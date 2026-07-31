@@ -1,2 +1,14 @@
 有更動什麼就在這邊留言 要留內容及日期及誰更動的
 比如說 新增Task1~4資列夾 07/26-宸
+
+完成 Task 1~4 完整實作 07/26-Kiro
+- 建立完整專案目錄結構 (src/, prompts/, schemas/, app/, deployment/, tests/, outputs/)
+- Task 1: Excel 資料解析 (excel_loader.py, data_standardizer.py)、指標計算引擎 (metrics.py)、資料血緣追蹤 (data_lineage.py)、資料驗證 (data_validator.py)
+- Task 2: LLM Agent 系統 (planner_agent.py, analyst_agent.py, reviewer_agent.py)、提示詞模板 (system_prompt.md, slide_planner.md, insight_reviewer.md)
+- Task 3: PowerPoint 模板解析 (template_parser.py)、原生圖表工廠 (chart_factory.py)、簡報生成器 (ppt_generator.py)，使用附件一實際 layout
+- Task 4: 端到端 Pipeline (pipeline.py)、PPT 數值回溯校驗 (ppt_reconciler.py)、Web Demo API (app/api/server.py)、前端 (app/web/index.html)、Docker 部署設定
+- 新增 main.py CLI 入口、requirements.txt、.env.example
+- 新增 demo_run.py 完整端到端展示腳本
+- 驗證結果：市場流通卡數 6,049 萬張、台新市占率 11.0%、排名第五，所有數據與附件三預期一致
+- 16 頁 PPT 全部使用附件一模板 layout，7 頁含原生可編輯圖表
+- 修正空白 placeholder 問題、修正散佈圖生成邏輯
