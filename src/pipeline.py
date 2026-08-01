@@ -457,14 +457,26 @@ class Pipeline:
         self.lineage_tracker.export_json(lineage_output)
         self.result.lineage_path = lineage_output
 
-        # 匯出 slide_spec JSON
+        # 匯出 slide_spec JSON (處理 numpy types)
         spec_output = os.path.join(self.config.output_dir, "slide_spec.json")
         with open(spec_output, "w", encoding="utf-8") as f:
-            json.dump(slide_specs, f, ensure_ascii=False, indent=2)
+            json.dump(slide_specs, f, ensure_ascii=False, indent=2, default=self._json_default)
         self.result.slide_spec_path = spec_output
 
         # 匯出 QA 報告
         qa_output = os.path.join(self.config.output_dir, "qa_report.json")
         with open(qa_output, "w", encoding="utf-8") as f:
-            json.dump(qa_report, f, ensure_ascii=False, indent=2)
+            json.dump(qa_report, f, ensure_ascii=False, indent=2, default=self._json_default)
         self.result.qa_report_path = qa_output
+
+    @staticmethod
+    def _json_default(obj):
+        """處理 numpy/pandas 類型的 JSON 序列化。"""
+        import numpy as np
+        if isinstance(obj, (np.integer,)):
+            return int(obj)
+        if isinstance(obj, (np.floating,)):
+            return float(obj)
+        if isinstance(obj, np.ndarray):
+            return obj.tolist()
+        return str(obj)
