@@ -1,0 +1,90 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SlideSpec",
+  "description": "LLM 投影片規格格式，遵循 README 5.2 節定義",
+  "type": "object",
+  "required": ["slide_no", "layout", "title"],
+  "properties": {
+    "slide_no": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 16,
+      "description": "頁碼 (1-16)"
+    },
+    "layout": {
+      "type": "string",
+      "enum": ["cover", "toc", "executive_summary", "chapter_divider", "trend_chart", "ranking_chart", "scatter_chart", "comparison_chart", "stacked_chart", "risk_chart", "strategy", "thank_you"],
+      "description": "版面類型"
+    },
+    "title": {
+      "type": "string",
+      "description": "頁面標題"
+    },
+    "headline": {
+      "type": "string",
+      "description": "核心訊息（一句話洞察結論，非數字描述）"
+    },
+    "chart": {
+      "type": ["object", "null"],
+      "description": "圖表規格",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["combo", "bar", "horizontal_bar", "scatter", "stacked_bar", "line", "bullet", "treemap"],
+          "description": "圖表類型"
+        },
+        "series_metric_ids": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "引用的 metric_id 陣列（對應計算引擎輸出）"
+        }
+      },
+      "required": ["type", "series_metric_ids"]
+    },
+    "kpis": {
+      "type": "array",
+      "description": "KPI 清單（Executive Summary 用）",
+      "items": {
+        "type": "object",
+        "required": ["label", "metric_id"],
+        "properties": {
+          "label": { "type": "string", "description": "KPI 名稱" },
+          "metric_id": { "type": "string", "description": "對應計算引擎的 metric_id" }
+        }
+      }
+    },
+    "insights": {
+      "type": "array",
+      "description": "商業洞察陣列",
+      "items": {
+        "type": "object",
+        "required": ["text", "evidence_metric_ids"],
+        "properties": {
+          "text": { "type": "string", "description": "洞察文字（必須包含管理意涵，非純數字描述）" },
+          "evidence_metric_ids": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "支持此洞察的 metric_id（必須存在於計算引擎結果）"
+          }
+        }
+      }
+    },
+    "recommendations": {
+      "type": "array",
+      "description": "策略建議",
+      "items": {
+        "type": "object",
+        "required": ["action", "rationale"],
+        "properties": {
+          "action": { "type": "string", "description": "建議行動" },
+          "rationale": { "type": "string", "description": "行動依據" }
+        }
+      }
+    },
+    "source_ids": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "此頁引用的所有 metric_id（資料血緣追溯用）"
+    }
+  }
+}

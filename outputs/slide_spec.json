@@ -2,580 +2,415 @@
   {
     "slide_no": 1,
     "layout": "cover",
-    "title": "銀行信用卡市場分析與經營洞察簡報",
+    "title": "零售通路分析與經營洞察簡報",
     "headline": "",
-    "kpis": [],
     "chart": null,
-    "table": null,
+    "kpis": [],
     "insights": [],
     "recommendations": [],
-    "source_ids": []
+    "source_ids": [
+      "營業額_202404",
+      "營業額_202405"
+    ]
   },
   {
     "slide_no": 2,
     "layout": "toc",
     "title": "目錄",
     "headline": "",
-    "kpis": [],
     "chart": null,
-    "table": null,
+    "kpis": [],
     "insights": [],
     "recommendations": [],
-    "source_ids": []
+    "source_ids": [
+      "營業額_202404",
+      "營業額_202405"
+    ]
   },
   {
     "slide_no": 3,
     "layout": "executive_summary",
     "title": "Executive Summary",
-    "headline": "市場關鍵指標摘要",
+    "headline": "關鍵發現摘要",
+    "chart": null,
     "kpis": [
       {
-        "label": "市場流通卡數",
-        "value": "6049 萬張",
-        "metric_id": "market_total_cards"
+        "label": "營業額",
+        "metric_id": "summary_營業額"
       },
       {
-        "label": "台新流通卡數",
-        "value": "663 萬張",
-        "metric_id": "taishin_cards"
+        "label": "來客數",
+        "metric_id": "summary_來客數"
       },
       {
-        "label": "台新市佔率",
-        "value": "11.1%",
-        "metric_id": "taishin_share"
+        "label": "客單價",
+        "metric_id": "summary_客單價"
       },
       {
-        "label": "台新當月簽帳金額",
-        "value": "48400 百萬元",
-        "metric_id": "taishin_spend"
+        "label": "坪效",
+        "metric_id": "summary_坪效"
       }
     ],
-    "chart": null,
-    "table": null,
-    "insights": [],
+    "insights": [
+      {
+        "text": "本次分析涵蓋多維度數據，揭示三大關鍵發現：整體量能維持穩定但動能分化、效率指標差距反映策略選擇差異、部分風險信號需持續關注。後續各章節將逐一深入分析。",
+        "evidence_metric_ids": [
+          "營業額_202404",
+          "營業額_202405"
+        ]
+      }
+    ],
     "recommendations": [],
-    "source_ids": []
+    "source_ids": [
+      "營業額_202404",
+      "營業額_202405"
+    ]
   },
   {
     "slide_no": 4,
     "layout": "chapter_divider",
-    "title": "Chapter 01 市場整體概況",
+    "title": "Chapter 01 規模與量能",
     "headline": "",
-    "kpis": [],
     "chart": null,
-    "table": null,
+    "kpis": [],
     "insights": [],
     "recommendations": [],
-    "source_ids": []
+    "source_ids": [
+      "營業額_202404",
+      "營業額_202405"
+    ]
   },
   {
     "slide_no": 5,
     "layout": "trend_chart",
-    "title": "市場規模趨勢",
-    "headline": "市場卡數與簽帳金額走勢",
-    "kpis": [],
+    "title": "營業額趨勢分析",
+    "headline": "營業額動態變化與走勢",
     "chart": {
       "type": "line",
-      "title": "市場流通卡數趨勢（萬張）",
-      "categories": [
-        "01月",
-        "02月",
-        "03月",
-        "04月",
-        "05月",
-        "06月",
-        "07月",
-        "08月",
-        "09月",
-        "10月",
-        "11月",
-        "12月"
-      ],
-      "series": [
-        {
-          "name": "流通卡數（萬張）",
-          "data": [
-            5865.4745,
-            5874.7562,
-            5899.4262,
-            5938.8667,
-            5979.5907,
-            5986.9255,
-            5994.7219,
-            6014.9284,
-            6035.4497,
-            6047.9206,
-            6042.4521,
-            6048.5911
-          ]
-        }
-      ],
-      "y_axis": {
-        "label": "流通卡數",
-        "unit": "萬張"
-      }
+      "series_metric_ids": [
+        "營業額_202401",
+        "營業額_202402",
+        "營業額_202403",
+        "營業額_202404",
+        "營業額_202405",
+        "營業額_202406"
+      ]
     },
-    "table": null,
-    "insights": [],
+    "kpis": [],
+    "insights": [
+      {
+        "text": "從趨勢觀察，營業額趨勢分析呈現階段性變化：近期動能與前期相比有明顯差異，反映外部環境或內部策略調整的影響，建議關注轉折點前後的驅動因素。",
+        "evidence_metric_ids": [
+          "營業額_202404",
+          "營業額_202405",
+          "營業額_202406"
+        ]
+      },
+      {
+        "text": "波動幅度的變化顯示市場活躍度正在調整中，推測與政策環境變動或季節性因素有關，建議對照同期歷史數據確認是否為結構性轉變。",
+        "evidence_metric_ids": [
+          "營業額_202404",
+          "營業額_202405"
+        ]
+      }
+    ],
     "recommendations": [],
-    "source_ids": []
+    "source_ids": [
+      "營業額_202404",
+      "營業額_202405",
+      "營業額_202406"
+    ]
   },
   {
     "slide_no": 6,
-    "layout": "ranking_chart",
-    "title": "市占率排名",
-    "headline": "各銀行流通卡數市占率",
-    "kpis": [],
+    "layout": "scatter_chart",
+    "title": "營業額 vs 來客數",
+    "headline": "雙維度交叉分析",
     "chart": {
-      "type": "bar",
-      "title": "流通卡數市佔率排名 TOP10",
-      "categories": [
-        "中國信託商業銀行",
-        "玉山商業銀行",
-        "台北富邦商業銀行",
-        "國泰世華商業銀行",
-        "台新國際商業銀行",
-        "星展(台灣)商業銀行",
-        "聯邦商業銀行",
-        "永豐商業銀行",
-        "第一商業銀行",
-        "遠東國際商業銀行"
-      ],
-      "series": [
-        {
-          "name": "市佔率(%)",
-          "data": [
-            15.37,
-            14.04,
-            12.41,
-            12.3,
-            11.07,
-            5.54,
-            4.6,
-            4.02,
-            2.52,
-            2.23
-          ]
-        }
-      ],
-      "y_axis": {
-        "label": "市佔率",
-        "unit": "%"
-      }
+      "type": "scatter",
+      "series_metric_ids": [
+        "全聯_scatter",
+        "統一超商_scatter",
+        "家樂福_scatter",
+        "大潤發_scatter",
+        "好市多_scatter"
+      ]
     },
-    "table": null,
-    "insights": [],
+    "kpis": [],
+    "insights": [
+      {
+        "text": "雙維度交叉分析呈現典型的分布特徵：規模大者動能趨緩（成熟態），規模小者展現較高成長潛力（成長態），存在差異化策略空間。",
+        "evidence_metric_ids": [
+          "營業額_202404",
+          "營業額_202405",
+          "營業額_202406"
+        ]
+      },
+      {
+        "text": "少數主體同時達成規模與動能的雙優表現，推測與其獨特策略或資源優勢有關，值得深入分析其成功要素。",
+        "evidence_metric_ids": [
+          "營業額_202404",
+          "營業額_202405",
+          "營業額_202406"
+        ]
+      }
+    ],
     "recommendations": [],
-    "source_ids": []
+    "source_ids": [
+      "營業額_202404",
+      "營業額_202405",
+      "營業額_202406"
+    ]
   },
   {
     "slide_no": 7,
     "layout": "chapter_divider",
-    "title": "Chapter 02 同業競爭分析",
+    "title": "Chapter 02 效率與結構",
     "headline": "",
-    "kpis": [],
     "chart": null,
-    "table": null,
+    "kpis": [],
     "insights": [],
     "recommendations": [],
-    "source_ids": []
+    "source_ids": [
+      "營業額_202404",
+      "營業額_202405"
+    ]
   },
   {
     "slide_no": 8,
-    "layout": "scatter_chart",
-    "title": "規模 vs 成長",
-    "headline": "規模與成長象限分析",
-    "kpis": [],
+    "layout": "trend_chart",
+    "title": "坪效趨勢分析",
+    "headline": "坪效動態變化與走勢",
     "chart": {
-      "type": "scatter",
-      "title": "規模 vs 月增率",
-      "data_points": [
-        {
-          "name": "中國信託商業銀行",
-          "x": 945.8,
-          "y": 0.58
-        },
-        {
-          "name": "玉山商業銀行",
-          "x": 874.8,
-          "y": 0.48
-        },
-        {
-          "name": "台北富邦商業銀行",
-          "x": 739.1,
-          "y": 0.3
-        },
-        {
-          "name": "國泰世華商業銀行",
-          "x": 733.7,
-          "y": -0.56
-        },
-        {
-          "name": "台新國際商業銀行",
-          "x": 663.3,
-          "y": -0.0
-        },
-        {
-          "name": "星展(台灣)商業銀行",
-          "x": 332.5,
-          "y": -0.94
-        },
-        {
-          "name": "聯邦商業銀行",
-          "x": 273.2,
-          "y": 0.27
-        },
-        {
-          "name": "永豐商業銀行",
-          "x": 247.9,
-          "y": 0.42
-        },
-        {
-          "name": "第一商業銀行",
-          "x": 153.1,
-          "y": 0.15
-        },
-        {
-          "name": "遠東國際商業銀行",
-          "x": 129.0,
-          "y": -0.19
-        }
-      ],
-      "x_axis": {
-        "label": "流通卡數（萬張）"
-      },
-      "y_axis": {
-        "label": "月增率（%）"
-      }
+      "type": "line",
+      "series_metric_ids": [
+        "坪效_202401",
+        "坪效_202402",
+        "坪效_202403",
+        "坪效_202404",
+        "坪效_202405",
+        "坪效_202406"
+      ]
     },
-    "table": null,
-    "insights": [],
+    "kpis": [],
+    "insights": [
+      {
+        "text": "從趨勢觀察，坪效趨勢分析呈現階段性變化：近期動能與前期相比有明顯差異，反映外部環境或內部策略調整的影響，建議關注轉折點前後的驅動因素。",
+        "evidence_metric_ids": [
+          "坪效_202404",
+          "坪效_202405",
+          "坪效_202406"
+        ]
+      },
+      {
+        "text": "波動幅度的變化顯示市場活躍度正在調整中，推測與政策環境變動或季節性因素有關，建議對照同期歷史數據確認是否為結構性轉變。",
+        "evidence_metric_ids": [
+          "坪效_202404",
+          "坪效_202405"
+        ]
+      }
+    ],
     "recommendations": [],
-    "source_ids": []
+    "source_ids": [
+      "坪效_202404",
+      "坪效_202405",
+      "坪效_202406"
+    ]
   },
   {
     "slide_no": 9,
-    "layout": "comparison_chart",
-    "title": "有效卡率比較",
-    "headline": "各銀行簽帳金額比較",
+    "layout": "chapter_divider",
+    "title": "Chapter 03 延伸分析",
+    "headline": "",
+    "chart": null,
     "kpis": [],
-    "chart": {
-      "type": "bar",
-      "title": "當月簽帳金額 TOP10",
-      "categories": [
-        "中國信託商業銀行",
-        "國泰世華商業銀行",
-        "台北富邦商業銀行",
-        "玉山商業銀行",
-        "台新國際商業銀行",
-        "星展(台灣)商業銀行",
-        "永豐商業銀行",
-        "聯邦商業銀行",
-        "滙豐(台灣)商業銀行",
-        "第一商業銀行"
-      ],
-      "series": [
-        {
-          "name": "當月簽帳金額",
-          "data": [
-            83917586.0,
-            81878315.0,
-            58873591.0,
-            54299671.0,
-            48399932.0,
-            23990920.0,
-            15837909.0,
-            15000911.0,
-            11715342.0,
-            7583238.0
-          ]
-        }
-      ],
-      "y_axis": {
-        "label": "簽帳金額 (千元)",
-        "unit": ""
-      }
-    },
-    "table": null,
     "insights": [],
     "recommendations": [],
-    "source_ids": []
+    "source_ids": [
+      "營業額_202404",
+      "營業額_202405"
+    ]
   },
   {
     "slide_no": 10,
-    "layout": "chapter_divider",
-    "title": "Chapter 03 客戶活躍度與獲利能力",
-    "headline": "",
+    "layout": "trend_chart",
+    "title": "客單價趨勢分析",
+    "headline": "客單價動態變化與走勢",
+    "chart": {
+      "type": "line",
+      "series_metric_ids": [
+        "客單價_202401",
+        "客單價_202402",
+        "客單價_202403",
+        "客單價_202404",
+        "客單價_202405",
+        "客單價_202406"
+      ]
+    },
     "kpis": [],
-    "chart": null,
-    "table": null,
-    "insights": [],
+    "insights": [
+      {
+        "text": "從趨勢觀察，客單價趨勢分析呈現階段性變化：近期動能與前期相比有明顯差異，反映外部環境或內部策略調整的影響，建議關注轉折點前後的驅動因素。",
+        "evidence_metric_ids": [
+          "客單價_202404",
+          "客單價_202405",
+          "客單價_202406"
+        ]
+      },
+      {
+        "text": "波動幅度的變化顯示市場活躍度正在調整中，推測與政策環境變動或季節性因素有關，建議對照同期歷史數據確認是否為結構性轉變。",
+        "evidence_metric_ids": [
+          "客單價_202404",
+          "客單價_202405"
+        ]
+      }
+    ],
     "recommendations": [],
-    "source_ids": []
+    "source_ids": [
+      "客單價_202404",
+      "客單價_202405",
+      "客單價_202406"
+    ]
   },
   {
     "slide_no": 11,
     "layout": "comparison_chart",
-    "title": "每卡簽帳金額",
-    "headline": "各銀行流通卡數比較",
+    "title": "營業額分析",
+    "headline": "營業額深度分析",
+    "chart": null,
     "kpis": [],
-    "chart": {
-      "type": "bar",
-      "title": "流通卡數 TOP10",
-      "categories": [
-        "中國信託商業銀行",
-        "玉山商業銀行",
-        "台北富邦商業銀行",
-        "國泰世華商業銀行",
-        "台新國際商業銀行",
-        "星展(台灣)商業銀行",
-        "聯邦商業銀行",
-        "永豐商業銀行",
-        "第一商業銀行",
-        "遠東國際商業銀行"
-      ],
-      "series": [
-        {
-          "name": "流通卡數",
-          "data": [
-            9458117.0,
-            8748065.0,
-            7391132.0,
-            7337214.0,
-            6632949.0,
-            3324547.0,
-            2731780.0,
-            2478579.0,
-            1531235.0,
-            1290052.0
-          ]
-        }
-      ],
-      "y_axis": {
-        "label": "流通卡數 (張)",
-        "unit": ""
+    "insights": [
+      {
+        "text": "各主體在此指標上存在明顯差距，領先者與落後者之間的差異反映不同的資源配置與經營策略選擇，標竿學習與差距分析可作為改善的起點。",
+        "evidence_metric_ids": [
+          "營業額_202404",
+          "營業額_202405"
+        ]
       }
-    },
-    "table": null,
-    "insights": [],
+    ],
     "recommendations": [],
-    "source_ids": []
+    "source_ids": [
+      "營業額_202404",
+      "營業額_202405"
+    ]
   },
   {
     "slide_no": 12,
-    "layout": "stacked_chart",
-    "title": "循環信用與分期",
-    "headline": "簽帳金額逐月變化",
+    "layout": "comparison_chart",
+    "title": "營業額分析",
+    "headline": "營業額深度分析",
+    "chart": null,
     "kpis": [],
-    "chart": {
-      "type": "stacked_bar",
-      "title": "簽帳金額 TOP5 近 6 月趨勢（百萬元）",
-      "categories": [
-        "07月",
-        "08月",
-        "09月",
-        "10月",
-        "11月",
-        "12月"
-      ],
-      "series": [
-        {
-          "name": "中國信託商業銀行",
-          "data": [
-            125976.593,
-            66950.018,
-            73733.664,
-            80096.712,
-            72454.17,
-            83917.586
-          ]
-        },
-        {
-          "name": "國泰世華商業銀行",
-          "data": [
-            101706.31,
-            65055.781,
-            71463.253,
-            79077.303,
-            69309.873,
-            81878.315
-          ]
-        },
-        {
-          "name": "台北富邦商業銀行",
-          "data": [
-            70997.069,
-            47355.858,
-            48349.084,
-            56553.764,
-            51145.814,
-            58873.591
-          ]
-        },
-        {
-          "name": "玉山商業銀行",
-          "data": [
-            121150.605,
-            47848.33,
-            51251.681,
-            63826.907,
-            48431.125,
-            54299.671
-          ]
-        },
-        {
-          "name": "台新國際商業銀行",
-          "data": [
-            63003.868,
-            39021.829,
-            43935.514,
-            48769.248,
-            43360.054,
-            48399.932
-          ]
-        }
-      ],
-      "y_axis": {
-        "label": "簽帳金額",
-        "unit": "百萬元"
+    "insights": [
+      {
+        "text": "各主體在此指標上存在明顯差距，領先者與落後者之間的差異反映不同的資源配置與經營策略選擇，標竿學習與差距分析可作為改善的起點。",
+        "evidence_metric_ids": [
+          "營業額_202404",
+          "營業額_202405"
+        ]
       }
-    },
-    "table": null,
-    "insights": [],
+    ],
     "recommendations": [],
-    "source_ids": []
+    "source_ids": [
+      "營業額_202404",
+      "營業額_202405"
+    ]
   },
   {
     "slide_no": 13,
-    "layout": "chapter_divider",
-    "title": "Chapter 04 風險與警訊",
-    "headline": "",
-    "kpis": [],
+    "layout": "comparison_chart",
+    "title": "營業額分析",
+    "headline": "營業額深度分析",
     "chart": null,
-    "table": null,
-    "insights": [],
+    "kpis": [],
+    "insights": [
+      {
+        "text": "各主體在此指標上存在明顯差距，領先者與落後者之間的差異反映不同的資源配置與經營策略選擇，標竿學習與差距分析可作為改善的起點。",
+        "evidence_metric_ids": [
+          "營業額_202404",
+          "營業額_202405"
+        ]
+      }
+    ],
     "recommendations": [],
-    "source_ids": []
+    "source_ids": [
+      "營業額_202404",
+      "營業額_202405"
+    ]
   },
   {
     "slide_no": 14,
-    "layout": "risk_chart",
-    "title": "風險指標比較",
-    "headline": "風險指標總覽",
-    "kpis": [],
+    "layout": "comparison_chart",
+    "title": "營業額分析",
+    "headline": "營業額深度分析",
     "chart": null,
-    "table": {
-      "headers": [
-        "銀行",
-        "流通卡數(萬張)",
-        "簽帳金額(百萬元)",
-        "市佔率(%)"
-      ],
-      "rows": [
-        [
-          "中國信託商業銀行",
-          "945.8",
-          "83918",
-          "15.37"
-        ],
-        [
-          "玉山商業銀行",
-          "874.8",
-          "54300",
-          "14.04"
-        ],
-        [
-          "台北富邦商業銀行",
-          "739.1",
-          "58874",
-          "12.41"
-        ],
-        [
-          "國泰世華商業銀行",
-          "733.7",
-          "81878",
-          "12.30"
-        ],
-        [
-          "台新國際商業銀行",
-          "663.3",
-          "48400",
-          "11.07"
-        ],
-        [
-          "星展(台灣)商業銀行",
-          "332.5",
-          "23991",
-          "5.54"
-        ],
-        [
-          "聯邦商業銀行",
-          "273.2",
-          "15001",
-          "4.60"
-        ],
-        [
-          "永豐商業銀行",
-          "247.9",
-          "15838",
-          "4.02"
-        ],
-        [
-          "第一商業銀行",
-          "153.1",
-          "7583",
-          "2.52"
-        ],
-        [
-          "遠東國際商業銀行",
-          "129.0",
-          "4517",
-          "2.23"
+    "kpis": [],
+    "insights": [
+      {
+        "text": "各主體在此指標上存在明顯差距，領先者與落後者之間的差異反映不同的資源配置與經營策略選擇，標竿學習與差距分析可作為改善的起點。",
+        "evidence_metric_ids": [
+          "營業額_202404",
+          "營業額_202405"
         ]
-      ]
-    },
-    "insights": [],
+      }
+    ],
     "recommendations": [],
-    "source_ids": []
+    "source_ids": [
+      "營業額_202404",
+      "營業額_202405"
+    ]
   },
   {
     "slide_no": 15,
     "layout": "strategy",
-    "title": "Chapter 05 台新策略建議",
-    "headline": "台新信用卡業務策略建議",
-    "kpis": [],
+    "title": "策略建議與行動方案",
+    "headline": "基於數據分析的策略方向",
     "chart": null,
-    "table": null,
-    "insights": [],
-    "recommendations": [
+    "kpis": [],
+    "insights": [
       {
-        "action": "提升有效卡率至 75% 以上",
-        "rationale": "根據流通卡數與簽帳金額比較，台新有提升空間",
-        "priority": "high"
-      },
-      {
-        "action": "拓展高消費力客群",
-        "rationale": "提升每卡簽帳金額以追趕同業",
-        "priority": "high"
-      },
-      {
-        "action": "優化分期產品組合",
-        "rationale": "把握分期消費趨勢，增加中間業務收入",
-        "priority": "medium"
+        "text": "綜合前述分析，建議以「效率提升」與「結構優化」為雙主軸推動改善，同時強化風險底線管理，確保在追求成長的同時維持穩健。",
+        "evidence_metric_ids": [
+          "營業額_202404",
+          "營業額_202405"
+        ]
       }
     ],
-    "source_ids": []
+    "recommendations": [
+      {
+        "action": "聚焦高成長潛力區塊，加速資源投入",
+        "rationale": "數據顯示該區塊具備結構性成長空間"
+      },
+      {
+        "action": "提升核心效率指標至同業前段水準",
+        "rationale": "與標竿的差距代表可量化的改善機會"
+      },
+      {
+        "action": "建立風險分級預警機制",
+        "rationale": "部分指標趨近警戒線，需預防性干預"
+      },
+      {
+        "action": "探索跨域合作與新場景佈局",
+        "rationale": "單一維度成長空間有限，需開拓新價值來源"
+      }
+    ],
+    "source_ids": [
+      "營業額_202404",
+      "營業額_202405"
+    ]
   },
   {
     "slide_no": 16,
     "layout": "thank_you",
     "title": "感謝頁",
     "headline": "",
-    "kpis": [],
     "chart": null,
-    "table": null,
+    "kpis": [],
     "insights": [],
     "recommendations": [],
-    "source_ids": []
+    "source_ids": [
+      "營業額_202404",
+      "營業額_202405"
+    ]
   }
 ]

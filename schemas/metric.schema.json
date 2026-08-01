@@ -1,0 +1,63 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Metric",
+  "description": "計算引擎輸出格式，遵循 README 5.1 節定義",
+  "type": "object",
+  "required": ["metric_id", "metric_name", "value", "unit", "period", "source", "validation_status"],
+  "properties": {
+    "metric_id": {
+      "type": "string",
+      "description": "指標唯一識別碼",
+      "examples": ["market_total_cards_11412", "taishin_market_share_11412"]
+    },
+    "metric_name": {
+      "type": "string",
+      "description": "指標中文名稱"
+    },
+    "value": {
+      "type": ["number", "null"],
+      "description": "計算結果數值，null 表示無法計算"
+    },
+    "display_value": {
+      "type": "string",
+      "description": "格式化後的顯示值"
+    },
+    "unit": {
+      "type": "string",
+      "description": "數值單位",
+      "enum": ["張", "萬張", "元", "千元", "百萬元", "億元", "%", "bp"]
+    },
+    "period": {
+      "type": "string",
+      "description": "資料期間"
+    },
+    "institution": {
+      "type": "string",
+      "description": "所屬機構"
+    },
+    "formula": {
+      "type": "string",
+      "description": "計算公式說明"
+    },
+    "source": {
+      "type": "array",
+      "description": "資料來源（資料血緣）",
+      "items": {
+        "type": "object",
+        "required": ["file", "sheet"],
+        "properties": {
+          "file": { "type": "string" },
+          "sheet": { "type": "string" },
+          "range": { "type": "string" }
+        }
+      }
+    },
+    "validation_status": {
+      "type": "string",
+      "enum": ["passed", "failed", "skipped", "na"]
+    },
+    "validation_note": {
+      "type": "string"
+    }
+  }
+}

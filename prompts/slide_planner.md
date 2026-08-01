@@ -1,40 +1,84 @@
-# Slide Planner Prompt
+# Slide Planner Prompt — 簡報結構規劃器
 
-你是簡報規劃專家。根據提供的資料摘要，規劃 16 頁信用卡市場分析簡報的結構。
+## 任務
 
-## 簡報結構要求
+根據資料摘要與使用者需求，規劃策略分析簡報結構。你不應假設資料來自哪個產業——簡報的標題、章節命名、分析角度全部由資料內容驅動。
 
-共 16 頁，結構如下：
+## 頁數規則
 
-| 頁次 | 類型 | 內容 |
-|------|------|------|
-| 1 | 封面 | 標題、日期、機構 |
-| 2 | 目錄 | 五大章節索引 |
-| 3 | 摘要 | Executive Summary（3-5 個關鍵 KPI） |
-| 4 | 分隔頁 | Chapter 01 市場整體概況 |
-| 5 | 圖表 | 市場規模趨勢 |
-| 6 | 圖表 | 市占率排名 |
-| 7 | 分隔頁 | Chapter 02 同業競爭分析 |
-| 8 | 圖表 | 規模 vs 成長 |
-| 9 | 圖表 | 有效卡率比較 |
-| 10 | 分隔頁 | Chapter 03 客戶活躍度與獲利能力 |
-| 11 | 圖表 | 每卡簽帳金額 |
-| 12 | 圖表 | 循環信用與分期 |
-| 13 | 分隔頁 | Chapter 04 風險與警訊 |
-| 14 | 圖表 | 風險指標比較 |
-| 15 | 分隔頁 | Chapter 05 台新策略建議 |
-| 16 | 結尾 | 感謝頁／資料來源 |
+- 若使用者明確指定頁數 → 依使用者指定
+- 若使用者未指定 → 預設 16 頁
 
-## 每頁必須包含
+## 簡報骨架（依頁數自動調整）
 
-- `slide_no`: 頁碼
-- `layout`: 版面類型
-- `title`: 標題
-- `headline`: 核心訊息（一句話摘要）
-- `chart` 或 `table`: 圖表/表格規格（若適用）
-- `insights`: 商業洞察陣列
-- `source_ids`: 引用的資料血緣 ID
+固定元素（至少佔 5 頁）：
+```
+封面（cover）
+目錄（toc）
+Executive Summary（executive_summary）
+策略建議（strategy）
+感謝頁（thank_you）
+```
 
-## 輸出
+可變元素（剩餘頁數分配給 Chapter）：
+```
+[Chapter 分隔頁（chapter_divider）] + [分析頁 × 1~3]
+```
 
-JSON 陣列，每個元素為一頁的 slide_spec。
+分配邏輯：
+- 剩餘頁數 = 總頁數 - 5（固定元素）
+- Chapter 數量 = 依指標分群結果，2~5 個
+- 每個 Chapter = 1 分隔頁 + N 分析頁
+- N 依剩餘頁數平均分配
+
+範例：
+- 16 頁 → 11 頁可變 → 4 Chapter × (1 分隔 + 2 分析) = 12，取 11
+- 10 頁 → 5 頁可變 → 2~3 Chapter × (1 分隔 + 1 分析)
+- 20 頁 → 15 頁可變 → 5 Chapter × (1 分隔 + 2 分析)
+
+## Chapter 主題決定邏輯
+
+將可用指標分群，分群規則：
+
+1. **依分析目的分群**：
+   - 規模/量能指標 → 「市場全景」類
+   - 排名/佔比指標 → 「競爭態勢」類
+   - 效率/比率指標 → 「營運體質」類
+   - 風險/異常指標 → 「風險預警」類
+   - 行為/偏好指標 → 「客群洞察」類
+   - 成長/動能指標 → 「成長機會」類
+
+2. **依資料維度選 layout**：
+   - 有時間序列 → `trend_chart`
+   - 有多主體排名 → `ranking_chart`
+   - 有兩個量化指標可配對 → `scatter_chart`
+   - 有同業對標 → `comparison_chart`
+   - 有結構佔比 → `stacked_chart`
+   - 有風險閾值 → `risk_chart`
+
+3. **Chapter 命名**：
+   - 直接從指標名稱推導，不使用任何特定產業的固定詞彙
+
+## 每頁必須包含的欄位（README 5.2）
+
+```json
+{
+  "slide_no": 1,
+  "layout": "cover|toc|executive_summary|chapter_divider|trend_chart|ranking_chart|scatter_chart|comparison_chart|stacked_chart|risk_chart|strategy|thank_you",
+  "title": "（從資料內容推導）",
+  "headline": "（洞察結論，非數字描述）",
+  "chart": {"type": "...", "series_metric_ids": [...]},
+  "kpis": [{"label": "...", "metric_id": "..."}],
+  "insights": [{"text": "...", "evidence_metric_ids": [...]}],
+  "recommendations": [{"action": "...", "rationale": "..."}],
+  "source_ids": [...]
+}
+```
+
+## 品質要求
+
+- 總頁數符合使用者指定（或預設 16）
+- headline 是洞察結論，不是數字重述
+- 圖表類型與資料維度匹配
+- 所有 metric_id 引用來自計算引擎
+- 不預設特定產業
