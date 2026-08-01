@@ -70,7 +70,7 @@ async def upload_and_process(
     prompt_text: str = Form(""),
     use_llm: bool = Form(True),
     target_institution: str = Form("台新銀行"),
-    model_id: str = Form("anthropic.claude-sonnet-4-20250514-v1:0"),
+    model_id: str = Form("us.anthropic.claude-sonnet-4-20250514-v1:0"),
     region: str = Form("us-east-1"),
 ):
     """上傳多個 Excel + 模板 + 提示詞，啟動處理。"""

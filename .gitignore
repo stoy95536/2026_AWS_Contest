@@ -1,0 +1,15 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Temp uploads and task outputs
+uploads/
+outputs/*/
+
+# IDE
+.vscode/
+.idea/

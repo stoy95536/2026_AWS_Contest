@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-07-31T18:17:28.428859",
-  "total_records": 39,
+  "generated_at": "2026-08-01T11:12:08.273501",
+  "total_records": 130,
   "records": {
-    "market_share_流通卡數_中國信託商業銀行_11412": {
-      "metric_id": "market_share_流通卡數_中國信託商業銀行_11412",
+    "market_share_流通卡數_三信商業銀行_11412": {
+      "metric_id": "market_share_流通卡數_三信商業銀行_11412",
       "metric_name": "流通卡數_市占率",
-      "value": 15.6368926972101,
-      "display_value": "16 ",
+      "value": 0.03479983958578387,
+      "display_value": "0 ",
       "unit": "",
       "period": "11412",
-      "institution": "中國信託商業銀行",
+      "institution": "三信商業銀行",
       "formula": "機構值 / 市場總計 * 100",
       "sources": [
         {
           "metric": "流通卡數",
-          "institution": "中國信託商業銀行",
-          "value": 9458117.0
+          "institution": "三信商業銀行",
+          "value": 21049.0
         },
         {
           "metric": "流通卡數_市場總計",
@@ -23,239 +23,23 @@
         }
       ],
       "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.235510",
+      "timestamp": "2026-08-01T11:12:01.601794",
       "rounding_rule": "四捨五入至小數第二位"
     },
-    "market_share_流通卡數_玉山商業銀行_11412": {
-      "metric_id": "market_share_流通卡數_玉山商業銀行_11412",
-      "metric_name": "流通卡數_市占率",
-      "value": 14.462979651575388,
-      "display_value": "14 ",
-      "unit": "",
-      "period": "11412",
-      "institution": "玉山商業銀行",
-      "formula": "機構值 / 市場總計 * 100",
-      "sources": [
-        {
-          "metric": "流通卡數",
-          "institution": "玉山商業銀行",
-          "value": 8748065.0
-        },
-        {
-          "metric": "流通卡數_市場總計",
-          "value": 60485911.0
-        }
-      ],
-      "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.236152",
-      "rounding_rule": "四捨五入至小數第二位"
-    },
-    "market_share_流通卡數_台北富邦商業銀行_11412": {
-      "metric_id": "market_share_流通卡數_台北富邦商業銀行_11412",
-      "metric_name": "流通卡數_市占率",
-      "value": 12.219592757725017,
-      "display_value": "12 ",
-      "unit": "",
-      "period": "11412",
-      "institution": "台北富邦商業銀行",
-      "formula": "機構值 / 市場總計 * 100",
-      "sources": [
-        {
-          "metric": "流通卡數",
-          "institution": "台北富邦商業銀行",
-          "value": 7391132.0
-        },
-        {
-          "metric": "流通卡數_市場總計",
-          "value": 60485911.0
-        }
-      ],
-      "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.236825",
-      "rounding_rule": "四捨五入至小數第二位"
-    },
-    "market_share_流通卡數_國泰世華商業銀行_11412": {
-      "metric_id": "market_share_流通卡數_國泰世華商業銀行_11412",
-      "metric_name": "流通卡數_市占率",
-      "value": 12.13045133766771,
-      "display_value": "12 ",
-      "unit": "",
-      "period": "11412",
-      "institution": "國泰世華商業銀行",
-      "formula": "機構值 / 市場總計 * 100",
-      "sources": [
-        {
-          "metric": "流通卡數",
-          "institution": "國泰世華商業銀行",
-          "value": 7337214.0
-        },
-        {
-          "metric": "流通卡數_市場總計",
-          "value": 60485911.0
-        }
-      ],
-      "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.237459",
-      "rounding_rule": "四捨五入至小數第二位"
-    },
-    "market_share_流通卡數_台新國際商業銀行_11412": {
-      "metric_id": "market_share_流通卡數_台新國際商業銀行_11412",
-      "metric_name": "流通卡數_市占率",
-      "value": 10.966105809334673,
-      "display_value": "11 ",
-      "unit": "",
-      "period": "11412",
-      "institution": "台新國際商業銀行",
-      "formula": "機構值 / 市場總計 * 100",
-      "sources": [
-        {
-          "metric": "流通卡數",
-          "institution": "台新國際商業銀行",
-          "value": 6632949.0
-        },
-        {
-          "metric": "流通卡數_市場總計",
-          "value": 60485911.0
-        }
-      ],
-      "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.238101",
-      "rounding_rule": "四捨五入至小數第二位"
-    },
-    "market_share_流通卡數_星展(台灣)商業銀行_11412": {
-      "metric_id": "market_share_流通卡數_星展(台灣)商業銀行_11412",
-      "metric_name": "流通卡數_市占率",
-      "value": 5.496398987856859,
-      "display_value": "5 ",
-      "unit": "",
-      "period": "11412",
-      "institution": "星展(台灣)商業銀行",
-      "formula": "機構值 / 市場總計 * 100",
-      "sources": [
-        {
-          "metric": "流通卡數",
-          "institution": "星展(台灣)商業銀行",
-          "value": 3324547.0
-        },
-        {
-          "metric": "流通卡數_市場總計",
-          "value": 60485911.0
-        }
-      ],
-      "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.238745",
-      "rounding_rule": "四捨五入至小數第二位"
-    },
-    "market_share_流通卡數_聯邦商業銀行_11412": {
-      "metric_id": "market_share_流通卡數_聯邦商業銀行_11412",
-      "metric_name": "流通卡數_市占率",
-      "value": 4.516390602102364,
-      "display_value": "5 ",
-      "unit": "",
-      "period": "11412",
-      "institution": "聯邦商業銀行",
-      "formula": "機構值 / 市場總計 * 100",
-      "sources": [
-        {
-          "metric": "流通卡數",
-          "institution": "聯邦商業銀行",
-          "value": 2731780.0
-        },
-        {
-          "metric": "流通卡數_市場總計",
-          "value": 60485911.0
-        }
-      ],
-      "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.239368",
-      "rounding_rule": "四捨五入至小數第二位"
-    },
-    "market_share_流通卡數_永豐商業銀行_11412": {
-      "metric_id": "market_share_流通卡數_永豐商業銀行_11412",
-      "metric_name": "流通卡數_市占率",
-      "value": 4.097779067922115,
-      "display_value": "4 ",
-      "unit": "",
-      "period": "11412",
-      "institution": "永豐商業銀行",
-      "formula": "機構值 / 市場總計 * 100",
-      "sources": [
-        {
-          "metric": "流通卡數",
-          "institution": "永豐商業銀行",
-          "value": 2478579.0
-        },
-        {
-          "metric": "流通卡數_市場總計",
-          "value": 60485911.0
-        }
-      ],
-      "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.239987",
-      "rounding_rule": "四捨五入至小數第二位"
-    },
-    "market_share_流通卡數_第一商業銀行_11412": {
-      "metric_id": "market_share_流通卡數_第一商業銀行_11412",
-      "metric_name": "流通卡數_市占率",
-      "value": 2.531556480979513,
-      "display_value": "3 ",
-      "unit": "",
-      "period": "11412",
-      "institution": "第一商業銀行",
-      "formula": "機構值 / 市場總計 * 100",
-      "sources": [
-        {
-          "metric": "流通卡數",
-          "institution": "第一商業銀行",
-          "value": 1531235.0
-        },
-        {
-          "metric": "流通卡數_市場總計",
-          "value": 60485911.0
-        }
-      ],
-      "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.222852",
-      "rounding_rule": "四捨五入至小數第二位"
-    },
-    "market_share_流通卡數_遠東國際商業銀行_11412": {
-      "metric_id": "market_share_流通卡數_遠東國際商業銀行_11412",
-      "metric_name": "流通卡數_市占率",
-      "value": 2.132814036644005,
-      "display_value": "2 ",
-      "unit": "",
-      "period": "11412",
-      "institution": "遠東國際商業銀行",
-      "formula": "機構值 / 市場總計 * 100",
-      "sources": [
-        {
-          "metric": "流通卡數",
-          "institution": "遠東國際商業銀行",
-          "value": 1290052.0
-        },
-        {
-          "metric": "流通卡數_市場總計",
-          "value": 60485911.0
-        }
-      ],
-      "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.223484",
-      "rounding_rule": "四捨五入至小數第二位"
-    },
-    "market_share_當月簽帳金額_中國信託商業銀行_11412": {
-      "metric_id": "market_share_當月簽帳金額_中國信託商業銀行_11412",
+    "market_share_當月簽帳金額_三信商業銀行_11412": {
+      "metric_id": "market_share_當月簽帳金額_三信商業銀行_11412",
       "metric_name": "當月簽帳金額_市占率",
-      "value": 18.49775857454958,
-      "display_value": "18 ",
+      "value": 0.0310598027386543,
+      "display_value": "0 ",
       "unit": "",
       "period": "11412",
-      "institution": "中國信託商業銀行",
+      "institution": "三信商業銀行",
       "formula": "機構值 / 市場總計 * 100",
       "sources": [
         {
           "metric": "當月簽帳金額",
-          "institution": "中國信託商業銀行",
-          "value": 83917586.0
+          "institution": "三信商業銀行",
+          "value": 140907.0
         },
         {
           "metric": "當月簽帳金額_市場總計",
@@ -263,287 +47,7 @@
         }
       ],
       "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.240651",
-      "rounding_rule": "四捨五入至小數第二位"
-    },
-    "market_share_當月簽帳金額_國泰世華商業銀行_11412": {
-      "metric_id": "market_share_當月簽帳金額_國泰世華商業銀行_11412",
-      "metric_name": "當月簽帳金額_市占率",
-      "value": 18.048246804441224,
-      "display_value": "18 ",
-      "unit": "",
-      "period": "11412",
-      "institution": "國泰世華商業銀行",
-      "formula": "機構值 / 市場總計 * 100",
-      "sources": [
-        {
-          "metric": "當月簽帳金額",
-          "institution": "國泰世華商業銀行",
-          "value": 81878315.0
-        },
-        {
-          "metric": "當月簽帳金額_市場總計",
-          "value": 453663538.0
-        }
-      ],
-      "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.242550",
-      "rounding_rule": "四捨五入至小數第二位"
-    },
-    "market_share_當月簽帳金額_台北富邦商業銀行_11412": {
-      "metric_id": "market_share_當月簽帳金額_台北富邦商業銀行_11412",
-      "metric_name": "當月簽帳金額_市占率",
-      "value": 12.977368924015225,
-      "display_value": "13 ",
-      "unit": "",
-      "period": "11412",
-      "institution": "台北富邦商業銀行",
-      "formula": "機構值 / 市場總計 * 100",
-      "sources": [
-        {
-          "metric": "當月簽帳金額",
-          "institution": "台北富邦商業銀行",
-          "value": 58873591.0
-        },
-        {
-          "metric": "當月簽帳金額_市場總計",
-          "value": 453663538.0
-        }
-      ],
-      "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.241896",
-      "rounding_rule": "四捨五入至小數第二位"
-    },
-    "market_share_當月簽帳金額_玉山商業銀行_11412": {
-      "metric_id": "market_share_當月簽帳金額_玉山商業銀行_11412",
-      "metric_name": "當月簽帳金額_市占率",
-      "value": 11.969150361826081,
-      "display_value": "12 ",
-      "unit": "",
-      "period": "11412",
-      "institution": "玉山商業銀行",
-      "formula": "機構值 / 市場總計 * 100",
-      "sources": [
-        {
-          "metric": "當月簽帳金額",
-          "institution": "玉山商業銀行",
-          "value": 54299671.0
-        },
-        {
-          "metric": "當月簽帳金額_市場總計",
-          "value": 453663538.0
-        }
-      ],
-      "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.241275",
-      "rounding_rule": "四捨五入至小數第二位"
-    },
-    "market_share_當月簽帳金額_台新國際商業銀行_11412": {
-      "metric_id": "market_share_當月簽帳金額_台新國際商業銀行_11412",
-      "metric_name": "當月簽帳金額_市占率",
-      "value": 10.66868459682118,
-      "display_value": "11 ",
-      "unit": "",
-      "period": "11412",
-      "institution": "台新國際商業銀行",
-      "formula": "機構值 / 市場總計 * 100",
-      "sources": [
-        {
-          "metric": "當月簽帳金額",
-          "institution": "台新國際商業銀行",
-          "value": 48399932.0
-        },
-        {
-          "metric": "當月簽帳金額_市場總計",
-          "value": 453663538.0
-        }
-      ],
-      "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.243176",
-      "rounding_rule": "四捨五入至小數第二位"
-    },
-    "market_share_當月簽帳金額_星展(台灣)商業銀行_11412": {
-      "metric_id": "market_share_當月簽帳金額_星展(台灣)商業銀行_11412",
-      "metric_name": "當月簽帳金額_市占率",
-      "value": 5.288262774161939,
-      "display_value": "5 ",
-      "unit": "",
-      "period": "11412",
-      "institution": "星展(台灣)商業銀行",
-      "formula": "機構值 / 市場總計 * 100",
-      "sources": [
-        {
-          "metric": "當月簽帳金額",
-          "institution": "星展(台灣)商業銀行",
-          "value": 23990920.0
-        },
-        {
-          "metric": "當月簽帳金額_市場總計",
-          "value": 453663538.0
-        }
-      ],
-      "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.243822",
-      "rounding_rule": "四捨五入至小數第二位"
-    },
-    "market_share_當月簽帳金額_永豐商業銀行_11412": {
-      "metric_id": "market_share_當月簽帳金額_永豐商業銀行_11412",
-      "metric_name": "當月簽帳金額_市占率",
-      "value": 3.4911134956585377,
-      "display_value": "3 ",
-      "unit": "",
-      "period": "11412",
-      "institution": "永豐商業銀行",
-      "formula": "機構值 / 市場總計 * 100",
-      "sources": [
-        {
-          "metric": "當月簽帳金額",
-          "institution": "永豐商業銀行",
-          "value": 15837909.0
-        },
-        {
-          "metric": "當月簽帳金額_市場總計",
-          "value": 453663538.0
-        }
-      ],
-      "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.245105",
-      "rounding_rule": "四捨五入至小數第二位"
-    },
-    "market_share_當月簽帳金額_聯邦商業銀行_11412": {
-      "metric_id": "market_share_當月簽帳金額_聯邦商業銀行_11412",
-      "metric_name": "當月簽帳金額_市占率",
-      "value": 3.306615970534533,
-      "display_value": "3 ",
-      "unit": "",
-      "period": "11412",
-      "institution": "聯邦商業銀行",
-      "formula": "機構值 / 市場總計 * 100",
-      "sources": [
-        {
-          "metric": "當月簽帳金額",
-          "institution": "聯邦商業銀行",
-          "value": 15000911.0
-        },
-        {
-          "metric": "當月簽帳金額_市場總計",
-          "value": 453663538.0
-        }
-      ],
-      "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.244476",
-      "rounding_rule": "四捨五入至小數第二位"
-    },
-    "market_share_當月簽帳金額_滙豐(台灣)商業銀行_11412": {
-      "metric_id": "market_share_當月簽帳金額_滙豐(台灣)商業銀行_11412",
-      "metric_name": "當月簽帳金額_市占率",
-      "value": 2.582385626944522,
-      "display_value": "3 ",
-      "unit": "",
-      "period": "11412",
-      "institution": "滙豐(台灣)商業銀行",
-      "formula": "機構值 / 市場總計 * 100",
-      "sources": [
-        {
-          "metric": "當月簽帳金額",
-          "institution": "滙豐(台灣)商業銀行",
-          "value": 11715342.0
-        },
-        {
-          "metric": "當月簽帳金額_市場總計",
-          "value": 453663538.0
-        }
-      ],
-      "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.199966",
-      "rounding_rule": "四捨五入至小數第二位"
-    },
-    "market_share_當月簽帳金額_第一商業銀行_11412": {
-      "metric_id": "market_share_當月簽帳金額_第一商業銀行_11412",
-      "metric_name": "當月簽帳金額_市占率",
-      "value": 1.671555539471193,
-      "display_value": "2 ",
-      "unit": "",
-      "period": "11412",
-      "institution": "第一商業銀行",
-      "formula": "機構值 / 市場總計 * 100",
-      "sources": [
-        {
-          "metric": "當月簽帳金額",
-          "institution": "第一商業銀行",
-          "value": 7583238.0
-        },
-        {
-          "metric": "當月簽帳金額_市場總計",
-          "value": 453663538.0
-        }
-      ],
-      "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.200838",
-      "rounding_rule": "四捨五入至小數第二位"
-    },
-    "mom_流通卡數_台新國際商業銀行_11412": {
-      "metric_id": "mom_流通卡數_台新國際商業銀行_11412",
-      "metric_name": "流通卡數_月增率",
-      "value": -0.0015679054577130622,
-      "display_value": "-0 ",
-      "unit": "",
-      "period": "11412",
-      "institution": "台新國際商業銀行",
-      "formula": "(本期 - 前期) / 前期 * 100",
-      "sources": [
-        {
-          "metric": "流通卡數",
-          "period": "11412",
-          "value": 6632949.0
-        },
-        {
-          "metric": "流通卡數",
-          "period": "11411",
-          "value": 6633053.0
-        }
-      ],
-      "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.277330",
-      "rounding_rule": "四捨五入至小數第二位"
-    },
-    "mom_當月簽帳金額_台新國際商業銀行_11412": {
-      "metric_id": "mom_當月簽帳金額_台新國際商業銀行_11412",
-      "metric_name": "當月簽帳金額_月增率",
-      "value": 11.623320395311316,
-      "display_value": "12 ",
-      "unit": "",
-      "period": "11412",
-      "institution": "台新國際商業銀行",
-      "formula": "(本期 - 前期) / 前期 * 100",
-      "sources": [
-        {
-          "metric": "當月簽帳金額",
-          "period": "11412",
-          "value": 48399932.0
-        },
-        {
-          "metric": "當月簽帳金額",
-          "period": "11411",
-          "value": 43360054.0
-        }
-      ],
-      "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.204510",
-      "rounding_rule": "四捨五入至小數第二位"
-    },
-    "yoy_流通卡數_台新國際商業銀行_11412": {
-      "metric_id": "yoy_流通卡數_台新國際商業銀行_11412",
-      "metric_name": "流通卡數_年增率",
-      "value": null,
-      "display_value": "N/A",
-      "unit": "",
-      "period": "11412",
-      "institution": "台新國際商業銀行",
-      "formula": "(本期 - 去年同期) / 去年同期 * 100",
-      "sources": [],
-      "validation_status": "N/A - 缺少去年同期資料",
-      "timestamp": "2026-07-31T18:17:28.205463",
+      "timestamp": "2026-08-01T11:12:01.602511",
       "rounding_rule": "四捨五入至小數第二位"
     },
     "mom_流通卡數_三信商業銀行_11412": {
@@ -568,7 +72,80 @@
         }
       ],
       "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.224437",
+      "timestamp": "2026-08-01T11:12:01.603221",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_當月簽帳金額_三信商業銀行_11412": {
+      "metric_id": "mom_當月簽帳金額_三信商業銀行_11412",
+      "metric_name": "當月簽帳金額_月增率",
+      "value": 2.5538945253933827,
+      "display_value": "3 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "三信商業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "period": "11412",
+          "value": 140907.0
+        },
+        {
+          "metric": "當月簽帳金額",
+          "period": "11411",
+          "value": 137398.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.604536",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_流通卡數_上海商業儲蓄銀行_11412": {
+      "metric_id": "market_share_流通卡數_上海商業儲蓄銀行_11412",
+      "metric_name": "流通卡數_市占率",
+      "value": 0.636040680614036,
+      "display_value": "1 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "上海商業儲蓄銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "institution": "上海商業儲蓄銀行",
+          "value": 384715.0
+        },
+        {
+          "metric": "流通卡數_市場總計",
+          "value": 60485911.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.607013",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_當月簽帳金額_上海商業儲蓄銀行_11412": {
+      "metric_id": "market_share_當月簽帳金額_上海商業儲蓄銀行_11412",
+      "metric_name": "當月簽帳金額_市占率",
+      "value": 0.3937808200049791,
+      "display_value": "0 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "上海商業儲蓄銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "institution": "上海商業儲蓄銀行",
+          "value": 1786440.0
+        },
+        {
+          "metric": "當月簽帳金額_市場總計",
+          "value": 453663538.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.607657",
       "rounding_rule": "四捨五入至小數第二位"
     },
     "mom_流通卡數_上海商業儲蓄銀行_11412": {
@@ -593,7 +170,80 @@
         }
       ],
       "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.225464",
+      "timestamp": "2026-08-01T11:12:01.608360",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_當月簽帳金額_上海商業儲蓄銀行_11412": {
+      "metric_id": "mom_當月簽帳金額_上海商業儲蓄銀行_11412",
+      "metric_name": "當月簽帳金額_月增率",
+      "value": 14.7876373449849,
+      "display_value": "15 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "上海商業儲蓄銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "period": "11412",
+          "value": 1786440.0
+        },
+        {
+          "metric": "當月簽帳金額",
+          "period": "11411",
+          "value": 1556300.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.609598",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_流通卡數_中國信託商業銀行_11412": {
+      "metric_id": "market_share_流通卡數_中國信託商業銀行_11412",
+      "metric_name": "流通卡數_市占率",
+      "value": 15.6368926972101,
+      "display_value": "16 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "中國信託商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "institution": "中國信託商業銀行",
+          "value": 9458117.0
+        },
+        {
+          "metric": "流通卡數_市場總計",
+          "value": 60485911.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.613187",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_當月簽帳金額_中國信託商業銀行_11412": {
+      "metric_id": "market_share_當月簽帳金額_中國信託商業銀行_11412",
+      "metric_name": "當月簽帳金額_市占率",
+      "value": 18.49775857454958,
+      "display_value": "18 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "中國信託商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "institution": "中國信託商業銀行",
+          "value": 83917586.0
+        },
+        {
+          "metric": "當月簽帳金額_市場總計",
+          "value": 453663538.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.614029",
       "rounding_rule": "四捨五入至小數第二位"
     },
     "mom_流通卡數_中國信託商業銀行_11412": {
@@ -618,7 +268,80 @@
         }
       ],
       "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.274657",
+      "timestamp": "2026-08-01T11:12:01.614763",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_當月簽帳金額_中國信託商業銀行_11412": {
+      "metric_id": "mom_當月簽帳金額_中國信託商業銀行_11412",
+      "metric_name": "當月簽帳金額_月增率",
+      "value": 15.821609715493256,
+      "display_value": "16 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "中國信託商業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "period": "11412",
+          "value": 83917586.0
+        },
+        {
+          "metric": "當月簽帳金額",
+          "period": "11411",
+          "value": 72454170.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.616039",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_流通卡數_元大商業銀行_11412": {
+      "metric_id": "market_share_流通卡數_元大商業銀行_11412",
+      "metric_name": "流通卡數_市占率",
+      "value": 2.010972439515708,
+      "display_value": "2 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "元大商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "institution": "元大商業銀行",
+          "value": 1216355.0
+        },
+        {
+          "metric": "流通卡數_市場總計",
+          "value": 60485911.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.618962",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_當月簽帳金額_元大商業銀行_11412": {
+      "metric_id": "market_share_當月簽帳金額_元大商業銀行_11412",
+      "metric_name": "當月簽帳金額_市占率",
+      "value": 1.202419754527418,
+      "display_value": "1 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "元大商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "institution": "元大商業銀行",
+          "value": 5454940.0
+        },
+        {
+          "metric": "當月簽帳金額_市場總計",
+          "value": 453663538.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.619657",
       "rounding_rule": "四捨五入至小數第二位"
     },
     "mom_流通卡數_元大商業銀行_11412": {
@@ -643,7 +366,80 @@
         }
       ],
       "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.227480",
+      "timestamp": "2026-08-01T11:12:01.620398",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_當月簽帳金額_元大商業銀行_11412": {
+      "metric_id": "mom_當月簽帳金額_元大商業銀行_11412",
+      "metric_name": "當月簽帳金額_月增率",
+      "value": 17.768594149200524,
+      "display_value": "18 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "元大商業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "period": "11412",
+          "value": 5454940.0
+        },
+        {
+          "metric": "當月簽帳金額",
+          "period": "11411",
+          "value": 4631914.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.621675",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_流通卡數_兆豐國際商業銀行_11412": {
+      "metric_id": "market_share_流通卡數_兆豐國際商業銀行_11412",
+      "metric_name": "流通卡數_市占率",
+      "value": 1.8301038732805066,
+      "display_value": "2 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "兆豐國際商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "institution": "兆豐國際商業銀行",
+          "value": 1106955.0
+        },
+        {
+          "metric": "流通卡數_市場總計",
+          "value": 60485911.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.624362",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_當月簽帳金額_兆豐國際商業銀行_11412": {
+      "metric_id": "market_share_當月簽帳金額_兆豐國際商業銀行_11412",
+      "metric_name": "當月簽帳金額_市占率",
+      "value": 1.0846419400802716,
+      "display_value": "1 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "兆豐國際商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "institution": "兆豐國際商業銀行",
+          "value": 4920625.0
+        },
+        {
+          "metric": "當月簽帳金額_市場總計",
+          "value": 453663538.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.625031",
       "rounding_rule": "四捨五入至小數第二位"
     },
     "mom_流通卡數_兆豐國際商業銀行_11412": {
@@ -668,7 +464,80 @@
         }
       ],
       "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.228471",
+      "timestamp": "2026-08-01T11:12:01.625771",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_當月簽帳金額_兆豐國際商業銀行_11412": {
+      "metric_id": "mom_當月簽帳金額_兆豐國際商業銀行_11412",
+      "metric_name": "當月簽帳金額_月增率",
+      "value": 11.798973715809934,
+      "display_value": "12 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "兆豐國際商業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "period": "11412",
+          "value": 4920625.0
+        },
+        {
+          "metric": "當月簽帳金額",
+          "period": "11411",
+          "value": 4401315.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.627052",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_流通卡數_凱基商業銀行_11412": {
+      "metric_id": "market_share_流通卡數_凱基商業銀行_11412",
+      "metric_name": "流通卡數_市占率",
+      "value": 0.7004126961070323,
+      "display_value": "1 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "凱基商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "institution": "凱基商業銀行",
+          "value": 423651.0
+        },
+        {
+          "metric": "流通卡數_市場總計",
+          "value": 60485911.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.630443",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_當月簽帳金額_凱基商業銀行_11412": {
+      "metric_id": "market_share_當月簽帳金額_凱基商業銀行_11412",
+      "metric_name": "當月簽帳金額_市占率",
+      "value": 0.4853184828797063,
+      "display_value": "0 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "凱基商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "institution": "凱基商業銀行",
+          "value": 2201713.0
+        },
+        {
+          "metric": "當月簽帳金額_市場總計",
+          "value": 453663538.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.631082",
       "rounding_rule": "四捨五入至小數第二位"
     },
     "mom_流通卡數_凱基商業銀行_11412": {
@@ -693,7 +562,80 @@
         }
       ],
       "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.229591",
+      "timestamp": "2026-08-01T11:12:01.631796",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_當月簽帳金額_凱基商業銀行_11412": {
+      "metric_id": "mom_當月簽帳金額_凱基商業銀行_11412",
+      "metric_name": "當月簽帳金額_月增率",
+      "value": 21.015397671496554,
+      "display_value": "21 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "凱基商業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "period": "11412",
+          "value": 2201713.0
+        },
+        {
+          "metric": "當月簽帳金額",
+          "period": "11411",
+          "value": 1819366.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.633061",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_流通卡數_台中商業銀行_11412": {
+      "metric_id": "market_share_流通卡數_台中商業銀行_11412",
+      "metric_name": "流通卡數_市占率",
+      "value": 0.2552974691908005,
+      "display_value": "0 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "台中商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "institution": "台中商業銀行",
+          "value": 154419.0
+        },
+        {
+          "metric": "流通卡數_市場總計",
+          "value": 60485911.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.635573",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_當月簽帳金額_台中商業銀行_11412": {
+      "metric_id": "market_share_當月簽帳金額_台中商業銀行_11412",
+      "metric_name": "當月簽帳金額_市占率",
+      "value": 0.14733694555809773,
+      "display_value": "0 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "台中商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "institution": "台中商業銀行",
+          "value": 668414.0
+        },
+        {
+          "metric": "當月簽帳金額_市場總計",
+          "value": 453663538.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.636249",
       "rounding_rule": "四捨五入至小數第二位"
     },
     "mom_流通卡數_台中商業銀行_11412": {
@@ -718,7 +660,80 @@
         }
       ],
       "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.230583",
+      "timestamp": "2026-08-01T11:12:01.637069",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_當月簽帳金額_台中商業銀行_11412": {
+      "metric_id": "mom_當月簽帳金額_台中商業銀行_11412",
+      "metric_name": "當月簽帳金額_月增率",
+      "value": 14.736775250058793,
+      "display_value": "15 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "台中商業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "period": "11412",
+          "value": 668414.0
+        },
+        {
+          "metric": "當月簽帳金額",
+          "period": "11411",
+          "value": 582563.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.638870",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_流通卡數_台北富邦商業銀行_11412": {
+      "metric_id": "market_share_流通卡數_台北富邦商業銀行_11412",
+      "metric_name": "流通卡數_市占率",
+      "value": 12.219592757725017,
+      "display_value": "12 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "台北富邦商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "institution": "台北富邦商業銀行",
+          "value": 7391132.0
+        },
+        {
+          "metric": "流通卡數_市場總計",
+          "value": 60485911.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.641485",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_當月簽帳金額_台北富邦商業銀行_11412": {
+      "metric_id": "market_share_當月簽帳金額_台北富邦商業銀行_11412",
+      "metric_name": "當月簽帳金額_市占率",
+      "value": 12.977368924015225,
+      "display_value": "13 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "台北富邦商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "institution": "台北富邦商業銀行",
+          "value": 58873591.0
+        },
+        {
+          "metric": "當月簽帳金額_市場總計",
+          "value": 453663538.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.642148",
       "rounding_rule": "四捨五入至小數第二位"
     },
     "mom_流通卡數_台北富邦商業銀行_11412": {
@@ -743,7 +758,178 @@
         }
       ],
       "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.275952",
+      "timestamp": "2026-08-01T11:12:01.642861",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_當月簽帳金額_台北富邦商業銀行_11412": {
+      "metric_id": "mom_當月簽帳金額_台北富邦商業銀行_11412",
+      "metric_name": "當月簽帳金額_月增率",
+      "value": 15.109304937448057,
+      "display_value": "15 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "台北富邦商業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "period": "11412",
+          "value": 58873591.0
+        },
+        {
+          "metric": "當月簽帳金額",
+          "period": "11411",
+          "value": 51145814.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.644581",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_流通卡數_台新國際商業銀行_11412": {
+      "metric_id": "market_share_流通卡數_台新國際商業銀行_11412",
+      "metric_name": "流通卡數_市占率",
+      "value": 10.966105809334673,
+      "display_value": "11 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "台新國際商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "institution": "台新國際商業銀行",
+          "value": 6632949.0
+        },
+        {
+          "metric": "流通卡數_市場總計",
+          "value": 60485911.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.647114",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_當月簽帳金額_台新國際商業銀行_11412": {
+      "metric_id": "market_share_當月簽帳金額_台新國際商業銀行_11412",
+      "metric_name": "當月簽帳金額_市占率",
+      "value": 10.66868459682118,
+      "display_value": "11 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "台新國際商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "institution": "台新國際商業銀行",
+          "value": 48399932.0
+        },
+        {
+          "metric": "當月簽帳金額_市場總計",
+          "value": 453663538.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.647778",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_流通卡數_台新國際商業銀行_11412": {
+      "metric_id": "mom_流通卡數_台新國際商業銀行_11412",
+      "metric_name": "流通卡數_月增率",
+      "value": -0.0015679054577130622,
+      "display_value": "-0 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "台新國際商業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "period": "11412",
+          "value": 6632949.0
+        },
+        {
+          "metric": "流通卡數",
+          "period": "11411",
+          "value": 6633053.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.648510",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_當月簽帳金額_台新國際商業銀行_11412": {
+      "metric_id": "mom_當月簽帳金額_台新國際商業銀行_11412",
+      "metric_name": "當月簽帳金額_月增率",
+      "value": 11.623320395311316,
+      "display_value": "12 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "台新國際商業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "period": "11412",
+          "value": 48399932.0
+        },
+        {
+          "metric": "當月簽帳金額",
+          "period": "11411",
+          "value": 43360054.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.649778",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_流通卡數_台灣樂天信用卡股份有限公司_11412": {
+      "metric_id": "market_share_流通卡數_台灣樂天信用卡股份有限公司_11412",
+      "metric_name": "流通卡數_市占率",
+      "value": 0.9964717238035813,
+      "display_value": "1 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "台灣樂天信用卡股份有限公司",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "institution": "台灣樂天信用卡股份有限公司",
+          "value": 602725.0
+        },
+        {
+          "metric": "流通卡數_市場總計",
+          "value": 60485911.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.652387",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_當月簽帳金額_台灣樂天信用卡股份有限公司_11412": {
+      "metric_id": "market_share_當月簽帳金額_台灣樂天信用卡股份有限公司_11412",
+      "metric_name": "當月簽帳金額_市占率",
+      "value": 0.193073484340723,
+      "display_value": "0 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "台灣樂天信用卡股份有限公司",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "institution": "台灣樂天信用卡股份有限公司",
+          "value": 875904.0
+        },
+        {
+          "metric": "當月簽帳金額_市場總計",
+          "value": 453663538.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.653097",
       "rounding_rule": "四捨五入至小數第二位"
     },
     "mom_流通卡數_台灣樂天信用卡股份有限公司_11412": {
@@ -768,32 +954,276 @@
         }
       ],
       "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.233531",
+      "timestamp": "2026-08-01T11:12:01.653842",
       "rounding_rule": "四捨五入至小數第二位"
     },
-    "mom_流通卡數_玉山商業銀行_11412": {
-      "metric_id": "mom_流通卡數_玉山商業銀行_11412",
-      "metric_name": "流通卡數_月增率",
-      "value": 0.47616712227851793,
+    "mom_當月簽帳金額_台灣樂天信用卡股份有限公司_11412": {
+      "metric_id": "mom_當月簽帳金額_台灣樂天信用卡股份有限公司_11412",
+      "metric_name": "當月簽帳金額_月增率",
+      "value": 19.12004700045695,
+      "display_value": "19 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "台灣樂天信用卡股份有限公司",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "period": "11412",
+          "value": 875904.0
+        },
+        {
+          "metric": "當月簽帳金額",
+          "period": "11411",
+          "value": 735312.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.655101",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_流通卡數_台灣美國運通國際(股)公司_11412": {
+      "metric_id": "market_share_流通卡數_台灣美國運通國際(股)公司_11412",
+      "metric_name": "流通卡數_市占率",
+      "value": 0.32775566528211836,
       "display_value": "0 ",
       "unit": "",
       "period": "11412",
-      "institution": "玉山商業銀行",
+      "institution": "台灣美國運通國際(股)公司",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "institution": "台灣美國運通國際(股)公司",
+          "value": 198246.0
+        },
+        {
+          "metric": "流通卡數_市場總計",
+          "value": 60485911.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.657581",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_當月簽帳金額_台灣美國運通國際(股)公司_11412": {
+      "metric_id": "market_share_當月簽帳金額_台灣美國運通國際(股)公司_11412",
+      "metric_name": "當月簽帳金額_市占率",
+      "value": 1.5104782346426968,
+      "display_value": "2 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "台灣美國運通國際(股)公司",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "institution": "台灣美國運通國際(股)公司",
+          "value": 6852489.0
+        },
+        {
+          "metric": "當月簽帳金額_市場總計",
+          "value": 453663538.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.658234",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_流通卡數_台灣美國運通國際(股)公司_11412": {
+      "metric_id": "mom_流通卡數_台灣美國運通國際(股)公司_11412",
+      "metric_name": "流通卡數_月增率",
+      "value": -0.5003939912569074,
+      "display_value": "-1 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "台灣美國運通國際(股)公司",
       "formula": "(本期 - 前期) / 前期 * 100",
       "sources": [
         {
           "metric": "流通卡數",
           "period": "11412",
-          "value": 8748065.0
+          "value": 198246.0
         },
         {
           "metric": "流通卡數",
           "period": "11411",
-          "value": 8706607.0
+          "value": 199243.0
         }
       ],
       "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.275303",
+      "timestamp": "2026-08-01T11:12:01.658920",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_當月簽帳金額_台灣美國運通國際(股)公司_11412": {
+      "metric_id": "mom_當月簽帳金額_台灣美國運通國際(股)公司_11412",
+      "metric_name": "當月簽帳金額_月增率",
+      "value": 0.35337919403476004,
+      "display_value": "0 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "台灣美國運通國際(股)公司",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "period": "11412",
+          "value": 6852489.0
+        },
+        {
+          "metric": "當月簽帳金額",
+          "period": "11411",
+          "value": 6828359.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.660316",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_流通卡數_合作金庫商業銀行_11412": {
+      "metric_id": "market_share_流通卡數_合作金庫商業銀行_11412",
+      "metric_name": "流通卡數_市占率",
+      "value": 1.1121267562622972,
+      "display_value": "1 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "合作金庫商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "institution": "合作金庫商業銀行",
+          "value": 672680.0
+        },
+        {
+          "metric": "流通卡數_市場總計",
+          "value": 60485911.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.662865",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_當月簽帳金額_合作金庫商業銀行_11412": {
+      "metric_id": "market_share_當月簽帳金額_合作金庫商業銀行_11412",
+      "metric_name": "當月簽帳金額_市占率",
+      "value": 1.0129013277677168,
+      "display_value": "1 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "合作金庫商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "institution": "合作金庫商業銀行",
+          "value": 4595164.0
+        },
+        {
+          "metric": "當月簽帳金額_市場總計",
+          "value": 453663538.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.663527",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_流通卡數_合作金庫商業銀行_11412": {
+      "metric_id": "mom_流通卡數_合作金庫商業銀行_11412",
+      "metric_name": "流通卡數_月增率",
+      "value": -0.6904778425556981,
+      "display_value": "-1 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "合作金庫商業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "period": "11412",
+          "value": 672680.0
+        },
+        {
+          "metric": "流通卡數",
+          "period": "11411",
+          "value": 677357.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.664209",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_當月簽帳金額_合作金庫商業銀行_11412": {
+      "metric_id": "mom_當月簽帳金額_合作金庫商業銀行_11412",
+      "metric_name": "當月簽帳金額_月增率",
+      "value": 7.730153918506395,
+      "display_value": "8 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "合作金庫商業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "period": "11412",
+          "value": 4595164.0
+        },
+        {
+          "metric": "當月簽帳金額",
+          "period": "11411",
+          "value": 4265439.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.665462",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_流通卡數_國泰世華商業銀行_11412": {
+      "metric_id": "market_share_流通卡數_國泰世華商業銀行_11412",
+      "metric_name": "流通卡數_市占率",
+      "value": 12.13045133766771,
+      "display_value": "12 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "國泰世華商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "institution": "國泰世華商業銀行",
+          "value": 7337214.0
+        },
+        {
+          "metric": "流通卡數_市場總計",
+          "value": 60485911.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.667960",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_當月簽帳金額_國泰世華商業銀行_11412": {
+      "metric_id": "market_share_當月簽帳金額_國泰世華商業銀行_11412",
+      "metric_name": "當月簽帳金額_市占率",
+      "value": 18.048246804441224,
+      "display_value": "18 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "國泰世華商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "institution": "國泰世華商業銀行",
+          "value": 81878315.0
+        },
+        {
+          "metric": "當月簽帳金額_市場總計",
+          "value": 453663538.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.668622",
       "rounding_rule": "四捨五入至小數第二位"
     },
     "mom_流通卡數_國泰世華商業銀行_11412": {
@@ -818,7 +1248,276 @@
         }
       ],
       "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.276616",
+      "timestamp": "2026-08-01T11:12:01.669376",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_當月簽帳金額_國泰世華商業銀行_11412": {
+      "metric_id": "mom_當月簽帳金額_國泰世華商業銀行_11412",
+      "metric_name": "當月簽帳金額_月增率",
+      "value": 18.133696479288023,
+      "display_value": "18 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "國泰世華商業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "period": "11412",
+          "value": 81878315.0
+        },
+        {
+          "metric": "當月簽帳金額",
+          "period": "11411",
+          "value": 69309873.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.670653",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_流通卡數_安泰商業銀行_11412": {
+      "metric_id": "market_share_流通卡數_安泰商業銀行_11412",
+      "metric_name": "流通卡數_市占率",
+      "value": 0.19975891575808458,
+      "display_value": "0 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "安泰商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "institution": "安泰商業銀行",
+          "value": 120826.0
+        },
+        {
+          "metric": "流通卡數_市場總計",
+          "value": 60485911.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.673154",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_當月簽帳金額_安泰商業銀行_11412": {
+      "metric_id": "market_share_當月簽帳金額_安泰商業銀行_11412",
+      "metric_name": "當月簽帳金額_市占率",
+      "value": 0.11299431342000424,
+      "display_value": "0 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "安泰商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "institution": "安泰商業銀行",
+          "value": 512614.0
+        },
+        {
+          "metric": "當月簽帳金額_市場總計",
+          "value": 453663538.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.673809",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_流通卡數_安泰商業銀行_11412": {
+      "metric_id": "mom_流通卡數_安泰商業銀行_11412",
+      "metric_name": "流通卡數_月增率",
+      "value": 0.0629399585921325,
+      "display_value": "0 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "安泰商業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "period": "11412",
+          "value": 120826.0
+        },
+        {
+          "metric": "流通卡數",
+          "period": "11411",
+          "value": 120750.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.674554",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_當月簽帳金額_安泰商業銀行_11412": {
+      "metric_id": "mom_當月簽帳金額_安泰商業銀行_11412",
+      "metric_name": "當月簽帳金額_月增率",
+      "value": 7.715777640025635,
+      "display_value": "8 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "安泰商業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "period": "11412",
+          "value": 512614.0
+        },
+        {
+          "metric": "當月簽帳金額",
+          "period": "11411",
+          "value": 475895.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.675906",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_流通卡數_彰化商業銀行_11412": {
+      "metric_id": "market_share_流通卡數_彰化商業銀行_11412",
+      "metric_name": "流通卡數_市占率",
+      "value": 0.9510694151568619,
+      "display_value": "1 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "彰化商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "institution": "彰化商業銀行",
+          "value": 575263.0
+        },
+        {
+          "metric": "流通卡數_市場總計",
+          "value": 60485911.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.678427",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_當月簽帳金額_彰化商業銀行_11412": {
+      "metric_id": "market_share_當月簽帳金額_彰化商業銀行_11412",
+      "metric_name": "當月簽帳金額_市占率",
+      "value": 0.5323308570590921,
+      "display_value": "1 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "彰化商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "institution": "彰化商業銀行",
+          "value": 2414991.0
+        },
+        {
+          "metric": "當月簽帳金額_市場總計",
+          "value": 453663538.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.679079",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_流通卡數_彰化商業銀行_11412": {
+      "metric_id": "mom_流通卡數_彰化商業銀行_11412",
+      "metric_name": "流通卡數_月增率",
+      "value": 0.005910689481928067,
+      "display_value": "0 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "彰化商業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "period": "11412",
+          "value": 575263.0
+        },
+        {
+          "metric": "流通卡數",
+          "period": "11411",
+          "value": 575229.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.679809",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_當月簽帳金額_彰化商業銀行_11412": {
+      "metric_id": "mom_當月簽帳金額_彰化商業銀行_11412",
+      "metric_name": "當月簽帳金額_月增率",
+      "value": 15.235859815411985,
+      "display_value": "15 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "彰化商業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "period": "11412",
+          "value": 2414991.0
+        },
+        {
+          "metric": "當月簽帳金額",
+          "period": "11411",
+          "value": 2095694.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.681056",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_流通卡數_星展(台灣)商業銀行_11412": {
+      "metric_id": "market_share_流通卡數_星展(台灣)商業銀行_11412",
+      "metric_name": "流通卡數_市占率",
+      "value": 5.496398987856859,
+      "display_value": "5 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "星展(台灣)商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "institution": "星展(台灣)商業銀行",
+          "value": 3324547.0
+        },
+        {
+          "metric": "流通卡數_市場總計",
+          "value": 60485911.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.683581",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_當月簽帳金額_星展(台灣)商業銀行_11412": {
+      "metric_id": "market_share_當月簽帳金額_星展(台灣)商業銀行_11412",
+      "metric_name": "當月簽帳金額_市占率",
+      "value": 5.288262774161939,
+      "display_value": "5 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "星展(台灣)商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "institution": "星展(台灣)商業銀行",
+          "value": 23990920.0
+        },
+        {
+          "metric": "當月簽帳金額_市場總計",
+          "value": 453663538.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.684237",
       "rounding_rule": "四捨五入至小數第二位"
     },
     "mom_流通卡數_星展(台灣)商業銀行_11412": {
@@ -843,32 +1542,80 @@
         }
       ],
       "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.278278",
+      "timestamp": "2026-08-01T11:12:01.684942",
       "rounding_rule": "四捨五入至小數第二位"
     },
-    "mom_流通卡數_聯邦商業銀行_11412": {
-      "metric_id": "mom_流通卡數_聯邦商業銀行_11412",
-      "metric_name": "流通卡數_月增率",
-      "value": 0.26992841794932215,
-      "display_value": "0 ",
+    "mom_當月簽帳金額_星展(台灣)商業銀行_11412": {
+      "metric_id": "mom_當月簽帳金額_星展(台灣)商業銀行_11412",
+      "metric_name": "當月簽帳金額_月增率",
+      "value": 13.370398692193355,
+      "display_value": "13 ",
       "unit": "",
       "period": "11412",
-      "institution": "聯邦商業銀行",
+      "institution": "星展(台灣)商業銀行",
       "formula": "(本期 - 前期) / 前期 * 100",
       "sources": [
         {
-          "metric": "流通卡數",
+          "metric": "當月簽帳金額",
           "period": "11412",
-          "value": 2731780.0
+          "value": 23990920.0
         },
         {
-          "metric": "流通卡數",
+          "metric": "當月簽帳金額",
           "period": "11411",
-          "value": 2724426.0
+          "value": 21161538.0
         }
       ],
       "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.278987",
+      "timestamp": "2026-08-01T11:12:01.686186",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_流通卡數_永豐商業銀行_11412": {
+      "metric_id": "market_share_流通卡數_永豐商業銀行_11412",
+      "metric_name": "流通卡數_市占率",
+      "value": 4.097779067922115,
+      "display_value": "4 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "永豐商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "institution": "永豐商業銀行",
+          "value": 2478579.0
+        },
+        {
+          "metric": "流通卡數_市場總計",
+          "value": 60485911.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.688851",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_當月簽帳金額_永豐商業銀行_11412": {
+      "metric_id": "market_share_當月簽帳金額_永豐商業銀行_11412",
+      "metric_name": "當月簽帳金額_市占率",
+      "value": 3.4911134956585377,
+      "display_value": "3 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "永豐商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "institution": "永豐商業銀行",
+          "value": 15837909.0
+        },
+        {
+          "metric": "當月簽帳金額_市場總計",
+          "value": 453663538.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.689675",
       "rounding_rule": "四捨五入至小數第二位"
     },
     "mom_流通卡數_永豐商業銀行_11412": {
@@ -893,7 +1640,374 @@
         }
       ],
       "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.279642",
+      "timestamp": "2026-08-01T11:12:01.690456",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_當月簽帳金額_永豐商業銀行_11412": {
+      "metric_id": "mom_當月簽帳金額_永豐商業銀行_11412",
+      "metric_name": "當月簽帳金額_月增率",
+      "value": 14.844194080696965,
+      "display_value": "15 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "永豐商業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "period": "11412",
+          "value": 15837909.0
+        },
+        {
+          "metric": "當月簽帳金額",
+          "period": "11411",
+          "value": 13790779.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.692174",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_流通卡數_渣打國際商業銀行_11412": {
+      "metric_id": "market_share_流通卡數_渣打國際商業銀行_11412",
+      "metric_name": "流通卡數_市占率",
+      "value": 0.3735035089411152,
+      "display_value": "0 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "渣打國際商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "institution": "渣打國際商業銀行",
+          "value": 225917.0
+        },
+        {
+          "metric": "流通卡數_市場總計",
+          "value": 60485911.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.694858",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_當月簽帳金額_渣打國際商業銀行_11412": {
+      "metric_id": "market_share_當月簽帳金額_渣打國際商業銀行_11412",
+      "metric_name": "當月簽帳金額_市占率",
+      "value": 0.3103317507522502,
+      "display_value": "0 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "渣打國際商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "institution": "渣打國際商業銀行",
+          "value": 1407862.0
+        },
+        {
+          "metric": "當月簽帳金額_市場總計",
+          "value": 453663538.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.695521",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_流通卡數_渣打國際商業銀行_11412": {
+      "metric_id": "mom_流通卡數_渣打國際商業銀行_11412",
+      "metric_name": "流通卡數_月增率",
+      "value": -1.1403666151765905,
+      "display_value": "-1 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "渣打國際商業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "period": "11412",
+          "value": 225917.0
+        },
+        {
+          "metric": "流通卡數",
+          "period": "11411",
+          "value": 228523.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.696239",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_當月簽帳金額_渣打國際商業銀行_11412": {
+      "metric_id": "mom_當月簽帳金額_渣打國際商業銀行_11412",
+      "metric_name": "當月簽帳金額_月增率",
+      "value": 12.908340397479524,
+      "display_value": "13 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "渣打國際商業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "period": "11412",
+          "value": 1407862.0
+        },
+        {
+          "metric": "當月簽帳金額",
+          "period": "11411",
+          "value": 1246907.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.697507",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_流通卡數_滙豐(台灣)商業銀行_11412": {
+      "metric_id": "market_share_流通卡數_滙豐(台灣)商業銀行_11412",
+      "metric_name": "流通卡數_市占率",
+      "value": 1.4093513446461936,
+      "display_value": "1 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "滙豐(台灣)商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "institution": "滙豐(台灣)商業銀行",
+          "value": 852459.0
+        },
+        {
+          "metric": "流通卡數_市場總計",
+          "value": 60485911.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.699992",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_當月簽帳金額_滙豐(台灣)商業銀行_11412": {
+      "metric_id": "market_share_當月簽帳金額_滙豐(台灣)商業銀行_11412",
+      "metric_name": "當月簽帳金額_市占率",
+      "value": 2.582385626944522,
+      "display_value": "3 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "滙豐(台灣)商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "institution": "滙豐(台灣)商業銀行",
+          "value": 11715342.0
+        },
+        {
+          "metric": "當月簽帳金額_市場總計",
+          "value": 453663538.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.700739",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_流通卡數_滙豐(台灣)商業銀行_11412": {
+      "metric_id": "mom_流通卡數_滙豐(台灣)商業銀行_11412",
+      "metric_name": "流通卡數_月增率",
+      "value": 0.29153592845016535,
+      "display_value": "0 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "滙豐(台灣)商業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "period": "11412",
+          "value": 852459.0
+        },
+        {
+          "metric": "流通卡數",
+          "period": "11411",
+          "value": 849981.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.701540",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_當月簽帳金額_滙豐(台灣)商業銀行_11412": {
+      "metric_id": "mom_當月簽帳金額_滙豐(台灣)商業銀行_11412",
+      "metric_name": "當月簽帳金額_月增率",
+      "value": 12.47536702957915,
+      "display_value": "12 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "滙豐(台灣)商業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "period": "11412",
+          "value": 11715342.0
+        },
+        {
+          "metric": "當月簽帳金額",
+          "period": "11411",
+          "value": 10415918.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.703279",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_流通卡數_玉山商業銀行_11412": {
+      "metric_id": "market_share_流通卡數_玉山商業銀行_11412",
+      "metric_name": "流通卡數_市占率",
+      "value": 14.462979651575388,
+      "display_value": "14 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "玉山商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "institution": "玉山商業銀行",
+          "value": 8748065.0
+        },
+        {
+          "metric": "流通卡數_市場總計",
+          "value": 60485911.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.705808",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_當月簽帳金額_玉山商業銀行_11412": {
+      "metric_id": "market_share_當月簽帳金額_玉山商業銀行_11412",
+      "metric_name": "當月簽帳金額_市占率",
+      "value": 11.969150361826081,
+      "display_value": "12 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "玉山商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "institution": "玉山商業銀行",
+          "value": 54299671.0
+        },
+        {
+          "metric": "當月簽帳金額_市場總計",
+          "value": 453663538.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.706457",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_流通卡數_玉山商業銀行_11412": {
+      "metric_id": "mom_流通卡數_玉山商業銀行_11412",
+      "metric_name": "流通卡數_月增率",
+      "value": 0.47616712227851793,
+      "display_value": "0 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "玉山商業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "period": "11412",
+          "value": 8748065.0
+        },
+        {
+          "metric": "流通卡數",
+          "period": "11411",
+          "value": 8706607.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.707147",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_當月簽帳金額_玉山商業銀行_11412": {
+      "metric_id": "mom_當月簽帳金額_玉山商業銀行_11412",
+      "metric_name": "當月簽帳金額_月增率",
+      "value": 12.117302664350662,
+      "display_value": "12 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "玉山商業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "period": "11412",
+          "value": 54299671.0
+        },
+        {
+          "metric": "當月簽帳金額",
+          "period": "11411",
+          "value": 48431125.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.709145",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_流通卡數_第一商業銀行_11412": {
+      "metric_id": "market_share_流通卡數_第一商業銀行_11412",
+      "metric_name": "流通卡數_市占率",
+      "value": 2.531556480979513,
+      "display_value": "3 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "第一商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "institution": "第一商業銀行",
+          "value": 1531235.0
+        },
+        {
+          "metric": "流通卡數_市場總計",
+          "value": 60485911.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.711634",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_當月簽帳金額_第一商業銀行_11412": {
+      "metric_id": "market_share_當月簽帳金額_第一商業銀行_11412",
+      "metric_name": "當月簽帳金額_市占率",
+      "value": 1.671555539471193,
+      "display_value": "2 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "第一商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "institution": "第一商業銀行",
+          "value": 7583238.0
+        },
+        {
+          "metric": "當月簽帳金額_市場總計",
+          "value": 453663538.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.712302",
       "rounding_rule": "四捨五入至小數第二位"
     },
     "mom_流通卡數_第一商業銀行_11412": {
@@ -918,7 +2032,914 @@
         }
       ],
       "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.280298",
+      "timestamp": "2026-08-01T11:12:01.713092",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_當月簽帳金額_第一商業銀行_11412": {
+      "metric_id": "mom_當月簽帳金額_第一商業銀行_11412",
+      "metric_name": "當月簽帳金額_月增率",
+      "value": 15.664964972140915,
+      "display_value": "16 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "第一商業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "period": "11412",
+          "value": 7583238.0
+        },
+        {
+          "metric": "當月簽帳金額",
+          "period": "11411",
+          "value": 6556210.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.714347",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_流通卡數_總計_11412": {
+      "metric_id": "mom_流通卡數_總計_11412",
+      "metric_name": "流通卡數_月增率",
+      "value": 0.1015978264850457,
+      "display_value": "0 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "總計",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "period": "11412",
+          "value": 60485911.0
+        },
+        {
+          "metric": "流通卡數",
+          "period": "11411",
+          "value": 60424521.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.716846",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_當月簽帳金額_總計_11412": {
+      "metric_id": "mom_當月簽帳金額_總計_11412",
+      "metric_name": "當月簽帳金額_月增率",
+      "value": 14.357976085101857,
+      "display_value": "14 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "總計",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "period": "11412",
+          "value": 453663538.0
+        },
+        {
+          "metric": "當月簽帳金額",
+          "period": "11411",
+          "value": 396704763.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.718234",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_流通卡數_聯邦商業銀行_11412": {
+      "metric_id": "market_share_流通卡數_聯邦商業銀行_11412",
+      "metric_name": "流通卡數_市占率",
+      "value": 4.516390602102364,
+      "display_value": "5 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "聯邦商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "institution": "聯邦商業銀行",
+          "value": 2731780.0
+        },
+        {
+          "metric": "流通卡數_市場總計",
+          "value": 60485911.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.720980",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_當月簽帳金額_聯邦商業銀行_11412": {
+      "metric_id": "market_share_當月簽帳金額_聯邦商業銀行_11412",
+      "metric_name": "當月簽帳金額_市占率",
+      "value": 3.306615970534533,
+      "display_value": "3 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "聯邦商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "institution": "聯邦商業銀行",
+          "value": 15000911.0
+        },
+        {
+          "metric": "當月簽帳金額_市場總計",
+          "value": 453663538.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.721643",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_流通卡數_聯邦商業銀行_11412": {
+      "metric_id": "mom_流通卡數_聯邦商業銀行_11412",
+      "metric_name": "流通卡數_月增率",
+      "value": 0.26992841794932215,
+      "display_value": "0 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "聯邦商業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "period": "11412",
+          "value": 2731780.0
+        },
+        {
+          "metric": "流通卡數",
+          "period": "11411",
+          "value": 2724426.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.722350",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_當月簽帳金額_聯邦商業銀行_11412": {
+      "metric_id": "mom_當月簽帳金額_聯邦商業銀行_11412",
+      "metric_name": "當月簽帳金額_月增率",
+      "value": 7.398375089672197,
+      "display_value": "7 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "聯邦商業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "period": "11412",
+          "value": 15000911.0
+        },
+        {
+          "metric": "當月簽帳金額",
+          "period": "11411",
+          "value": 13967540.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.724246",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_流通卡數_臺灣中小企業銀行_11412": {
+      "metric_id": "market_share_流通卡數_臺灣中小企業銀行_11412",
+      "metric_name": "流通卡數_市占率",
+      "value": 0.2885035491984241,
+      "display_value": "0 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "臺灣中小企業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "institution": "臺灣中小企業銀行",
+          "value": 174504.0
+        },
+        {
+          "metric": "流通卡數_市場總計",
+          "value": 60485911.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.726752",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_當月簽帳金額_臺灣中小企業銀行_11412": {
+      "metric_id": "market_share_當月簽帳金額_臺灣中小企業銀行_11412",
+      "metric_name": "當月簽帳金額_市占率",
+      "value": 0.24831376243422057,
+      "display_value": "0 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "臺灣中小企業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "institution": "臺灣中小企業銀行",
+          "value": 1126509.0
+        },
+        {
+          "metric": "當月簽帳金額_市場總計",
+          "value": 453663538.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.727400",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_流通卡數_臺灣中小企業銀行_11412": {
+      "metric_id": "mom_流通卡數_臺灣中小企業銀行_11412",
+      "metric_name": "流通卡數_月增率",
+      "value": -0.016615768937679406,
+      "display_value": "-0 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "臺灣中小企業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "period": "11412",
+          "value": 174504.0
+        },
+        {
+          "metric": "流通卡數",
+          "period": "11411",
+          "value": 174533.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.728124",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_當月簽帳金額_臺灣中小企業銀行_11412": {
+      "metric_id": "mom_當月簽帳金額_臺灣中小企業銀行_11412",
+      "metric_name": "當月簽帳金額_月增率",
+      "value": 6.795515477404847,
+      "display_value": "7 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "臺灣中小企業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "period": "11412",
+          "value": 1126509.0
+        },
+        {
+          "metric": "當月簽帳金額",
+          "period": "11411",
+          "value": 1054828.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.729356",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_流通卡數_臺灣土地銀行_11412": {
+      "metric_id": "market_share_流通卡數_臺灣土地銀行_11412",
+      "metric_name": "流通卡數_市占率",
+      "value": 0.5075198421000884,
+      "display_value": "1 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "臺灣土地銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "institution": "臺灣土地銀行",
+          "value": 306978.0
+        },
+        {
+          "metric": "流通卡數_市場總計",
+          "value": 60485911.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.731792",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_當月簽帳金額_臺灣土地銀行_11412": {
+      "metric_id": "market_share_當月簽帳金額_臺灣土地銀行_11412",
+      "metric_name": "當月簽帳金額_市占率",
+      "value": 0.22295708499279923,
+      "display_value": "0 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "臺灣土地銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "institution": "臺灣土地銀行",
+          "value": 1011475.0
+        },
+        {
+          "metric": "當月簽帳金額_市場總計",
+          "value": 453663538.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.732415",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_流通卡數_臺灣土地銀行_11412": {
+      "metric_id": "mom_流通卡數_臺灣土地銀行_11412",
+      "metric_name": "流通卡數_月增率",
+      "value": -1.4453576473609862,
+      "display_value": "-1 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "臺灣土地銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "period": "11412",
+          "value": 306978.0
+        },
+        {
+          "metric": "流通卡數",
+          "period": "11411",
+          "value": 311480.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.733098",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_當月簽帳金額_臺灣土地銀行_11412": {
+      "metric_id": "mom_當月簽帳金額_臺灣土地銀行_11412",
+      "metric_name": "當月簽帳金額_月增率",
+      "value": 26.062176424107818,
+      "display_value": "26 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "臺灣土地銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "period": "11412",
+          "value": 1011475.0
+        },
+        {
+          "metric": "當月簽帳金額",
+          "period": "11411",
+          "value": 802362.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.734343",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_流通卡數_臺灣新光商業銀行_11412": {
+      "metric_id": "market_share_流通卡數_臺灣新光商業銀行_11412",
+      "metric_name": "流通卡數_市占率",
+      "value": 1.7567429876355833,
+      "display_value": "2 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "臺灣新光商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "institution": "臺灣新光商業銀行",
+          "value": 1062582.0
+        },
+        {
+          "metric": "流通卡數_市場總計",
+          "value": 60485911.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.736764",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_當月簽帳金額_臺灣新光商業銀行_11412": {
+      "metric_id": "market_share_當月簽帳金額_臺灣新光商業銀行_11412",
+      "metric_name": "當月簽帳金額_市占率",
+      "value": 1.1427792991377674,
+      "display_value": "1 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "臺灣新光商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "institution": "臺灣新光商業銀行",
+          "value": 5184373.0
+        },
+        {
+          "metric": "當月簽帳金額_市場總計",
+          "value": 453663538.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.737417",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_流通卡數_臺灣新光商業銀行_11412": {
+      "metric_id": "mom_流通卡數_臺灣新光商業銀行_11412",
+      "metric_name": "流通卡數_月增率",
+      "value": -0.9886394978717695,
+      "display_value": "-1 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "臺灣新光商業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "period": "11412",
+          "value": 1062582.0
+        },
+        {
+          "metric": "流通卡數",
+          "period": "11411",
+          "value": 1073192.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.738092",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_當月簽帳金額_臺灣新光商業銀行_11412": {
+      "metric_id": "mom_當月簽帳金額_臺灣新光商業銀行_11412",
+      "metric_name": "當月簽帳金額_月增率",
+      "value": 31.599170253822926,
+      "display_value": "32 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "臺灣新光商業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "period": "11412",
+          "value": 5184373.0
+        },
+        {
+          "metric": "當月簽帳金額",
+          "period": "11411",
+          "value": 3939518.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.739329",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_流通卡數_臺灣銀行_11412": {
+      "metric_id": "market_share_流通卡數_臺灣銀行_11412",
+      "metric_name": "流通卡數_市占率",
+      "value": 0.47854945922861275,
+      "display_value": "0 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "臺灣銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "institution": "臺灣銀行",
+          "value": 289455.0
+        },
+        {
+          "metric": "流通卡數_市場總計",
+          "value": 60485911.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.742027",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_當月簽帳金額_臺灣銀行_11412": {
+      "metric_id": "market_share_當月簽帳金額_臺灣銀行_11412",
+      "metric_name": "當月簽帳金額_市占率",
+      "value": 0.26475237690360737,
+      "display_value": "0 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "臺灣銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "institution": "臺灣銀行",
+          "value": 1201085.0
+        },
+        {
+          "metric": "當月簽帳金額_市場總計",
+          "value": 453663538.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.742814",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_流通卡數_臺灣銀行_11412": {
+      "metric_id": "mom_流通卡數_臺灣銀行_11412",
+      "metric_name": "流通卡數_月增率",
+      "value": 1.0765717318732277,
+      "display_value": "1 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "臺灣銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "period": "11412",
+          "value": 289455.0
+        },
+        {
+          "metric": "流通卡數",
+          "period": "11411",
+          "value": 286372.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.743531",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_當月簽帳金額_臺灣銀行_11412": {
+      "metric_id": "mom_當月簽帳金額_臺灣銀行_11412",
+      "metric_name": "當月簽帳金額_月增率",
+      "value": 24.11031293011875,
+      "display_value": "24 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "臺灣銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "period": "11412",
+          "value": 1201085.0
+        },
+        {
+          "metric": "當月簽帳金額",
+          "period": "11411",
+          "value": 967756.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.744782",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_流通卡數_花旗(台灣)商業銀行_11412": {
+      "metric_id": "market_share_流通卡數_花旗(台灣)商業銀行_11412",
+      "metric_name": "流通卡數_市占率",
+      "value": 0.044079686590154855,
+      "display_value": "0 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "花旗(台灣)商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "institution": "花旗(台灣)商業銀行",
+          "value": 26662.0
+        },
+        {
+          "metric": "流通卡數_市場總計",
+          "value": 60485911.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.747202",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_當月簽帳金額_花旗(台灣)商業銀行_11412": {
+      "metric_id": "market_share_當月簽帳金額_花旗(台灣)商業銀行_11412",
+      "metric_name": "當月簽帳金額_市占率",
+      "value": 0.14701886841961717,
+      "display_value": "0 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "花旗(台灣)商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "institution": "花旗(台灣)商業銀行",
+          "value": 666971.0
+        },
+        {
+          "metric": "當月簽帳金額_市場總計",
+          "value": 453663538.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.747818",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_流通卡數_花旗(台灣)商業銀行_11412": {
+      "metric_id": "mom_流通卡數_花旗(台灣)商業銀行_11412",
+      "metric_name": "流通卡數_月增率",
+      "value": 1.249382903581058,
+      "display_value": "1 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "花旗(台灣)商業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "period": "11412",
+          "value": 26662.0
+        },
+        {
+          "metric": "流通卡數",
+          "period": "11411",
+          "value": 26333.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.748543",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_當月簽帳金額_花旗(台灣)商業銀行_11412": {
+      "metric_id": "mom_當月簽帳金額_花旗(台灣)商業銀行_11412",
+      "metric_name": "當月簽帳金額_月增率",
+      "value": 10.551222083359578,
+      "display_value": "11 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "花旗(台灣)商業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "period": "11412",
+          "value": 666971.0
+        },
+        {
+          "metric": "當月簽帳金額",
+          "period": "11411",
+          "value": 603314.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.749762",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_流通卡數_華南商業銀行_11412": {
+      "metric_id": "market_share_流通卡數_華南商業銀行_11412",
+      "metric_name": "流通卡數_市占率",
+      "value": 1.6776683747063013,
+      "display_value": "2 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "華南商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "institution": "華南商業銀行",
+          "value": 1014753.0
+        },
+        {
+          "metric": "流通卡數_市場總計",
+          "value": 60485911.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.752194",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_當月簽帳金額_華南商業銀行_11412": {
+      "metric_id": "market_share_當月簽帳金額_華南商業銀行_11412",
+      "metric_name": "當月簽帳金額_市占率",
+      "value": 1.272005245438085,
+      "display_value": "1 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "華南商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "institution": "華南商業銀行",
+          "value": 5770624.0
+        },
+        {
+          "metric": "當月簽帳金額_市場總計",
+          "value": 453663538.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.752830",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_流通卡數_華南商業銀行_11412": {
+      "metric_id": "mom_流通卡數_華南商業銀行_11412",
+      "metric_name": "流通卡數_月增率",
+      "value": -0.6350135815549363,
+      "display_value": "-1 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "華南商業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "period": "11412",
+          "value": 1014753.0
+        },
+        {
+          "metric": "流通卡數",
+          "period": "11411",
+          "value": 1021238.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.753513",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_當月簽帳金額_華南商業銀行_11412": {
+      "metric_id": "mom_當月簽帳金額_華南商業銀行_11412",
+      "metric_name": "當月簽帳金額_月增率",
+      "value": 16.606719377173256,
+      "display_value": "17 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "華南商業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "period": "11412",
+          "value": 5770624.0
+        },
+        {
+          "metric": "當月簽帳金額",
+          "period": "11411",
+          "value": 4948792.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.755015",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_流通卡數_華泰商業銀行_11412": {
+      "metric_id": "market_share_流通卡數_華泰商業銀行_11412",
+      "metric_name": "流通卡數_市占率",
+      "value": 0.015249832312189198,
+      "display_value": "0 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "華泰商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "institution": "華泰商業銀行",
+          "value": 9224.0
+        },
+        {
+          "metric": "流通卡數_市場總計",
+          "value": 60485911.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.757934",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_當月簽帳金額_華泰商業銀行_11412": {
+      "metric_id": "market_share_當月簽帳金額_華泰商業銀行_11412",
+      "metric_name": "當月簽帳金額_市占率",
+      "value": 0.011173919822491885,
+      "display_value": "0 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "華泰商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "institution": "華泰商業銀行",
+          "value": 50692.0
+        },
+        {
+          "metric": "當月簽帳金額_市場總計",
+          "value": 453663538.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.758586",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_流通卡數_華泰商業銀行_11412": {
+      "metric_id": "mom_流通卡數_華泰商業銀行_11412",
+      "metric_name": "流通卡數_月增率",
+      "value": -0.3134118664217011,
+      "display_value": "-0 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "華泰商業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "period": "11412",
+          "value": 9224.0
+        },
+        {
+          "metric": "流通卡數",
+          "period": "11411",
+          "value": 9253.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.759281",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_當月簽帳金額_華泰商業銀行_11412": {
+      "metric_id": "mom_當月簽帳金額_華泰商業銀行_11412",
+      "metric_name": "當月簽帳金額_月增率",
+      "value": 4.090349075975359,
+      "display_value": "4 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "華泰商業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "period": "11412",
+          "value": 50692.0
+        },
+        {
+          "metric": "當月簽帳金額",
+          "period": "11411",
+          "value": 48700.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.760654",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_流通卡數_遠東國際商業銀行_11412": {
+      "metric_id": "market_share_流通卡數_遠東國際商業銀行_11412",
+      "metric_name": "流通卡數_市占率",
+      "value": 2.132814036644005,
+      "display_value": "2 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "遠東國際商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "institution": "遠東國際商業銀行",
+          "value": 1290052.0
+        },
+        {
+          "metric": "流通卡數_市場總計",
+          "value": 60485911.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.763114",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_當月簽帳金額_遠東國際商業銀行_11412": {
+      "metric_id": "market_share_當月簽帳金額_遠東國際商業銀行_11412",
+      "metric_name": "當月簽帳金額_市占率",
+      "value": 0.9957346406798953,
+      "display_value": "1 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "遠東國際商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "institution": "遠東國際商業銀行",
+          "value": 4517285.0
+        },
+        {
+          "metric": "當月簽帳金額_市場總計",
+          "value": 453663538.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.763763",
       "rounding_rule": "四捨五入至小數第二位"
     },
     "mom_流通卡數_遠東國際商業銀行_11412": {
@@ -943,7 +2964,228 @@
         }
       ],
       "validation_status": "passed",
-      "timestamp": "2026-07-31T18:17:28.280935",
+      "timestamp": "2026-08-01T11:12:01.764464",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_當月簽帳金額_遠東國際商業銀行_11412": {
+      "metric_id": "mom_當月簽帳金額_遠東國際商業銀行_11412",
+      "metric_name": "當月簽帳金額_月增率",
+      "value": 6.69878214697379,
+      "display_value": "7 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "遠東國際商業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "period": "11412",
+          "value": 4517285.0
+        },
+        {
+          "metric": "當月簽帳金額",
+          "period": "11411",
+          "value": 4233680.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.765691",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_流通卡數_陽信商業銀行_11412": {
+      "metric_id": "market_share_流通卡數_陽信商業銀行_11412",
+      "metric_name": "流通卡數_市占率",
+      "value": 0.1868170589346005,
+      "display_value": "0 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "陽信商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "institution": "陽信商業銀行",
+          "value": 112998.0
+        },
+        {
+          "metric": "流通卡數_市場總計",
+          "value": 60485911.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.768133",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_當月簽帳金額_陽信商業銀行_11412": {
+      "metric_id": "market_share_當月簽帳金額_陽信商業銀行_11412",
+      "metric_name": "當月簽帳金額_市占率",
+      "value": 0.14046665570905986,
+      "display_value": "0 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "陽信商業銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "institution": "陽信商業銀行",
+          "value": 637246.0
+        },
+        {
+          "metric": "當月簽帳金額_市場總計",
+          "value": 453663538.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.768771",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_流通卡數_陽信商業銀行_11412": {
+      "metric_id": "mom_流通卡數_陽信商業銀行_11412",
+      "metric_name": "流通卡數_月增率",
+      "value": 0.44623808846536767,
+      "display_value": "0 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "陽信商業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "period": "11412",
+          "value": 112998.0
+        },
+        {
+          "metric": "流通卡數",
+          "period": "11411",
+          "value": 112496.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.769508",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_當月簽帳金額_陽信商業銀行_11412": {
+      "metric_id": "mom_當月簽帳金額_陽信商業銀行_11412",
+      "metric_name": "當月簽帳金額_月增率",
+      "value": 29.96479864252471,
+      "display_value": "30 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "陽信商業銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "period": "11412",
+          "value": 637246.0
+        },
+        {
+          "metric": "當月簽帳金額",
+          "period": "11411",
+          "value": 490322.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.770971",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_流通卡數_高雄銀行_11412": {
+      "metric_id": "market_share_流通卡數_高雄銀行_11412",
+      "metric_name": "流通卡數_市占率",
+      "value": 0.01624345213218331,
+      "display_value": "0 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "高雄銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "institution": "高雄銀行",
+          "value": 9825.0
+        },
+        {
+          "metric": "流通卡數_市場總計",
+          "value": 60485911.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.773841",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "market_share_當月簽帳金額_高雄銀行_11412": {
+      "metric_id": "market_share_當月簽帳金額_高雄銀行_11412",
+      "metric_name": "當月簽帳金額_市占率",
+      "value": 0.036987764266829835,
+      "display_value": "0 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "高雄銀行",
+      "formula": "機構值 / 市場總計 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "institution": "高雄銀行",
+          "value": 167800.0
+        },
+        {
+          "metric": "當月簽帳金額_市場總計",
+          "value": 453663538.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.774497",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_流通卡數_高雄銀行_11412": {
+      "metric_id": "mom_流通卡數_高雄銀行_11412",
+      "metric_name": "流通卡數_月增率",
+      "value": -0.5164034021871203,
+      "display_value": "-1 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "高雄銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "流通卡數",
+          "period": "11412",
+          "value": 9825.0
+        },
+        {
+          "metric": "流通卡數",
+          "period": "11411",
+          "value": 9876.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.775239",
+      "rounding_rule": "四捨五入至小數第二位"
+    },
+    "mom_當月簽帳金額_高雄銀行_11412": {
+      "metric_id": "mom_當月簽帳金額_高雄銀行_11412",
+      "metric_name": "當月簽帳金額_月增率",
+      "value": -31.790836070371697,
+      "display_value": "-32 ",
+      "unit": "",
+      "period": "11412",
+      "institution": "高雄銀行",
+      "formula": "(本期 - 前期) / 前期 * 100",
+      "sources": [
+        {
+          "metric": "當月簽帳金額",
+          "period": "11412",
+          "value": 167800.0
+        },
+        {
+          "metric": "當月簽帳金額",
+          "period": "11411",
+          "value": 246008.0
+        }
+      ],
+      "validation_status": "passed",
+      "timestamp": "2026-08-01T11:12:01.776522",
       "rounding_rule": "四捨五入至小數第二位"
     }
   }

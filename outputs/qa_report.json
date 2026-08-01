@@ -1,141 +1,36 @@
 {
   "status": "failed",
-  "total_issues": 19,
-  "errors": 18,
-  "warnings": 1,
+  "total_issues": 4,
+  "errors": 4,
+  "warnings": 0,
   "issues": [
     {
-      "slide_no": 1,
-      "type": "logic_error",
-      "severity": "error",
-      "message": "引用了 YoY 指標 'yoy_流通卡數_台新國際商業銀行_11412'，但該值為 N/A（缺少基期資料）",
-      "suggestion": "移除 YoY 引用或標注為無法計算"
-    },
-    {
-      "slide_no": 2,
-      "type": "logic_error",
-      "severity": "error",
-      "message": "引用了 YoY 指標 'yoy_流通卡數_台新國際商業銀行_11412'，但該值為 N/A（缺少基期資料）",
-      "suggestion": "移除 YoY 引用或標注為無法計算"
-    },
-    {
       "slide_no": 3,
       "type": "missing_source",
       "severity": "error",
-      "message": "KPI '市場流通卡數（12月）' 引用的 metric_id 'market_total_cards_11412' 不存在於計算結果中",
+      "message": "KPI '市場流通卡數' 引用的 metric_id 'market_total_cards' 不存在於計算結果中",
       "suggestion": "確認計算引擎已產出對應指標"
     },
     {
       "slide_no": 3,
       "type": "missing_source",
       "severity": "error",
-      "message": "KPI '月均簽帳金額（12月）' 引用的 metric_id 'market_total_amount_11412' 不存在於計算結果中",
+      "message": "KPI '台新市占率' 引用的 metric_id 'taishin_market_share' 不存在於計算結果中",
       "suggestion": "確認計算引擎已產出對應指標"
     },
     {
       "slide_no": 3,
       "type": "missing_source",
-      "severity": "warning",
-      "message": "洞察引用的 evidence_metric_id 'market_total_cards_11412' 不存在",
-      "suggestion": "更新引用或從計算引擎重新取得"
+      "severity": "error",
+      "message": "KPI '台新有效卡率' 引用的 metric_id 'taishin_effective_rate' 不存在於計算結果中",
+      "suggestion": "確認計算引擎已產出對應指標"
     },
     {
       "slide_no": 3,
-      "type": "logic_error",
+      "type": "missing_source",
       "severity": "error",
-      "message": "引用了 YoY 指標 'yoy_流通卡數_台新國際商業銀行_11412'，但該值為 N/A（缺少基期資料）",
-      "suggestion": "移除 YoY 引用或標注為無法計算"
-    },
-    {
-      "slide_no": 4,
-      "type": "logic_error",
-      "severity": "error",
-      "message": "引用了 YoY 指標 'yoy_流通卡數_台新國際商業銀行_11412'，但該值為 N/A（缺少基期資料）",
-      "suggestion": "移除 YoY 引用或標注為無法計算"
-    },
-    {
-      "slide_no": 5,
-      "type": "logic_error",
-      "severity": "error",
-      "message": "引用了 YoY 指標 'yoy_流通卡數_台新國際商業銀行_11412'，但該值為 N/A（缺少基期資料）",
-      "suggestion": "移除 YoY 引用或標注為無法計算"
-    },
-    {
-      "slide_no": 6,
-      "type": "logic_error",
-      "severity": "error",
-      "message": "引用了 YoY 指標 'yoy_流通卡數_台新國際商業銀行_11412'，但該值為 N/A（缺少基期資料）",
-      "suggestion": "移除 YoY 引用或標注為無法計算"
-    },
-    {
-      "slide_no": 7,
-      "type": "logic_error",
-      "severity": "error",
-      "message": "引用了 YoY 指標 'yoy_流通卡數_台新國際商業銀行_11412'，但該值為 N/A（缺少基期資料）",
-      "suggestion": "移除 YoY 引用或標注為無法計算"
-    },
-    {
-      "slide_no": 8,
-      "type": "logic_error",
-      "severity": "error",
-      "message": "引用了 YoY 指標 'yoy_流通卡數_台新國際商業銀行_11412'，但該值為 N/A（缺少基期資料）",
-      "suggestion": "移除 YoY 引用或標注為無法計算"
-    },
-    {
-      "slide_no": 9,
-      "type": "logic_error",
-      "severity": "error",
-      "message": "引用了 YoY 指標 'yoy_流通卡數_台新國際商業銀行_11412'，但該值為 N/A（缺少基期資料）",
-      "suggestion": "移除 YoY 引用或標注為無法計算"
-    },
-    {
-      "slide_no": 10,
-      "type": "logic_error",
-      "severity": "error",
-      "message": "引用了 YoY 指標 'yoy_流通卡數_台新國際商業銀行_11412'，但該值為 N/A（缺少基期資料）",
-      "suggestion": "移除 YoY 引用或標注為無法計算"
-    },
-    {
-      "slide_no": 11,
-      "type": "logic_error",
-      "severity": "error",
-      "message": "引用了 YoY 指標 'yoy_流通卡數_台新國際商業銀行_11412'，但該值為 N/A（缺少基期資料）",
-      "suggestion": "移除 YoY 引用或標注為無法計算"
-    },
-    {
-      "slide_no": 12,
-      "type": "logic_error",
-      "severity": "error",
-      "message": "引用了 YoY 指標 'yoy_流通卡數_台新國際商業銀行_11412'，但該值為 N/A（缺少基期資料）",
-      "suggestion": "移除 YoY 引用或標注為無法計算"
-    },
-    {
-      "slide_no": 13,
-      "type": "logic_error",
-      "severity": "error",
-      "message": "引用了 YoY 指標 'yoy_流通卡數_台新國際商業銀行_11412'，但該值為 N/A（缺少基期資料）",
-      "suggestion": "移除 YoY 引用或標注為無法計算"
-    },
-    {
-      "slide_no": 14,
-      "type": "logic_error",
-      "severity": "error",
-      "message": "引用了 YoY 指標 'yoy_流通卡數_台新國際商業銀行_11412'，但該值為 N/A（缺少基期資料）",
-      "suggestion": "移除 YoY 引用或標注為無法計算"
-    },
-    {
-      "slide_no": 15,
-      "type": "logic_error",
-      "severity": "error",
-      "message": "引用了 YoY 指標 'yoy_流通卡數_台新國際商業銀行_11412'，但該值為 N/A（缺少基期資料）",
-      "suggestion": "移除 YoY 引用或標注為無法計算"
-    },
-    {
-      "slide_no": 16,
-      "type": "logic_error",
-      "severity": "error",
-      "message": "引用了 YoY 指標 'yoy_流通卡數_台新國際商業銀行_11412'，但該值為 N/A（缺少基期資料）",
-      "suggestion": "移除 YoY 引用或標注為無法計算"
+      "message": "KPI '台新每卡簽帳金額' 引用的 metric_id 'taishin_avg_purchase' 不存在於計算結果中",
+      "suggestion": "確認計算引擎已產出對應指標"
     }
   ]
 }
