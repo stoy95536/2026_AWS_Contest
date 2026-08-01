@@ -62,6 +62,14 @@ _UNIT_KEYWORDS: list[tuple[tuple[str, ...], str]] = [
     (("元", "金額", "amount"), "元"),
 ]
 
+# 彙總欄關鍵字。順序有意義：先判總計再判小計，「總計」含「計」字容易互相誤判。
+_AGGREGATION_KEYWORDS: list[tuple[tuple[str, ...], str]] = [
+    (("總計", "grand total"), "total"),
+    (("小計", "sub-total", "sub total", "subtotal"), "subtotal"),
+    (("合計", "total"), "total"),
+    (("其他", "其它", "未列明", "others", "unstated", "other"), "residual"),
+]
+
 # 「日本 Japan」→「日本」：切在第一個純英文詞之前
 _ASCII_WORD = re.compile(r"(?:^|\s)[A-Za-z][A-Za-z.\-'&/()]*")
 # 沖掉表名裡的流水編號：「表1-3-歷年來臺旅客按國籍分」→「歷年來臺旅客按國籍分」
@@ -179,6 +187,25 @@ def infer_unit(
     return "未知", 0.3
 
 
+def infer_aggregation_role(column: ColumnInfo) -> str:
+    """
+    判定欄位是明細還是彙總，回傳 detail／subtotal／total／residual。
+
+    **這是防止「悄悄算錯」的關鍵標記**。表1-3 的東南亞群組有 6 個國家明細欄
+    （G~L）、1 個殘差欄（M 東南亞其他地區）、1 個小計欄（N 東南亞小計）。
+    若積木把整個群組加總，會變成「六國 + 殘差 + 小計」——小計重複計、殘差又
+    倒扣，答案錯得無跡可循。少了這個標記，執行引擎沒有任何依據能擋下來。
+
+    residual（殘差欄）另有陷阱：實測 M 欄 = 小計 − 已列名加總，而小計早年
+    未填為 0，導致殘差變成整個加總的負值。這種欄位不是資料，是公式副產物。
+    """
+    haystack = column.leaf_name.lower()
+    for keywords, role in _AGGREGATION_KEYWORDS:
+        if any(k in haystack for k in keywords):
+            return role
+    return "detail"
+
+
 def sheet_measure_concept(sheet_name: str, file_name: str) -> str:
     """
     從工作表／檔名推出「這張表在量什麼」，作為 canonical 名稱的前綴。
@@ -212,6 +239,7 @@ class FieldCard:
     alignment_method: str
     file_name: str
     sheet_name: str
+    aggregation_role: str = "detail"
     profile: NumericProfile | None = None
     notes: list[str] = field(default_factory=list)
 
@@ -234,6 +262,8 @@ class FieldCard:
             "sample_values": self.sample_values,
             "confidence": round(self.confidence, 3),
             "alignment_method": self.alignment_method,
+            # 給 LLM 與執行引擎判斷「這欄能不能跟同群組其他欄一起加總」
+            "aggregation_role": self.aggregation_role,
         }
         if self.notes:
             card["notes"] = self.notes
@@ -278,8 +308,11 @@ def build_field_cards(
             confidence = min(confidence, 0.55)
             notes.append(f"僅 {profile.count} 筆數值，樣本過少不足以判定語意")
 
+        role = infer_aggregation_role(column)
         if unit_reliability < 0.9:
             notes.append(f"單位「{unit}」由數值特徵推得，非表頭明示")
+        if role != "detail":
+            notes.append(f"彙總欄（{role}），不可與同群組明細欄一起加總")
         if profile and profile.has_negative and unit != "%":
             notes.append("量值欄含負數，疑似小計調整或缺值標記")
 
@@ -295,6 +328,7 @@ def build_field_cards(
                 alignment_method=alignment_method,
                 file_name=normalized.file_name,
                 sheet_name=normalized.sheet_name,
+                aggregation_role=role,
                 profile=profile,
                 notes=notes,
             )
