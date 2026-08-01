@@ -487,6 +487,245 @@ class ChartFactory:
 
         return chart_frame
 
+    def create_horizontal_bar_chart(
+        self,
+        slide: Slide,
+        categories: list[str],
+        series_data: dict[str, list[float]],
+        title: str = "",
+        position: dict = None,
+        y_axis_label: str = "",
+        y_axis_unit: str = "",
+        highlight_first: bool = True,
+        highlight_institution: str = "",
+    ):
+        """
+        建立橫條圖（水平長條圖）。
+        適合用於排名展示，類別名稱在左側，數值向右延伸。
+
+        Args:
+            slide: 目標投影片
+            categories: 類別（通常是機構名稱）
+            series_data: {系列名稱: [值...]}
+            title: 圖表標題
+            position: 位置 dict
+            highlight_first: 排名第一是否標金色
+            highlight_institution: 目標機構名稱
+        """
+        if position is None:
+            position = {"left": Cm(2), "top": Cm(4), "width": Cm(22), "height": Cm(12)}
+
+        chart_data = CategoryChartData()
+        chart_data.categories = categories
+
+        for name, values in series_data.items():
+            chart_data.add_series(name, values)
+
+        chart_frame = slide.shapes.add_chart(
+            XL_CHART_TYPE.BAR_CLUSTERED,  # 橫條圖
+            position["left"],
+            position["top"],
+            position["width"],
+            position["height"],
+            chart_data,
+        )
+
+        chart = chart_frame.chart
+        if title:
+            chart.has_title = True
+            chart.chart_title.text_frame.text = title
+
+        # 條件式格式 — 排名第一金色、目標機構深藍
+        for i, series in enumerate(chart.series):
+            base_color = self.colors[i % len(self.colors)]
+            series.format.fill.solid()
+            series.format.fill.fore_color.rgb = base_color
+
+            if len(series_data) == 1:
+                for pt_idx, cat in enumerate(categories):
+                    point = series.points[pt_idx]
+                    if highlight_first and pt_idx == 0:
+                        point.format.fill.solid()
+                        point.format.fill.fore_color.rgb = RGBColor(0xFF, 0xCC, 0x00)
+                    elif highlight_institution and highlight_institution in cat:
+                        point.format.fill.solid()
+                        point.format.fill.fore_color.rgb = RGBColor(0x00, 0x33, 0x66)
+
+        # X 軸（數值軸）設定
+        self._set_value_axis_title(chart.value_axis, y_axis_label, y_axis_unit)
+
+        return chart_frame
+
+    def create_heatmap(
+        self,
+        slide: Slide,
+        row_labels: list[str],
+        col_labels: list[str],
+        values: list[list[float]],
+        title: str = "",
+        position: dict = None,
+    ):
+        """
+        建立熱力圖（以表格 + 條件色彩實現）。
+        PowerPoint 不支援原生熱力圖，以彩色表格模擬。
+        每個儲存格的背景色根據數值大小從綠（高）到紅（低）漸變。
+
+        Args:
+            slide: 目標投影片
+            row_labels: 列標籤（如銀行名稱）
+            col_labels: 欄標籤（如月份）
+            values: 二維數值陣列 [row][col]
+            title: 圖表標題
+            position: 位置 dict
+        """
+        from pptx.oxml.ns import qn as _qn
+
+        if position is None:
+            position = {"left": Cm(1.5), "top": Cm(4.5), "width": Cm(30.0), "height": Cm(11.0)}
+
+        # 加標題
+        if title:
+            txBox = slide.shapes.add_textbox(position["left"], Cm(3.8), position["width"], Cm(0.7))
+            tf = txBox.text_frame
+            p = tf.paragraphs[0]
+            p.text = title
+            p.font.size = Pt(11)
+            p.font.bold = True
+
+        n_rows = len(row_labels) + 1  # +1 for header
+        n_cols = len(col_labels) + 1  # +1 for row label column
+
+        tbl_shape = slide.shapes.add_table(
+            n_rows, n_cols,
+            position["left"], position["top"],
+            position["width"], position["height"],
+        )
+        table = tbl_shape.table
+
+        # 計算數值範圍（用於色彩映射）
+        all_vals = [v for row in values for v in row if v is not None]
+        min_val = min(all_vals) if all_vals else 0
+        max_val = max(all_vals) if all_vals else 1
+        val_range = max_val - min_val if max_val != min_val else 1
+
+        # Header row（欄標籤）
+        table.cell(0, 0).text = ""
+        for col_idx, col_label in enumerate(col_labels):
+            table.cell(0, col_idx + 1).text = str(col_label)
+            for para in table.cell(0, col_idx + 1).text_frame.paragraphs:
+                para.font.size = Pt(8)
+                para.font.bold = True
+
+        # Data rows
+        for row_idx, row_label in enumerate(row_labels):
+            table.cell(row_idx + 1, 0).text = str(row_label)
+            for para in table.cell(row_idx + 1, 0).text_frame.paragraphs:
+                para.font.size = Pt(8)
+
+            for col_idx, val in enumerate(values[row_idx] if row_idx < len(values) else []):
+                cell = table.cell(row_idx + 1, col_idx + 1)
+                cell.text = f"{val:.1f}" if val is not None else ""
+                for para in cell.text_frame.paragraphs:
+                    para.font.size = Pt(7)
+
+                # 色彩映射：低→紅、中→黃、高→綠
+                if val is not None:
+                    ratio = (val - min_val) / val_range
+                    color = self._heatmap_color(ratio)
+                    self._set_table_cell_fill(cell, color)
+
+        return tbl_shape
+
+    def create_quadrant_scatter(
+        self,
+        slide: Slide,
+        data_points: list[dict],
+        title: str = "",
+        x_label: str = "",
+        y_label: str = "",
+        position: dict = None,
+        x_threshold: float = None,
+        y_threshold: float = None,
+    ):
+        """
+        建立風險象限圖（四象限散佈圖）。
+        在散佈圖基礎上加入水平線和垂直線標示閾值，將圖分為四個象限。
+
+        Args:
+            data_points: [{"name": str, "x": float, "y": float}, ...]
+            x_threshold: X 軸分界線（預設為平均值）
+            y_threshold: Y 軸分界線（預設為平均值）
+        """
+        # 先建立基本散佈圖
+        chart_frame = self.create_scatter_chart(
+            slide, data_points,
+            title=title,
+            x_label=x_label,
+            y_label=y_label,
+            position=position,
+        )
+
+        # 計算閾值（預設用平均值）
+        x_values = [p["x"] for p in data_points if "x" in p]
+        y_values = [p["y"] for p in data_points if "y" in p]
+
+        if x_threshold is None and x_values:
+            x_threshold = sum(x_values) / len(x_values)
+        if y_threshold is None and y_values:
+            y_threshold = sum(y_values) / len(y_values)
+
+        # 在圖表區域加入象限分界線說明（用 textbox 模擬）
+        if position is None:
+            position = {"left": Cm(2), "top": Cm(4), "width": Cm(22), "height": Cm(12)}
+
+        # 四象限標籤（左上、右上、左下、右下）
+        quadrant_labels = [
+            ("⚠ 高風險\n低規模", Cm(2.5), Cm(4.5)),   # 左上
+            ("★ 領先者\n高規模高成長", Cm(18.0), Cm(4.5)),  # 右上
+            ("觀察區\n低規模低成長", Cm(2.5), Cm(11.0)),   # 左下
+            ("穩定區\n高規模低成長", Cm(18.0), Cm(11.0)),  # 右下
+        ]
+
+        for label_text, lx, ly in quadrant_labels:
+            txBox = slide.shapes.add_textbox(lx, ly, Cm(5.0), Cm(1.5))
+            tf = txBox.text_frame
+            tf.word_wrap = True
+            p = tf.paragraphs[0]
+            p.text = label_text
+            p.font.size = Pt(8)
+            p.font.color.rgb = RGBColor(0x99, 0x99, 0x99)
+
+        return chart_frame
+
+    def _heatmap_color(self, ratio: float) -> RGBColor:
+        """
+        根據 0~1 的比例回傳熱力圖顏色。
+        0.0 = 紅色（低）, 0.5 = 黃色（中）, 1.0 = 綠色（高）。
+        """
+        ratio = max(0.0, min(1.0, ratio))
+        if ratio < 0.5:
+            # 紅 → 黃
+            r = 0xCC
+            g = int(0x33 + (0xCC - 0x33) * (ratio / 0.5))
+            b = 0x33
+        else:
+            # 黃 → 綠
+            r = int(0xCC - (0xCC - 0x33) * ((ratio - 0.5) / 0.5))
+            g = 0x99
+            b = 0x33
+        return RGBColor(r, g, b)
+
+    def _set_table_cell_fill(self, cell, color: RGBColor):
+        """設定表格儲存格背景色（用於熱力圖）。"""
+        from pptx.oxml.ns import qn as _qn
+
+        tc_pr = cell._tc.get_or_add_tcPr()
+        for old_fill in tc_pr.findall(_qn("a:solidFill")):
+            tc_pr.remove(old_fill)
+        solid_fill = etree.SubElement(tc_pr, _qn("a:solidFill"))
+        srgb_clr = etree.SubElement(solid_fill, _qn("a:srgbClr"))
+        srgb_clr.set("val", str(color))
+
     # ========== 共用工具方法 ==========
 
     def _set_value_axis_title(self, value_axis, label: str, unit: str = ""):

@@ -44,6 +44,32 @@ def fill_chart(slide: Slide, spec: dict, chart_factory: ChartFactory):
         )
         chart_created = True
 
+    # 風險象限圖也使用 data_points
+    elif chart_type == "quadrant" and data_points:
+        chart_factory.create_quadrant_scatter(
+            slide, data_points,
+            title=chart_spec.get("title", ""),
+            x_label=chart_spec.get("x_axis", {}).get("label", ""),
+            y_label=chart_spec.get("y_axis", {}).get("label", ""),
+            position=position,
+            x_threshold=chart_spec.get("x_threshold"),
+            y_threshold=chart_spec.get("y_threshold"),
+        )
+        chart_created = True
+
+    # 熱力圖使用 row_labels + col_labels + heatmap_values
+    elif chart_type == "heatmap":
+        row_labels = chart_spec.get("row_labels", [])
+        col_labels = chart_spec.get("col_labels", [])
+        heatmap_values = chart_spec.get("heatmap_values", [])
+        if row_labels and col_labels and heatmap_values:
+            chart_factory.create_heatmap(
+                slide, row_labels, col_labels, heatmap_values,
+                title=chart_spec.get("title", ""),
+                position=position,
+            )
+            chart_created = True
+
     # 其他圖表使用 categories + series
     elif series_list and categories:
         series_data = {}
@@ -106,6 +132,17 @@ def fill_chart(slide: Slide, spec: dict, chart_factory: ChartFactory):
                         position=position,
                     )
                     chart_created = True
+            elif chart_type == "horizontal_bar":
+                chart_factory.create_horizontal_bar_chart(
+                    slide, categories, series_data,
+                    title=chart_spec.get("title", ""),
+                    position=position,
+                    y_axis_label=y_axis_label,
+                    y_axis_unit=y_axis_unit,
+                    highlight_first=True,
+                    highlight_institution=spec.get("highlight_institution", "台新"),
+                )
+                chart_created = True
 
     # 如果沒有生成圖表，顯示提示
     if not chart_created:

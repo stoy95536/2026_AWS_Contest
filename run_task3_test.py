@@ -37,7 +37,7 @@ DEFAULT_SLIDE_STRUCTURE = [
 EXCEL_PATH = "附件四_預期修正參照資料.xlsx"
 TEMPLATE_PATH = "附件一_台新新光金控簡報版型.pptx"
 OUTPUT_DIR = "outputs"
-OUTPUT_FILE = os.path.join(OUTPUT_DIR, "test_presentation_v7.pptx")
+OUTPUT_FILE = os.path.join(OUTPUT_DIR, "test_presentation_v8.pptx")
 
 
 def load_excel_data():
