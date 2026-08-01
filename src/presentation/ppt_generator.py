@@ -257,6 +257,30 @@ class PPTGenerator:
         p3.font.color.rgb = RGBColor(0x66, 0x66, 0x66)
         p3.alignment = PP_ALIGN.CENTER
 
+        # Excel 原始資料連結（Data Lineage 追溯入口）
+        excel_path = spec.get("excel_source", "") or self._get_excel_source()
+        if excel_path:
+            txBox3 = slide.shapes.add_textbox(Cm(3.1), Cm(12.0), Cm(27.7), Cm(1.0))
+            tf3 = txBox3.text_frame
+            p4 = tf3.paragraphs[0]
+            p4.alignment = PP_ALIGN.CENTER
+            run = p4.add_run()
+            run.text = f"📎 原始資料：{excel_path}"
+            run.font.size = Pt(10)
+            run.font.color.rgb = RGBColor(0x00, 0x66, 0xCC)
+            run.font.underline = True
+            # 加入超連結
+            run.hyperlink.address = excel_path
+
+    def _get_excel_source(self) -> str:
+        """取得 Excel 來源檔案路徑（從模板路徑推斷或使用預設）。"""
+        import os
+        # 預設指向附件四
+        default = "附件四_預期修正參照資料.xlsx"
+        if os.path.exists(default):
+            return default
+        return ""
+
     # ========== 內容頁 ==========
     def _build_content(self, slide: Slide, spec: dict):
         """
