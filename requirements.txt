@@ -1,12 +1,23 @@
+# Python 3.13 相容版本
+# 註：原先釘的 numpy==1.26.4 / pandas==2.2.3 在 Python 3.13 無預編譯 wheel，
+#     會嘗試從原始碼編譯並失敗，故升版至支援 3.13 的最低穩定版本。
+
 # Core dependencies
-pandas==2.2.3
+pandas==2.3.3
+numpy==2.3.5
 openpyxl==3.1.5
-numpy==1.26.4
 python-pptx==1.0.2
 
+# Data catalog / 欄位語意比對 (Task1 Layer 1 規則式比對)
+rapidfuzz==3.10.1
+
+# Schema 驗證 (metric / chart_data / data_catalog 合約)
+pydantic==2.12.4
+
 # AWS SDK
-boto3==1.35.0
-botocore==1.35.0
+boto3==1.40.62
+botocore==1.40.62
+certifi==2025.11.12
 
 # Web Framework
 fastapi==0.115.0
@@ -14,7 +25,7 @@ uvicorn==0.30.6
 python-multipart==0.0.9
 
 # Utilities
-python-dotenv==1.0.1
+python-dotenv==1.2.1
 
 # Testing
 pytest==8.3.3
