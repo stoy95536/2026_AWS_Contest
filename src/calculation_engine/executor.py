@@ -126,6 +126,13 @@ class MetricResult:
     source_range_summary: list[str]
     validation_status: str
     validation_note: str | None = None
+    source_refs: list[dict[str, str]] = field(default_factory=list)
+    """結構化來源 {file, sheet, range}，對齊 metric.schema.json 的 source 欄位。
+
+    與 `source_range_summary` 的字串形式並存是刻意的：字串給人看（Excel 的
+    來源欄、log），結構化給程式吃（成員 D 的回溯校驗要按 file 開檔）。
+    只留字串會讓 D 得自己解析，而檔名裡可能含 `!` 這類分隔符。"""
+
     assumption_statement: str = ""
     sanity: SanityReport | None = None
     attempts: int = 1
@@ -299,7 +306,7 @@ class Executor:
         formula = final.formula if isinstance(final, ScalarResult) else " → ".join(chain)
         note = final.reason if isinstance(final, ScalarResult) else None
 
-        cells, ranges = self._collect_lineage(results)
+        cells, ranges, refs = self._collect_lineage(results)
         sanity = check_metric(
             value,
             unit=recipe.unit,
@@ -328,6 +335,7 @@ class Executor:
             block_chain=chain,
             source_cells=cells,
             source_range_summary=ranges,
+            source_refs=refs,
             validation_status=status,
             validation_note="；".join(notes) or None,
             assumption_statement=recipe.assumption_statement,
@@ -375,7 +383,9 @@ class Executor:
             ))
         return report
 
-    def _collect_lineage(self, results: dict[str, Any]) -> tuple[list[str], list[str]]:
+    def _collect_lineage(
+        self, results: dict[str, Any]
+    ) -> tuple[list[str], list[str], list[dict[str, str]]]:
         """
         從所有中間結果蒐集來源儲存格。
 
@@ -391,28 +401,37 @@ class Executor:
             and {COL_SHEET, COL_ROW, COL_COL}.issubset(r.columns)
         ]
         if not frames:
-            return [], []
+            return [], [], []
 
         source = frames[-1]
         cells = [
             f"{r[COL_SHEET]}!{to_a1(int(r[COL_ROW]), int(r[COL_COL]))}"
             for _, r in source.head(MAX_LINEAGE_CELLS).iterrows()
         ]
-        ranges = self._summarize_ranges(source)
-        return cells, ranges
+        refs = self._summarize_ranges(source)
+        ranges = [f"{r['sheet']}!{r['range']}" for r in refs]
+        return cells, ranges, refs
 
     @staticmethod
-    def _summarize_ranges(frame: pd.DataFrame) -> list[str]:
-        """每個工作表+欄位壓成一個 A1 範圍，如 '歷年來臺旅客-按國籍!C5:C66'。"""
+    def _summarize_ranges(frame: pd.DataFrame) -> list[dict[str, str]]:
+        """
+        每個「檔案 + 工作表 + 欄位」壓成一個 A1 範圍。
+
+        **必須帶檔名**：成員 D 做回溯校驗時要按檔名開檔，只給
+        'Sheet!C5:C66' 他不知道去哪份 Excel 找——11 份檔案裡有多個
+        工作表名稱相近，猜錯就核對到別份資料上了。
+        """
         from src.catalog_builder.cell_tracker import to_a1_range
 
-        summary = []
-        for (sheet, col), group in frame.groupby([COL_SHEET, COL_COL]):
+        refs = []
+        for (file_name, sheet, col), group in frame.groupby([COL_FILE, COL_SHEET, COL_COL]):
             rows = group[COL_ROW].astype(int)
-            summary.append(
-                f"{sheet}!{to_a1_range(rows.min(), int(col), rows.max(), int(col))}"
-            )
-        return sorted(summary)
+            refs.append({
+                "file": str(file_name),
+                "sheet": str(sheet),
+                "range": to_a1_range(rows.min(), int(col), rows.max(), int(col)),
+            })
+        return sorted(refs, key=lambda r: (r["file"], r["sheet"], r["range"]))
 
 
 def execute_with_retry(

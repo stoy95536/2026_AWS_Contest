@@ -26,6 +26,7 @@ def _metric(metric_id: str, value: float | None, unit: str = "人次", status: s
         metric_id=metric_id, metric_name=f"{metric_id} 名稱", value=value,
         unit=unit, period="2024", formula="f", block_chain=["group_sum()"],
         source_cells=["S1!C5"], source_range_summary=["S1!C5:C10"],
+        source_refs=[{"file": "t.xlsx", "sheet": "S1", "range": "C5:C10"}],
         validation_status=status, assumption_statement="測試假設",
     )
 
@@ -105,8 +106,9 @@ def test_血緣沿用舊格式讓組員d不必改程式(result):
     assert set(payload) >= {"generated_at", "total_records", "records"}
     record = payload["records"]["m_big"]
     assert record["validation_status"] == "passed"
-    # 舊格式的 sources 沒有座標，新版必須有真 A1
-    assert record["sources"][0]["range"] == "C5:C10"
+    # 舊格式的 sources 沒有座標也沒有檔名，新版必須兩者俱全，
+    # 否則成員 D 拿到 'S1!C5:C10' 不知道該開 11 份裡的哪一份
+    assert record["sources"][0] == {"file": "t.xlsx", "sheet": "S1", "range": "C5:C10"}
     assert record["block_chain"]
     assert record["assumption_statement"]
 

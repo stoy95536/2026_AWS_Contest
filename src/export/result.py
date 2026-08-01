@@ -232,12 +232,11 @@ class AnalysisResult:
 
     @staticmethod
     def _source_refs(m: MetricResult) -> list[dict[str, str]]:
-        """把 'Sheet!C5:C66' 拆成 {sheet, range}，符合 metric.schema.json 的 source 結構。"""
-        refs = []
-        for entry in m.source_range_summary:
-            sheet, _, cell_range = entry.partition("!")
-            refs.append({"file": "", "sheet": sheet, "range": cell_range})
-        return refs
+        """符合 metric.schema.json 的 source 結構：{file, sheet, range}。
+
+        直接取執行引擎產出的結構化來源，不從顯示字串反解——
+        檔名可能含 `!`，反解會拆錯。"""
+        return m.source_refs
 
     # ---------- 三方一致性 ----------
 
