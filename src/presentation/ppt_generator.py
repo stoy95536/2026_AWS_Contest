@@ -25,6 +25,14 @@ from .template_parser import (
     LAYOUT_COVER, LAYOUT_CONTENT, LAYOUT_CHAPTER, LAYOUT_THANKYOU,
 )
 from .chart_factory import ChartFactory
+from .components import (
+    fill_executive_summary,
+    fill_toc,
+    fill_strategy,
+    fill_chart,
+    fill_table,
+    fill_insights_only,
+)
 
 
 class PPTGenerator:
@@ -109,6 +117,21 @@ class PPTGenerator:
                 sp.getparent().remove(sp)
                 return
 
+    def _add_page_number(self, slide: Slide, slide_no: int):
+        """
+        統一頁碼處理：在投影片右下角加入頁碼 textbox。
+        封面與結束頁不呼叫此方法，其餘頁面統一使用。
+        """
+        if not slide_no:
+            return
+        txBox = slide.shapes.add_textbox(Cm(31.7), Cm(17.8), Cm(1.8), Cm(0.9))
+        tf = txBox.text_frame
+        p = tf.paragraphs[0]
+        p.text = str(slide_no)
+        p.font.size = Pt(10)
+        p.font.color.rgb = RGBColor(0x99, 0x99, 0x99)
+        p.alignment = PP_ALIGN.RIGHT
+
     # ========== 封面頁 ==========
     def _build_cover(self, slide: Slide, spec: dict):
         """封面頁 — 使用 2_標題投影片 layout (title placeholder 居中)。"""
@@ -156,15 +179,8 @@ class PPTGenerator:
                 tf.paragraphs[0].font.bold = True
                 tf.paragraphs[0].font.color.rgb = RGBColor(0x00, 0x33, 0x66)
 
-        # 加入頁碼
-        slide_no = spec.get("slide_no", 0)
-        txBox = slide.shapes.add_textbox(Cm(31.7), Cm(17.8), Cm(1.8), Cm(0.9))
-        tf = txBox.text_frame
-        p = tf.paragraphs[0]
-        p.text = str(slide_no)
-        p.font.size = Pt(10)
-        p.font.color.rgb = RGBColor(0x99, 0x99, 0x99)
-        p.alignment = PP_ALIGN.RIGHT
+        # 統一頁碼
+        self._add_page_number(slide, spec.get("slide_no", 0))
 
     # ========== 結束頁 ==========
     def _build_thank_you(self, slide: Slide, spec: dict):
@@ -208,7 +224,7 @@ class PPTGenerator:
         headline = spec.get("headline", "")
         slide_no = spec.get("slide_no", 0)
 
-        # 填入 TITLE placeholder
+        # 填入 TITLE placeholder，移除 SLIDE_NUMBER placeholder（改用統一 textbox）
         for ph in slide.placeholders:
             if ph.placeholder_format.idx == 0:
                 ph.text = title
@@ -216,11 +232,15 @@ class PPTGenerator:
                     para.font.size = Pt(22)
                     para.font.bold = True
                     para.font.color.rgb = RGBColor(0x00, 0x33, 0x66)
-            elif ph.placeholder_format.idx == 12:
-                ph.text = str(slide_no)
+
+        # 移除原生 SLIDE_NUMBER placeholder，改用統一的 textbox 頁碼
+        self._remove_placeholder(slide, 12)
 
         # 移除 BODY placeholder（我們用自訂 shapes 取代）
         self._remove_placeholder(slide, 1)
+
+        # 統一頁碼
+        self._add_page_number(slide, slide_no)
 
         # Headline (核心訊息)
         if headline:
@@ -250,286 +270,25 @@ class PPTGenerator:
             self._fill_insights_only(slide, spec)
 
     def _fill_executive_summary(self, slide: Slide, spec: dict):
-        """填充 Executive Summary 頁 — KPI 卡片 + 洞察。"""
-        kpis = spec.get("kpis", [])
-
-        # KPI cards (排成一行，最多4個)
-        card_width = Cm(7.5)
-        start_x = Cm(1.0)
-        y = Cm(4.0)
-
-        for i, kpi in enumerate(kpis[:4]):
-            x = start_x + Cm(i * 7.8)
-            # 標籤
-            txBox = slide.shapes.add_textbox(x, y, card_width, Cm(0.8))
-            tf = txBox.text_frame
-            p = tf.paragraphs[0]
-            p.text = kpi.get("label", "")
-            p.font.size = Pt(10)
-            p.font.color.rgb = RGBColor(0x66, 0x66, 0x66)
-
-            # 數值
-            txBox2 = slide.shapes.add_textbox(x, y + Cm(0.9), card_width, Cm(1.3))
-            tf2 = txBox2.text_frame
-            p2 = tf2.paragraphs[0]
-            p2.text = kpi.get("value", "—")
-            p2.font.size = Pt(22)
-            p2.font.bold = True
-            p2.font.color.rgb = RGBColor(0x00, 0x33, 0x66)
-
-            # 變化
-            change = kpi.get("change", "")
-            if change:
-                txBox3 = slide.shapes.add_textbox(x, y + Cm(2.3), card_width, Cm(0.7))
-                tf3 = txBox3.text_frame
-                p3 = tf3.paragraphs[0]
-                p3.text = change
-                p3.font.size = Pt(9)
-                direction = kpi.get("change_direction", "flat")
-                if direction == "up":
-                    p3.font.color.rgb = RGBColor(0x33, 0x99, 0x33)
-                elif direction == "down":
-                    p3.font.color.rgb = RGBColor(0xCC, 0x33, 0x33)
-                else:
-                    p3.font.color.rgb = RGBColor(0x66, 0x66, 0x66)
-
-        # 洞察區域
-        insights = spec.get("insights", [])
-        if insights:
-            insight_y = Cm(8.0)
-            # 洞察標題
-            txH = slide.shapes.add_textbox(Cm(1.0), insight_y, Cm(31.2), Cm(0.8))
-            tfH = txH.text_frame
-            pH = tfH.paragraphs[0]
-            pH.text = "四大關鍵洞察"
-            pH.font.size = Pt(12)
-            pH.font.bold = True
-            pH.font.color.rgb = RGBColor(0x00, 0x33, 0x66)
-
-            insight_y += Cm(1.0)
-            for insight in insights[:4]:
-                text = insight.get("text", "") if isinstance(insight, dict) else str(insight)
-                txBox = slide.shapes.add_textbox(Cm(1.5), insight_y, Cm(30.0), Cm(1.5))
-                tf = txBox.text_frame
-                tf.word_wrap = True
-                p = tf.paragraphs[0]
-                p.text = f"• {text}"
-                p.font.size = Pt(10)
-                insight_y += Cm(1.5)
+        """填充 Executive Summary 頁 — 委派給 components 模組。"""
+        fill_executive_summary(slide, spec)
 
     def _fill_toc(self, slide: Slide, spec: dict):
-        """填充目錄頁。"""
-        chapters = [
-            "01  市場整體概況",
-            "02  同業競爭分析",
-            "03  客戶活躍度與獲利能力",
-            "04  風險與警訊",
-            "05  對台新的策略建議",
-        ]
-        y = Cm(4.5)
-        for ch in chapters:
-            txBox = slide.shapes.add_textbox(Cm(3.0), y, Cm(25.0), Cm(1.5))
-            tf = txBox.text_frame
-            p = tf.paragraphs[0]
-            p.text = f"CHAPTER {ch}"
-            p.font.size = Pt(16)
-            p.font.color.rgb = RGBColor(0x00, 0x33, 0x66)
-            y += Cm(2.0)
+        """填充目錄頁 — 委派給 components 模組。"""
+        fill_toc(slide, spec)
 
     def _fill_strategy(self, slide: Slide, spec: dict):
-        """填充策略建議頁。"""
-        recommendations = spec.get("recommendations", [])
-        y = Cm(4.0)
-
-        for i, rec in enumerate(recommendations[:4]):
-            action = rec.get("action", "")
-            rationale = rec.get("rationale", "")
-            priority = rec.get("priority", "medium")
-
-            # 編號
-            txNum = slide.shapes.add_textbox(Cm(1.5), y, Cm(2.0), Cm(1.5))
-            tfNum = txNum.text_frame
-            pNum = tfNum.paragraphs[0]
-            pNum.text = f"0{i+1}"
-            pNum.font.size = Pt(24)
-            pNum.font.bold = True
-            pNum.font.color.rgb = RGBColor(0x00, 0x66, 0xCC)
-
-            # 標題
-            txTitle = slide.shapes.add_textbox(Cm(4.0), y, Cm(27.0), Cm(0.8))
-            tfTitle = txTitle.text_frame
-            pTitle = tfTitle.paragraphs[0]
-            pTitle.text = action
-            pTitle.font.size = Pt(13)
-            pTitle.font.bold = True
-            pTitle.font.color.rgb = RGBColor(0x00, 0x33, 0x66)
-
-            # 理由
-            if rationale:
-                txR = slide.shapes.add_textbox(Cm(4.0), y + Cm(0.9), Cm(27.0), Cm(1.5))
-                tfR = txR.text_frame
-                tfR.word_wrap = True
-                pR = tfR.paragraphs[0]
-                pR.text = rationale
-                pR.font.size = Pt(10)
-                pR.font.color.rgb = RGBColor(0x33, 0x33, 0x33)
-
-            y += Cm(3.0)
+        """填充策略建議頁 — 委派給 components 模組。"""
+        fill_strategy(slide, spec)
 
     def _fill_chart(self, slide: Slide, spec: dict):
-        """填充含圖表的頁面 — 使用 python-pptx 原生圖表。"""
-        chart_spec = spec.get("chart", {})
-        chart_type = chart_spec.get("type", "bar")
-        categories = chart_spec.get("categories", [])
-        series_list = chart_spec.get("series", [])
-        data_points = chart_spec.get("data_points", [])
-
-        # 圖表位置 (在 1_標題及內容 的 body 區域內)
-        position = {
-            "left": Cm(1.5),
-            "top": Cm(4.5),
-            "width": Cm(30.0),
-            "height": Cm(10.0),
-        }
-
-        chart_created = False
-
-        # 散佈圖使用 data_points
-        if chart_type == "scatter" and data_points:
-            self.chart_factory.create_scatter_chart(
-                slide, data_points,
-                title=chart_spec.get("title", ""),
-                x_label=chart_spec.get("x_axis", {}).get("label", ""),
-                y_label=chart_spec.get("y_axis", {}).get("label", ""),
-                position=position,
-            )
-            chart_created = True
-
-        # 其他圖表使用 categories + series
-        elif series_list and categories:
-            series_data = {}
-            for s in series_list:
-                if "data" in s and s["data"]:
-                    series_data[s.get("name", "Series")] = s["data"]
-
-            if series_data:
-                if chart_type == "bar":
-                    self.chart_factory.create_bar_chart(
-                        slide, categories, series_data,
-                        title=chart_spec.get("title", ""),
-                        position=position,
-                        y_axis_label=chart_spec.get("y_axis", {}).get("label", ""),
-                        y_axis_unit=chart_spec.get("y_axis", {}).get("unit", ""),
-                    )
-                    chart_created = True
-                elif chart_type == "line":
-                    self.chart_factory.create_line_chart(
-                        slide, categories, series_data,
-                        title=chart_spec.get("title", ""),
-                        position=position,
-                    )
-                    chart_created = True
-                elif chart_type == "combo":
-                    keys = list(series_data.keys())
-                    bar_data = {keys[0]: series_data[keys[0]]} if keys else {}
-                    line_data = {k: series_data[k] for k in keys[1:]} if len(keys) > 1 else {}
-                    self.chart_factory.create_combo_chart(
-                        slide, categories, bar_data, line_data,
-                        title=chart_spec.get("title", ""),
-                        position=position,
-                    )
-                    chart_created = True
-                elif chart_type == "stacked_bar":
-                    self.chart_factory.create_stacked_bar_chart(
-                        slide, categories, series_data,
-                        title=chart_spec.get("title", ""),
-                        position=position,
-                    )
-                    chart_created = True
-                elif chart_type == "pie":
-                    first_series = series_list[0] if series_list else {}
-                    values = first_series.get("data", [])
-                    if values:
-                        self.chart_factory.create_pie_chart(
-                            slide, categories, values,
-                            title=chart_spec.get("title", ""),
-                            position=position,
-                        )
-                        chart_created = True
-
-        # 如果沒有生成圖表，顯示提示
-        if not chart_created:
-            txBox = slide.shapes.add_textbox(Cm(5), Cm(7), Cm(23), Cm(3))
-            tf = txBox.text_frame
-            tf.word_wrap = True
-            p = tf.paragraphs[0]
-            p.text = f"[圖表區域 — {chart_spec.get('title', '待補充資料')}]"
-            p.font.size = Pt(14)
-            p.font.color.rgb = RGBColor(0x99, 0x99, 0x99)
-            p.alignment = PP_ALIGN.CENTER
-
-        # 洞察文字 (圖表下方)
-        insights = spec.get("insights", [])
-        if insights:
-            insight_y = Cm(15.0)
-            for ins in insights[:2]:
-                text = ins.get("text", "") if isinstance(ins, dict) else str(ins)
-                is_spec = ins.get("is_speculation", False) if isinstance(ins, dict) else False
-                prefix = "（推測）" if is_spec else ""
-                txBox = slide.shapes.add_textbox(Cm(1.5), insight_y, Cm(30.0), Cm(1.2))
-                tf = txBox.text_frame
-                tf.word_wrap = True
-                p = tf.paragraphs[0]
-                p.text = f"◆ {prefix}{text}"
-                p.font.size = Pt(9)
-                p.font.color.rgb = RGBColor(0x33, 0x33, 0x33)
-                insight_y += Cm(1.3)
+        """填充含圖表的頁面 — 委派給 components 模組。"""
+        fill_chart(slide, spec, self.chart_factory)
 
     def _fill_table(self, slide: Slide, spec: dict):
-        """填充含原生表格的頁面。"""
-        table_spec = spec.get("table", {})
-        headers = table_spec.get("headers", [])
-        rows = table_spec.get("rows", [])
-
-        if not headers or not rows:
-            return
-
-        n_rows = min(len(rows) + 1, 15)  # 限制行數避免溢出
-        n_cols = len(headers)
-
-        tbl_shape = slide.shapes.add_table(
-            n_rows, n_cols,
-            Cm(1.5), Cm(4.5), Cm(30.0), Cm(11.0),
-        )
-        table = tbl_shape.table
-
-        # Header
-        for col_idx, header in enumerate(headers):
-            cell = table.cell(0, col_idx)
-            cell.text = str(header)
-            for para in cell.text_frame.paragraphs:
-                para.font.bold = True
-                para.font.size = Pt(9)
-
-        # Data rows
-        for row_idx, row_data in enumerate(rows[:n_rows - 1]):
-            for col_idx, value in enumerate(row_data):
-                if col_idx < n_cols:
-                    cell = table.cell(row_idx + 1, col_idx)
-                    cell.text = str(value) if value is not None else ""
-                    for para in cell.text_frame.paragraphs:
-                        para.font.size = Pt(8)
+        """填充含原生表格的頁面 — 委派給 components 模組。"""
+        fill_table(slide, spec)
 
     def _fill_insights_only(self, slide: Slide, spec: dict):
-        """只有洞察文字的頁面。"""
-        insights = spec.get("insights", [])
-        y = Cm(4.5)
-        for ins in insights[:6]:
-            text = ins.get("text", "") if isinstance(ins, dict) else str(ins)
-            txBox = slide.shapes.add_textbox(Cm(1.5), y, Cm(30.0), Cm(1.5))
-            tf = txBox.text_frame
-            tf.word_wrap = True
-            p = tf.paragraphs[0]
-            p.text = f"• {text}"
-            p.font.size = Pt(11)
-            y += Cm(1.8)
+        """只有洞察文字的頁面 — 委派給 components 模組。"""
+        fill_insights_only(slide, spec)

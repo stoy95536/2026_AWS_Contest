@@ -4,11 +4,16 @@
 所有圖表為原生物件，不以圖片嵌入。
 """
 
+import copy
+
+from lxml import etree
+
 from pptx import Presentation
 from pptx.chart.data import CategoryChartData, XyChartData
 from pptx.util import Inches, Pt, Cm, Emu
 from pptx.dml.color import RGBColor
 from pptx.enum.chart import XL_CHART_TYPE, XL_LEGEND_POSITION
+from pptx.oxml.ns import qn
 from pptx.slide import Slide
 
 
@@ -82,10 +87,7 @@ class ChartFactory:
             series.format.fill.fore_color.rgb = self.colors[i % len(self.colors)]
 
         # Y 軸設定
-        value_axis = chart.value_axis
-        if y_axis_label:
-            value_axis.has_title = True
-            value_axis.axis_title.text_frame.text = f"{y_axis_label} ({y_axis_unit})" if y_axis_unit else y_axis_label
+        self._set_value_axis_title(chart.value_axis, y_axis_label, y_axis_unit)
 
         return chart_frame
 
@@ -96,8 +98,21 @@ class ChartFactory:
         series_data: dict[str, list[float]],
         title: str = "",
         position: dict = None,
+        y_axis_label: str = "",
+        y_axis_unit: str = "",
     ):
-        """建立折線圖。"""
+        """
+        建立折線圖。
+
+        Args:
+            slide: 目標投影片
+            categories: X 軸類別
+            series_data: {系列名稱: [值...]}
+            title: 圖表標題
+            position: 位置 dict (left, top, width, height)
+            y_axis_label: Y 軸標籤
+            y_axis_unit: Y 軸單位
+        """
         if position is None:
             position = {"left": Cm(2), "top": Cm(4), "width": Cm(22), "height": Cm(12)}
 
@@ -125,6 +140,9 @@ class ChartFactory:
             series.format.line.color.rgb = self.colors[i % len(self.colors)]
             series.format.line.width = Pt(2.5)
 
+        # Y 軸設定
+        self._set_value_axis_title(chart.value_axis, y_axis_label, y_axis_unit)
+
         return chart_frame
 
     def create_combo_chart(
@@ -135,8 +153,24 @@ class ChartFactory:
         line_series: dict[str, list[float]],
         title: str = "",
         position: dict = None,
+        y_axis_label: str = "",
+        y_axis_unit: str = "",
     ):
-        """建立組合圖（直條 + 折線）。"""
+        """
+        建立組合圖（直條 + 折線）。
+        透過操作底層 XML，將折線系列從 barChart plot 移至獨立的 lineChart plot，
+        實現真正的組合圖效果。
+
+        Args:
+            slide: 目標投影片
+            categories: X 軸類別
+            bar_series: 直條系列 {系列名稱: [值...]}
+            line_series: 折線系列 {系列名稱: [值...]}
+            title: 圖表標題
+            position: 位置 dict (left, top, width, height)
+            y_axis_label: Y 軸標籤
+            y_axis_unit: Y 軸單位
+        """
         if position is None:
             position = {"left": Cm(2), "top": Cm(4), "width": Cm(22), "height": Cm(12)}
 
@@ -164,13 +198,51 @@ class ChartFactory:
             chart.has_title = True
             chart.chart_title.text_frame.text = title
 
-        # 將折線系列改為折線類型
+        # --- 透過 XML 操作將折線系列移至獨立 lineChart plot ---
         bar_count = len(bar_series)
-        for i in range(bar_count, bar_count + len(line_series)):
-            if i < len(chart.series):
-                plot = chart.plots[0]
-                # Note: python-pptx 對組合圖的支援有限
-                # 實作上可能需要直接操作 XML
+        if line_series and bar_count < len(chart.series):
+            plot_area = chart._chartSpace.find(qn("c:chart")).find(qn("c:plotArea"))
+            bar_chart_elem = plot_area.find(qn("c:barChart"))
+
+            if bar_chart_elem is not None:
+                # 建立 lineChart 元素
+                line_chart_elem = etree.SubElement(plot_area, qn("c:lineChart"))
+                # 設定 grouping 為 standard
+                grouping = etree.SubElement(line_chart_elem, qn("c:grouping"))
+                grouping.set("val", "standard")
+
+                # 從 barChart 中取出折線系列，移至 lineChart
+                all_ser = bar_chart_elem.findall(qn("c:ser"))
+                for i in range(bar_count, bar_count + len(line_series)):
+                    if i < len(all_ser):
+                        ser_elem = all_ser[i]
+                        bar_chart_elem.remove(ser_elem)
+                        line_chart_elem.append(ser_elem)
+
+                # 為 lineChart 加入 marker 設定（顯示標記點）
+                marker = etree.SubElement(line_chart_elem, qn("c:marker"))
+                marker_val = etree.SubElement(marker, qn("c:val"))
+                marker_val.text = "1"
+
+                # 設定折線系列使用副Y軸 (axId 對應)
+                # 複製主軸 axId 引用到 lineChart
+                for ax_id in bar_chart_elem.findall(qn("c:axId")):
+                    new_ax_id = copy.deepcopy(ax_id)
+                    line_chart_elem.append(new_ax_id)
+
+        # 設定直條系列顏色
+        for i, series in enumerate(chart.series):
+            if i < bar_count:
+                series.format.fill.solid()
+                series.format.fill.fore_color.rgb = self.colors[i % len(self.colors)]
+            else:
+                # 折線系列設定線條顏色
+                color_idx = i % len(self.colors)
+                series.format.line.color.rgb = self.colors[color_idx]
+                series.format.line.width = Pt(2.5)
+
+        # Y 軸設定
+        self._set_value_axis_title(chart.value_axis, y_axis_label, y_axis_unit)
 
         return chart_frame
 
@@ -184,10 +256,14 @@ class ChartFactory:
         position: dict = None,
     ):
         """
-        建立散佈圖。
+        建立散佈圖，並為每個資料點加上名稱標籤。
 
         Args:
             data_points: [{"name": str, "x": float, "y": float}, ...]
+            title: 圖表標題
+            x_label: X 軸標籤
+            y_label: Y 軸標籤
+            position: 位置 dict (left, top, width, height)
         """
         if position is None:
             position = {"left": Cm(2), "top": Cm(4), "width": Cm(22), "height": Cm(12)}
@@ -212,7 +288,77 @@ class ChartFactory:
             chart.has_title = True
             chart.chart_title.text_frame.text = title
 
+        # X 軸標籤
+        if x_label:
+            chart.category_axis.has_title = True
+            chart.category_axis.axis_title.text_frame.text = x_label
+
+        # Y 軸標籤
+        if y_label:
+            chart.value_axis.has_title = True
+            chart.value_axis.axis_title.text_frame.text = y_label
+
+        # --- 透過 XML 為每個資料點加上名稱標籤 ---
+        self._add_scatter_data_labels(chart, data_points)
+
         return chart_frame
+
+    def _add_scatter_data_labels(self, chart, data_points: list[dict]):
+        """
+        為散佈圖的每個資料點加入自訂文字標籤（銀行名稱）。
+        python-pptx 不直接支援自訂 data label 文字，需操作底層 XML。
+        """
+        plot_area = chart._chartSpace.find(qn("c:chart")).find(qn("c:plotArea"))
+        scatter_chart = plot_area.find(qn("c:scatterChart"))
+        if scatter_chart is None:
+            return
+
+        ser_elem = scatter_chart.find(qn("c:ser"))
+        if ser_elem is None:
+            return
+
+        # 為每個資料點建立個別的 dLbl 元素
+        # 先建立 dLbls 容器
+        d_lbls = etree.SubElement(ser_elem, qn("c:dLbls"))
+
+        for idx, point in enumerate(data_points):
+            name = point.get("name", "")
+            if not name:
+                continue
+
+            d_lbl = etree.SubElement(d_lbls, qn("c:dLbl"))
+
+            # 指定 data point index
+            idx_elem = etree.SubElement(d_lbl, qn("c:idx"))
+            idx_elem.set("val", str(idx))
+
+            # 使用 tx (rich text) 設定自訂標籤文字
+            tx = etree.SubElement(d_lbl, qn("c:tx"))
+            rich = etree.SubElement(tx, qn("c:rich"))
+
+            # body properties
+            etree.SubElement(rich, qn("a:bodyPr"))
+            etree.SubElement(rich, qn("a:lstStyle"))
+
+            # paragraph
+            p = etree.SubElement(rich, qn("a:p"))
+            r = etree.SubElement(p, qn("a:r"))
+
+            # 設定字體大小
+            r_pr = etree.SubElement(r, qn("a:rPr"))
+            r_pr.set("lang", "zh-TW")
+            r_pr.set("sz", "800")  # 8pt
+
+            t = etree.SubElement(r, qn("a:t"))
+            t.text = name
+
+            # 顯示設定：只顯示自訂文字，不顯示值
+            show_val = etree.SubElement(d_lbl, qn("c:showVal"))
+            show_val.set("val", "0")
+            show_cat = etree.SubElement(d_lbl, qn("c:showCatName"))
+            show_cat.set("val", "0")
+            show_ser = etree.SubElement(d_lbl, qn("c:showSerName"))
+            show_ser.set("val", "0")
 
     def create_stacked_bar_chart(
         self,
@@ -221,8 +367,21 @@ class ChartFactory:
         series_data: dict[str, list[float]],
         title: str = "",
         position: dict = None,
+        y_axis_label: str = "",
+        y_axis_unit: str = "",
     ):
-        """建立堆疊直條圖。"""
+        """
+        建立堆疊直條圖。
+
+        Args:
+            slide: 目標投影片
+            categories: X 軸類別
+            series_data: {系列名稱: [值...]}
+            title: 圖表標題
+            position: 位置 dict (left, top, width, height)
+            y_axis_label: Y 軸標籤
+            y_axis_unit: Y 軸單位
+        """
         if position is None:
             position = {"left": Cm(2), "top": Cm(4), "width": Cm(22), "height": Cm(12)}
 
@@ -250,6 +409,9 @@ class ChartFactory:
             series.format.fill.solid()
             series.format.fill.fore_color.rgb = self.colors[i % len(self.colors)]
 
+        # Y 軸設定
+        self._set_value_axis_title(chart.value_axis, y_axis_label, y_axis_unit)
+
         return chart_frame
 
     def create_pie_chart(
@@ -260,7 +422,10 @@ class ChartFactory:
         title: str = "",
         position: dict = None,
     ):
-        """建立圓餅圖。"""
+        """
+        建立圓餅圖。
+        圓餅圖無座標軸，不設定軸標籤。
+        """
         if position is None:
             position = {"left": Cm(2), "top": Cm(4), "width": Cm(22), "height": Cm(12)}
 
@@ -286,3 +451,17 @@ class ChartFactory:
         chart.legend.position = XL_LEGEND_POSITION.BOTTOM
 
         return chart_frame
+
+    # ========== 共用工具方法 ==========
+
+    def _set_value_axis_title(self, value_axis, label: str, unit: str = ""):
+        """
+        統一設定 Y 軸（數值軸）標題。
+        格式：「標籤 (單位)」或僅「標籤」。
+        座標軸單位須正確，不混用不同量級。
+        """
+        if not label:
+            return
+        value_axis.has_title = True
+        axis_text = f"{label} ({unit})" if unit else label
+        value_axis.axis_title.text_frame.text = axis_text
