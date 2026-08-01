@@ -5,7 +5,12 @@ Planner Agent — 簡報結構規劃器
 
 import json
 import os
+import warnings
 from typing import Optional
+
+from dotenv import load_dotenv
+load_dotenv(override=True)
+warnings.filterwarnings("ignore", message="Unverified HTTPS request")
 
 import boto3
 
@@ -37,7 +42,7 @@ class PlannerAgent:
     可使用 LLM 或基於規則的方式產生結構。
     """
 
-    def __init__(self, model_id: str = "anthropic.claude-sonnet-4-20250514-v1:0", region: str = "us-east-1"):
+    def __init__(self, model_id: str = "us.anthropic.claude-sonnet-4-20250514-v1:0", region: str = "us-east-1"):
         self.model_id = model_id
         self.region = region
         self._client = None
@@ -80,7 +85,7 @@ class PlannerAgent:
         try:
             return self._llm_plan(data_summary)
         except Exception as e:
-            print(f"[PlannerAgent] LLM 規劃失敗，使用預設結構: {e}")
+            print(f"[PlannerAgent] LLM 規劃失敗，使用預設結構: {type(e).__name__}: {e}")
             return self._rule_based_plan(data_summary)
 
     def _rule_based_plan(self, data_summary: dict) -> list[dict]:

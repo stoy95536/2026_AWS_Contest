@@ -65,6 +65,8 @@ class PPTReconciler:
         kpis = spec.get("kpis", [])
 
         for kpi in kpis:
+            if not isinstance(kpi, dict):
+                continue
             metric_id = kpi.get("metric_id", "")
             display_value = kpi.get("value", "")
 
@@ -98,14 +100,18 @@ class PPTReconciler:
         issues = []
         chart = spec.get("chart")
 
-        if not chart:
+        if not chart or not isinstance(chart, dict):
             return issues
 
         # 檢查 series 中引用的 metric_ids
         series_list = chart.get("series", [])
         for series in series_list:
+            if not isinstance(series, dict):
+                continue
             metric_ids = series.get("metric_ids", [])
             for mid in metric_ids:
+                if not isinstance(mid, str):
+                    continue
                 record = self.lineage.get_record(mid)
                 if record is None:
                     issues.append({
@@ -152,6 +158,8 @@ class PPTReconciler:
         # 校驗規則 2: 無基期不得有 YoY
         source_ids = spec.get("source_ids", [])
         for sid in source_ids:
+            if not isinstance(sid, str):
+                continue
             if "yoy" in sid.lower():
                 record = self.lineage.get_record(sid)
                 if record and record.value is None:
@@ -164,9 +172,11 @@ class PPTReconciler:
 
         # 校驗規則 3: 排名不重複不漏項
         chart = spec.get("chart")
-        if chart and chart.get("type") == "bar":
+        if chart and isinstance(chart, dict) and chart.get("type") == "bar":
             series_list = chart.get("series", [])
             for series in series_list:
+                if not isinstance(series, dict):
+                    continue
                 data = series.get("data", [])
                 # 排名圖中每個值代表不同銀行，應確保數量合理
                 if len(data) > 0 and len(set(str(d) for d in data)) < len(data) * 0.5:

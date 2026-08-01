@@ -6,154 +6,312 @@
     <title>LLM Excel-to-PPT Automation</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Microsoft JhengHei', sans-serif; background: #f5f7fa; color: #333; }
-        .container { max-width: 900px; margin: 0 auto; padding: 2rem; }
-        h1 { color: #003366; margin-bottom: 0.5rem; }
-        .subtitle { color: #666; margin-bottom: 2rem; }
-        .upload-section { background: #fff; border-radius: 12px; padding: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 2rem; }
-        .form-group { margin-bottom: 1.5rem; }
-        label { display: block; font-weight: bold; margin-bottom: 0.5rem; color: #003366; }
-        input[type="file"] { border: 2px dashed #ccc; padding: 1rem; width: 100%; border-radius: 8px; cursor: pointer; }
-        input[type="file"]:hover { border-color: #0066CC; }
-        select, input[type="text"] { width: 100%; padding: 0.7rem; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem; }
-        .btn { background: #003366; color: white; border: none; padding: 0.8rem 2rem; border-radius: 8px; font-size: 1rem; cursor: pointer; transition: background 0.3s; }
-        .btn:hover { background: #0066CC; }
-        .btn:disabled { background: #ccc; cursor: not-allowed; }
-        .progress-section { background: #fff; border-radius: 12px; padding: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 2rem; display: none; }
-        .progress-bar { width: 100%; height: 8px; background: #eee; border-radius: 4px; overflow: hidden; margin: 1rem 0; }
-        .progress-fill { height: 100%; background: linear-gradient(90deg, #003366, #0066CC); transition: width 0.5s; }
-        .status-text { color: #666; font-size: 0.9rem; }
-        .result-section { background: #fff; border-radius: 12px; padding: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); display: none; }
-        .download-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem; }
-        .download-card { border: 1px solid #eee; border-radius: 8px; padding: 1rem; text-align: center; cursor: pointer; transition: all 0.3s; }
-        .download-card:hover { border-color: #0066CC; background: #f0f7ff; }
-        .download-card h3 { color: #003366; font-size: 0.9rem; margin-bottom: 0.5rem; }
-        .error { color: #cc3333; background: #fff5f5; padding: 1rem; border-radius: 8px; margin-top: 1rem; }
+        body { font-family: 'Microsoft JhengHei', sans-serif; background: #f0f4f8; color: #1a1a2e; min-height: 100vh; }
+        .header { background: linear-gradient(135deg, #003366, #0066CC); color: white; padding: 1.5rem 2rem; }
+        .header h1 { font-size: 1.5rem; font-weight: 600; }
+        .header p { font-size: 0.85rem; opacity: 0.8; margin-top: 0.3rem; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 2rem; }
+        .card { background: #fff; border-radius: 12px; padding: 2rem; box-shadow: 0 2px 12px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+        .card h2 { color: #003366; font-size: 1.1rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+        .card h2 .badge { background: #003366; color: white; font-size: 0.7rem; padding: 0.2rem 0.6rem; border-radius: 10px; }
+        .form-group { margin-bottom: 1.2rem; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 0.4rem; color: #333; font-size: 0.9rem; }
+        .form-group .hint { font-size: 0.8rem; color: #888; margin-top: 0.2rem; }
+        .file-drop { border: 2px dashed #ccd; padding: 1.5rem; border-radius: 8px; text-align: center; cursor: pointer; transition: all 0.2s; background: #fafbfc; }
+        .file-drop:hover { border-color: #0066CC; background: #f0f7ff; }
+        .file-drop.dragover { border-color: #0066CC; background: #e8f4ff; }
+        .file-drop input { display: none; }
+        .file-drop .icon { font-size: 2rem; margin-bottom: 0.5rem; }
+        .file-drop .text { color: #666; font-size: 0.9rem; }
+        .file-list { margin-top: 0.8rem; }
+        .file-item { display: flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0.8rem; background: #f0f7ff; border-radius: 6px; margin-bottom: 0.4rem; font-size: 0.85rem; }
+        .file-item .name { flex: 1; color: #003366; }
+        .file-item .size { color: #888; font-size: 0.75rem; }
+        .file-item .remove { color: #cc3333; cursor: pointer; font-weight: bold; }
+        textarea { width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 8px; font-size: 0.9rem; font-family: inherit; resize: vertical; min-height: 120px; }
+        textarea:focus { outline: none; border-color: #0066CC; box-shadow: 0 0 0 3px rgba(0,102,204,0.1); }
+        select { width: 100%; padding: 0.6rem; border: 1px solid #ddd; border-radius: 6px; font-size: 0.9rem; }
+        .btn-row { display: flex; gap: 1rem; margin-top: 1.5rem; }
+        .btn { padding: 0.8rem 2rem; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; border: none; transition: all 0.2s; }
+        .btn-primary { background: #003366; color: white; flex: 1; }
+        .btn-primary:hover { background: #004488; }
+        .btn-primary:disabled { background: #aaa; cursor: not-allowed; }
+        .btn-secondary { background: #f0f0f0; color: #333; }
+        .btn-secondary:hover { background: #e0e0e0; }
+        .progress-card { display: none; }
+        .progress-bar { width: 100%; height: 6px; background: #eee; border-radius: 3px; overflow: hidden; margin: 1rem 0; }
+        .progress-fill { height: 100%; background: linear-gradient(90deg, #003366, #0066CC); transition: width 0.5s; width: 0%; }
+        .step-list { list-style: none; }
+        .step-list li { padding: 0.4rem 0; font-size: 0.85rem; color: #666; display: flex; align-items: center; gap: 0.5rem; }
+        .step-list li.done { color: #33993; }
+        .step-list li.done::before { content: "✓"; color: #339933; font-weight: bold; }
+        .step-list li.active { color: #003366; font-weight: 600; }
+        .step-list li.active::before { content: "▶"; color: #0066CC; }
+        .step-list li.pending::before { content: "○"; color: #ccc; }
+        .result-card { display: none; }
+        .download-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; }
+        .dl-card { border: 1px solid #e8e8e8; border-radius: 8px; padding: 1.2rem; text-align: center; cursor: pointer; transition: all 0.2s; }
+        .dl-card:hover { border-color: #0066CC; background: #f8fbff; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+        .dl-card .dl-icon { font-size: 1.8rem; margin-bottom: 0.5rem; }
+        .dl-card .dl-name { font-size: 0.85rem; font-weight: 600; color: #003366; }
+        .dl-card .dl-desc { font-size: 0.75rem; color: #888; margin-top: 0.3rem; }
+        .error-box { background: #fff5f5; border: 1px solid #ffcccc; color: #cc3333; padding: 1rem; border-radius: 8px; margin-top: 1rem; font-size: 0.85rem; display: none; }
+        .stats { display: flex; gap: 2rem; margin-top: 1rem; }
+        .stat { text-align: center; }
+        .stat .val { font-size: 1.5rem; font-weight: 700; color: #003366; }
+        .stat .label { font-size: 0.75rem; color: #888; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>LLM Excel-to-PPT Automation</h1>
-        <p class="subtitle">信用卡業務 Excel 報表自動轉換為策略簡報</p>
+    <div class="header">
+        <h1>LLM 驅動之 Excel 報表轉簡報自動化系統</h1>
+        <p>上傳信用卡業務 Excel 資料，自動產出策略分析簡報</p>
+    </div>
 
-        <div class="upload-section">
-            <form id="uploadForm">
-                <div class="form-group">
-                    <label>Excel 資料檔案 *</label>
-                    <input type="file" id="excelFile" accept=".xlsx,.xls" required>
+    <div class="container">
+        <!-- Upload Section -->
+        <div class="card" id="uploadCard">
+            <h2>上傳檔案 <span class="badge">STEP 1</span></h2>
+
+            <div class="form-group">
+                <label>Excel 資料檔案（可多選）*</label>
+                <div class="file-drop" id="excelDrop" onclick="document.getElementById('excelFiles').click()">
+                    <div class="icon">📊</div>
+                    <div class="text">點擊或拖拉 Excel 檔案到此處<br><small>支援 .xlsx / .xls，可同時上傳多個檔案</small></div>
+                    <input type="file" id="excelFiles" accept=".xlsx,.xls" multiple>
                 </div>
-                <div class="form-group">
-                    <label>PowerPoint 模板 (選填)</label>
+                <div class="file-list" id="excelFileList"></div>
+            </div>
+
+            <div class="form-group">
+                <label>PowerPoint 簡報模板（選填）</label>
+                <div class="file-drop" id="templateDrop" onclick="document.getElementById('templateFile').click()">
+                    <div class="icon">📑</div>
+                    <div class="text">點擊或拖拉 PPT 模板<br><small>支援 .pptx，不提供則使用預設版型</small></div>
                     <input type="file" id="templateFile" accept=".pptx">
                 </div>
-                <div class="form-group">
-                    <label>目標機構</label>
-                    <input type="text" id="targetInstitution" value="台新銀行">
-                </div>
-                <div class="form-group">
-                    <label>LLM 模型</label>
-                    <select id="modelSelect">
-                        <option value="anthropic.claude-sonnet-4-20250514">Claude Sonnet 4</option>
-                        <option value="anthropic.claude-3-5-sonnet-20241022-v2:0">Claude 3.5 Sonnet v2</option>
-                        <option value="anthropic.claude-3-haiku-20240307-v1:0">Claude 3 Haiku</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn" id="submitBtn">開始生成簡報</button>
-            </form>
+                <div class="file-list" id="templateFileList"></div>
+            </div>
         </div>
 
-        <div class="progress-section" id="progressSection">
+        <!-- Prompt Section -->
+        <div class="card">
+            <h2>分析提示詞 <span class="badge">STEP 2</span></h2>
+            <div class="form-group">
+                <label>系統提示詞</label>
+                <textarea id="promptText" placeholder="請根據我提供的 1-12 月信用卡業務統計資料，以台新新光金控簡報模板，製作一份16頁的「銀行信用卡市場分析與經營洞察簡報」...">請根據我提供的 1-12 月信用卡業務統計資料，以台新新光金控簡報模板，製作一份16頁的「銀行信用卡市場分析與經營洞察簡報」。
+簡報對象為：銀行高階主管、信用卡事業處、數位金融主管。
+請重點分析以下指標：流通卡數、有效卡數、有效卡率、簽帳金額、平均每卡簽帳金額、月增率/年增率、市占率變化、循環信用餘額、分期業務、呆帳或風險指標。
+請用「商業洞察」方式撰寫，而不是只描述數字。
+請大量使用：排名圖、市占率圖、成長率圖、散點圖（規模 vs 成長）、熱力圖。</textarea>
+                <div class="hint">此提示詞將指引 LLM 如何分析資料並撰寫洞察</div>
+            </div>
+            <div class="form-group">
+                <label>目標分析機構</label>
+                <select id="institution">
+                    <option value="台新銀行">台新銀行</option>
+                    <option value="中國信託">中國信託</option>
+                    <option value="國泰世華">國泰世華</option>
+                    <option value="玉山銀行">玉山銀行</option>
+                    <option value="台北富邦">台北富邦</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>LLM 模型</label>
+                <select id="modelSelect">
+                    <option value="anthropic.claude-sonnet-4-20250514-v1:0">Claude Sonnet 4</option>
+                    <option value="anthropic.claude-sonnet-4-5-20250929-v1:0">Claude Sonnet 4.5</option>
+                    <option value="anthropic.claude-haiku-4-5-20251001-v1:0">Claude Haiku 4.5</option>
+                </select>
+            </div>
+            <div class="btn-row">
+                <button class="btn btn-primary" id="submitBtn" onclick="startProcessing()">開始生成簡報</button>
+            </div>
+        </div>
+
+        <!-- Progress Section -->
+        <div class="card progress-card" id="progressCard">
             <h2>處理進度</h2>
-            <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width: 0%"></div></div>
-            <p class="status-text" id="statusText">準備中...</p>
+            <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+            <ul class="step-list" id="stepList">
+                <li class="pending" data-step="upload">上傳檔案</li>
+                <li class="pending" data-step="parse">Excel 解析與標準化</li>
+                <li class="pending" data-step="calc">指標計算引擎</li>
+                <li class="pending" data-step="plan">LLM 簡報結構規劃</li>
+                <li class="pending" data-step="insight">商業洞察生成</li>
+                <li class="pending" data-step="review">品質審核</li>
+                <li class="pending" data-step="ppt">PowerPoint 生成</li>
+                <li class="pending" data-step="qa">數值回溯校驗</li>
+                <li class="pending" data-step="export">匯出結果</li>
+            </ul>
         </div>
 
-        <div class="result-section" id="resultSection">
-            <h2>結果下載</h2>
-            <div class="download-grid">
-                <div class="download-card" onclick="download('ppt')">
-                    <h3>PowerPoint 簡報</h3>
-                    <p>16 頁策略簡報</p>
+        <!-- Result Section -->
+        <div class="card result-card" id="resultCard">
+            <h2>生成結果</h2>
+            <div class="stats" id="statsArea"></div>
+            <div class="download-grid" id="downloadGrid">
+                <div class="dl-card" onclick="download('ppt')">
+                    <div class="dl-icon">📊</div>
+                    <div class="dl-name">策略簡報</div>
+                    <div class="dl-desc">16 頁 PowerPoint</div>
                 </div>
-                <div class="download-card" onclick="download('excel')">
-                    <h3>分析結果 Excel</h3>
-                    <p>指標計算結果</p>
+                <div class="dl-card" onclick="download('excel')">
+                    <div class="dl-icon">📋</div>
+                    <div class="dl-name">分析結果</div>
+                    <div class="dl-desc">標準化 Excel</div>
                 </div>
-                <div class="download-card" onclick="download('lineage')">
-                    <h3>資料血緣</h3>
-                    <p>數值追溯紀錄</p>
+                <div class="dl-card" onclick="download('lineage')">
+                    <div class="dl-icon">🔗</div>
+                    <div class="dl-name">資料血緣</div>
+                    <div class="dl-desc">數值追溯 JSON</div>
                 </div>
-                <div class="download-card" onclick="download('qa_report')">
-                    <h3>QA 報告</h3>
-                    <p>品質校驗結果</p>
+                <div class="dl-card" onclick="download('qa_report')">
+                    <div class="dl-icon">✅</div>
+                    <div class="dl-name">QA 報告</div>
+                    <div class="dl-desc">品質校驗結果</div>
+                </div>
+                <div class="dl-card" onclick="download('slide_spec')">
+                    <div class="dl-icon">📝</div>
+                    <div class="dl-name">Slide Spec</div>
+                    <div class="dl-desc">簡報規格 JSON</div>
                 </div>
             </div>
-            <div id="errorDisplay" class="error" style="display:none"></div>
+            <div class="error-box" id="errorBox"></div>
         </div>
     </div>
 
     <script>
         let currentTaskId = null;
-        const API_BASE = window.location.origin;
+        const API = window.location.origin;
+        let excelFiles = [];
+        let templateFile = null;
 
-        document.getElementById('uploadForm').addEventListener('submit', async (e) => {
-            e.preventDefault();
+        // Drag & Drop for Excel
+        const excelDrop = document.getElementById('excelDrop');
+        const excelInput = document.getElementById('excelFiles');
+
+        ['dragenter','dragover'].forEach(e => excelDrop.addEventListener(e, ev => { ev.preventDefault(); excelDrop.classList.add('dragover'); }));
+        ['dragleave','drop'].forEach(e => excelDrop.addEventListener(e, ev => { ev.preventDefault(); excelDrop.classList.remove('dragover'); }));
+        excelDrop.addEventListener('drop', ev => { addExcelFiles(ev.dataTransfer.files); });
+        excelInput.addEventListener('change', ev => { addExcelFiles(ev.target.files); });
+
+        function addExcelFiles(files) {
+            for (const f of files) {
+                if (f.name.endsWith('.xlsx') || f.name.endsWith('.xls')) {
+                    excelFiles.push(f);
+                }
+            }
+            renderExcelList();
+        }
+
+        function renderExcelList() {
+            const list = document.getElementById('excelFileList');
+            list.innerHTML = excelFiles.map((f, i) =>
+                `<div class="file-item"><span class="name">${f.name}</span><span class="size">${(f.size/1024).toFixed(0)} KB</span><span class="remove" onclick="removeExcel(${i})">✕</span></div>`
+            ).join('');
+        }
+
+        function removeExcel(idx) { excelFiles.splice(idx, 1); renderExcelList(); }
+
+        // Template
+        const templateDrop = document.getElementById('templateDrop');
+        const templateInput = document.getElementById('templateFile');
+        ['dragenter','dragover'].forEach(e => templateDrop.addEventListener(e, ev => { ev.preventDefault(); templateDrop.classList.add('dragover'); }));
+        ['dragleave','drop'].forEach(e => templateDrop.addEventListener(e, ev => { ev.preventDefault(); templateDrop.classList.remove('dragover'); }));
+        templateDrop.addEventListener('drop', ev => { setTemplate(ev.dataTransfer.files[0]); });
+        templateInput.addEventListener('change', ev => { setTemplate(ev.target.files[0]); });
+
+        function setTemplate(f) {
+            if (f && f.name.endsWith('.pptx')) {
+                templateFile = f;
+                document.getElementById('templateFileList').innerHTML = `<div class="file-item"><span class="name">${f.name}</span><span class="size">${(f.size/1024).toFixed(0)} KB</span><span class="remove" onclick="clearTemplate()">✕</span></div>`;
+            }
+        }
+        function clearTemplate() { templateFile = null; document.getElementById('templateFileList').innerHTML = ''; }
+
+        // Submit
+        async function startProcessing() {
+            if (excelFiles.length === 0) { alert('請至少上傳一個 Excel 檔案'); return; }
+
             const formData = new FormData();
-            const excelFile = document.getElementById('excelFile').files[0];
-            if (!excelFile) { alert('請選擇 Excel 檔案'); return; }
-
-            formData.append('excel_file', excelFile);
-            const templateFile = document.getElementById('templateFile').files[0];
+            excelFiles.forEach(f => formData.append('excel_files', f));
             if (templateFile) formData.append('template_file', templateFile);
-            formData.append('target_institution', document.getElementById('targetInstitution').value);
+            formData.append('prompt_text', document.getElementById('promptText').value);
+            formData.append('target_institution', document.getElementById('institution').value);
             formData.append('model_id', document.getElementById('modelSelect').value);
             formData.append('use_llm', 'true');
             formData.append('region', 'us-east-1');
 
             document.getElementById('submitBtn').disabled = true;
-            document.getElementById('progressSection').style.display = 'block';
-            document.getElementById('resultSection').style.display = 'none';
+            document.getElementById('progressCard').style.display = 'block';
+            document.getElementById('resultCard').style.display = 'none';
+            document.getElementById('errorBox').style.display = 'none';
+            resetSteps();
 
             try {
-                const res = await fetch(`${API_BASE}/api/upload`, { method: 'POST', body: formData });
+                const res = await fetch(`${API}/api/upload`, { method: 'POST', body: formData });
                 const data = await res.json();
                 currentTaskId = data.task_id;
+                updateStep('upload', 'done');
                 pollStatus();
             } catch (err) {
                 showError('上傳失敗: ' + err.message);
+                document.getElementById('submitBtn').disabled = false;
             }
-        });
+        }
+
+        function resetSteps() {
+            document.querySelectorAll('.step-list li').forEach(li => { li.className = 'pending'; });
+            document.getElementById('progressFill').style.width = '0%';
+        }
+
+        function updateStep(step, state) {
+            const li = document.querySelector(`[data-step="${step}"]`);
+            if (li) li.className = state;
+        }
 
         async function pollStatus() {
             if (!currentTaskId) return;
             try {
-                const res = await fetch(`${API_BASE}/api/status/${currentTaskId}`);
+                const res = await fetch(`${API}/api/status/${currentTaskId}`);
                 const data = await res.json();
                 document.getElementById('progressFill').style.width = data.progress + '%';
-                document.getElementById('statusText').textContent = data.current_step || '處理中...';
+
+                // Update step states
+                const steps = ['upload','parse','calc','plan','insight','review','ppt','qa','export'];
+                const completed = data.steps_completed || [];
+                const stepMap = { 'excel_parse':'parse', 'data_validation':'calc', 'metric_calculation':'calc',
+                    'slide_planning':'plan', 'insight_generation':'insight', 'quality_review':'review',
+                    'ppt_generation':'ppt', 'reconciliation':'qa', 'export':'export' };
+                completed.forEach(s => { if(stepMap[s]) updateStep(stepMap[s], 'done'); });
 
                 if (data.status === 'completed') {
-                    document.getElementById('resultSection').style.display = 'block';
+                    document.getElementById('resultCard').style.display = 'block';
                     document.getElementById('submitBtn').disabled = false;
+                    if (data.result) {
+                        const dur = data.result.duration_seconds;
+                        document.getElementById('statsArea').innerHTML = `
+                            <div class="stat"><div class="val">${dur ? dur.toFixed(1) : '-'}s</div><div class="label">處理時間</div></div>
+                            <div class="stat"><div class="val">${completed.length}</div><div class="label">完成步驟</div></div>
+                            <div class="stat"><div class="val">16</div><div class="label">簡報頁數</div></div>
+                        `;
+                    }
                 } else if (data.status === 'failed') {
-                    showError('處理失敗: ' + (data.error || '未知錯誤'));
+                    showError('處理失敗: ' + JSON.stringify(data.error));
                     document.getElementById('submitBtn').disabled = false;
                 } else {
                     setTimeout(pollStatus, 2000);
                 }
-            } catch (err) {
-                setTimeout(pollStatus, 3000);
-            }
+            } catch (err) { setTimeout(pollStatus, 3000); }
         }
 
-        function download(fileType) {
-            if (currentTaskId) {
-                window.open(`${API_BASE}/api/download/${currentTaskId}/${fileType}`);
-            }
+        function download(type) {
+            if (currentTaskId) window.open(`${API}/api/download/${currentTaskId}/${type}`);
         }
 
         function showError(msg) {
-            const el = document.getElementById('errorDisplay');
+            const el = document.getElementById('errorBox');
             el.textContent = msg;
             el.style.display = 'block';
         }

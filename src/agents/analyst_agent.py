@@ -5,7 +5,12 @@ Analyst Agent — 分析師 Agent
 
 import json
 import os
+import warnings
 from typing import Optional
+
+from dotenv import load_dotenv
+load_dotenv(override=True)
+warnings.filterwarnings("ignore", message="Unverified HTTPS request")
 
 import boto3
 
@@ -19,7 +24,7 @@ class AnalystAgent:
     - 不自行計算數值，只引用計算引擎結果
     """
 
-    def __init__(self, model_id: str = "anthropic.claude-sonnet-4-20250514-v1:0", region: str = "us-east-1"):
+    def __init__(self, model_id: str = "us.anthropic.claude-sonnet-4-20250514-v1:0", region: str = "us-east-1"):
         self.model_id = model_id
         self.region = region
         self._client = None
@@ -67,7 +72,7 @@ class AnalystAgent:
         try:
             return self._llm_insights(slide_spec, metric_data)
         except Exception as e:
-            print(f"[AnalystAgent] LLM 洞察生成失敗: {e}")
+            print(f"[AnalystAgent] LLM 洞察生成失敗: {type(e).__name__}: {e}")
             return self._rule_based_insights(slide_spec, metric_data)
 
     def _rule_based_insights(self, slide_spec: dict, metric_data: list[dict]) -> dict:

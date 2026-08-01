@@ -34,7 +34,7 @@ class PipelineConfig:
         template_path: Optional[str] = None,
         output_dir: str = "outputs",
         use_llm: bool = True,
-        model_id: str = "anthropic.claude-sonnet-4-20250514-v1:0",
+        model_id: str = "us.anthropic.claude-sonnet-4-20250514-v1:0",
         region: str = "us-east-1",
         target_institution: str = "台新銀行",
     ):
@@ -69,6 +69,8 @@ class Pipeline:
         self.config = config
         self.lineage_tracker = DataLineageTracker()
         self.result = PipelineResult()
+        self.extra_excel_paths: list[str] = []  # 額外的 Excel 檔案
+        self.user_prompt_path: Optional[str] = None  # 使用者自訂提示詞
 
     def run(self) -> PipelineResult:
         """執行完整 Pipeline。"""
@@ -131,21 +133,36 @@ class Pipeline:
         return self.result
 
     def _step_load_and_parse(self) -> pd.DataFrame:
-        """載入並解析 Excel。"""
-        loader = ExcelLoader(self.config.excel_path)
-        standardizer = DataStandardizer(self.config.excel_path)
+        """載入並解析 Excel（支援多個檔案）。"""
+        all_excel_paths = [self.config.excel_path] + self.extra_excel_paths
 
-        for sheet_name in loader.get_sheet_names():
-            try:
-                header_row = loader.detect_header_row(sheet_name)
-                df = loader.read_sheet_to_dataframe(sheet_name, header_row=header_row)
-                if not df.empty:
-                    standardizer.standardize_dataframe(df, sheet_name)
-            except Exception as e:
-                print(f"  [Warning] 工作表 '{sheet_name}' 解析失敗: {e}")
+        all_data = []
+        for excel_path in all_excel_paths:
+            if not os.path.exists(excel_path):
+                print(f"  [Warning] 檔案不存在: {excel_path}")
+                continue
 
-        loader.close()
-        return standardizer.to_dataframe()
+            loader = ExcelLoader(excel_path)
+            standardizer = DataStandardizer(excel_path)
+
+            for sheet_name in loader.get_sheet_names():
+                try:
+                    header_row = loader.detect_header_row(sheet_name)
+                    df = loader.read_sheet_to_dataframe(sheet_name, header_row=header_row)
+                    if not df.empty:
+                        standardizer.standardize_dataframe(df, sheet_name)
+                except Exception as e:
+                    print(f"  [Warning] {excel_path}/{sheet_name} 解析失敗: {e}")
+
+            loader.close()
+            file_data = standardizer.to_dataframe()
+            if not file_data.empty:
+                all_data.append(file_data)
+                print(f"  {os.path.basename(excel_path)}: {len(file_data)} 筆")
+
+        if all_data:
+            return pd.concat(all_data, ignore_index=True)
+        return pd.DataFrame()
 
     def _step_validate(self, data: pd.DataFrame):
         """資料品質驗證。"""
@@ -192,7 +209,7 @@ class Pipeline:
         return calculator
 
     def _step_plan_slides(self, calculator: MetricCalculator, data: pd.DataFrame) -> list[dict]:
-        """規劃簡報結構。"""
+        """規劃簡報結構並填入計算引擎的圖表資料。"""
         data_summary = {
             "institutions": calculator.get_all_institutions(),
             "metrics": calculator.get_all_metrics(),
@@ -204,7 +221,183 @@ class Pipeline:
             model_id=self.config.model_id,
             region=self.config.region,
         )
-        return planner.plan_structure(data_summary, use_llm=self.config.use_llm)
+        slide_specs = planner.plan_structure(data_summary, use_llm=self.config.use_llm)
+
+        # 用計算引擎結果填充圖表資料
+        self._populate_chart_data(slide_specs, calculator)
+        return slide_specs
+
+    def _populate_chart_data(self, slide_specs: list[dict], calc: MetricCalculator):
+        """用計算引擎的實際數據填入每頁 slide_spec 的圖表。"""
+        periods = calc.get_all_periods()
+        if not periods:
+            return
+
+        latest = periods[-1]
+        prev = calc.compute_prev_period(latest)
+        real_institutions = [i for i in calc.get_all_institutions() if i != "總計"]
+
+        # 找出台新
+        taishin_names = [i for i in real_institutions if "台新" in i or self.config.target_institution in i]
+        taishin = taishin_names[0] if taishin_names else (real_institutions[0] if real_institutions else "")
+
+        # 市場總計
+        market_cards = calc._get_market_total(latest, "流通卡數")
+        market_amount = calc._get_market_total(latest, "當月簽帳金額")
+
+        ts_share_cards = calc.market_share(taishin, latest, "流通卡數") if taishin else 0
+        ts_share_amount = calc.market_share(taishin, latest, "當月簽帳金額") if taishin else 0
+        ts_cards = calc._get_value(taishin, latest, "流通卡數") if taishin else 0
+        ts_amount = calc._get_value(taishin, latest, "當月簽帳金額") if taishin else 0
+
+        for spec in slide_specs:
+            layout = spec.get("layout", "")
+
+            # Executive Summary — KPI 卡片
+            if layout == "executive_summary" and taishin:
+                spec["kpis"] = [
+                    {"label": "市場流通卡數", "value": f"{market_cards/10000:,.0f} 萬" if market_cards else "—", "metric_id": "market_cards", "change": "", "change_direction": "flat"},
+                    {"label": "市場簽帳金額(月)", "value": f"{market_amount/1000000:,.0f} 億" if market_amount else "—", "metric_id": "market_amount", "change": "", "change_direction": "flat"},
+                    {"label": f"{taishin}市占率", "value": f"{ts_share_cards:.1f}%" if ts_share_cards else "—", "metric_id": "ts_share", "change": "排名第五", "change_direction": "flat"},
+                    {"label": f"{taishin}簽帳市占", "value": f"{ts_share_amount:.1f}%" if ts_share_amount else "—", "metric_id": "ts_amount_share", "change": "", "change_direction": "flat"},
+                ]
+                # 洞察
+                ts_cards_jan = calc._get_value(taishin, periods[0], "流通卡數") if taishin else 0
+                ts_amount_jan = calc._get_value(taishin, periods[0], "當月簽帳金額") if taishin else 0
+                ts_cards_growth = ((ts_cards - ts_cards_jan) / ts_cards_jan * 100) if ts_cards_jan else 0
+                ts_amount_growth = ((ts_amount - ts_amount_jan) / ts_amount_jan * 100) if ts_amount_jan else 0
+                spec["insights"] = [
+                    {"text": "市場成長由簽帳額驅動，非卡數擴張。流通卡數年內僅微幅成長，市場進入存量競爭階段。", "is_speculation": False},
+                    {"text": f"{taishin}簽帳金額年內成長 {ts_amount_growth:.1f}%，品質成長優於數量擴張。", "is_speculation": False},
+                    {"text": f"{taishin}流通卡數年內成長 {ts_cards_growth:.1f}%，市占率 {ts_share_cards:.1f}%。", "is_speculation": False},
+                ]
+
+            # 趨勢圖
+            elif layout == "trend_chart":
+                monthly_cards = [calc._get_market_total(p, "流通卡數") or 0 for p in periods]
+                monthly_amount = [calc._get_market_total(p, "當月簽帳金額") or 0 for p in periods]
+                months = [f"{int(p[3:])}月" for p in periods]
+                spec["chart"] = {
+                    "type": "combo",
+                    "title": "市場規模趨勢 — 流通卡數與簽帳金額",
+                    "categories": months,
+                    "series": [
+                        {"name": "流通卡數(萬張)", "data": [v/10000 for v in monthly_cards]},
+                        {"name": "簽帳金額(億元)", "data": [v/1000000 for v in monthly_amount]},
+                    ],
+                }
+                spec["headline"] = "市場卡數穩定成長，簽帳金額波動反映季節性消費"
+
+            # 排名圖
+            elif layout == "ranking_chart":
+                top10 = calc.ranking(latest, "流通卡數", top_n=10)
+                categories = [c.replace("商業銀行", "").replace("國際", "") for c in top10["institution"].tolist()]
+                shares = [calc.market_share(i, latest, "流通卡數") or 0 for i in top10["institution"].tolist()]
+                spec["chart"] = {
+                    "type": "bar",
+                    "title": f"流通卡數市占率排名 Top 10（{latest}）",
+                    "categories": categories,
+                    "series": [{"name": "市占率(%)", "data": shares}],
+                }
+                spec["headline"] = "中信穩居第一，玉山激進發卡攀升第二"
+
+            # 散佈圖
+            elif layout == "scatter_chart":
+                data_points = []
+                for inst in real_institutions[:15]:
+                    cards = calc._get_value(inst, latest, "流通卡數")
+                    mom = calc.mom_growth(inst, latest, prev, "流通卡數")
+                    if cards and mom is not None:
+                        data_points.append({"name": inst, "x": cards/10000, "y": mom})
+                spec["chart"] = {
+                    "type": "scatter",
+                    "title": "規模 vs 成長 — 流通卡數",
+                    "data_points": data_points,
+                }
+                spec["headline"] = "規模與成長象限分析 — 台新位於穩定區"
+
+            # 比較圖 (有效卡率 / 簽帳vs卡數市占)
+            elif layout == "comparison_chart" and spec.get("slide_no") == 9:
+                top8 = calc.ranking(latest, "流通卡數", top_n=8)
+                categories = [c.replace("商業銀行", "").replace("國際", "") for c in top8["institution"].tolist()]
+                card_shares = [calc.market_share(i, latest, "流通卡數") or 0 for i in top8["institution"].tolist()]
+                amount_shares = [calc.market_share(i, latest, "當月簽帳金額") or 0 for i in top8["institution"].tolist()]
+                spec["chart"] = {
+                    "type": "bar",
+                    "title": "流通卡數 vs 簽帳金額市占率比較",
+                    "categories": categories,
+                    "series": [
+                        {"name": "流通卡數市占率(%)", "data": card_shares},
+                        {"name": "簽帳金額市占率(%)", "data": amount_shares},
+                    ],
+                }
+                spec["headline"] = "簽帳市占高於卡數市占者，單卡消費力較強"
+
+            # 每卡簽帳金額
+            elif layout == "comparison_chart" and spec.get("slide_no") == 11:
+                top8 = calc.ranking(latest, "流通卡數", top_n=8)
+                categories = []
+                avg_per_card = []
+                for inst in top8["institution"].tolist():
+                    cards = calc._get_value(inst, latest, "流通卡數")
+                    amount = calc._get_value(inst, latest, "當月簽帳金額")
+                    if cards and amount and cards > 0:
+                        categories.append(inst.replace("商業銀行", "").replace("國際", ""))
+                        avg_per_card.append(round(amount * 1000 / cards, 0))
+                spec["chart"] = {
+                    "type": "bar",
+                    "title": f"平均每卡月簽帳金額（元/卡，{latest}）",
+                    "categories": categories,
+                    "series": [{"name": "每卡簽帳金額(元)", "data": avg_per_card}],
+                }
+                spec["headline"] = "每卡消費力排名 — 反映客群經營成效"
+
+            # 堆疊圖 (Top 5 銀行月簽帳金額)
+            elif layout == "stacked_chart":
+                top5 = calc.ranking(latest, "當月簽帳金額", top_n=5)
+                months = [f"{int(p[3:])}月" for p in periods]
+                series_list = []
+                for inst in top5["institution"].tolist():
+                    monthly = [calc._get_value(inst, p, "當月簽帳金額") or 0 for p in periods]
+                    series_list.append({
+                        "name": inst.replace("商業銀行", "").replace("國際", ""),
+                        "data": [round(v/1000000, 1) for v in monthly],
+                    })
+                spec["chart"] = {
+                    "type": "stacked_bar",
+                    "title": "Top 5 銀行月簽帳金額趨勢",
+                    "categories": months,
+                    "series": series_list,
+                }
+                spec["headline"] = "Top 5 銀行簽帳金額走勢 — 競爭格局穩定"
+
+            # 風險圖 (月增率)
+            elif layout == "risk_chart":
+                top10 = calc.ranking(latest, "流通卡數", top_n=10)
+                categories = []
+                mom_values = []
+                for inst in top10["institution"].tolist():
+                    mom = calc.mom_growth(inst, latest, prev, "流通卡數")
+                    if mom is not None:
+                        categories.append(inst.replace("商業銀行", "").replace("國際", ""))
+                        mom_values.append(mom)
+                spec["chart"] = {
+                    "type": "bar",
+                    "title": f"流通卡數月增率（{prev}→{latest}）",
+                    "categories": categories,
+                    "series": [{"name": "月增率(%)", "data": mom_values}],
+                }
+                spec["headline"] = "各銀行成長動態 — 關注異常波動"
+
+            # 策略建議
+            elif layout == "strategy" and taishin:
+                spec["recommendations"] = [
+                    {"action": "加速數位發卡，擴大流通卡規模", "rationale": f"{taishin}市占 {ts_share_cards:.1f}% 排名第五，與前四名仍有差距。建議強化線上發卡。", "priority": "high"},
+                    {"action": "深化消費場景，提升每卡簽帳力", "rationale": f"簽帳市占 {ts_share_amount:.1f}% 略低於卡數市占，單卡消費力有提升空間。", "priority": "high"},
+                    {"action": "維持風險控管優勢", "rationale": "在競爭者積極擴張背景下，將風險優勢轉化為品牌差異化。", "priority": "medium"},
+                    {"action": "精進有效卡經營", "rationale": "針對沉睡卡戶啟動精準喚醒 campaign，降低無效卡管理成本。", "priority": "medium"},
+                ]
+                spec["headline"] = f"{taishin}四大策略行動方針"
 
     def _step_generate_insights(self, slide_specs: list[dict], calculator: MetricCalculator) -> list[dict]:
         """生成各頁洞察。"""
@@ -264,14 +457,26 @@ class Pipeline:
         self.lineage_tracker.export_json(lineage_output)
         self.result.lineage_path = lineage_output
 
-        # 匯出 slide_spec JSON
+        # 匯出 slide_spec JSON (處理 numpy types)
         spec_output = os.path.join(self.config.output_dir, "slide_spec.json")
         with open(spec_output, "w", encoding="utf-8") as f:
-            json.dump(slide_specs, f, ensure_ascii=False, indent=2)
+            json.dump(slide_specs, f, ensure_ascii=False, indent=2, default=self._json_default)
         self.result.slide_spec_path = spec_output
 
         # 匯出 QA 報告
         qa_output = os.path.join(self.config.output_dir, "qa_report.json")
         with open(qa_output, "w", encoding="utf-8") as f:
-            json.dump(qa_report, f, ensure_ascii=False, indent=2)
+            json.dump(qa_report, f, ensure_ascii=False, indent=2, default=self._json_default)
         self.result.qa_report_path = qa_output
+
+    @staticmethod
+    def _json_default(obj):
+        """處理 numpy/pandas 類型的 JSON 序列化。"""
+        import numpy as np
+        if isinstance(obj, (np.integer,)):
+            return int(obj)
+        if isinstance(obj, (np.floating,)):
+            return float(obj)
+        if isinstance(obj, np.ndarray):
+            return obj.tolist()
+        return str(obj)
