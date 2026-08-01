@@ -21,6 +21,13 @@ COL_PERIOD = "period"
 COL_DIMENSION = "dimension"
 """維度值（原始欄位的完整表頭，如「亞洲地區 > 日本 Japan」）。"""
 
+COL_CANONICAL = "canonical"
+"""統一欄位名（如「來臺旅客_亞洲地區_日本」）。
+
+LLM 只認得 canonical 名稱——它讀的是 Data Catalog，看不到原始表頭。
+長表同時帶兩者：`canonical` 供 LLM 指定參數，`dimension` 保留原始表頭
+供人核對時能對回 Excel 上實際看到的文字。"""
+
 COL_VALUE = "value"
 """數值。"""
 
@@ -37,7 +44,7 @@ COL_ROLE = "aggregation_role"
 造成重複計算——實測表1-3 東南亞群組就是這種結構。"""
 
 LONG_COLUMNS = [
-    COL_PERIOD, COL_DIMENSION, COL_VALUE,
+    COL_PERIOD, COL_CANONICAL, COL_DIMENSION, COL_VALUE,
     COL_FILE, COL_SHEET, COL_ROW, COL_COL, COL_ROLE,
 ]
 
