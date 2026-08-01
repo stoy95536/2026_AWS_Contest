@@ -69,6 +69,8 @@ class Pipeline:
         self.config = config
         self.lineage_tracker = DataLineageTracker()
         self.result = PipelineResult()
+        self.extra_excel_paths: list[str] = []  # 額外的 Excel 檔案
+        self.user_prompt_path: Optional[str] = None  # 使用者自訂提示詞
 
     def run(self) -> PipelineResult:
         """執行完整 Pipeline。"""
@@ -131,21 +133,36 @@ class Pipeline:
         return self.result
 
     def _step_load_and_parse(self) -> pd.DataFrame:
-        """載入並解析 Excel。"""
-        loader = ExcelLoader(self.config.excel_path)
-        standardizer = DataStandardizer(self.config.excel_path)
+        """載入並解析 Excel（支援多個檔案）。"""
+        all_excel_paths = [self.config.excel_path] + self.extra_excel_paths
 
-        for sheet_name in loader.get_sheet_names():
-            try:
-                header_row = loader.detect_header_row(sheet_name)
-                df = loader.read_sheet_to_dataframe(sheet_name, header_row=header_row)
-                if not df.empty:
-                    standardizer.standardize_dataframe(df, sheet_name)
-            except Exception as e:
-                print(f"  [Warning] 工作表 '{sheet_name}' 解析失敗: {e}")
+        all_data = []
+        for excel_path in all_excel_paths:
+            if not os.path.exists(excel_path):
+                print(f"  [Warning] 檔案不存在: {excel_path}")
+                continue
 
-        loader.close()
-        return standardizer.to_dataframe()
+            loader = ExcelLoader(excel_path)
+            standardizer = DataStandardizer(excel_path)
+
+            for sheet_name in loader.get_sheet_names():
+                try:
+                    header_row = loader.detect_header_row(sheet_name)
+                    df = loader.read_sheet_to_dataframe(sheet_name, header_row=header_row)
+                    if not df.empty:
+                        standardizer.standardize_dataframe(df, sheet_name)
+                except Exception as e:
+                    print(f"  [Warning] {excel_path}/{sheet_name} 解析失敗: {e}")
+
+            loader.close()
+            file_data = standardizer.to_dataframe()
+            if not file_data.empty:
+                all_data.append(file_data)
+                print(f"  {os.path.basename(excel_path)}: {len(file_data)} 筆")
+
+        if all_data:
+            return pd.concat(all_data, ignore_index=True)
+        return pd.DataFrame()
 
     def _step_validate(self, data: pd.DataFrame):
         """資料品質驗證。"""
