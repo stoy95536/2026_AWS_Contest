@@ -1,36 +1,4 @@
 {
-  "status": "failed",
-  "total_issues": 4,
-  "errors": 4,
-  "warnings": 0,
-  "issues": [
-    {
-      "slide_no": 3,
-      "type": "missing_source",
-      "severity": "error",
-      "message": "KPI '市場流通卡數' 引用的 metric_id 'market_total_cards' 不存在於計算結果中",
-      "suggestion": "確認計算引擎已產出對應指標"
-    },
-    {
-      "slide_no": 3,
-      "type": "missing_source",
-      "severity": "error",
-      "message": "KPI '台新市占率' 引用的 metric_id 'taishin_market_share' 不存在於計算結果中",
-      "suggestion": "確認計算引擎已產出對應指標"
-    },
-    {
-      "slide_no": 3,
-      "type": "missing_source",
-      "severity": "error",
-      "message": "KPI '台新有效卡率' 引用的 metric_id 'taishin_effective_rate' 不存在於計算結果中",
-      "suggestion": "確認計算引擎已產出對應指標"
-    },
-    {
-      "slide_no": 3,
-      "type": "missing_source",
-      "severity": "error",
-      "message": "KPI '台新每卡簽帳金額' 引用的 metric_id 'taishin_avg_purchase' 不存在於計算結果中",
-      "suggestion": "確認計算引擎已產出對應指標"
-    }
-  ]
+  "status": "passed",
+  "errors": []
 }

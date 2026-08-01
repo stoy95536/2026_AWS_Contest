@@ -1,0 +1,35 @@
+{
+  "domain": "零售通路",
+  "data_types": [
+    "time_series",
+    "cross_section",
+    "dual_variable"
+  ],
+  "theme_groups": [
+    {
+      "name": "規模與量能",
+      "metrics": [
+        "營業額",
+        "來客數"
+      ],
+      "focus": "整體量能趨勢"
+    },
+    {
+      "name": "效率與結構",
+      "metrics": [
+        "坪效"
+      ],
+      "focus": "營運品質與結構"
+    },
+    {
+      "name": "延伸分析",
+      "metrics": [
+        "客單價"
+      ],
+      "focus": "補充維度分析"
+    }
+  ],
+  "has_time_series": true,
+  "has_cross_section": true,
+  "metric_count": 4
+}
