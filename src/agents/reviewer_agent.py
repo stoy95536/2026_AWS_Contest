@@ -5,7 +5,12 @@ Reviewer Agent — 品質審核 Agent
 
 import json
 import os
+import warnings
 from typing import Optional
+
+from dotenv import load_dotenv
+load_dotenv(override=True)
+warnings.filterwarnings("ignore", message="Unverified HTTPS request")
 
 import boto3
 
@@ -19,7 +24,7 @@ class ReviewerAgent:
     - 確認推測性內容有適當標注
     """
 
-    def __init__(self, model_id: str = "anthropic.claude-sonnet-4-20250514-v1:0", region: str = "us-east-1"):
+    def __init__(self, model_id: str = "us.anthropic.claude-sonnet-4-20250514-v1:0", region: str = "us-east-1"):
         self.model_id = model_id
         self.region = region
         self._client = None
