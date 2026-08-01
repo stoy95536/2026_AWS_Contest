@@ -130,11 +130,11 @@ def fill_chart(slide: Slide, spec: dict, chart_factory: ChartFactory):
             if is_spec:
                 # 推測性內容：橘色斜體，讓評審一眼區分 LLM 推論
                 p.text = f"◆ （推測）{text}"
-                p.font.size = Pt(9)
+                p.font.size = Pt(11)
                 p.font.italic = True
                 p.font.color.rgb = RGBColor(0xFF, 0x66, 0x00)  # 台新橘
             else:
                 p.text = f"◆ {text}"
-                p.font.size = Pt(9)
+                p.font.size = Pt(11)
                 p.font.color.rgb = RGBColor(0x33, 0x33, 0x33)
             insight_y += Cm(1.3)

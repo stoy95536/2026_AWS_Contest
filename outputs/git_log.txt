@@ -1,0 +1,1 @@
+﻿[main de77359] merge: use remote slide_spec.json

@@ -37,7 +37,7 @@ DEFAULT_SLIDE_STRUCTURE = [
 EXCEL_PATH = "附件四_預期修正參照資料.xlsx"
 TEMPLATE_PATH = "附件一_台新新光金控簡報版型.pptx"
 OUTPUT_DIR = "outputs"
-OUTPUT_FILE = os.path.join(OUTPUT_DIR, "test_presentation.pptx")
+OUTPUT_FILE = os.path.join(OUTPUT_DIR, "test_presentation_v4.pptx")
 
 
 def load_excel_data():
@@ -269,9 +269,9 @@ def _build_scatter_chart(std_df, periods):
     if not data_points:
         return None
 
-    # 取前15家（避免太擠）
+    # 取前10家（避免太擠）
     data_points.sort(key=lambda p: p["x"], reverse=True)
-    data_points = data_points[:15]
+    data_points = data_points[:10]
 
     return {
         "type": "scatter",

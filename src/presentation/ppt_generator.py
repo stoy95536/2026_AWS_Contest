@@ -117,6 +117,19 @@ class PPTGenerator:
                 sp.getparent().remove(sp)
                 return
 
+    def _set_title_style(self, text_frame, font_size=Pt(22), bold=True,
+                         color=RGBColor(0x00, 0x33, 0x66), alignment=PP_ALIGN.LEFT):
+        """
+        統一標題樣式設定。
+        所有頁面的標題都透過此方法套用格式，確保一致性。
+        修改此處即可全域調整標題外觀，不需逐頁改動。
+        """
+        for para in text_frame.paragraphs:
+            para.font.size = font_size
+            para.font.bold = bold
+            para.font.color.rgb = color
+            para.alignment = alignment
+
     def _add_page_number(self, slide: Slide, slide_no: int):
         """
         統一頁碼處理：在投影片右下角加入頁碼 textbox。
@@ -142,12 +155,8 @@ class PPTGenerator:
         txBox = slide.shapes.add_textbox(Cm(3.1), Cm(4.0), Cm(27.7), Cm(2.5))
         tf = txBox.text_frame
         tf.word_wrap = True
-        p = tf.paragraphs[0]
-        p.text = spec.get("title", "信用卡市場分析與經營洞察")
-        p.font.size = Pt(32)
-        p.font.bold = True
-        p.font.color.rgb = RGBColor(0x00, 0x33, 0x66)
-        p.alignment = PP_ALIGN.CENTER
+        tf.paragraphs[0].text = spec.get("title", "信用卡市場分析與經營洞察")
+        self._set_title_style(tf, font_size=Pt(32), alignment=PP_ALIGN.CENTER)
 
         # 副標題
         txBox2 = slide.shapes.add_textbox(Cm(3.1), Cm(7.0), Cm(27.7), Cm(1.5))
@@ -173,11 +182,8 @@ class PPTGenerator:
         title = spec.get("title", "")
         for ph in slide.placeholders:
             if ph.placeholder_format.idx == 0:
-                tf = ph.text_frame
-                tf.paragraphs[0].text = title
-                tf.paragraphs[0].font.size = Pt(28)
-                tf.paragraphs[0].font.bold = True
-                tf.paragraphs[0].font.color.rgb = RGBColor(0x00, 0x33, 0x66)
+                ph.text_frame.paragraphs[0].text = title
+                self._set_title_style(ph.text_frame, font_size=Pt(28))
 
         # 統一頁碼
         self._add_page_number(slide, spec.get("slide_no", 0))
@@ -190,12 +196,8 @@ class PPTGenerator:
 
         txBox = slide.shapes.add_textbox(Cm(3.1), Cm(5.0), Cm(27.7), Cm(2.5))
         tf = txBox.text_frame
-        p = tf.paragraphs[0]
-        p.text = "感謝聆聽"
-        p.font.size = Pt(36)
-        p.font.bold = True
-        p.font.color.rgb = RGBColor(0x00, 0x33, 0x66)
-        p.alignment = PP_ALIGN.CENTER
+        tf.paragraphs[0].text = "感謝聆聽"
+        self._set_title_style(tf, font_size=Pt(36), alignment=PP_ALIGN.CENTER)
 
         txBox2 = slide.shapes.add_textbox(Cm(3.1), Cm(8.5), Cm(27.7), Cm(2.0))
         tf2 = txBox2.text_frame
@@ -228,10 +230,7 @@ class PPTGenerator:
         for ph in slide.placeholders:
             if ph.placeholder_format.idx == 0:
                 ph.text = title
-                for para in ph.text_frame.paragraphs:
-                    para.font.size = Pt(22)
-                    para.font.bold = True
-                    para.font.color.rgb = RGBColor(0x00, 0x33, 0x66)
+                self._set_title_style(ph.text_frame)
 
         # 移除原生 SLIDE_NUMBER placeholder，改用統一的 textbox 頁碼
         self._remove_placeholder(slide, 12)

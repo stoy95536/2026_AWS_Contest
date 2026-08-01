@@ -41,7 +41,7 @@ def fill_table(slide: Slide, spec: dict):
         _set_cell_fill(cell, RGBColor(0x00, 0x33, 0x66))
         for para in cell.text_frame.paragraphs:
             para.font.bold = True
-            para.font.size = Pt(9)
+            para.font.size = Pt(11)
             para.font.color.rgb = RGBColor(0xFF, 0xFF, 0xFF)
             para.alignment = PP_ALIGN.CENTER
         cell.vertical_anchor = MSO_ANCHOR.MIDDLE
@@ -60,7 +60,7 @@ def fill_table(slide: Slide, spec: dict):
                 cell.text = str(value) if value is not None else ""
                 _set_cell_fill(cell, bg_color)
                 for para in cell.text_frame.paragraphs:
-                    para.font.size = Pt(8)
+                    para.font.size = Pt(10)
                     para.font.color.rgb = RGBColor(0x33, 0x33, 0x33)
                 cell.vertical_anchor = MSO_ANCHOR.MIDDLE
                 _set_cell_border(cell, border_color, Pt(0.5))

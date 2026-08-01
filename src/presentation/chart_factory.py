@@ -298,6 +298,19 @@ class ChartFactory:
             chart.value_axis.has_title = True
             chart.value_axis.axis_title.text_frame.text = y_label
 
+        # 將 X 軸刻度移到底部（Y 軸在最小值處交叉），避免與資料點重疊
+        # python-pptx 的 crosses 屬性在散佈圖上不一定生效，直接操作 XML
+        plot_area = chart._chartSpace.find(qn("c:chart")).find(qn("c:plotArea"))
+        # 找到 Y 軸 (valAx)，設定它在 X 軸最小值處交叉
+        for val_ax in plot_area.findall(qn("c:valAx")):
+            # 找到 crossesAt 或 crosses 元素
+            crosses = val_ax.find(qn("c:crosses"))
+            if crosses is not None:
+                crosses.set("val", "min")
+            else:
+                crosses = etree.SubElement(val_ax, qn("c:crosses"))
+                crosses.set("val", "min")
+
         # --- 透過 XML 為每個資料點加上名稱標籤 ---
         self._add_scatter_data_labels(chart, data_points)
 
@@ -306,7 +319,7 @@ class ChartFactory:
     def _add_scatter_data_labels(self, chart, data_points: list[dict]):
         """
         為散佈圖的每個資料點加入自訂文字標籤（銀行名稱）。
-        python-pptx 不直接支援自訂 data label 文字，需操作底層 XML。
+        標籤放置於資料點上方，避免與軸刻度重疊。
         """
         plot_area = chart._chartSpace.find(qn("c:chart")).find(qn("c:plotArea"))
         scatter_chart = plot_area.find(qn("c:scatterChart"))
@@ -317,8 +330,7 @@ class ChartFactory:
         if ser_elem is None:
             return
 
-        # 為每個資料點建立個別的 dLbl 元素
-        # 先建立 dLbls 容器
+        # 建立 dLbls 容器
         d_lbls = etree.SubElement(ser_elem, qn("c:dLbls"))
 
         for idx, point in enumerate(data_points):
@@ -332,6 +344,10 @@ class ChartFactory:
             idx_elem = etree.SubElement(d_lbl, qn("c:idx"))
             idx_elem.set("val", str(idx))
 
+            # 標籤位置設為上方 (t = top)，避免跟軸線重疊
+            d_lbl_pos = etree.SubElement(d_lbl, qn("c:dLblPos"))
+            d_lbl_pos.set("val", "t")
+
             # 使用 tx (rich text) 設定自訂標籤文字
             tx = etree.SubElement(d_lbl, qn("c:tx"))
             rich = etree.SubElement(tx, qn("c:rich"))
@@ -344,10 +360,10 @@ class ChartFactory:
             p = etree.SubElement(rich, qn("a:p"))
             r = etree.SubElement(p, qn("a:r"))
 
-            # 設定字體大小
+            # 設定字體大小（10pt 清楚可見）
             r_pr = etree.SubElement(r, qn("a:rPr"))
             r_pr.set("lang", "zh-TW")
-            r_pr.set("sz", "800")  # 8pt
+            r_pr.set("sz", "1000")  # 10pt
 
             t = etree.SubElement(r, qn("a:t"))
             t.text = name

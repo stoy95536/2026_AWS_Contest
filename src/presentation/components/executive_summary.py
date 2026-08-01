@@ -21,7 +21,7 @@ def fill_executive_summary(slide: Slide, spec: dict):
         tf = txBox.text_frame
         p = tf.paragraphs[0]
         p.text = kpi.get("label", "")
-        p.font.size = Pt(10)
+        p.font.size = Pt(12)
         p.font.color.rgb = RGBColor(0x66, 0x66, 0x66)
 
         # 數值
@@ -29,7 +29,7 @@ def fill_executive_summary(slide: Slide, spec: dict):
         tf2 = txBox2.text_frame
         p2 = tf2.paragraphs[0]
         p2.text = kpi.get("value", "—")
-        p2.font.size = Pt(22)
+        p2.font.size = Pt(24)
         p2.font.bold = True
         p2.font.color.rgb = RGBColor(0x00, 0x33, 0x66)
 
@@ -40,7 +40,7 @@ def fill_executive_summary(slide: Slide, spec: dict):
             tf3 = txBox3.text_frame
             p3 = tf3.paragraphs[0]
             p3.text = change
-            p3.font.size = Pt(9)
+            p3.font.size = Pt(11)
             direction = kpi.get("change_direction", "flat")
             if direction == "up":
                 p3.font.color.rgb = RGBColor(0x33, 0x99, 0x33)
@@ -58,7 +58,7 @@ def fill_executive_summary(slide: Slide, spec: dict):
         tfH = txH.text_frame
         pH = tfH.paragraphs[0]
         pH.text = "四大關鍵洞察"
-        pH.font.size = Pt(12)
+        pH.font.size = Pt(14)
         pH.font.bold = True
         pH.font.color.rgb = RGBColor(0x00, 0x33, 0x66)
 
@@ -70,5 +70,5 @@ def fill_executive_summary(slide: Slide, spec: dict):
             tf.word_wrap = True
             p = tf.paragraphs[0]
             p.text = f"• {text}"
-            p.font.size = Pt(10)
+            p.font.size = Pt(12)
             insight_y += Cm(1.5)

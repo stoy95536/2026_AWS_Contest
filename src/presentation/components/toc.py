@@ -20,6 +20,6 @@ def fill_toc(slide: Slide, spec: dict):
         tf = txBox.text_frame
         p = tf.paragraphs[0]
         p.text = f"CHAPTER {ch}"
-        p.font.size = Pt(16)
+        p.font.size = Pt(18)
         p.font.color.rgb = RGBColor(0x00, 0x33, 0x66)
         y += Cm(2.0)

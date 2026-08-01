@@ -15,5 +15,5 @@ def fill_insights_only(slide: Slide, spec: dict):
         tf.word_wrap = True
         p = tf.paragraphs[0]
         p.text = f"• {text}"
-        p.font.size = Pt(11)
+        p.font.size = Pt(13)
         y += Cm(1.8)

@@ -20,7 +20,7 @@ def fill_strategy(slide: Slide, spec: dict):
         tfNum = txNum.text_frame
         pNum = tfNum.paragraphs[0]
         pNum.text = f"0{i+1}"
-        pNum.font.size = Pt(24)
+        pNum.font.size = Pt(26)
         pNum.font.bold = True
         pNum.font.color.rgb = RGBColor(0x00, 0x66, 0xCC)
 
@@ -29,7 +29,7 @@ def fill_strategy(slide: Slide, spec: dict):
         tfTitle = txTitle.text_frame
         pTitle = tfTitle.paragraphs[0]
         pTitle.text = action
-        pTitle.font.size = Pt(13)
+        pTitle.font.size = Pt(14)
         pTitle.font.bold = True
         pTitle.font.color.rgb = RGBColor(0x00, 0x33, 0x66)
 
@@ -40,7 +40,7 @@ def fill_strategy(slide: Slide, spec: dict):
             tfR.word_wrap = True
             pR = tfR.paragraphs[0]
             pR.text = rationale
-            pR.font.size = Pt(10)
+            pR.font.size = Pt(12)
             pR.font.color.rgb = RGBColor(0x33, 0x33, 0x33)
 
         y += Cm(3.0)
