@@ -19,7 +19,7 @@ class ReviewerAgent:
     - 確認推測性內容有適當標注
     """
 
-    def __init__(self, model_id: str = "anthropic.claude-sonnet-4-20250514", region: str = "us-east-1"):
+    def __init__(self, model_id: str = "anthropic.claude-sonnet-4-20250514-v1:0", region: str = "us-east-1"):
         self.model_id = model_id
         self.region = region
         self._client = None
@@ -30,6 +30,7 @@ class ReviewerAgent:
             self._client = boto3.client(
                 "bedrock-runtime",
                 region_name=self.region,
+                verify=False,
             )
         return self._client
 

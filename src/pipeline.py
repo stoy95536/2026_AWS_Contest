@@ -6,10 +6,16 @@
 import json
 import os
 import time
+import warnings
 from datetime import datetime
 from typing import Optional
 
 import pandas as pd
+from dotenv import load_dotenv
+
+# 載入 .env 並抑制 SSL 警告
+load_dotenv(override=True)
+warnings.filterwarnings("ignore", message="Unverified HTTPS request")
 
 from src.data_loader import ExcelLoader, DataStandardizer
 from src.calculation_engine import MetricCalculator, DataLineageTracker
@@ -28,7 +34,7 @@ class PipelineConfig:
         template_path: Optional[str] = None,
         output_dir: str = "outputs",
         use_llm: bool = True,
-        model_id: str = "anthropic.claude-sonnet-4-20250514",
+        model_id: str = "anthropic.claude-sonnet-4-20250514-v1:0",
         region: str = "us-east-1",
         target_institution: str = "台新銀行",
     ):

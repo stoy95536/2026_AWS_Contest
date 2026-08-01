@@ -57,7 +57,7 @@ async def upload_and_process(
     template_file: Optional[UploadFile] = File(None),
     use_llm: bool = Form(True),
     target_institution: str = Form("台新銀行"),
-    model_id: str = Form("anthropic.claude-sonnet-4-20250514"),
+    model_id: str = Form("anthropic.claude-sonnet-4-20250514-v1:0"),
     region: str = Form("us-east-1"),
 ):
     """

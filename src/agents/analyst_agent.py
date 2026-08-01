@@ -19,7 +19,7 @@ class AnalystAgent:
     - 不自行計算數值，只引用計算引擎結果
     """
 
-    def __init__(self, model_id: str = "anthropic.claude-sonnet-4-20250514", region: str = "us-east-1"):
+    def __init__(self, model_id: str = "anthropic.claude-sonnet-4-20250514-v1:0", region: str = "us-east-1"):
         self.model_id = model_id
         self.region = region
         self._client = None
@@ -30,6 +30,7 @@ class AnalystAgent:
             self._client = boto3.client(
                 "bedrock-runtime",
                 region_name=self.region,
+                verify=False,
             )
         return self._client
 
