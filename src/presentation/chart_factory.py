@@ -45,9 +45,12 @@ class ChartFactory:
         position: dict = None,
         y_axis_label: str = "",
         y_axis_unit: str = "",
+        highlight_first: bool = True,
+        highlight_institution: str = "",
     ):
         """
         建立橫條/直條圖。
+        支援條件式格式：排名第一金色、目標機構深藍高亮。
 
         Args:
             slide: 目標投影片
@@ -57,6 +60,8 @@ class ChartFactory:
             position: 位置 dict (left, top, width, height)
             y_axis_label: Y 軸標籤
             y_axis_unit: Y 軸單位
+            highlight_first: 是否將排名第一的長條標為金色
+            highlight_institution: 目標機構名稱（深藍高亮）
         """
         if position is None:
             position = {"left": Cm(2), "top": Cm(4), "width": Cm(22), "height": Cm(12)}
@@ -81,10 +86,24 @@ class ChartFactory:
             chart.has_title = True
             chart.chart_title.text_frame.text = title
 
-        # 設定顏色
+        # 設定顏色 — 條件式格式
         for i, series in enumerate(chart.series):
+            base_color = self.colors[i % len(self.colors)]
             series.format.fill.solid()
-            series.format.fill.fore_color.rgb = self.colors[i % len(self.colors)]
+            series.format.fill.fore_color.rgb = base_color
+
+            # 條件式格式：逐點上色（排名第一金色、目標機構深藍）
+            if len(series_data) == 1:  # 單系列才做逐點高亮
+                for pt_idx, cat in enumerate(categories):
+                    point = series.points[pt_idx]
+                    if highlight_first and pt_idx == 0:
+                        # 排名第一：金色
+                        point.format.fill.solid()
+                        point.format.fill.fore_color.rgb = RGBColor(0xFF, 0xCC, 0x00)
+                    elif highlight_institution and highlight_institution in cat:
+                        # 目標機構：台新深藍
+                        point.format.fill.solid()
+                        point.format.fill.fore_color.rgb = RGBColor(0x00, 0x33, 0x66)
 
         # Y 軸設定
         self._set_value_axis_title(chart.value_axis, y_axis_label, y_axis_unit)

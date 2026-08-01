@@ -62,6 +62,8 @@ def fill_chart(slide: Slide, spec: dict, chart_factory: ChartFactory):
                     position=position,
                     y_axis_label=y_axis_label,
                     y_axis_unit=y_axis_unit,
+                    highlight_first=True,
+                    highlight_institution=spec.get("highlight_institution", "台新"),
                 )
                 chart_created = True
             elif chart_type == "line":

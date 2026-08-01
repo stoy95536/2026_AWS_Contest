@@ -1,1 +1,9 @@
-﻿[main de77359] merge: use remote slide_spec.json
+﻿git : To https://github.com/stoy95536/2026_AWS_Contest.git
+位於 線路:1 字元:1
++ git push 2>&1 | Out-File -FilePath outputs/git_log.txt -Encoding utf8
++ ~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (To https://gith...AWS_Contest.git 
+   :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+   6fa33c5..76dc948  main -> main

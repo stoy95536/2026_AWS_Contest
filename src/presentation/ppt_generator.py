@@ -145,6 +145,50 @@ class PPTGenerator:
         p.font.color.rgb = RGBColor(0x99, 0x99, 0x99)
         p.alignment = PP_ALIGN.RIGHT
 
+    def _add_slide_notes(self, slide: Slide, spec: dict):
+        """
+        自動生成頁面備註 Notes。
+        將 source_ids（資料來源追溯）和補充數據寫入 slide notes，
+        簡報者看得到、觀眾看不到，方便 Q&A 時查閱。
+        """
+        notes_parts = []
+
+        # 資料來源追溯
+        source_ids = spec.get("source_ids", [])
+        if source_ids:
+            notes_parts.append("【資料來源】")
+            for sid in source_ids:
+                notes_parts.append(f"  • {sid}")
+
+        # 補充 KPI 原始數據
+        kpis = spec.get("kpis", [])
+        if kpis:
+            notes_parts.append("\n【KPI 詳細數據】")
+            for kpi in kpis:
+                metric_id = kpi.get("metric_id", "")
+                label = kpi.get("label", "")
+                value = kpi.get("value", "")
+                notes_parts.append(f"  • {label}: {value} (metric_id: {metric_id})")
+
+        # 圖表資料摘要
+        chart = spec.get("chart", {})
+        if chart:
+            chart_title = chart.get("title", "")
+            notes_parts.append(f"\n【圖表】{chart_title}")
+
+        # 表格資料摘要
+        table = spec.get("table", {})
+        if table:
+            headers = table.get("headers", [])
+            row_count = len(table.get("rows", []))
+            notes_parts.append(f"\n【表格】{len(headers)} 欄 × {row_count} 行")
+
+        # 寫入 notes
+        if notes_parts:
+            notes_text = "\n".join(notes_parts)
+            notes_slide = slide.notes_slide
+            notes_slide.notes_text_frame.text = notes_text
+
     # ========== 封面頁 ==========
     def _build_cover(self, slide: Slide, spec: dict):
         """封面頁 — 使用 2_標題投影片 layout (title placeholder 居中)。"""
@@ -240,6 +284,9 @@ class PPTGenerator:
 
         # 統一頁碼
         self._add_page_number(slide, slide_no)
+
+        # 自動生成頁面備註 Notes（資料來源追溯 + 補充資訊）
+        self._add_slide_notes(slide, spec)
 
         # Headline (核心訊息)
         if headline:
