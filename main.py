@@ -29,7 +29,7 @@ def parse_args():
     parser.add_argument("--template", default=None, help="PowerPoint 模板路徑")
     parser.add_argument("--output", default="outputs", help="輸出目錄 (預設: outputs/)")
     parser.add_argument("--no-llm", action="store_true", help="不使用 LLM（僅規則引擎）")
-    parser.add_argument("--model", default="anthropic.claude-sonnet-4-20250514-v1:0", help="Bedrock 模型 ID")
+    parser.add_argument("--model", default="us.anthropic.claude-sonnet-4-20250514-v1:0", help="Bedrock 模型 ID")
     parser.add_argument("--region", default="us-east-1", help="AWS Region")
     parser.add_argument("--institution", default="台新銀行", help="目標分析機構")
     return parser.parse_args()
