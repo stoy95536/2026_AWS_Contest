@@ -1,9 +1,9 @@
 ﻿git : To https://github.com/stoy95536/2026_AWS_Contest.git
-位於 線路:1 字元:105
-+ ...  hyperlink on thank_you page for data lineage"; git push 2>&1 | Out-F ...
+位於 線路:1 字元:124
++ ... horizontal_bar, heatmap, quadrant chart types"; git push 2>&1 | Out-F ...
 +                                                     ~~~~~~~~~~~~~
     + CategoryInfo          : NotSpecified: (To https://gith...AWS_Contest.git 
    :String) [], RemoteException
     + FullyQualifiedErrorId : NativeCommandError
  
-   cfaa086..fc80850  main -> main
+   fc80850..436951e  main -> main

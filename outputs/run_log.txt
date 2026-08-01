@@ -14,8 +14,8 @@
   slide_spec 已存: outputs\slide_spec.json
 
 [Step 3] 生成 PowerPoint...
-  輸出: outputs\test_presentation_v8.pptx
+  輸出: outputs\final_presentation.pptx
 
 ============================================================
-  完成！請開啟: outputs\test_presentation_v8.pptx
+  完成！請開啟: outputs\final_presentation.pptx
 ============================================================
