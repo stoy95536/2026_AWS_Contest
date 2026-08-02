@@ -36,12 +36,12 @@ Task1 analysis_result.json
 ## 關鍵設計決策
 
 ### 決策 1：Agent 完全不含產業硬編碼
-**問題**：初版 Agent 寫死了信用卡指標（如 `compute_effective_card_rate`、「簽帳金額」洞察模板）。
+**問題**：初版 Agent 寫死了信用卡指標（如 compute_effective_card_rate、「簽帳金額」洞察模板）。
 **決策**：改為通用「理解→規劃→判斷」引擎。所有產業相關內容由資料推導或 LLM 動態生成。
 **理由**：決賽提供旅遊資料，且目標是通用簡報神器。
 
 ### 決策 2：有 chart_data 時強制規則引擎規劃結構
-**問題**：LLM 規劃器會編造不存在的 metric_id（如 `出國人次_2020`），造成 QA 大量 missing_source。
+**問題**：LLM 規劃器會編造不存在的 metric_id（如 出國人次_2020），造成 QA 大量 missing_source。
 **決策**：當 Task1 提供 chart_data 時，結構規劃走規則引擎（引用真實 ID），LLM 只負責 Analyst 的洞察文字。
 **理由**：Task1 已算好圖表，Planner 不該重新發明。LLM 的價值在敘事，不在重編數據。
 

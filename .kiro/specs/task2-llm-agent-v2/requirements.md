@@ -1,6 +1,7 @@
 # Task 2 LLM Agent 系統 — Requirements
 
 > 使用 Kiro IDE 的 Spec 工作流開發。本檔記錄需求分析階段。
+> 本 v2 版對應 Task 2 的通用化重構與 Task1 串接（取代舊版 task2-llm-agent.md 的固定 16 頁設計）。
 
 ## 背景
 
