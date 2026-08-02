@@ -251,55 +251,64 @@ def _ensure_chart_data(slide_specs: list[dict], analysis_json_path: str) -> list
 
 def _build_fixed_16_page_structure() -> list[dict]:
     """
-    建立 README 規定的 16 頁 5 章固定結構。
+    建立通用的 16 頁結構（不假設任何特定領域的指標名稱）。
+    頁面標題會在 _populate_from_excel 中動態替換。
     """
     return [
-        {"slide_no": 1, "layout": "cover", "title": "銀行信用卡市場分析與經營洞察簡報", "headline": "", "kpis": [], "chart": None, "insights": [], "recommendations": [], "source_ids": []},
+        {"slide_no": 1, "layout": "cover", "title": "資料分析與經營洞察簡報", "headline": "", "kpis": [], "chart": None, "insights": [], "recommendations": [], "source_ids": []},
         {"slide_no": 2, "layout": "toc", "title": "目錄", "headline": "", "kpis": [], "chart": None, "insights": [], "recommendations": [], "source_ids": []},
         {"slide_no": 3, "layout": "executive_summary", "title": "Executive Summary", "headline": "關鍵發現摘要", "kpis": [], "chart": None, "insights": [], "recommendations": [], "source_ids": []},
-        {"slide_no": 4, "layout": "chapter_divider", "title": "Chapter 01 市場整體概況", "headline": "", "kpis": [], "chart": None, "insights": [], "recommendations": [], "source_ids": []},
-        {"slide_no": 5, "layout": "trend_chart", "title": "市場規模趨勢", "headline": "", "kpis": [], "chart": None, "insights": [], "recommendations": [], "source_ids": []},
-        {"slide_no": 6, "layout": "ranking_chart", "title": "市占率排名", "headline": "", "kpis": [], "chart": None, "insights": [], "recommendations": [], "source_ids": []},
-        {"slide_no": 7, "layout": "chapter_divider", "title": "Chapter 02 同業競爭分析", "headline": "", "kpis": [], "chart": None, "insights": [], "recommendations": [], "source_ids": []},
+        {"slide_no": 4, "layout": "chapter_divider", "title": "Chapter 01 整體概況", "headline": "", "kpis": [], "chart": None, "insights": [], "recommendations": [], "source_ids": []},
+        {"slide_no": 5, "layout": "trend_chart", "title": "趨勢分析", "headline": "", "kpis": [], "chart": None, "insights": [], "recommendations": [], "source_ids": []},
+        {"slide_no": 6, "layout": "ranking_chart", "title": "排名分析", "headline": "", "kpis": [], "chart": None, "insights": [], "recommendations": [], "source_ids": []},
+        {"slide_no": 7, "layout": "chapter_divider", "title": "Chapter 02 比較分析", "headline": "", "kpis": [], "chart": None, "insights": [], "recommendations": [], "source_ids": []},
         {"slide_no": 8, "layout": "scatter_chart", "title": "規模 vs 成長", "headline": "", "kpis": [], "chart": None, "insights": [], "recommendations": [], "source_ids": []},
-        {"slide_no": 9, "layout": "comparison_chart", "title": "簽帳金額市占率比較", "headline": "", "kpis": [], "chart": None, "insights": [], "recommendations": [], "source_ids": []},
-        {"slide_no": 10, "layout": "chapter_divider", "title": "Chapter 03 客戶活躍度與獲利能力", "headline": "", "kpis": [], "chart": None, "insights": [], "recommendations": [], "source_ids": []},
-        {"slide_no": 11, "layout": "comparison_chart", "title": "每卡簽帳金額", "headline": "", "kpis": [], "chart": None, "insights": [], "recommendations": [], "source_ids": []},
-        {"slide_no": 12, "layout": "stacked_chart", "title": "Top 5 銀行簽帳金額趨勢", "headline": "", "kpis": [], "chart": None, "insights": [], "recommendations": [], "source_ids": []},
-        {"slide_no": 13, "layout": "chapter_divider", "title": "Chapter 04 風險與警訊", "headline": "", "kpis": [], "chart": None, "insights": [], "recommendations": [], "source_ids": []},
-        {"slide_no": 14, "layout": "comparison_chart", "title": "流通卡數月增率", "headline": "", "kpis": [], "chart": None, "insights": [], "recommendations": [], "source_ids": []},
-        {"slide_no": 15, "layout": "strategy", "title": "Chapter 05 台新策略建議", "headline": "", "kpis": [], "chart": None, "insights": [], "recommendations": [], "source_ids": []},
+        {"slide_no": 9, "layout": "comparison_chart", "title": "指標比較", "headline": "", "kpis": [], "chart": None, "insights": [], "recommendations": [], "source_ids": []},
+        {"slide_no": 10, "layout": "chapter_divider", "title": "Chapter 03 深度分析", "headline": "", "kpis": [], "chart": None, "insights": [], "recommendations": [], "source_ids": []},
+        {"slide_no": 11, "layout": "comparison_chart", "title": "效率指標", "headline": "", "kpis": [], "chart": None, "insights": [], "recommendations": [], "source_ids": []},
+        {"slide_no": 12, "layout": "stacked_chart", "title": "組成分析", "headline": "", "kpis": [], "chart": None, "insights": [], "recommendations": [], "source_ids": []},
+        {"slide_no": 13, "layout": "chapter_divider", "title": "Chapter 04 趨勢與警訊", "headline": "", "kpis": [], "chart": None, "insights": [], "recommendations": [], "source_ids": []},
+        {"slide_no": 14, "layout": "comparison_chart", "title": "月增率分析", "headline": "", "kpis": [], "chart": None, "insights": [], "recommendations": [], "source_ids": []},
+        {"slide_no": 15, "layout": "strategy", "title": "Chapter 05 策略建議", "headline": "", "kpis": [], "chart": None, "insights": [], "recommendations": [], "source_ids": []},
         {"slide_no": 16, "layout": "thank_you", "title": "感謝頁", "headline": "", "kpis": [], "chart": None, "insights": [], "recommendations": [], "source_ids": []},
     ]
 
 
+
 def _populate_from_excel(slide_specs: list[dict], excel_dir: str, target_institution: str = "台新"):
     """
-    當 chart_data 不足時，直接用 Excel 資料 + MetricCalculator 填充圖表。
+    通用圖表填充 — 自動偵測指標、機構、期間，動態生成圖表。
+    不假設任何特定領域（信用卡/旅遊/零售等都適用）。
     """
     from src.data_loader import ExcelLoader, DataStandardizer
     from src.calculation_engine import MetricCalculator, DataLineageTracker
+    import pandas as pd
 
-    # 找到所有 Excel 檔案
     excel_files = list(Path(excel_dir).glob("*.xlsx")) + list(Path(excel_dir).glob("*.xls"))
     if not excel_files:
         return
 
-    # 載入第一個 Excel
-    excel_path = str(excel_files[0])
-    loader = ExcelLoader(excel_path)
-    standardizer = DataStandardizer(excel_path)
-    for sheet_name in loader.get_sheet_names():
-        try:
-            header_row = loader.detect_header_row(sheet_name)
-            df = loader.read_sheet_to_dataframe(sheet_name, header_row=header_row)
-            if not df.empty:
-                standardizer.standardize_dataframe(df, sheet_name)
-        except Exception:
-            pass
-    loader.close()
+    # 載入所有 Excel
+    all_data = []
+    for ep in excel_files:
+        loader = ExcelLoader(str(ep))
+        standardizer = DataStandardizer(str(ep))
+        for sheet_name in loader.get_sheet_names():
+            try:
+                header_row = loader.detect_header_row(sheet_name)
+                df = loader.read_sheet_to_dataframe(sheet_name, header_row=header_row)
+                if not df.empty:
+                    standardizer.standardize_dataframe(df, sheet_name)
+            except Exception:
+                pass
+        loader.close()
+        file_data = standardizer.to_dataframe()
+        if not file_data.empty:
+            all_data.append(file_data)
 
-    std_data = standardizer.to_dataframe()
+    if not all_data:
+        return
+    std_data = pd.concat(all_data, ignore_index=True) if len(all_data) > 1 else all_data[0]
     if std_data.empty:
         return
 
@@ -311,145 +320,120 @@ def _populate_from_excel(slide_specs: list[dict], excel_dir: str, target_institu
 
     latest = periods[-1]
     prev = calc.compute_prev_period(latest)
+    all_metrics = [m for m in calc.get_all_metrics() if "市佔率" not in m]
     real_institutions = [i for i in calc.get_all_institutions() if i != "總計"]
 
-    # 填充圖表
+    if not all_metrics or not real_institutions:
+        return
+
     # 找目標機構
-    taishin_names = [i for i in real_institutions if target_institution in i]
-    taishin = taishin_names[0] if taishin_names else (real_institutions[0] if real_institutions else "")
-    market_cards = calc._get_market_total(latest, "流通卡數") or 0
-    market_amount = calc._get_market_total(latest, "當月簽帳金額") or 0
-    ts_share_cards = calc.market_share(taishin, latest, "流通卡數") if taishin else 0
-    ts_share_amount = calc.market_share(taishin, latest, "當月簽帳金額") if taishin else 0
-    ts_cards = calc._get_value(taishin, latest, "流通卡數") if taishin else 0
-    ts_amount = calc._get_value(taishin, latest, "當月簽帳金額") if taishin else 0
+    target_names = [i for i in real_institutions if target_institution in i]
+    target = target_names[0] if target_names else real_institutions[0]
+
+    # 主要指標
+    metric1 = all_metrics[0]
+    metric2 = all_metrics[1] if len(all_metrics) > 1 else metric1
+    months = [f"{int(p[3:])}月" if len(p) >= 5 and p[3:].isdigit() else p for p in periods]
 
     comparison_count = 0
-    trend_count = 0
     for spec in slide_specs:
         layout = spec.get("layout", "")
         if layout in ("cover", "toc", "chapter_divider", "thank_you"):
             continue
 
         # Executive Summary
-        if layout == "executive_summary" and taishin:
-            ts_cards_jan = calc._get_value(taishin, periods[0], "流通卡數") or 0
-            ts_amount_jan = calc._get_value(taishin, periods[0], "當月簽帳金額") or 0
-            ts_cards_growth = ((ts_cards - ts_cards_jan) / ts_cards_jan * 100) if ts_cards_jan else 0
-            ts_amount_growth = ((ts_amount - ts_amount_jan) / ts_amount_jan * 100) if ts_amount_jan else 0
+        if layout == "executive_summary":
+            market1 = calc._get_market_total(latest, metric1) or 0
+            market2 = calc._get_market_total(latest, metric2) or 0
+            t_share = calc.market_share(target, latest, metric1) or 0
             spec["kpis"] = [
-                {"label": "市場流通卡數", "value": f"{market_cards/10000:,.0f} 萬", "metric_id": "market_cards"},
-                {"label": "市場簽帳金額(月)", "value": f"{market_amount/1000000:,.0f} 億", "metric_id": "market_amount"},
-                {"label": f"{taishin}市占率", "value": f"{ts_share_cards:.1f}%", "metric_id": "ts_share", "change": "排名第五"},
-                {"label": f"{taishin}簽帳市占", "value": f"{ts_share_amount:.1f}%", "metric_id": "ts_amount_share"},
+                {"label": f"市場 {metric1}", "value": f"{market1:,.0f}", "metric_id": "m1"},
+                {"label": f"市場 {metric2}", "value": f"{market2:,.0f}", "metric_id": "m2"},
+                {"label": f"{target} 市占率", "value": f"{t_share:.1f}%", "metric_id": "m3"},
             ]
-            spec["insights"] = [
-                {"text": f"市場進入存量競爭，簽帳金額波動大於卡數成長。", "is_speculation": False},
-                {"text": f"{taishin}簽帳金額年內成長 {ts_amount_growth:.1f}%，品質成長優於數量擴張。", "is_speculation": False},
-                {"text": f"{taishin}流通卡數年內成長 {ts_cards_growth:.1f}%，市占率 {ts_share_cards:.1f}%。", "is_speculation": False},
-            ]
-            spec["headline"] = "關鍵發現摘要"
+            spec["headline"] = f"{len(all_metrics)} 個指標 · {len(real_institutions)} 個主體 · {len(periods)} 期間"
             continue
 
         # 策略建議
-        if layout == "strategy" and taishin:
+        if layout == "strategy":
             spec["recommendations"] = [
-                {"action": "加速數位發卡", "rationale": f"{taishin}市占 {ts_share_cards:.1f}%，與前四名差距仍大。", "priority": "high"},
-                {"action": "深化消費場景", "rationale": f"簽帳市占 {ts_share_amount:.1f}% 有提升空間。", "priority": "high"},
-                {"action": "維持風險控管", "rationale": "將風險優勢轉化為品牌差異化。", "priority": "medium"},
-                {"action": "精進有效卡經營", "rationale": "啟動沉睡卡戶精準喚醒 campaign。", "priority": "medium"},
+                {"action": "持續監控核心指標", "rationale": f"追蹤 {len(all_metrics)} 個指標變化", "priority": "high"},
+                {"action": "關注前五名動態", "rationale": "排名變動反映結構性轉變", "priority": "high"},
+                {"action": "深化分析頻率", "rationale": f"涵蓋 {len(periods)} 個期間", "priority": "medium"},
             ]
-            spec["headline"] = f"{taishin}四大策略行動方針"
+            spec["headline"] = "策略行動方針"
             continue
 
-        # 已有有效圖表就跳過
-        chart = spec.get("chart")
-        if chart and isinstance(chart, dict):
-            series = chart.get("series", [])
-            if series and any(isinstance(s, dict) and s.get("data") and any(v for v in s["data"] if v) for s in series):
-                continue
-
-        top8 = calc.ranking(latest, "流通卡數", top_n=8)
-        inst_list = top8["institution"].tolist()
-        categories = [c.replace("商業銀行", "").replace("國際", "") for c in inst_list]
-        months = [f"{int(p[3:])}月" for p in periods]
-
+        # 趨勢圖
         if layout == "trend_chart":
-            trend_count += 1
-            if trend_count == 1:
-                monthly_cards = [calc._get_market_total(p, "流通卡數") or 0 for p in periods]
-                monthly_amount = [calc._get_market_total(p, "當月簽帳金額") or 0 for p in periods]
-                spec["chart"] = {
-                    "type": "combo",
-                    "title": "市場規模趨勢 — 流通卡數與簽帳金額",
-                    "categories": months,
-                    "series": [
-                        {"name": "流通卡數(萬張)", "data": [v/10000 for v in monthly_cards]},
-                        {"name": "簽帳金額(億元)", "data": [v/1000000 for v in monthly_amount]},
-                    ],
-                }
-                spec["headline"] = "市場卡數穩定成長，簽帳金額波動反映季節性消費"
-            else:
-                top5 = calc.ranking(latest, "當月簽帳金額", top_n=5)
-                series_list = []
-                for inst in top5["institution"].tolist():
-                    monthly = [calc._get_value(inst, p, "當月簽帳金額") or 0 for p in periods]
-                    series_list.append({"name": inst.replace("商業銀行", ""), "data": [round(v/1000000, 1) for v in monthly]})
-                spec["chart"] = {"type": "line", "title": "Top 5 簽帳金額趨勢", "categories": months, "series": series_list}
-                spec["headline"] = "Top 5 銀行簽帳金額月度走勢"
+            m1_vals = [calc._get_market_total(p, metric1) or 0 for p in periods]
+            m2_vals = [calc._get_market_total(p, metric2) or 0 for p in periods]
+            spec["chart"] = {"type": "combo", "title": f"{metric1} 與 {metric2} 趨勢", "categories": months, "series": [{"name": metric1, "data": m1_vals}, {"name": metric2, "data": m2_vals}]}
+            spec["title"] = f"{metric1} 與 {metric2} 趨勢"
+            spec["headline"] = "整體走勢"
+            continue
 
-        elif layout == "ranking_chart":
-            top10 = calc.ranking(latest, "流通卡數", top_n=10)
-            categories = [c.replace("商業銀行", "").replace("國際", "") for c in top10["institution"].tolist()]
-            shares = [calc.market_share(i, latest, "流通卡數") or 0 for i in top10["institution"].tolist()]
-            spec["chart"] = {"type": "bar", "title": "流通卡數市占率 Top 10", "categories": categories, "series": [{"name": "市占率(%)", "data": shares}]}
-            spec["headline"] = "中信穩居第一，玉山激進發卡攀升第二"
+        # 排名圖
+        if layout == "ranking_chart":
+            top10 = calc.ranking(latest, metric1, top_n=10)
+            if not top10.empty:
+                spec["chart"] = {"type": "bar", "title": f"{metric1} Top 10", "categories": [c[:10] for c in top10["institution"].tolist()], "series": [{"name": metric1, "data": top10["value"].tolist()}]}
+                spec["title"] = f"{metric1} 排名"
+            spec["headline"] = f"{latest} 期排名"
+            continue
 
-        elif layout == "scatter_chart":
-            data_points = []
+        # 散佈圖
+        if layout == "scatter_chart":
+            pts = []
             for inst in real_institutions[:12]:
-                cards = calc._get_value(inst, latest, "流通卡數")
-                mom = calc.mom_growth(inst, latest, prev, "流通卡數")
-                if cards and mom is not None:
-                    data_points.append({"name": inst, "x": cards/10000, "y": mom})
-            spec["chart"] = {"type": "scatter", "title": "規模 vs 成長", "data_points": data_points}
-            spec["headline"] = "規模與成長象限分析"
+                v = calc._get_value(inst, latest, metric1)
+                mom = calc.mom_growth(inst, latest, prev, metric1)
+                if v and mom is not None:
+                    pts.append({"name": inst[:6], "x": v, "y": mom})
+            if pts:
+                spec["chart"] = {"type": "scatter", "title": f"{metric1} 規模 vs 成長", "data_points": pts}
+            spec["headline"] = "規模與成長"
+            continue
 
-        elif layout == "stacked_chart":
-            top5 = calc.ranking(latest, "當月簽帳金額", top_n=5)
-            series_list = []
-            for inst in top5["institution"].tolist():
-                monthly = [calc._get_value(inst, p, "當月簽帳金額") or 0 for p in periods]
-                series_list.append({"name": inst.replace("商業銀行", "").replace("國際", ""), "data": [round(v/1000000, 1) for v in monthly]})
-            spec["chart"] = {"type": "stacked_bar", "title": "Top 5 銀行月簽帳金額", "categories": months, "series": series_list}
-            spec["headline"] = "Top 5 銀行簽帳金額堆疊走勢"
+        # 堆疊圖
+        if layout == "stacked_chart":
+            top5 = calc.ranking(latest, metric1, top_n=5)
+            if not top5.empty:
+                sl = []
+                for inst in top5["institution"].tolist():
+                    monthly = [calc._get_value(inst, p, metric1) or 0 for p in periods]
+                    sl.append({"name": inst[:8], "data": monthly})
+                spec["chart"] = {"type": "stacked_bar", "title": f"Top 5 {metric1}", "categories": months, "series": sl}
+                spec["title"] = f"Top 5 {metric1} 趨勢"
+            spec["headline"] = f"Top 5 分布"
+            continue
 
-        elif layout in ("comparison_chart", "risk_chart"):
+        # 比較圖
+        if layout in ("comparison_chart", "risk_chart"):
             comparison_count += 1
+            top8 = calc.ranking(latest, metric1, top_n=8)
+            if top8.empty:
+                continue
+            il = top8["institution"].tolist()
+            cats = [c[:10] for c in il]
             if comparison_count == 1:
-                shares = [calc.market_share(i, latest, "流通卡數") or 0 for i in inst_list]
-                amount_shares = [calc.market_share(i, latest, "當月簽帳金額") or 0 for i in inst_list]
-                spec["chart"] = {"type": "bar", "title": "卡數 vs 簽帳市占率", "categories": categories, "series": [{"name": "卡數市占(%)", "data": shares}, {"name": "簽帳市占(%)", "data": amount_shares}]}
+                v1 = [calc._get_value(i, latest, metric1) or 0 for i in il]
+                v2 = [calc._get_value(i, latest, metric2) or 0 for i in il]
+                spec["chart"] = {"type": "bar", "title": f"{metric1} vs {metric2}", "categories": cats, "series": [{"name": metric1, "data": v1}, {"name": metric2, "data": v2}]}
             elif comparison_count == 2:
-                cats, vals = [], []
-                for inst in inst_list:
-                    cards = calc._get_value(inst, latest, "流通卡數")
-                    amount = calc._get_value(inst, latest, "當月簽帳金額")
-                    if cards and amount and cards > 0:
-                        cats.append(inst.replace("商業銀行", "").replace("國際", ""))
-                        vals.append(round(amount * 1000 / cards, 0))
-                spec["chart"] = {"type": "bar", "title": "每卡簽帳金額(元/卡)", "categories": cats, "series": [{"name": "每卡簽帳(元)", "data": vals}]}
-            elif comparison_count == 3:
-                top10 = calc.ranking(latest, "流通卡數", top_n=10)
-                spec["chart"] = {"type": "bar", "title": "流通卡數 Top 10", "categories": [c.replace("商業銀行", "") for c in top10["institution"].tolist()], "series": [{"name": "萬張", "data": [round(v/10000, 1) for v in top10["value"].tolist()]}]}
+                shares = [calc.market_share(i, latest, metric1) or 0 for i in il]
+                spec["chart"] = {"type": "bar", "title": f"{metric1} 市占率", "categories": cats, "series": [{"name": "市占率(%)", "data": shares}]}
             else:
-                cats, moms = [], []
-                for inst in inst_list:
-                    mom = calc.mom_growth(inst, latest, prev, "流通卡數")
-                    if mom is not None:
-                        cats.append(inst.replace("商業銀行", "").replace("國際", ""))
-                        moms.append(mom)
-                spec["chart"] = {"type": "bar", "title": f"月增率({prev}→{latest})", "categories": cats, "series": [{"name": "MoM(%)", "data": moms}]}
+                moms, mcats = [], []
+                for inst in il:
+                    m = calc.mom_growth(inst, latest, prev, metric1)
+                    if m is not None:
+                        mcats.append(inst[:10])
+                        moms.append(m)
+                if moms:
+                    spec["chart"] = {"type": "bar", "title": f"{metric1} 月增率", "categories": mcats, "series": [{"name": "MoM(%)", "data": moms}]}
+            spec["headline"] = spec.get("title", "比較分析")
+            continue
 
 
 if __name__ == "__main__":
