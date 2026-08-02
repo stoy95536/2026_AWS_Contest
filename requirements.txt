@@ -6,6 +6,9 @@
 pandas==2.3.3
 numpy==2.3.5
 openpyxl==3.1.5
+
+# 舊版 .xls 讀取（政府開放資料常見格式；xlrd 2.x 僅支援 .xls）
+xlrd==2.0.2
 python-pptx==1.0.2
 
 # Data catalog / 欄位語意比對 (Task1 Layer 1 規則式比對)

@@ -13,10 +13,10 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
-import openpyxl
 import pandas as pd
 
 from src.catalog_builder.field_matcher import build_field_cards
+from src.catalog_builder.loaders import iter_workbooks
 from src.catalog_builder.normalizer import normalize_sheet
 from src.catalog_builder.structure_detector import detect_structure
 
@@ -120,17 +120,12 @@ def build_dataset(data_dir: str | Path) -> Dataset:
     structure_detector / normalizer / field_matcher），確保 Catalog 描述的
     欄位與長表裡的資料是同一批東西——兩邊各解析一次會產生對不上的風險。
     """
-    src = Path(data_dir)
-    files = sorted(src.glob("*.xlsx"))
-    if not files:
-        raise FileNotFoundError(f"{src} 底下沒有 .xlsx")
-
     rows: list[dict[str, Any]] = []
     fields: dict[str, FieldMeta] = {}
     warnings: list[str] = []
 
-    for path in files:
-        workbook = openpyxl.load_workbook(path, data_only=True)
+    for path, workbook, loader_warnings in iter_workbooks(data_dir):
+        warnings.extend(loader_warnings)
         try:
             for sheet_name in workbook.sheetnames:
                 structure = detect_structure(workbook[sheet_name])

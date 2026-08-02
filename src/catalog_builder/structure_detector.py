@@ -203,9 +203,15 @@ def _split_title_and_header(
 
     titles, headers = [], []
     for r in above:
-        non_empty, _ = _row_numeric_ratio(grid[r - 1])
-        is_title = non_empty <= TITLE_MAX_NON_EMPTY or _spans_full_width(
-            grid[r - 1], max_col
+        row = grid[r - 1]
+        non_empty, _ = _row_numeric_ratio(row)
+        # 稀疏列要從第 1 欄開始才算標題。分組表頭（「亞洲地區」橫跨 B:C）
+        # 一定讓出第 1 欄給維度欄，只有標題會從最左邊開始——少了這個條件，
+        # 只跨兩欄的分組表頭會被誤判成標題而整個丟掉。
+        starts_at_first = row and row[0] is not None and str(row[0]).strip() != ""
+        is_title = (
+            (non_empty <= TITLE_MAX_NON_EMPTY and starts_at_first)
+            or _spans_full_width(row, max_col)
         )
         (titles if is_title else headers).append(r)
 

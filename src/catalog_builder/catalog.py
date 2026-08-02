@@ -18,8 +18,6 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
-import openpyxl
-
 from .field_matcher import (
     CONFIDENCE_AUTO,
     CONFIDENCE_MIN,
@@ -29,6 +27,7 @@ from .field_matcher import (
     chinese_part,
 )
 from .fingerprint import FingerprintCache, sheet_fingerprint
+from .loaders import iter_workbooks
 from .normalizer import NormalizedSheet, normalize_sheet
 from .structure_detector import detect_structure
 
@@ -74,19 +73,15 @@ def build_catalog(data_dir: str | Path) -> dict[str, Any]:
     Layer 0 指紋在此生效：結構完全相同的工作表直接複用欄位卡的比對結果，
     不重跑 Layer 1。
     """
-    src = Path(data_dir)
-    files = sorted(src.glob("*.xlsx"))
-    if not files:
-        raise FileNotFoundError(f"{src} 底下沒有 .xlsx")
-
     cache: FingerprintCache[list[FieldCard]] = FingerprintCache()
     catalog_files: list[dict[str, Any]] = []
     all_cards: list[FieldCard] = []
     sheet_dimensions: list[tuple[str, list[str]]] = []
     review: list[dict[str, Any]] = []
 
-    for path in files:
-        workbook = openpyxl.load_workbook(path, data_only=True)
+    for path, workbook, loader_warnings in iter_workbooks(data_dir):
+        for message in loader_warnings:
+            review.append({"file": "(輸入檔)", "sheet": "", "reason": message})
         try:
             sheets_out: list[dict[str, Any]] = []
 

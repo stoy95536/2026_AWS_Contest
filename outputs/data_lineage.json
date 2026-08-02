@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-02T10:12:03",
+  "generated_at": "2026-08-02T10:33:54",
   "total_records": 177,
   "records": {
     "觀光外匯收入_來臺旅客觀光支出(美元)_2024": {
@@ -30,7 +30,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "觀光外匯收入_來臺旅客觀光支出(美元)_yoy_2024": {
       "metric_id": "觀光外匯收入_來臺旅客觀光支出(美元)_yoy_2024",
@@ -65,7 +65,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "觀光外匯收入_來臺人次_2024": {
       "metric_id": "觀光外匯收入_來臺人次_2024",
@@ -95,7 +95,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "觀光外匯收入_來臺人次_yoy_2024": {
       "metric_id": "觀光外匯收入_來臺人次_yoy_2024",
@@ -130,7 +130,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "觀光外匯收入_每一旅客平均在臺消費額(美元）_2024": {
       "metric_id": "觀光外匯收入_每一旅客平均在臺消費額(美元）_2024",
@@ -160,7 +160,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "觀光外匯收入_每一旅客平均在臺消費額(美元）_yoy_2024": {
       "metric_id": "觀光外匯收入_每一旅客平均在臺消費額(美元）_yoy_2024",
@@ -195,7 +195,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "觀光外匯收入_指數80年=100_2024": {
       "metric_id": "觀光外匯收入_指數80年=100_2024",
@@ -225,7 +225,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "觀光外匯收入_指數80年=100_yoy_2024": {
       "metric_id": "觀光外匯收入_指數80年=100_yoy_2024",
@@ -260,7 +260,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "觀光外匯收入_每一旅客每日平均消費額(美元）_2024": {
       "metric_id": "觀光外匯收入_每一旅客每日平均消費額(美元）_2024",
@@ -290,7 +290,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "觀光外匯收入_每一旅客每日平均消費額(美元）_yoy_2024": {
       "metric_id": "觀光外匯收入_每一旅客每日平均消費額(美元）_yoy_2024",
@@ -325,7 +325,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "觀光外匯收入_來臺旅客觀光支出(美元)_2019": {
       "metric_id": "觀光外匯收入_來臺旅客觀光支出(美元)_2019",
@@ -355,7 +355,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "觀光外匯收入_來臺旅客觀光支出(美元)_2020": {
       "metric_id": "觀光外匯收入_來臺旅客觀光支出(美元)_2020",
@@ -385,7 +385,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "觀光外匯收入_來臺旅客觀光支出(美元)_2021": {
       "metric_id": "觀光外匯收入_來臺旅客觀光支出(美元)_2021",
@@ -415,7 +415,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "觀光外匯收入_來臺旅客觀光支出(美元)_2022": {
       "metric_id": "觀光外匯收入_來臺旅客觀光支出(美元)_2022",
@@ -445,7 +445,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "觀光外匯收入_來臺旅客觀光支出(美元)_2023": {
       "metric_id": "觀光外匯收入_來臺旅客觀光支出(美元)_2023",
@@ -475,7 +475,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_亞洲地區_日本_2025": {
       "metric_id": "來臺旅客_亞洲地區_日本_2025",
@@ -505,7 +505,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_亞洲地區_日本_yoy_2025": {
       "metric_id": "來臺旅客_亞洲地區_日本_yoy_2025",
@@ -540,7 +540,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_亞洲地區_日本_share_2025": {
       "metric_id": "來臺旅客_亞洲地區_日本_share_2025",
@@ -575,7 +575,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_亞洲地區_香港.澳門_2025": {
       "metric_id": "來臺旅客_亞洲地區_香港.澳門_2025",
@@ -605,7 +605,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_亞洲地區_香港.澳門_yoy_2025": {
       "metric_id": "來臺旅客_亞洲地區_香港.澳門_yoy_2025",
@@ -640,7 +640,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_亞洲地區_香港.澳門_share_2025": {
       "metric_id": "來臺旅客_亞洲地區_香港.澳門_share_2025",
@@ -675,7 +675,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_亞洲地區_韓國_2025": {
       "metric_id": "來臺旅客_亞洲地區_韓國_2025",
@@ -705,7 +705,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_亞洲地區_韓國_yoy_2025": {
       "metric_id": "來臺旅客_亞洲地區_韓國_yoy_2025",
@@ -740,7 +740,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_亞洲地區_韓國_share_2025": {
       "metric_id": "來臺旅客_亞洲地區_韓國_share_2025",
@@ -775,7 +775,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_美洲地區_美國_2025": {
       "metric_id": "來臺旅客_美洲地區_美國_2025",
@@ -805,7 +805,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_美洲地區_美國_yoy_2025": {
       "metric_id": "來臺旅客_美洲地區_美國_yoy_2025",
@@ -840,7 +840,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_美洲地區_美國_share_2025": {
       "metric_id": "來臺旅客_美洲地區_美國_share_2025",
@@ -875,7 +875,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_亞洲地區_大陸_2025": {
       "metric_id": "來臺旅客_亞洲地區_大陸_2025",
@@ -905,7 +905,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_亞洲地區_大陸_yoy_2025": {
       "metric_id": "來臺旅客_亞洲地區_大陸_yoy_2025",
@@ -940,7 +940,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_亞洲地區_大陸_share_2025": {
       "metric_id": "來臺旅客_亞洲地區_大陸_share_2025",
@@ -975,7 +975,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_亞洲地區_日本_2020": {
       "metric_id": "來臺旅客_亞洲地區_日本_2020",
@@ -1005,7 +1005,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_亞洲地區_日本_2021": {
       "metric_id": "來臺旅客_亞洲地區_日本_2021",
@@ -1035,7 +1035,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_亞洲地區_日本_2022": {
       "metric_id": "來臺旅客_亞洲地區_日本_2022",
@@ -1065,7 +1065,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_亞洲地區_日本_2023": {
       "metric_id": "來臺旅客_亞洲地區_日本_2023",
@@ -1095,7 +1095,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_亞洲地區_日本_2024": {
       "metric_id": "來臺旅客_亞洲地區_日本_2024",
@@ -1125,7 +1125,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_華僑_2025": {
       "metric_id": "來臺旅客_華僑_2025",
@@ -1155,7 +1155,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_華僑_yoy_2025": {
       "metric_id": "來臺旅客_華僑_yoy_2025",
@@ -1190,7 +1190,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_華僑_share_2025": {
       "metric_id": "來臺旅客_華僑_share_2025",
@@ -1225,7 +1225,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_韓國_2025": {
       "metric_id": "來臺旅客_韓國_2025",
@@ -1255,7 +1255,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_韓國_yoy_2025": {
       "metric_id": "來臺旅客_韓國_yoy_2025",
@@ -1290,7 +1290,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_韓國_share_2025": {
       "metric_id": "來臺旅客_韓國_share_2025",
@@ -1325,7 +1325,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_美國_2025": {
       "metric_id": "來臺旅客_美國_2025",
@@ -1355,7 +1355,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_美國_yoy_2025": {
       "metric_id": "來臺旅客_美國_yoy_2025",
@@ -1390,7 +1390,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_美國_share_2025": {
       "metric_id": "來臺旅客_美國_share_2025",
@@ -1425,7 +1425,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_東南亞地區_菲律賓_2025": {
       "metric_id": "來臺旅客_東南亞地區_菲律賓_2025",
@@ -1455,7 +1455,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_東南亞地區_菲律賓_yoy_2025": {
       "metric_id": "來臺旅客_東南亞地區_菲律賓_yoy_2025",
@@ -1490,7 +1490,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_東南亞地區_菲律賓_share_2025": {
       "metric_id": "來臺旅客_東南亞地區_菲律賓_share_2025",
@@ -1525,7 +1525,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_華僑_2020": {
       "metric_id": "來臺旅客_華僑_2020",
@@ -1555,7 +1555,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_華僑_2021": {
       "metric_id": "來臺旅客_華僑_2021",
@@ -1585,7 +1585,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_華僑_2022": {
       "metric_id": "來臺旅客_華僑_2022",
@@ -1615,7 +1615,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_華僑_2023": {
       "metric_id": "來臺旅客_華僑_2023",
@@ -1645,7 +1645,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_華僑_2024": {
       "metric_id": "來臺旅客_華僑_2024",
@@ -1675,7 +1675,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_女_人次_2025": {
       "metric_id": "來臺旅客_女_人次_2025",
@@ -1705,7 +1705,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_女_人次_yoy_2025": {
       "metric_id": "來臺旅客_女_人次_yoy_2025",
@@ -1740,7 +1740,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_女_人次_share_2025": {
       "metric_id": "來臺旅客_女_人次_share_2025",
@@ -1775,7 +1775,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_男_人次_2025": {
       "metric_id": "來臺旅客_男_人次_2025",
@@ -1805,7 +1805,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_男_人次_yoy_2025": {
       "metric_id": "來臺旅客_男_人次_yoy_2025",
@@ -1840,7 +1840,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_男_人次_share_2025": {
       "metric_id": "來臺旅客_男_人次_share_2025",
@@ -1875,7 +1875,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_女_人次_2020": {
       "metric_id": "來臺旅客_女_人次_2020",
@@ -1905,7 +1905,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_女_人次_2021": {
       "metric_id": "來臺旅客_女_人次_2021",
@@ -1935,7 +1935,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_女_人次_2022": {
       "metric_id": "來臺旅客_女_人次_2022",
@@ -1965,7 +1965,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_女_人次_2023": {
       "metric_id": "來臺旅客_女_人次_2023",
@@ -1995,7 +1995,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_女_人次_2024": {
       "metric_id": "來臺旅客_女_人次_2024",
@@ -2025,7 +2025,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_30至39歲30-39_2025": {
       "metric_id": "來臺旅客_30至39歲30-39_2025",
@@ -2055,7 +2055,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_30至39歲30-39_yoy_2025": {
       "metric_id": "來臺旅客_30至39歲30-39_yoy_2025",
@@ -2090,7 +2090,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_20至29歲20-29_2025": {
       "metric_id": "來臺旅客_20至29歲20-29_2025",
@@ -2120,7 +2120,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_20至29歲20-29_yoy_2025": {
       "metric_id": "來臺旅客_20至29歲20-29_yoy_2025",
@@ -2155,7 +2155,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_40至49歲40-49_2025": {
       "metric_id": "來臺旅客_40至49歲40-49_2025",
@@ -2185,7 +2185,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_40至49歲40-49_yoy_2025": {
       "metric_id": "來臺旅客_40至49歲40-49_yoy_2025",
@@ -2220,7 +2220,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_60歲以上60_2025": {
       "metric_id": "來臺旅客_60歲以上60_2025",
@@ -2250,7 +2250,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_60歲以上60_yoy_2025": {
       "metric_id": "來臺旅客_60歲以上60_yoy_2025",
@@ -2285,7 +2285,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_50至59歲50-59_2025": {
       "metric_id": "來臺旅客_50至59歲50-59_2025",
@@ -2315,7 +2315,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_50至59歲50-59_yoy_2025": {
       "metric_id": "來臺旅客_50至59歲50-59_yoy_2025",
@@ -2350,7 +2350,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_30至39歲30-39_2020": {
       "metric_id": "來臺旅客_30至39歲30-39_2020",
@@ -2380,7 +2380,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_30至39歲30-39_2021": {
       "metric_id": "來臺旅客_30至39歲30-39_2021",
@@ -2410,7 +2410,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_30至39歲30-39_2022": {
       "metric_id": "來臺旅客_30至39歲30-39_2022",
@@ -2440,7 +2440,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_30至39歲30-39_2023": {
       "metric_id": "來臺旅客_30至39歲30-39_2023",
@@ -2470,7 +2470,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_30至39歲30-39_2024": {
       "metric_id": "來臺旅客_30至39歲30-39_2024",
@@ -2500,7 +2500,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_飛機_桃園機場_2025": {
       "metric_id": "來臺旅客_飛機_桃園機場_2025",
@@ -2530,7 +2530,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_飛機_桃園機場_yoy_2025": {
       "metric_id": "來臺旅客_飛機_桃園機場_yoy_2025",
@@ -2565,7 +2565,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_飛機_高雄_2025": {
       "metric_id": "來臺旅客_飛機_高雄_2025",
@@ -2595,7 +2595,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_飛機_高雄_yoy_2025": {
       "metric_id": "來臺旅客_飛機_高雄_yoy_2025",
@@ -2630,7 +2630,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_飛機_松山_2025": {
       "metric_id": "來臺旅客_飛機_松山_2025",
@@ -2660,7 +2660,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_飛機_松山_yoy_2025": {
       "metric_id": "來臺旅客_飛機_松山_yoy_2025",
@@ -2695,7 +2695,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_飛機_臺中_2025": {
       "metric_id": "來臺旅客_飛機_臺中_2025",
@@ -2725,7 +2725,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_飛機_臺中_yoy_2025": {
       "metric_id": "來臺旅客_飛機_臺中_yoy_2025",
@@ -2760,7 +2760,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_輪船_基隆_2025": {
       "metric_id": "來臺旅客_輪船_基隆_2025",
@@ -2790,7 +2790,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_輪船_基隆_yoy_2025": {
       "metric_id": "來臺旅客_輪船_基隆_yoy_2025",
@@ -2825,7 +2825,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_飛機_桃園機場_2020": {
       "metric_id": "來臺旅客_飛機_桃園機場_2020",
@@ -2855,7 +2855,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_飛機_桃園機場_2021": {
       "metric_id": "來臺旅客_飛機_桃園機場_2021",
@@ -2885,7 +2885,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_飛機_桃園機場_2022": {
       "metric_id": "來臺旅客_飛機_桃園機場_2022",
@@ -2915,7 +2915,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_飛機_桃園機場_2023": {
       "metric_id": "來臺旅客_飛機_桃園機場_2023",
@@ -2945,7 +2945,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_飛機_桃園機場_2024": {
       "metric_id": "來臺旅客_飛機_桃園機場_2024",
@@ -2975,7 +2975,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_停留夜數_3_2025": {
       "metric_id": "來臺旅客_停留夜數_3_2025",
@@ -3005,7 +3005,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_停留夜數_3_yoy_2025": {
       "metric_id": "來臺旅客_停留夜數_3_yoy_2025",
@@ -3040,7 +3040,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_停留夜數_3_share_2025": {
       "metric_id": "來臺旅客_停留夜數_3_share_2025",
@@ -3075,7 +3075,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_停留夜數_5-7_2025": {
       "metric_id": "來臺旅客_停留夜數_5-7_2025",
@@ -3105,7 +3105,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_停留夜數_5-7_yoy_2025": {
       "metric_id": "來臺旅客_停留夜數_5-7_yoy_2025",
@@ -3140,7 +3140,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_停留夜數_5-7_share_2025": {
       "metric_id": "來臺旅客_停留夜數_5-7_share_2025",
@@ -3175,7 +3175,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_停留夜數_4_2025": {
       "metric_id": "來臺旅客_停留夜數_4_2025",
@@ -3205,7 +3205,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_停留夜數_4_yoy_2025": {
       "metric_id": "來臺旅客_停留夜數_4_yoy_2025",
@@ -3240,7 +3240,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_停留夜數_4_share_2025": {
       "metric_id": "來臺旅客_停留夜數_4_share_2025",
@@ -3275,7 +3275,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_停留夜數_2_2025": {
       "metric_id": "來臺旅客_停留夜數_2_2025",
@@ -3305,7 +3305,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_停留夜數_2_yoy_2025": {
       "metric_id": "來臺旅客_停留夜數_2_yoy_2025",
@@ -3340,7 +3340,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_停留夜數_2_share_2025": {
       "metric_id": "來臺旅客_停留夜數_2_share_2025",
@@ -3375,7 +3375,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_停留夜數_90以上_2025": {
       "metric_id": "來臺旅客_停留夜數_90以上_2025",
@@ -3405,7 +3405,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_停留夜數_90以上_yoy_2025": {
       "metric_id": "來臺旅客_停留夜數_90以上_yoy_2025",
@@ -3440,7 +3440,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_停留夜數_90以上_share_2025": {
       "metric_id": "來臺旅客_停留夜數_90以上_share_2025",
@@ -3475,7 +3475,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_停留夜數_3_2020": {
       "metric_id": "來臺旅客_停留夜數_3_2020",
@@ -3505,7 +3505,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_停留夜數_3_2021": {
       "metric_id": "來臺旅客_停留夜數_3_2021",
@@ -3535,7 +3535,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_停留夜數_3_2022": {
       "metric_id": "來臺旅客_停留夜數_3_2022",
@@ -3565,7 +3565,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_停留夜數_3_2023": {
       "metric_id": "來臺旅客_停留夜數_3_2023",
@@ -3595,7 +3595,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_停留夜數_3_2024": {
       "metric_id": "來臺旅客_停留夜數_3_2024",
@@ -3625,7 +3625,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_觀光_2025": {
       "metric_id": "來臺旅客_觀光_2025",
@@ -3655,7 +3655,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_觀光_yoy_2025": {
       "metric_id": "來臺旅客_觀光_yoy_2025",
@@ -3690,7 +3690,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_業務_2025": {
       "metric_id": "來臺旅客_業務_2025",
@@ -3720,7 +3720,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_業務_yoy_2025": {
       "metric_id": "來臺旅客_業務_yoy_2025",
@@ -3755,7 +3755,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_探親_2025": {
       "metric_id": "來臺旅客_探親_2025",
@@ -3785,7 +3785,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_探親_yoy_2025": {
       "metric_id": "來臺旅客_探親_yoy_2025",
@@ -3820,7 +3820,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_求學_2025": {
       "metric_id": "來臺旅客_求學_2025",
@@ -3850,7 +3850,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_求學_yoy_2025": {
       "metric_id": "來臺旅客_求學_yoy_2025",
@@ -3885,7 +3885,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_會議_2025": {
       "metric_id": "來臺旅客_會議_2025",
@@ -3915,7 +3915,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_會議_yoy_2025": {
       "metric_id": "來臺旅客_會議_yoy_2025",
@@ -3950,7 +3950,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_觀光_2020": {
       "metric_id": "來臺旅客_觀光_2020",
@@ -3980,7 +3980,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_觀光_2021": {
       "metric_id": "來臺旅客_觀光_2021",
@@ -4010,7 +4010,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_觀光_2022": {
       "metric_id": "來臺旅客_觀光_2022",
@@ -4040,7 +4040,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_觀光_2023": {
       "metric_id": "來臺旅客_觀光_2023",
@@ -4070,7 +4070,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "來臺旅客_觀光_2024": {
       "metric_id": "來臺旅客_觀光_2024",
@@ -4100,7 +4100,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國_日本_2025": {
       "metric_id": "出國_日本_2025",
@@ -4130,7 +4130,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國_日本_yoy_2025": {
       "metric_id": "出國_日本_yoy_2025",
@@ -4165,7 +4165,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國_日本_share_2025": {
       "metric_id": "出國_日本_share_2025",
@@ -4200,7 +4200,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國_大陸_2025": {
       "metric_id": "出國_大陸_2025",
@@ -4230,7 +4230,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國_大陸_yoy_2025": {
       "metric_id": "出國_大陸_yoy_2025",
@@ -4265,7 +4265,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國_大陸_share_2025": {
       "metric_id": "出國_大陸_share_2025",
@@ -4300,7 +4300,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國_韓國_2025": {
       "metric_id": "出國_韓國_2025",
@@ -4330,7 +4330,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國_韓國_yoy_2025": {
       "metric_id": "出國_韓國_yoy_2025",
@@ -4365,7 +4365,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國_韓國_share_2025": {
       "metric_id": "出國_韓國_share_2025",
@@ -4400,7 +4400,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國_亞洲地區_香港_2025": {
       "metric_id": "出國_亞洲地區_香港_2025",
@@ -4430,7 +4430,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國_亞洲地區_香港_yoy_2025": {
       "metric_id": "出國_亞洲地區_香港_yoy_2025",
@@ -4465,7 +4465,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國_亞洲地區_香港_share_2025": {
       "metric_id": "出國_亞洲地區_香港_share_2025",
@@ -4500,7 +4500,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國_越南_2025": {
       "metric_id": "出國_越南_2025",
@@ -4530,7 +4530,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國_越南_yoy_2025": {
       "metric_id": "出國_越南_yoy_2025",
@@ -4565,7 +4565,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國_越南_share_2025": {
       "metric_id": "出國_越南_share_2025",
@@ -4600,7 +4600,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國_日本_2020": {
       "metric_id": "出國_日本_2020",
@@ -4630,7 +4630,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國_日本_2021": {
       "metric_id": "出國_日本_2021",
@@ -4660,7 +4660,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國_日本_2022": {
       "metric_id": "出國_日本_2022",
@@ -4690,7 +4690,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國_日本_2023": {
       "metric_id": "出國_日本_2023",
@@ -4720,7 +4720,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國_日本_2024": {
       "metric_id": "出國_日本_2024",
@@ -4750,7 +4750,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國人次_40至49歲40-49_2025": {
       "metric_id": "出國人次_40至49歲40-49_2025",
@@ -4780,7 +4780,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國人次_40至49歲40-49_yoy_2025": {
       "metric_id": "出國人次_40至49歲40-49_yoy_2025",
@@ -4815,7 +4815,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國人次_40至49歲40-49_share_2025": {
       "metric_id": "出國人次_40至49歲40-49_share_2025",
@@ -4850,7 +4850,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國人次_30至39歲30-39_2025": {
       "metric_id": "出國人次_30至39歲30-39_2025",
@@ -4880,7 +4880,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國人次_30至39歲30-39_yoy_2025": {
       "metric_id": "出國人次_30至39歲30-39_yoy_2025",
@@ -4915,7 +4915,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國人次_30至39歲30-39_share_2025": {
       "metric_id": "出國人次_30至39歲30-39_share_2025",
@@ -4950,7 +4950,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國人次_60歲及以上60_2025": {
       "metric_id": "出國人次_60歲及以上60_2025",
@@ -4980,7 +4980,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國人次_60歲及以上60_yoy_2025": {
       "metric_id": "出國人次_60歲及以上60_yoy_2025",
@@ -5015,7 +5015,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國人次_60歲及以上60_share_2025": {
       "metric_id": "出國人次_60歲及以上60_share_2025",
@@ -5050,7 +5050,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國人次_50至59歲50-59_2025": {
       "metric_id": "出國人次_50至59歲50-59_2025",
@@ -5080,7 +5080,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國人次_50至59歲50-59_yoy_2025": {
       "metric_id": "出國人次_50至59歲50-59_yoy_2025",
@@ -5115,7 +5115,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國人次_50至59歲50-59_share_2025": {
       "metric_id": "出國人次_50至59歲50-59_share_2025",
@@ -5150,7 +5150,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國人次_20至29歲20-29_2025": {
       "metric_id": "出國人次_20至29歲20-29_2025",
@@ -5180,7 +5180,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國人次_20至29歲20-29_yoy_2025": {
       "metric_id": "出國人次_20至29歲20-29_yoy_2025",
@@ -5215,7 +5215,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國人次_20至29歲20-29_share_2025": {
       "metric_id": "出國人次_20至29歲20-29_share_2025",
@@ -5250,7 +5250,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國人次_40至49歲40-49_2020": {
       "metric_id": "出國人次_40至49歲40-49_2020",
@@ -5280,7 +5280,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國人次_40至49歲40-49_2021": {
       "metric_id": "出國人次_40至49歲40-49_2021",
@@ -5310,7 +5310,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國人次_40至49歲40-49_2022": {
       "metric_id": "出國人次_40至49歲40-49_2022",
@@ -5340,7 +5340,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國人次_40至49歲40-49_2023": {
       "metric_id": "出國人次_40至49歲40-49_2023",
@@ -5370,7 +5370,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "出國人次_40至49歲40-49_2024": {
       "metric_id": "出國人次_40至49歲40-49_2024",
@@ -5400,7 +5400,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "郵輪來臺遊客人次_人數_2025": {
       "metric_id": "郵輪來臺遊客人次_人數_2025",
@@ -5430,7 +5430,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "郵輪來臺遊客人次_人數_yoy_2025": {
       "metric_id": "郵輪來臺遊客人次_人數_yoy_2025",
@@ -5465,7 +5465,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "郵輪來臺遊客人次_成長率_2025": {
       "metric_id": "郵輪來臺遊客人次_成長率_2025",
@@ -5495,7 +5495,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "郵輪來臺遊客人次_成長率_yoy_2025": {
       "metric_id": "郵輪來臺遊客人次_成長率_yoy_2025",
@@ -5530,7 +5530,7 @@
       "validation_status": "na",
       "validation_note": "基期為負數（-21.77），成長率正負號無意義；[郵輪來臺遊客人次_成長率_yoy_2025] 值為 N/A，未參與後續計算",
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "郵輪來臺遊客人次_人數_2020": {
       "metric_id": "郵輪來臺遊客人次_人數_2020",
@@ -5560,7 +5560,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "郵輪來臺遊客人次_人數_2021": {
       "metric_id": "郵輪來臺遊客人次_人數_2021",
@@ -5596,7 +5596,7 @@
       "validation_status": "na",
       "validation_note": "[郵輪來臺遊客人次_人數_2021] 值為 N/A，未參與後續計算",
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "郵輪來臺遊客人次_人數_2022": {
       "metric_id": "郵輪來臺遊客人次_人數_2022",
@@ -5632,7 +5632,7 @@
       "validation_status": "na",
       "validation_note": "[郵輪來臺遊客人次_人數_2022] 值為 N/A，未參與後續計算",
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "郵輪來臺遊客人次_人數_2023": {
       "metric_id": "郵輪來臺遊客人次_人數_2023",
@@ -5662,7 +5662,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     },
     "郵輪來臺遊客人次_人數_2024": {
       "metric_id": "郵輪來臺遊客人次_人數_2024",
@@ -5692,7 +5692,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:12:03"
+      "timestamp": "2026-08-02T10:33:54"
     }
   }
 }
