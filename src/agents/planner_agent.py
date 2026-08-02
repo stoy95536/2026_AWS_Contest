@@ -76,6 +76,13 @@ class PlannerAgent:
         """
         pages = total_pages if total_pages is not None else 16
 
+        # 當 Task1 已提供計算好的 chart_data 時，結構規劃一律走規則引擎。
+        # 原因：chart_data 裡的 metric_id 是計算引擎的真實輸出，必須原樣引用；
+        # 若讓 LLM 重新規劃結構，它會編造不存在的 metric_id（幻覺）。
+        # LLM 的價值改為體現在 Analyst 的洞察生成，而非重編圖表。
+        if chart_data:
+            return self._rule_based_plan(data_summary, pages, metrics=metrics, chart_data=chart_data)
+
         if not use_llm:
             return self._rule_based_plan(data_summary, pages, metrics=metrics, chart_data=chart_data)
         try:

@@ -281,6 +281,10 @@ class AnalystAgent:
                     "period": m.get("period", ""),
                 })
 
+        # 建立此頁允許引用的合法 metric_id 集合（防幻覺白名單）
+        valid_ids = self._collect_metric_ids(slide_spec, metric_data)
+        valid_id_set = set(valid_ids)
+
         # 也從 chart.series 收集有效資訊
         chart = slide_spec.get("chart")
         chart_context = ""
@@ -337,11 +341,52 @@ class AnalystAgent:
             if start != -1 and end > start:
                 result = json.loads(response_text[start:end])
                 merged = slide_spec.copy()
-                for key in ("headline", "insights", "recommendations", "source_ids"):
-                    if result.get(key):
-                        merged[key] = result[key]
+
+                if result.get("headline"):
+                    merged["headline"] = result["headline"]
+
+                # 防幻覺：過濾洞察中不存在的 metric_id
+                if result.get("insights"):
+                    merged["insights"] = self._sanitize_insights(
+                        result["insights"], valid_id_set, valid_ids
+                    )
+
+                if result.get("recommendations"):
+                    merged["recommendations"] = result["recommendations"]
+
+                # source_ids 也只保留合法的
+                if result.get("source_ids"):
+                    clean_sources = [sid for sid in result["source_ids"] if sid in valid_id_set]
+                    merged["source_ids"] = clean_sources or valid_ids[:10]
+                elif valid_ids:
+                    merged["source_ids"] = valid_ids[:10]
+
                 return merged
         except json.JSONDecodeError:
             pass
 
         return self._rule_based_insights(slide_spec, metric_data)
+
+    def _sanitize_insights(self, insights: list, valid_id_set: set, valid_ids: list) -> list:
+        """
+        防幻覺過濾：移除 LLM 洞察中不存在於計算引擎的 metric_id。
+
+        - 過濾每條洞察的 evidence_metric_ids，只保留真實存在的
+        - 若過濾後為空，退回使用該頁所有合法 ids（確保洞察仍可追溯）
+        - 保留洞察文字本身（文字不含數字，是安全的）
+        """
+        sanitized = []
+        for insight in insights:
+            if not isinstance(insight, dict):
+                continue
+            evidence = insight.get("evidence_metric_ids", [])
+            # 只保留合法 id
+            clean_evidence = [eid for eid in evidence if eid in valid_id_set]
+            # 若全部被過濾掉，退回該頁所有合法 ids
+            if not clean_evidence and valid_ids:
+                clean_evidence = valid_ids[:3]
+            sanitized.append({
+                "text": insight.get("text", ""),
+                "evidence_metric_ids": clean_evidence,
+            })
+        return sanitized

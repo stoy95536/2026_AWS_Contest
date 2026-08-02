@@ -171,9 +171,17 @@ def _map_metrics_to_slides(slide_specs: list, metrics_by_id: dict) -> dict:
     來源：該頁 chart.series[].metric_ids、chart.series_metric_ids、
     kpis[].metric_id、source_ids。
     """
+    # 預先挑出全簡報的代表性指標（給策略頁/摘要頁綜合用）
+    # 優先取 passed 狀態、有值的指標
+    key_metrics = [
+        m for m in metrics_by_id.values()
+        if m.get("validation_status") == "passed" and m.get("value") is not None
+    ][:15]
+
     result = {}
     for spec in slide_specs:
         sno = spec.get("slide_no", 0)
+        layout = spec.get("layout", "")
         ids = set()
 
         chart = spec.get("chart")
@@ -191,6 +199,11 @@ def _map_metrics_to_slides(slide_specs: list, metrics_by_id: dict) -> dict:
 
         # 轉為真實 metric 物件
         page_metrics = [metrics_by_id[mid] for mid in ids if mid in metrics_by_id]
+
+        # 策略頁與摘要頁若無自帶指標，餵入全簡報關鍵指標供綜合分析
+        if not page_metrics and layout in ("strategy", "executive_summary"):
+            page_metrics = key_metrics
+
         result[sno] = page_metrics
 
     return result
