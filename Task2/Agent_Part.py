@@ -29,7 +29,171 @@ import json
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
+# 自動載入 .env（AWS 憑證、MODEL_ID）
+try:
+    from dotenv import load_dotenv
+    load_dotenv(os.path.join(os.path.dirname(__file__), "..", ".env"))
+except ImportError:
+    pass
+
 from src.agents import PlannerAgent, AnalystAgent, ReviewerAgent
+
+
+def run_task2_from_task1(
+    analysis_result_path: str = "outputs/analysis_result.json",
+    use_llm: bool = True,
+    output_dir: str = "outputs",
+    total_pages: int = None,
+):
+    """
+    正式串接入口：讀取 Task1 的 analysis_result.json，產出簡報規格。
+
+    這是 Task1 → Task2 的對接函式。Task1 計算引擎產出的
+    analysis_result.json 包含：data_summary、metrics、chart_data，
+    本函式將它們餵給三個 Agent，最終輸出 slide_spec.json + qa_report.json
+    給成員 C（PPT 生成）與成員 D（QA 回溯）使用。
+
+    Args:
+        analysis_result_path: Task1 產出的 analysis_result.json 路徑
+        use_llm: 是否使用 LLM（正式串接建議 True）
+        output_dir: 輸出目錄
+        total_pages: 簡報頁數（None = 預設 16）
+
+    Returns:
+        (enriched_specs, qa_result)
+    """
+    pages = total_pages if total_pages is not None else 16
+
+    print("=" * 70)
+    print("  智匯數據簡報神器 — Task 1 → Task 2 串接")
+    print("=" * 70)
+
+    # ── 讀取 Task1 輸出 ──────────────────────────────────────────
+    if not os.path.exists(analysis_result_path):
+        raise FileNotFoundError(
+            f"找不到 Task1 輸出檔: {analysis_result_path}\n"
+            f"請先執行 Task1 (python Task1/run_task1.py) 或指定正確路徑。"
+        )
+
+    with open(analysis_result_path, "r", encoding="utf-8") as f:
+        payload = json.load(f)
+
+    data_summary = payload.get("data_summary", {})
+    metrics_list = payload.get("metrics", [])
+    chart_data = payload.get("chart_data", [])
+
+    print(f"\n[讀取] {analysis_result_path}")
+    print(f"  指標數:   {len(metrics_list)}")
+    print(f"  圖表數:   {len(chart_data)}")
+    print(f"  主體數:   {len(data_summary.get('institutions', []))}")
+    print(f"  期間數:   {len(data_summary.get('periods', []))}")
+    print(f"  頁數:     {pages}")
+    print(f"  LLM:      {'啟用' if use_llm else '規則引擎'}")
+
+    # 建立 metric_id → metric 快速查表
+    metrics_by_id = {m["metric_id"]: m for m in metrics_list if "metric_id" in m}
+
+    # ── Step 1: Planner ─────────────────────────────────────────
+    print("\n" + "─" * 60)
+    print(f"[Step 1] Planner Agent — 規劃 {pages} 頁結構")
+    print("─" * 60)
+
+    planner = PlannerAgent()
+    classification = planner.classify_data(data_summary)
+    print(f"  推測情境: {classification['domain']}")
+
+    slide_specs = planner.plan_structure(
+        data_summary, use_llm=use_llm, total_pages=total_pages,
+        metrics=metrics_list, chart_data=chart_data,
+    )
+    print(f"  產出 {len(slide_specs)} 頁")
+    for s in slide_specs:
+        print(f"    P{s['slide_no']:02d} | {s['layout']:<18s} | {s['title'][:40]}")
+
+    # ── Step 2: Analyst ─────────────────────────────────────────
+    print("\n" + "─" * 60)
+    print("[Step 2] Analyst Agent — 生成洞察")
+    print("─" * 60)
+
+    analyst = AnalystAgent()
+    # 為每頁準備對應的真實 metric 資料
+    all_metric_data = _map_metrics_to_slides(slide_specs, metrics_by_id)
+    enriched_specs = analyst.generate_all_slides(slide_specs, all_metric_data, use_llm=use_llm)
+
+    total_insights = sum(len(s.get("insights", [])) for s in enriched_specs)
+    total_recs = sum(len(s.get("recommendations", [])) for s in enriched_specs)
+    print(f"  洞察數: {total_insights}, 建議數: {total_recs}")
+
+    # ── Step 3: Reviewer ────────────────────────────────────────
+    print("\n" + "─" * 60)
+    print("[Step 3] Reviewer Agent — 品質審核")
+    print("─" * 60)
+
+    reviewer = ReviewerAgent()
+    qa_result = reviewer.review(
+        enriched_specs, metrics_list=metrics_list,
+        use_llm=False, expected_pages=pages,
+    )
+    print(f"  Status: {qa_result['status'].upper()}")
+    print(f"  Errors: {len(qa_result['errors'])}")
+    if qa_result["errors"]:
+        types = {}
+        for e in qa_result["errors"]:
+            types[e["type"]] = types.get(e["type"], 0) + 1
+        print(f"  分類: {types}")
+
+    # ── 輸出 ─────────────────────────────────────────────────────
+    print("\n" + "─" * 60)
+    print("[Output]")
+    print("─" * 60)
+    os.makedirs(output_dir, exist_ok=True)
+
+    spec_path = os.path.join(output_dir, "slide_spec.json")
+    with open(spec_path, "w", encoding="utf-8") as f:
+        json.dump(enriched_specs, f, ensure_ascii=False, indent=2)
+    print(f"  → {spec_path}  (交付成員 C 生成 PPT)")
+
+    qa_path = os.path.join(output_dir, "qa_report.json")
+    with open(qa_path, "w", encoding="utf-8") as f:
+        json.dump(qa_result, f, ensure_ascii=False, indent=2)
+    print(f"  → {qa_path}  (交付成員 D 做 QA)")
+
+    print("\n" + "=" * 70)
+    print("  [Task 1 → Task 2] 串接完成")
+    print("=" * 70)
+    return enriched_specs, qa_result
+
+
+def _map_metrics_to_slides(slide_specs: list, metrics_by_id: dict) -> dict:
+    """
+    為每一頁挑出它引用到的真實 metric 物件。
+
+    來源：該頁 chart.series[].metric_ids、chart.series_metric_ids、
+    kpis[].metric_id、source_ids。
+    """
+    result = {}
+    for spec in slide_specs:
+        sno = spec.get("slide_no", 0)
+        ids = set()
+
+        chart = spec.get("chart")
+        if chart and isinstance(chart, dict):
+            ids.update(chart.get("series_metric_ids", []))
+            for series in chart.get("series", []):
+                if isinstance(series, dict):
+                    ids.update(series.get("metric_ids", []))
+
+        for kpi in spec.get("kpis", []):
+            if kpi.get("metric_id"):
+                ids.add(kpi["metric_id"])
+
+        ids.update(spec.get("source_ids", []))
+
+        # 轉為真實 metric 物件
+        page_metrics = [metrics_by_id[mid] for mid in ids if mid in metrics_by_id]
+        result[sno] = page_metrics
+
+    return result
 
 
 def run_task2(
@@ -251,12 +415,22 @@ if __name__ == "__main__":
 
     # 解析頁數參數
     total_pages = None
+    analysis_path = "outputs/analysis_result.json"
     for arg in sys.argv[1:]:
         if arg.startswith("--pages="):
             total_pages = int(arg.split("=")[1])
+        elif arg.startswith("--input="):
+            analysis_path = arg.split("=")[1]
 
-    if "--travel" in sys.argv:
-        # 展示旅遊資料情境
+    if "--from-task1" in sys.argv:
+        # 正式串接：讀取 Task1 的 analysis_result.json
+        run_task2_from_task1(
+            analysis_result_path=analysis_path,
+            use_llm=use_llm,
+            total_pages=total_pages,
+        )
+    elif "--travel" in sys.argv:
+        # 展示旅遊資料情境（獨立測試用）
         travel = {
             "institutions": ["日本", "韓國", "泰國", "越南", "新加坡",
                             "美國", "香港", "馬來西亞", "菲律賓", "印尼"],

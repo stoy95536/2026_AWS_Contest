@@ -231,11 +231,14 @@ class ReviewerAgent:
                     "message": "分析頁缺少 headline（核心訊息）",
                 })
 
+            # 策略頁與摘要頁是綜合前述分析，允許不引用單一指標
+            synthesis_layouts = {"strategy", "executive_summary"}
             for insight in insights:
-                if not insight.get("evidence_metric_ids"):
+                if not insight.get("evidence_metric_ids") and layout not in synthesis_layouts:
+                    # 分析頁的洞察缺少 evidence 屬品質問題（警告級，非阻斷）
                     errors.append({
                         "slide_no": slide_no,
-                        "type": "missing_source",
+                        "type": "weak_insight",
                         "message": f"洞察缺少 evidence_metric_ids: {insight.get('text', '')[:30]}...",
                     })
 
