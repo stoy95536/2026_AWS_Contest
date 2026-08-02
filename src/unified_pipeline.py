@@ -15,9 +15,15 @@ import json
 import os
 import time
 import shutil
+import sys
 import warnings
 from pathlib import Path
 from typing import Optional
+
+# 確保專案根目錄在 sys.path 中
+_ROOT = str(Path(__file__).resolve().parents[1])
+if _ROOT not in sys.path:
+    sys.path.insert(0, _ROOT)
 
 from dotenv import load_dotenv
 load_dotenv(override=True)
