@@ -237,69 +237,82 @@ class Pipeline:
         prev = calc.compute_prev_period(latest)
         real_institutions = [i for i in calc.get_all_institutions() if i != "總計"]
 
-        # 找出台新
+        # 找出目標機構
         taishin_names = [i for i in real_institutions if "台新" in i or self.config.target_institution in i]
         taishin = taishin_names[0] if taishin_names else (real_institutions[0] if real_institutions else "")
 
         # 市場總計
-        market_cards = calc._get_market_total(latest, "流通卡數")
-        market_amount = calc._get_market_total(latest, "當月簽帳金額")
+        market_cards = calc._get_market_total(latest, "流通卡數") or 0
+        market_amount = calc._get_market_total(latest, "當月簽帳金額") or 0
 
         ts_share_cards = calc.market_share(taishin, latest, "流通卡數") if taishin else 0
         ts_share_amount = calc.market_share(taishin, latest, "當月簽帳金額") if taishin else 0
         ts_cards = calc._get_value(taishin, latest, "流通卡數") if taishin else 0
         ts_amount = calc._get_value(taishin, latest, "當月簽帳金額") if taishin else 0
 
+        # 追蹤已填過的 trend/comparison 計數
+        trend_count = 0
+        comparison_count = 0
+
         for spec in slide_specs:
             layout = spec.get("layout", "")
 
-            # Executive Summary — KPI 卡片
+            # 已有圖表資料的跳過
+            chart = spec.get("chart")
+            if chart and isinstance(chart, dict) and chart.get("series"):
+                continue
+
+            # Executive Summary
             if layout == "executive_summary" and taishin:
                 spec["kpis"] = [
                     {"label": "市場流通卡數", "value": f"{market_cards/10000:,.0f} 萬" if market_cards else "—", "metric_id": "market_cards", "change": "", "change_direction": "flat"},
                     {"label": "市場簽帳金額(月)", "value": f"{market_amount/1000000:,.0f} 億" if market_amount else "—", "metric_id": "market_amount", "change": "", "change_direction": "flat"},
-                    {"label": f"{taishin}市占率", "value": f"{ts_share_cards:.1f}%" if ts_share_cards else "—", "metric_id": "ts_share", "change": "排名第五", "change_direction": "flat"},
+                    {"label": f"{taishin}市占率", "value": f"{ts_share_cards:.1f}%" if ts_share_cards else "—", "metric_id": "ts_share", "change": "", "change_direction": "flat"},
                     {"label": f"{taishin}簽帳市占", "value": f"{ts_share_amount:.1f}%" if ts_share_amount else "—", "metric_id": "ts_amount_share", "change": "", "change_direction": "flat"},
                 ]
-                # 洞察
                 ts_cards_jan = calc._get_value(taishin, periods[0], "流通卡數") if taishin else 0
                 ts_amount_jan = calc._get_value(taishin, periods[0], "當月簽帳金額") if taishin else 0
                 ts_cards_growth = ((ts_cards - ts_cards_jan) / ts_cards_jan * 100) if ts_cards_jan else 0
                 ts_amount_growth = ((ts_amount - ts_amount_jan) / ts_amount_jan * 100) if ts_amount_jan else 0
                 spec["insights"] = [
-                    {"text": "市場成長由簽帳額驅動，非卡數擴張。流通卡數年內僅微幅成長，市場進入存量競爭階段。", "is_speculation": False},
+                    {"text": "市場成長由簽帳額驅動，非卡數擴張。市場進入存量競爭階段。", "is_speculation": False},
                     {"text": f"{taishin}簽帳金額年內成長 {ts_amount_growth:.1f}%，品質成長優於數量擴張。", "is_speculation": False},
                     {"text": f"{taishin}流通卡數年內成長 {ts_cards_growth:.1f}%，市占率 {ts_share_cards:.1f}%。", "is_speculation": False},
                 ]
 
             # 趨勢圖
             elif layout == "trend_chart":
-                monthly_cards = [calc._get_market_total(p, "流通卡數") or 0 for p in periods]
-                monthly_amount = [calc._get_market_total(p, "當月簽帳金額") or 0 for p in periods]
+                trend_count += 1
                 months = [f"{int(p[3:])}月" for p in periods]
-                spec["chart"] = {
-                    "type": "combo",
-                    "title": "市場規模趨勢 — 流通卡數與簽帳金額",
-                    "categories": months,
-                    "series": [
-                        {"name": "流通卡數(萬張)", "data": [v/10000 for v in monthly_cards]},
-                        {"name": "簽帳金額(億元)", "data": [v/1000000 for v in monthly_amount]},
-                    ],
-                }
-                spec["headline"] = "市場卡數穩定成長，簽帳金額波動反映季節性消費"
-
-            # 排名圖
-            elif layout == "ranking_chart":
-                top10 = calc.ranking(latest, "流通卡數", top_n=10)
-                categories = [c.replace("商業銀行", "").replace("國際", "") for c in top10["institution"].tolist()]
-                shares = [calc.market_share(i, latest, "流通卡數") or 0 for i in top10["institution"].tolist()]
-                spec["chart"] = {
-                    "type": "bar",
-                    "title": f"流通卡數市占率排名 Top 10（{latest}）",
-                    "categories": categories,
-                    "series": [{"name": "市占率(%)", "data": shares}],
-                }
-                spec["headline"] = "中信穩居第一，玉山激進發卡攀升第二"
+                if trend_count == 1:
+                    # 第一個趨勢圖: 市場整體
+                    monthly_cards = [calc._get_market_total(p, "流通卡數") or 0 for p in periods]
+                    monthly_amount = [calc._get_market_total(p, "當月簽帳金額") or 0 for p in periods]
+                    spec["chart"] = {
+                        "type": "combo",
+                        "title": "市場規模趨勢 — 流通卡數與簽帳金額",
+                        "categories": months,
+                        "series": [
+                            {"name": "流通卡數(萬張)", "data": [v/10000 for v in monthly_cards]},
+                            {"name": "簽帳金額(億元)", "data": [v/1000000 for v in monthly_amount]},
+                        ],
+                    }
+                else:
+                    # 後續趨勢圖: Top 5 銀行月趨勢
+                    top5 = calc.ranking(latest, "當月簽帳金額", top_n=5)
+                    series_list = []
+                    for inst in top5["institution"].tolist():
+                        monthly = [calc._get_value(inst, p, "當月簽帳金額") or 0 for p in periods]
+                        series_list.append({
+                            "name": inst.replace("商業銀行", "").replace("國際", ""),
+                            "data": [round(v/1000000, 1) for v in monthly],
+                        })
+                    spec["chart"] = {
+                        "type": "line",
+                        "title": "Top 5 銀行月簽帳金額趨勢",
+                        "categories": months,
+                        "series": series_list,
+                    }
 
             # 散佈圖
             elif layout == "scatter_chart":
@@ -314,45 +327,81 @@ class Pipeline:
                     "title": "規模 vs 成長 — 流通卡數",
                     "data_points": data_points,
                 }
-                spec["headline"] = "規模與成長象限分析 — 台新位於穩定區"
 
-            # 比較圖 (有效卡率 / 簽帳vs卡數市占)
-            elif layout == "comparison_chart" and spec.get("slide_no") == 9:
-                top8 = calc.ranking(latest, "流通卡數", top_n=8)
-                categories = [c.replace("商業銀行", "").replace("國際", "") for c in top8["institution"].tolist()]
-                card_shares = [calc.market_share(i, latest, "流通卡數") or 0 for i in top8["institution"].tolist()]
-                amount_shares = [calc.market_share(i, latest, "當月簽帳金額") or 0 for i in top8["institution"].tolist()]
+            # 排名圖
+            elif layout == "ranking_chart":
+                top10 = calc.ranking(latest, "流通卡數", top_n=10)
+                categories = [c.replace("商業銀行", "").replace("國際", "") for c in top10["institution"].tolist()]
+                shares = [calc.market_share(i, latest, "流通卡數") or 0 for i in top10["institution"].tolist()]
                 spec["chart"] = {
                     "type": "bar",
-                    "title": "流通卡數 vs 簽帳金額市占率比較",
+                    "title": f"流通卡數市占率排名 Top 10",
                     "categories": categories,
-                    "series": [
-                        {"name": "流通卡數市占率(%)", "data": card_shares},
-                        {"name": "簽帳金額市占率(%)", "data": amount_shares},
-                    ],
+                    "series": [{"name": "市占率(%)", "data": shares}],
                 }
-                spec["headline"] = "簽帳市占高於卡數市占者，單卡消費力較強"
 
-            # 每卡簽帳金額
-            elif layout == "comparison_chart" and spec.get("slide_no") == 11:
+            # 比較圖 (通用 — 依出現順序分配不同資料)
+            elif layout == "comparison_chart":
+                comparison_count += 1
                 top8 = calc.ranking(latest, "流通卡數", top_n=8)
-                categories = []
-                avg_per_card = []
-                for inst in top8["institution"].tolist():
-                    cards = calc._get_value(inst, latest, "流通卡數")
-                    amount = calc._get_value(inst, latest, "當月簽帳金額")
-                    if cards and amount and cards > 0:
-                        categories.append(inst.replace("商業銀行", "").replace("國際", ""))
-                        avg_per_card.append(round(amount * 1000 / cards, 0))
-                spec["chart"] = {
-                    "type": "bar",
-                    "title": f"平均每卡月簽帳金額（元/卡，{latest}）",
-                    "categories": categories,
-                    "series": [{"name": "每卡簽帳金額(元)", "data": avg_per_card}],
-                }
-                spec["headline"] = "每卡消費力排名 — 反映客群經營成效"
+                inst_list = top8["institution"].tolist()
+                categories = [c.replace("商業銀行", "").replace("國際", "") for c in inst_list]
 
-            # 堆疊圖 (Top 5 銀行月簽帳金額)
+                if comparison_count == 1:
+                    # 卡數市占 vs 簽帳市占
+                    card_shares = [calc.market_share(i, latest, "流通卡數") or 0 for i in inst_list]
+                    amount_shares = [calc.market_share(i, latest, "當月簽帳金額") or 0 for i in inst_list]
+                    spec["chart"] = {
+                        "type": "bar",
+                        "title": "流通卡數 vs 簽帳金額市占率",
+                        "categories": categories,
+                        "series": [
+                            {"name": "流通卡數市占(%)", "data": card_shares},
+                            {"name": "簽帳金額市占(%)", "data": amount_shares},
+                        ],
+                    }
+                elif comparison_count == 2:
+                    # 每卡簽帳金額
+                    cats = []
+                    vals = []
+                    for inst in inst_list:
+                        cards = calc._get_value(inst, latest, "流通卡數")
+                        amount = calc._get_value(inst, latest, "當月簽帳金額")
+                        if cards and amount and cards > 0:
+                            cats.append(inst.replace("商業銀行", "").replace("國際", ""))
+                            vals.append(round(amount * 1000 / cards, 0))
+                    spec["chart"] = {
+                        "type": "bar",
+                        "title": "平均每卡月簽帳金額（元/卡）",
+                        "categories": cats,
+                        "series": [{"name": "每卡簽帳(元)", "data": vals}],
+                    }
+                elif comparison_count == 3:
+                    # Top 10 流通卡數絕對值
+                    top10 = calc.ranking(latest, "流通卡數", top_n=10)
+                    spec["chart"] = {
+                        "type": "bar",
+                        "title": "流通卡數排名 Top 10",
+                        "categories": [c.replace("商業銀行", "").replace("國際", "") for c in top10["institution"].tolist()],
+                        "series": [{"name": "流通卡數(萬張)", "data": [round(v/10000, 1) for v in top10["value"].tolist()]}],
+                    }
+                else:
+                    # MoM 月增率
+                    cats = []
+                    moms = []
+                    for inst in inst_list:
+                        mom = calc.mom_growth(inst, latest, prev, "流通卡數")
+                        if mom is not None:
+                            cats.append(inst.replace("商業銀行", "").replace("國際", ""))
+                            moms.append(mom)
+                    spec["chart"] = {
+                        "type": "bar",
+                        "title": f"流通卡數月增率（{prev}→{latest}）",
+                        "categories": cats,
+                        "series": [{"name": "月增率(%)", "data": moms}],
+                    }
+
+            # 堆疊圖
             elif layout == "stacked_chart":
                 top5 = calc.ranking(latest, "當月簽帳金額", top_n=5)
                 months = [f"{int(p[3:])}月" for p in periods]
@@ -365,37 +414,35 @@ class Pipeline:
                     })
                 spec["chart"] = {
                     "type": "stacked_bar",
-                    "title": "Top 5 銀行月簽帳金額趨勢",
+                    "title": "Top 5 銀行月簽帳金額",
                     "categories": months,
                     "series": series_list,
                 }
-                spec["headline"] = "Top 5 銀行簽帳金額走勢 — 競爭格局穩定"
 
-            # 風險圖 (月增率)
+            # 風險圖
             elif layout == "risk_chart":
                 top10 = calc.ranking(latest, "流通卡數", top_n=10)
-                categories = []
-                mom_values = []
+                cats = []
+                moms = []
                 for inst in top10["institution"].tolist():
                     mom = calc.mom_growth(inst, latest, prev, "流通卡數")
                     if mom is not None:
-                        categories.append(inst.replace("商業銀行", "").replace("國際", ""))
-                        mom_values.append(mom)
+                        cats.append(inst.replace("商業銀行", "").replace("國際", ""))
+                        moms.append(mom)
                 spec["chart"] = {
                     "type": "bar",
                     "title": f"流通卡數月增率（{prev}→{latest}）",
-                    "categories": categories,
-                    "series": [{"name": "月增率(%)", "data": mom_values}],
+                    "categories": cats,
+                    "series": [{"name": "月增率(%)", "data": moms}],
                 }
-                spec["headline"] = "各銀行成長動態 — 關注異常波動"
 
             # 策略建議
             elif layout == "strategy" and taishin:
                 spec["recommendations"] = [
-                    {"action": "加速數位發卡，擴大流通卡規模", "rationale": f"{taishin}市占 {ts_share_cards:.1f}% 排名第五，與前四名仍有差距。建議強化線上發卡。", "priority": "high"},
-                    {"action": "深化消費場景，提升每卡簽帳力", "rationale": f"簽帳市占 {ts_share_amount:.1f}% 略低於卡數市占，單卡消費力有提升空間。", "priority": "high"},
-                    {"action": "維持風險控管優勢", "rationale": "在競爭者積極擴張背景下，將風險優勢轉化為品牌差異化。", "priority": "medium"},
-                    {"action": "精進有效卡經營", "rationale": "針對沉睡卡戶啟動精準喚醒 campaign，降低無效卡管理成本。", "priority": "medium"},
+                    {"action": "加速數位發卡，擴大流通卡規模", "rationale": f"{taishin}市占 {ts_share_cards:.1f}%，與前四名仍有差距。", "priority": "high"},
+                    {"action": "深化消費場景，提升每卡簽帳力", "rationale": f"簽帳市占 {ts_share_amount:.1f}% 略低於卡數市占。", "priority": "high"},
+                    {"action": "維持風險控管優勢", "rationale": "將風險優勢轉化為品牌差異化。", "priority": "medium"},
+                    {"action": "精進有效卡經營", "rationale": "啟動沉睡卡戶精準喚醒 campaign。", "priority": "medium"},
                 ]
                 spec["headline"] = f"{taishin}四大策略行動方針"
 
