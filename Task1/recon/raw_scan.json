@@ -1,0 +1,7532 @@
+[
+  {
+    "file_name": "表1-10-歷年來臺旅客觀光支出統計表.xlsx",
+    "sheet_count": 1,
+    "sheets": [
+      {
+        "sheet_name": "歷年觀光外匯收入",
+        "dimensions": {
+          "max_row": 50,
+          "max_column": 8,
+          "scanned_rows": 40
+        },
+        "merged_cell_count": 1,
+        "merged_cells": [
+          "A1:H1"
+        ],
+        "first_majority_numeric_row": 3,
+        "head_rows": [
+          {
+            "row": 1,
+            "profile": {
+              "non_empty": 1,
+              "number": 0,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.0
+            },
+            "values": [
+              "歷年來臺旅客觀光支出統計表\nVisitor E…",
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          {
+            "row": 2,
+            "profile": {
+              "non_empty": 8,
+              "number": 0,
+              "text": 8,
+              "date": 0,
+              "numeric_ratio": 0.0
+            },
+            "values": [
+              "年別\nYear",
+              "來臺人次\nNo. of \nVisitors",
+              "來臺旅客\n觀光支出\n(美元)\nVisitor\n…",
+              "成長率\nGrowth\nRate\n(%)",
+              "指數\n80年=100\nIndex\n1991=1…",
+              "每一旅客\n平均在臺\n消費額(美元）\nSpend…",
+              "每一旅客\n每日平均\n消費額(美元）\nSpend…",
+              "每一旅客\n平均在臺\n停留夜數(夜)\n Aver…"
+            ]
+          },
+          {
+            "row": 3,
+            "profile": {
+              "non_empty": 8,
+              "number": 7,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.875
+            },
+            "values": [
+              "66 年 1977",
+              1110182.0,
+              527492000.0,
+              13.177007233,
+              26.14,
+              475.14,
+              72.43,
+              6.56
+            ]
+          },
+          {
+            "row": 4,
+            "profile": {
+              "non_empty": 8,
+              "number": 7,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.875
+            },
+            "values": [
+              "67 年 1978",
+              1270977.0,
+              608000000.0,
+              15.262411563,
+              30.13,
+              478.37,
+              70.87,
+              6.75
+            ]
+          },
+          {
+            "row": 5,
+            "profile": {
+              "non_empty": 8,
+              "number": 7,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.875
+            },
+            "values": [
+              "68 年 1979",
+              1340382.0,
+              919000000.0,
+              51.151315789,
+              45.54,
+              685.58,
+              95.22,
+              7.2
+            ]
+          },
+          {
+            "row": 6,
+            "profile": {
+              "non_empty": 8,
+              "number": 7,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.875
+            },
+            "values": [
+              "69 年 1980",
+              1393254.0,
+              988000000.0,
+              7.5081610446,
+              48.96,
+              709.05,
+              104.58,
+              6.78
+            ]
+          },
+          {
+            "row": 7,
+            "profile": {
+              "non_empty": 8,
+              "number": 7,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.875
+            },
+            "values": [
+              "70 年 1981",
+              1409465.0,
+              1080000000.0,
+              9.3117408907,
+              53.52,
+              766.46,
+              115.78,
+              6.62
+            ]
+          },
+          {
+            "row": 8,
+            "profile": {
+              "non_empty": 8,
+              "number": 7,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.875
+            },
+            "values": [
+              "71 年 1982",
+              1419178.0,
+              953000000.0,
+              -11.759259259,
+              47.22,
+              671.54,
+              109.55,
+              6.13
+            ]
+          },
+          {
+            "row": 9,
+            "profile": {
+              "non_empty": 8,
+              "number": 7,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.875
+            },
+            "values": [
+              "72 年 1983",
+              1457404.0,
+              990000000.0,
+              3.8824763903,
+              49.06,
+              679.53,
+              105.19,
+              6.46
+            ]
+          },
+          {
+            "row": 10,
+            "profile": {
+              "non_empty": 8,
+              "number": 7,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.875
+            },
+            "values": [
+              "73 年 1984",
+              1516138.0,
+              1066000000.0,
+              7.6767676768,
+              52.82,
+              702.82,
+              110.68,
+              6.35
+            ]
+          },
+          {
+            "row": 11,
+            "profile": {
+              "non_empty": 8,
+              "number": 7,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.875
+            },
+            "values": [
+              "74 年 1985",
+              1451659.0,
+              963000000.0,
+              -9.6622889306,
+              47.72,
+              663.56,
+              101.93,
+              6.51
+            ]
+          },
+          {
+            "row": 12,
+            "profile": {
+              "non_empty": 8,
+              "number": 7,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.875
+            },
+            "values": [
+              "75 年 1986",
+              1610385.0,
+              1333000000.0,
+              38.421599169,
+              66.06,
+              827.49,
+              120.45,
+              6.87
+            ]
+          },
+          {
+            "row": 13,
+            "profile": {
+              "non_empty": 8,
+              "number": 7,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.875
+            },
+            "values": [
+              "76 年 1987",
+              1760948.0,
+              1619000000.0,
+              21.455363841,
+              80.23,
+              919.53,
+              132.88,
+              6.92
+            ]
+          },
+          {
+            "row": 14,
+            "profile": {
+              "non_empty": 8,
+              "number": 7,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.875
+            },
+            "values": [
+              "77 年 1988",
+              1935134.0,
+              2289000000.0,
+              41.383570105,
+              113.43,
+              1182.93,
+              168.99,
+              7.0
+            ]
+          },
+          {
+            "row": 15,
+            "profile": {
+              "non_empty": 8,
+              "number": 7,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.875
+            },
+            "values": [
+              "78 年 1989",
+              2004126.0,
+              2698000000.0,
+              17.868064657,
+              133.7,
+              1346.4,
+              187.0,
+              7.2
+            ]
+          }
+        ],
+        "row_profiles": [
+          {
+            "non_empty": 1,
+            "number": 0,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.0,
+            "row": 1
+          },
+          {
+            "non_empty": 8,
+            "number": 0,
+            "text": 8,
+            "date": 0,
+            "numeric_ratio": 0.0,
+            "row": 2
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 3
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 4
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 5
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 6
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 7
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 8
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 9
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 10
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 11
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 12
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 13
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 14
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 15
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 16
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 17
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 18
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 19
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 20
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 21
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 22
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 23
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 24
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 25
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 26
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 27
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 28
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 29
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 30
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 31
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 32
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 33
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 34
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 35
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 36
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 37
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 38
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 39
+          },
+          {
+            "non_empty": 8,
+            "number": 7,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.875,
+            "row": 40
+          }
+        ],
+        "year_samples": [
+          {
+            "cell": "A3",
+            "value": "66 年 1977"
+          },
+          {
+            "cell": "A4",
+            "value": "67 年 1978"
+          },
+          {
+            "cell": "A5",
+            "value": "68 年 1979"
+          },
+          {
+            "cell": "A6",
+            "value": "69 年 1980"
+          },
+          {
+            "cell": "A7",
+            "value": "70 年 1981"
+          },
+          {
+            "cell": "A8",
+            "value": "71 年 1982"
+          },
+          {
+            "cell": "A9",
+            "value": "72 年 1983"
+          },
+          {
+            "cell": "A10",
+            "value": "73 年 1984"
+          }
+        ],
+        "negative_count_in_scan": 6,
+        "negatives": [
+          {
+            "cell": "D8",
+            "value": -11.759259259
+          },
+          {
+            "cell": "D11",
+            "value": -9.6622889306
+          },
+          {
+            "cell": "D16",
+            "value": -35.507783543
+          },
+          {
+            "cell": "D23",
+            "value": -6.4356435644
+          },
+          {
+            "cell": "D24",
+            "value": -0.88183421517
+          },
+          {
+            "cell": "D29",
+            "value": -35.078534031
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file_name": "表1-2-歷年來臺旅客按居住地分.xlsx",
+    "sheet_count": 1,
+    "sheets": [
+      {
+        "sheet_name": "歷年來臺旅客-按居住地",
+        "dimensions": {
+          "max_row": 75,
+          "max_column": 48,
+          "scanned_rows": 40
+        },
+        "merged_cell_count": 7,
+        "merged_cells": [
+          "C2:R2",
+          "I3:P3",
+          "A1:AV1",
+          "Z2:AM2",
+          "S2:Y2",
+          "AR2:AT2",
+          "AN2:AQ2"
+        ],
+        "first_majority_numeric_row": 5,
+        "head_rows": [
+          {
+            "row": 1,
+            "profile": {
+              "non_empty": 1,
+              "number": 0,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.0
+            },
+            "values": [
+              "歷年來臺旅客按居住地分\nVisitor Arr…",
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          {
+            "row": 2,
+            "profile": {
+              "non_empty": 5,
+              "number": 0,
+              "text": 5,
+              "date": 0,
+              "numeric_ratio": 0.0
+            },
+            "values": [
+              null,
+              null,
+              "亞洲地區",
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          {
+            "row": 3,
+            "profile": {
+              "non_empty": 41,
+              "number": 0,
+              "text": 41,
+              "date": 0,
+              "numeric_ratio": 0.0
+            },
+            "values": [
+              "年\n度",
+              "居住地\nResidence",
+              "香港.澳門 HongKong. Macao",
+              "大陸 Mainland China",
+              "日本 Japan",
+              "韓國 Korea",
+              "印度 India",
+              "中東 Middle East",
+              "東南亞地區",
+              null,
+              null,
+              null
+            ]
+          },
+          {
+            "row": 4,
+            "profile": {
+              "non_empty": 9,
+              "number": 0,
+              "text": 9,
+              "date": 0,
+              "numeric_ratio": 0.0
+            },
+            "values": [
+              "Year",
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              "馬來西亞 Malaysia",
+              "新加坡 Singapore",
+              "印尼 Indonesia",
+              "菲律賓 Philippines"
+            ]
+          },
+          {
+            "row": 5,
+            "profile": {
+              "non_empty": 47,
+              "number": 46,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.979
+            },
+            "values": [
+              "45年1956",
+              null,
+              0.0,
+              0.0,
+              1042.0,
+              0.0,
+              0.0,
+              0.0,
+              2.0,
+              0.0,
+              0.0,
+              360.0
+            ]
+          },
+          {
+            "row": 6,
+            "profile": {
+              "non_empty": 47,
+              "number": 46,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.979
+            },
+            "values": [
+              "46年1957",
+              null,
+              0.0,
+              0.0,
+              1476.0,
+              0.0,
+              0.0,
+              0.0,
+              3.0,
+              0.0,
+              0.0,
+              706.0
+            ]
+          },
+          {
+            "row": 7,
+            "profile": {
+              "non_empty": 47,
+              "number": 46,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.979
+            },
+            "values": [
+              "47年1958",
+              null,
+              0.0,
+              0.0,
+              1998.0,
+              0.0,
+              0.0,
+              0.0,
+              7.0,
+              0.0,
+              0.0,
+              614.0
+            ]
+          },
+          {
+            "row": 8,
+            "profile": {
+              "non_empty": 47,
+              "number": 46,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.979
+            },
+            "values": [
+              "48年1959",
+              null,
+              0.0,
+              0.0,
+              2612.0,
+              0.0,
+              0.0,
+              0.0,
+              11.0,
+              0.0,
+              0.0,
+              956.0
+            ]
+          },
+          {
+            "row": 9,
+            "profile": {
+              "non_empty": 47,
+              "number": 46,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.979
+            },
+            "values": [
+              "49年1960",
+              null,
+              0.0,
+              0.0,
+              3495.0,
+              0.0,
+              0.0,
+              0.0,
+              41.0,
+              0.0,
+              0.0,
+              1144.0
+            ]
+          },
+          {
+            "row": 10,
+            "profile": {
+              "non_empty": 47,
+              "number": 46,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.979
+            },
+            "values": [
+              "50年1961",
+              null,
+              0.0,
+              0.0,
+              5256.0,
+              0.0,
+              0.0,
+              0.0,
+              238.0,
+              0.0,
+              0.0,
+              2030.0
+            ]
+          },
+          {
+            "row": 11,
+            "profile": {
+              "non_empty": 47,
+              "number": 46,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.979
+            },
+            "values": [
+              "51年1962",
+              null,
+              1375.0,
+              0.0,
+              7832.0,
+              147.0,
+              0.0,
+              0.0,
+              852.0,
+              290.0,
+              0.0,
+              4057.0
+            ]
+          },
+          {
+            "row": 12,
+            "profile": {
+              "non_empty": 47,
+              "number": 46,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.979
+            },
+            "values": [
+              "52年1963",
+              null,
+              2532.0,
+              0.0,
+              13059.0,
+              336.0,
+              0.0,
+              0.0,
+              1486.0,
+              357.0,
+              631.0,
+              5981.0
+            ]
+          },
+          {
+            "row": 13,
+            "profile": {
+              "non_empty": 47,
+              "number": 46,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.979
+            },
+            "values": [
+              "53年1964",
+              null,
+              3199.0,
+              0.0,
+              24194.0,
+              484.0,
+              0.0,
+              0.0,
+              3375.0,
+              470.0,
+              58.0,
+              8012.0
+            ]
+          },
+          {
+            "row": 14,
+            "profile": {
+              "non_empty": 47,
+              "number": 46,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.979
+            },
+            "values": [
+              "54年1965",
+              null,
+              4554.0,
+              0.0,
+              42664.0,
+              446.0,
+              0.0,
+              0.0,
+              5178.0,
+              467.0,
+              150.0,
+              9098.0
+            ]
+          },
+          {
+            "row": 15,
+            "profile": {
+              "non_empty": 47,
+              "number": 46,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.979
+            },
+            "values": [
+              "55年1966",
+              null,
+              10416.0,
+              0.0,
+              59800.0,
+              457.0,
+              0.0,
+              0.0,
+              6317.0,
+              683.0,
+              280.0,
+              12479.0
+            ]
+          }
+        ],
+        "row_profiles": [
+          {
+            "non_empty": 1,
+            "number": 0,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.0,
+            "row": 1
+          },
+          {
+            "non_empty": 5,
+            "number": 0,
+            "text": 5,
+            "date": 0,
+            "numeric_ratio": 0.0,
+            "row": 2
+          },
+          {
+            "non_empty": 41,
+            "number": 0,
+            "text": 41,
+            "date": 0,
+            "numeric_ratio": 0.0,
+            "row": 3
+          },
+          {
+            "non_empty": 9,
+            "number": 0,
+            "text": 9,
+            "date": 0,
+            "numeric_ratio": 0.0,
+            "row": 4
+          },
+          {
+            "non_empty": 47,
+            "number": 46,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.979,
+            "row": 5
+          },
+          {
+            "non_empty": 47,
+            "number": 46,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.979,
+            "row": 6
+          },
+          {
+            "non_empty": 47,
+            "number": 46,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.979,
+            "row": 7
+          },
+          {
+            "non_empty": 47,
+            "number": 46,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.979,
+            "row": 8
+          },
+          {
+            "non_empty": 47,
+            "number": 46,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.979,
+            "row": 9
+          },
+          {
+            "non_empty": 47,
+            "number": 46,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.979,
+            "row": 10
+          },
+          {
+            "non_empty": 47,
+            "number": 46,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.979,
+            "row": 11
+          },
+          {
+            "non_empty": 47,
+            "number": 46,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.979,
+            "row": 12
+          },
+          {
+            "non_empty": 47,
+            "number": 46,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.979,
+            "row": 13
+          },
+          {
+            "non_empty": 47,
+            "number": 46,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.979,
+            "row": 14
+          },
+          {
+            "non_empty": 47,
+            "number": 46,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.979,
+            "row": 15
+          },
+          {
+            "non_empty": 47,
+            "number": 46,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.979,
+            "row": 16
+          },
+          {
+            "non_empty": 47,
+            "number": 46,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.979,
+            "row": 17
+          },
+          {
+            "non_empty": 47,
+            "number": 46,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.979,
+            "row": 18
+          },
+          {
+            "non_empty": 47,
+            "number": 46,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.979,
+            "row": 19
+          },
+          {
+            "non_empty": 47,
+            "number": 46,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.979,
+            "row": 20
+          },
+          {
+            "non_empty": 47,
+            "number": 46,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.979,
+            "row": 21
+          },
+          {
+            "non_empty": 47,
+            "number": 46,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.979,
+            "row": 22
+          },
+          {
+            "non_empty": 47,
+            "number": 46,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.979,
+            "row": 23
+          },
+          {
+            "non_empty": 47,
+            "number": 46,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.979,
+            "row": 24
+          },
+          {
+            "non_empty": 47,
+            "number": 46,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.979,
+            "row": 25
+          },
+          {
+            "non_empty": 47,
+            "number": 46,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.979,
+            "row": 26
+          },
+          {
+            "non_empty": 47,
+            "number": 46,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.979,
+            "row": 27
+          },
+          {
+            "non_empty": 47,
+            "number": 46,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.979,
+            "row": 28
+          },
+          {
+            "non_empty": 47,
+            "number": 46,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.979,
+            "row": 29
+          },
+          {
+            "non_empty": 47,
+            "number": 46,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.979,
+            "row": 30
+          },
+          {
+            "non_empty": 47,
+            "number": 46,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.979,
+            "row": 31
+          },
+          {
+            "non_empty": 47,
+            "number": 46,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.979,
+            "row": 32
+          },
+          {
+            "non_empty": 47,
+            "number": 46,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.979,
+            "row": 33
+          },
+          {
+            "non_empty": 47,
+            "number": 46,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.979,
+            "row": 34
+          },
+          {
+            "non_empty": 47,
+            "number": 46,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.979,
+            "row": 35
+          },
+          {
+            "non_empty": 47,
+            "number": 46,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.979,
+            "row": 36
+          },
+          {
+            "non_empty": 47,
+            "number": 46,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.979,
+            "row": 37
+          },
+          {
+            "non_empty": 47,
+            "number": 46,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.979,
+            "row": 38
+          },
+          {
+            "non_empty": 47,
+            "number": 46,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.979,
+            "row": 39
+          },
+          {
+            "non_empty": 47,
+            "number": 46,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.979,
+            "row": 40
+          }
+        ],
+        "year_samples": [
+          {
+            "cell": "A5",
+            "value": "45年1956"
+          },
+          {
+            "cell": "A6",
+            "value": "46年1957"
+          },
+          {
+            "cell": "A7",
+            "value": "47年1958"
+          },
+          {
+            "cell": "A8",
+            "value": "48年1959"
+          },
+          {
+            "cell": "A9",
+            "value": "49年1960"
+          },
+          {
+            "cell": "A10",
+            "value": "50年1961"
+          },
+          {
+            "cell": "A11",
+            "value": "51年1962"
+          },
+          {
+            "cell": "A12",
+            "value": "52年1963"
+          }
+        ],
+        "negative_count_in_scan": 10,
+        "negatives": [
+          {
+            "cell": "O5",
+            "value": -547.0
+          },
+          {
+            "cell": "O6",
+            "value": -1007.0
+          },
+          {
+            "cell": "O7",
+            "value": -951.0
+          },
+          {
+            "cell": "O8",
+            "value": -1546.0
+          },
+          {
+            "cell": "O9",
+            "value": -1950.0
+          },
+          {
+            "cell": "O10",
+            "value": -3442.0
+          },
+          {
+            "cell": "O11",
+            "value": -6941.0
+          },
+          {
+            "cell": "O12",
+            "value": -10959.0
+          },
+          {
+            "cell": "O13",
+            "value": -15954.0
+          },
+          {
+            "cell": "O14",
+            "value": -19846.0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file_name": "表1-3-歷年來臺旅客按國籍分.xlsx",
+    "sheet_count": 1,
+    "sheets": [
+      {
+        "sheet_name": "歷年來臺旅客-按國籍",
+        "dimensions": {
+          "max_row": 67,
+          "max_column": 46,
+          "scanned_rows": 40
+        },
+        "merged_cell_count": 1,
+        "merged_cells": [
+          "G3:N3"
+        ],
+        "first_majority_numeric_row": 5,
+        "head_rows": [
+          {
+            "row": 1,
+            "profile": {
+              "non_empty": 1,
+              "number": 0,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.0
+            },
+            "values": [
+              "歷年來臺旅客按國籍分\nVisitor Arri…",
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          {
+            "row": 2,
+            "profile": {
+              "non_empty": 5,
+              "number": 0,
+              "text": 5,
+              "date": 0,
+              "numeric_ratio": 0.0
+            },
+            "values": [
+              null,
+              null,
+              "亞洲地區",
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          {
+            "row": 3,
+            "profile": {
+              "non_empty": 39,
+              "number": 0,
+              "text": 39,
+              "date": 0,
+              "numeric_ratio": 0.0
+            },
+            "values": [
+              "年度",
+              "國籍\n",
+              "日本 Japan",
+              "韓國 Korea",
+              "印度 India",
+              "中東 Middle East",
+              "東南亞地區",
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          {
+            "row": 4,
+            "profile": {
+              "non_empty": 10,
+              "number": 0,
+              "text": 10,
+              "date": 0,
+              "numeric_ratio": 0.0
+            },
+            "values": [
+              "Year",
+              "Nationality",
+              null,
+              null,
+              null,
+              null,
+              "馬來西亞 Malaysia",
+              "新加坡 Singapore",
+              "印尼 Indonesia",
+              "菲律賓 Philippines",
+              "泰國 Thailand",
+              "越南 Vietnam"
+            ]
+          },
+          {
+            "row": 5,
+            "profile": {
+              "non_empty": 45,
+              "number": 44,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.978
+            },
+            "values": [
+              "53年1964",
+              null,
+              22733.0,
+              1066.0,
+              0.0,
+              0.0,
+              2592.0,
+              0.0,
+              0.0,
+              5161.0,
+              2195.0,
+              803.0
+            ]
+          },
+          {
+            "row": 6,
+            "profile": {
+              "non_empty": 45,
+              "number": 44,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.978
+            },
+            "values": [
+              "54年1965",
+              null,
+              40424.0,
+              1571.0,
+              0.0,
+              0.0,
+              4465.0,
+              0.0,
+              0.0,
+              6231.0,
+              2842.0,
+              824.0
+            ]
+          },
+          {
+            "row": 7,
+            "profile": {
+              "non_empty": 45,
+              "number": 44,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.978
+            },
+            "values": [
+              "55年1966",
+              null,
+              56677.0,
+              2149.0,
+              0.0,
+              0.0,
+              5290.0,
+              0.0,
+              0.0,
+              9345.0,
+              3782.0,
+              1045.0
+            ]
+          },
+          {
+            "row": 8,
+            "profile": {
+              "non_empty": 45,
+              "number": 44,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.978
+            },
+            "values": [
+              "56年1967",
+              null,
+              75069.0,
+              3822.0,
+              0.0,
+              0.0,
+              6101.0,
+              0.0,
+              0.0,
+              11269.0,
+              6364.0,
+              3246.0
+            ]
+          },
+          {
+            "row": 9,
+            "profile": {
+              "non_empty": 45,
+              "number": 44,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.978
+            },
+            "values": [
+              "57年1968",
+              null,
+              106239.0,
+              3216.0,
+              0.0,
+              0.0,
+              7634.0,
+              0.0,
+              0.0,
+              12351.0,
+              5913.0,
+              2741.0
+            ]
+          },
+          {
+            "row": 10,
+            "profile": {
+              "non_empty": 45,
+              "number": 44,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.978
+            },
+            "values": [
+              "58年1969",
+              null,
+              148088.0,
+              3387.0,
+              0.0,
+              0.0,
+              7512.0,
+              0.0,
+              0.0,
+              11881.0,
+              6533.0,
+              3720.0
+            ]
+          },
+          {
+            "row": 11,
+            "profile": {
+              "non_empty": 45,
+              "number": 44,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.978
+            },
+            "values": [
+              "59年1970",
+              null,
+              181885.0,
+              4129.0,
+              0.0,
+              0.0,
+              10655.0,
+              0.0,
+              0.0,
+              14767.0,
+              9718.0,
+              1977.0
+            ]
+          },
+          {
+            "row": 12,
+            "profile": {
+              "non_empty": 45,
+              "number": 44,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.978
+            },
+            "values": [
+              "60年1971",
+              null,
+              263396.0,
+              5495.0,
+              0.0,
+              0.0,
+              8910.0,
+              0.0,
+              0.0,
+              12517.0,
+              8141.0,
+              1855.0
+            ]
+          },
+          {
+            "row": 13,
+            "profile": {
+              "non_empty": 45,
+              "number": 44,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.978
+            },
+            "values": [
+              "61年1972",
+              null,
+              280634.0,
+              5068.0,
+              908.0,
+              0.0,
+              10685.0,
+              0.0,
+              0.0,
+              8858.0,
+              8966.0,
+              2119.0
+            ]
+          },
+          {
+            "row": 14,
+            "profile": {
+              "non_empty": 45,
+              "number": 44,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.978
+            },
+            "values": [
+              "62年1973",
+              null,
+              437821.0,
+              5466.0,
+              1558.0,
+              0.0,
+              18441.0,
+              0.0,
+              0.0,
+              5520.0,
+              11413.0,
+              2162.0
+            ]
+          },
+          {
+            "row": 15,
+            "profile": {
+              "non_empty": 45,
+              "number": 44,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.978
+            },
+            "values": [
+              "63年1974",
+              null,
+              438911.0,
+              6780.0,
+              1695.0,
+              0.0,
+              20403.0,
+              0.0,
+              0.0,
+              6974.0,
+              12438.0,
+              2037.0
+            ]
+          }
+        ],
+        "row_profiles": [
+          {
+            "non_empty": 1,
+            "number": 0,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.0,
+            "row": 1
+          },
+          {
+            "non_empty": 5,
+            "number": 0,
+            "text": 5,
+            "date": 0,
+            "numeric_ratio": 0.0,
+            "row": 2
+          },
+          {
+            "non_empty": 39,
+            "number": 0,
+            "text": 39,
+            "date": 0,
+            "numeric_ratio": 0.0,
+            "row": 3
+          },
+          {
+            "non_empty": 10,
+            "number": 0,
+            "text": 10,
+            "date": 0,
+            "numeric_ratio": 0.0,
+            "row": 4
+          },
+          {
+            "non_empty": 45,
+            "number": 44,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.978,
+            "row": 5
+          },
+          {
+            "non_empty": 45,
+            "number": 44,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.978,
+            "row": 6
+          },
+          {
+            "non_empty": 45,
+            "number": 44,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.978,
+            "row": 7
+          },
+          {
+            "non_empty": 45,
+            "number": 44,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.978,
+            "row": 8
+          },
+          {
+            "non_empty": 45,
+            "number": 44,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.978,
+            "row": 9
+          },
+          {
+            "non_empty": 45,
+            "number": 44,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.978,
+            "row": 10
+          },
+          {
+            "non_empty": 45,
+            "number": 44,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.978,
+            "row": 11
+          },
+          {
+            "non_empty": 45,
+            "number": 44,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.978,
+            "row": 12
+          },
+          {
+            "non_empty": 45,
+            "number": 44,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.978,
+            "row": 13
+          },
+          {
+            "non_empty": 45,
+            "number": 44,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.978,
+            "row": 14
+          },
+          {
+            "non_empty": 45,
+            "number": 44,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.978,
+            "row": 15
+          },
+          {
+            "non_empty": 45,
+            "number": 44,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.978,
+            "row": 16
+          },
+          {
+            "non_empty": 45,
+            "number": 44,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.978,
+            "row": 17
+          },
+          {
+            "non_empty": 45,
+            "number": 44,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.978,
+            "row": 18
+          },
+          {
+            "non_empty": 45,
+            "number": 44,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.978,
+            "row": 19
+          },
+          {
+            "non_empty": 45,
+            "number": 44,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.978,
+            "row": 20
+          },
+          {
+            "non_empty": 45,
+            "number": 44,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.978,
+            "row": 21
+          },
+          {
+            "non_empty": 45,
+            "number": 44,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.978,
+            "row": 22
+          },
+          {
+            "non_empty": 45,
+            "number": 44,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.978,
+            "row": 23
+          },
+          {
+            "non_empty": 45,
+            "number": 44,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.978,
+            "row": 24
+          },
+          {
+            "non_empty": 45,
+            "number": 44,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.978,
+            "row": 25
+          },
+          {
+            "non_empty": 45,
+            "number": 44,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.978,
+            "row": 26
+          },
+          {
+            "non_empty": 45,
+            "number": 44,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.978,
+            "row": 27
+          },
+          {
+            "non_empty": 45,
+            "number": 44,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.978,
+            "row": 28
+          },
+          {
+            "non_empty": 45,
+            "number": 44,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.978,
+            "row": 29
+          },
+          {
+            "non_empty": 45,
+            "number": 44,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.978,
+            "row": 30
+          },
+          {
+            "non_empty": 45,
+            "number": 44,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.978,
+            "row": 31
+          },
+          {
+            "non_empty": 45,
+            "number": 44,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.978,
+            "row": 32
+          },
+          {
+            "non_empty": 45,
+            "number": 44,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.978,
+            "row": 33
+          },
+          {
+            "non_empty": 45,
+            "number": 44,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.978,
+            "row": 34
+          },
+          {
+            "non_empty": 45,
+            "number": 44,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.978,
+            "row": 35
+          },
+          {
+            "non_empty": 45,
+            "number": 44,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.978,
+            "row": 36
+          },
+          {
+            "non_empty": 45,
+            "number": 44,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.978,
+            "row": 37
+          },
+          {
+            "non_empty": 45,
+            "number": 44,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.978,
+            "row": 38
+          },
+          {
+            "non_empty": 45,
+            "number": 44,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.978,
+            "row": 39
+          },
+          {
+            "non_empty": 45,
+            "number": 44,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.978,
+            "row": 40
+          }
+        ],
+        "year_samples": [
+          {
+            "cell": "A5",
+            "value": "53年1964"
+          },
+          {
+            "cell": "A6",
+            "value": "54年1965"
+          },
+          {
+            "cell": "A7",
+            "value": "55年1966"
+          },
+          {
+            "cell": "A8",
+            "value": "56年1967"
+          },
+          {
+            "cell": "A9",
+            "value": "57年1968"
+          },
+          {
+            "cell": "A10",
+            "value": "58年1969"
+          },
+          {
+            "cell": "A11",
+            "value": "59年1970"
+          },
+          {
+            "cell": "A12",
+            "value": "60年1971"
+          }
+        ],
+        "negative_count_in_scan": 10,
+        "negatives": [
+          {
+            "cell": "M5",
+            "value": -10751.0
+          },
+          {
+            "cell": "M6",
+            "value": -14362.0
+          },
+          {
+            "cell": "M7",
+            "value": -19462.0
+          },
+          {
+            "cell": "M8",
+            "value": -26980.0
+          },
+          {
+            "cell": "M9",
+            "value": -28639.0
+          },
+          {
+            "cell": "M10",
+            "value": -29646.0
+          },
+          {
+            "cell": "M11",
+            "value": -37117.0
+          },
+          {
+            "cell": "M12",
+            "value": -31423.0
+          },
+          {
+            "cell": "M13",
+            "value": -30628.0
+          },
+          {
+            "cell": "M14",
+            "value": -37536.0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file_name": "表1-4-歷年來臺旅客按性別分.xlsx",
+    "sheet_count": 1,
+    "sheets": [
+      {
+        "sheet_name": "歷年來臺旅客-按性別",
+        "dimensions": {
+          "max_row": 66,
+          "max_column": 6,
+          "scanned_rows": 40
+        },
+        "merged_cell_count": 6,
+        "merged_cells": [
+          "C2:D2",
+          "A66:F66",
+          "E2:F2",
+          "A1:F1",
+          "B2:B3",
+          "A2:A3"
+        ],
+        "first_majority_numeric_row": 4,
+        "head_rows": [
+          {
+            "row": 1,
+            "profile": {
+              "non_empty": 1,
+              "number": 0,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.0
+            },
+            "values": [
+              "歷年來臺旅客按性別分\nVisitor Arri…",
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          {
+            "row": 2,
+            "profile": {
+              "non_empty": 4,
+              "number": 0,
+              "text": 4,
+              "date": 0,
+              "numeric_ratio": 0.0
+            },
+            "values": [
+              "年度\nYear",
+              "合計\nTotal",
+              "男 Male",
+              null,
+              "女 Female",
+              null
+            ]
+          },
+          {
+            "row": 3,
+            "profile": {
+              "non_empty": 4,
+              "number": 0,
+              "text": 4,
+              "date": 0,
+              "numeric_ratio": 0.0
+            },
+            "values": [
+              null,
+              null,
+              "人次\nNo. of Visitors",
+              "佔合計百分比\n% of  Total",
+              "人次\nNo. of Visitors",
+              "佔合計百分比\n% of  Total"
+            ]
+          },
+          {
+            "row": 4,
+            "profile": {
+              "non_empty": 6,
+              "number": 5,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.833
+            },
+            "values": [
+              "54 年 1965",
+              118460.0,
+              82031.0,
+              69.24784737464122,
+              36429.0,
+              30.752152625358768
+            ]
+          },
+          {
+            "row": 5,
+            "profile": {
+              "non_empty": 6,
+              "number": 5,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.833
+            },
+            "values": [
+              "55 年 1966",
+              160279.0,
+              114191.0,
+              71.24514128488448,
+              46088.0,
+              28.754858715115517
+            ]
+          },
+          {
+            "row": 6,
+            "profile": {
+              "non_empty": 6,
+              "number": 5,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.833
+            },
+            "values": [
+              "56 年 1967",
+              198218.0,
+              138470.0,
+              69.85742969861465,
+              59748.0,
+              30.14257030138534
+            ]
+          },
+          {
+            "row": 7,
+            "profile": {
+              "non_empty": 6,
+              "number": 5,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.833
+            },
+            "values": [
+              "57 年 1968",
+              250599.0,
+              187136.0,
+              74.67547755577635,
+              63463.0,
+              25.32452244422364
+            ]
+          },
+          {
+            "row": 8,
+            "profile": {
+              "non_empty": 6,
+              "number": 5,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.833
+            },
+            "values": [
+              "58 年 1969",
+              321188.0,
+              238559.0,
+              74.2739454774151,
+              82629.0,
+              25.726054522584903
+            ]
+          },
+          {
+            "row": 9,
+            "profile": {
+              "non_empty": 6,
+              "number": 5,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.833
+            },
+            "values": [
+              "59 年 1970",
+              409756.0,
+              298070.0,
+              72.74329112935503,
+              111686.0,
+              27.256708870644967
+            ]
+          },
+          {
+            "row": 10,
+            "profile": {
+              "non_empty": 6,
+              "number": 5,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.833
+            },
+            "values": [
+              "60 年 1971",
+              466570.0,
+              366647.0,
+              78.5834922948325,
+              99923.0,
+              21.416507705167497
+            ]
+          },
+          {
+            "row": 11,
+            "profile": {
+              "non_empty": 6,
+              "number": 5,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.833
+            },
+            "values": [
+              "61 年 1972",
+              580033.0,
+              452895.0,
+              78.0809022934902,
+              127138.0,
+              21.919097706509802
+            ]
+          },
+          {
+            "row": 12,
+            "profile": {
+              "non_empty": 6,
+              "number": 5,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.833
+            },
+            "values": [
+              "62 年 1973",
+              824393.0,
+              673422.0,
+              81.6870109280404,
+              150971.0,
+              18.312989071959613
+            ]
+          },
+          {
+            "row": 13,
+            "profile": {
+              "non_empty": 6,
+              "number": 5,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.833
+            },
+            "values": [
+              "63 年 1974",
+              819821.0,
+              678072.0,
+              82.70976225297962,
+              141749.0,
+              17.290237747020388
+            ]
+          },
+          {
+            "row": 14,
+            "profile": {
+              "non_empty": 6,
+              "number": 5,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.833
+            },
+            "values": [
+              "64 年 1975",
+              853140.0,
+              690604.0,
+              80.94849614365755,
+              162536.0,
+              19.051503856342453
+            ]
+          },
+          {
+            "row": 15,
+            "profile": {
+              "non_empty": 6,
+              "number": 5,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.833
+            },
+            "values": [
+              "65 年 1976",
+              1008126.0,
+              819668.0,
+              81.3061065779476,
+              188458.0,
+              18.6938934220524
+            ]
+          }
+        ],
+        "row_profiles": [
+          {
+            "non_empty": 1,
+            "number": 0,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.0,
+            "row": 1
+          },
+          {
+            "non_empty": 4,
+            "number": 0,
+            "text": 4,
+            "date": 0,
+            "numeric_ratio": 0.0,
+            "row": 2
+          },
+          {
+            "non_empty": 4,
+            "number": 0,
+            "text": 4,
+            "date": 0,
+            "numeric_ratio": 0.0,
+            "row": 3
+          },
+          {
+            "non_empty": 6,
+            "number": 5,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.833,
+            "row": 4
+          },
+          {
+            "non_empty": 6,
+            "number": 5,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.833,
+            "row": 5
+          },
+          {
+            "non_empty": 6,
+            "number": 5,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.833,
+            "row": 6
+          },
+          {
+            "non_empty": 6,
+            "number": 5,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.833,
+            "row": 7
+          },
+          {
+            "non_empty": 6,
+            "number": 5,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.833,
+            "row": 8
+          },
+          {
+            "non_empty": 6,
+            "number": 5,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.833,
+            "row": 9
+          },
+          {
+            "non_empty": 6,
+            "number": 5,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.833,
+            "row": 10
+          },
+          {
+            "non_empty": 6,
+            "number": 5,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.833,
+            "row": 11
+          },
+          {
+            "non_empty": 6,
+            "number": 5,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.833,
+            "row": 12
+          },
+          {
+            "non_empty": 6,
+            "number": 5,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.833,
+            "row": 13
+          },
+          {
+            "non_empty": 6,
+            "number": 5,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.833,
+            "row": 14
+          },
+          {
+            "non_empty": 6,
+            "number": 5,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.833,
+            "row": 15
+          },
+          {
+            "non_empty": 6,
+            "number": 5,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.833,
+            "row": 16
+          },
+          {
+            "non_empty": 6,
+            "number": 5,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.833,
+            "row": 17
+          },
+          {
+            "non_empty": 6,
+            "number": 5,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.833,
+            "row": 18
+          },
+          {
+            "non_empty": 6,
+            "number": 5,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.833,
+            "row": 19
+          },
+          {
+            "non_empty": 6,
+            "number": 5,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.833,
+            "row": 20
+          },
+          {
+            "non_empty": 6,
+            "number": 5,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.833,
+            "row": 21
+          },
+          {
+            "non_empty": 6,
+            "number": 5,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.833,
+            "row": 22
+          },
+          {
+            "non_empty": 6,
+            "number": 5,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.833,
+            "row": 23
+          },
+          {
+            "non_empty": 6,
+            "number": 5,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.833,
+            "row": 24
+          },
+          {
+            "non_empty": 6,
+            "number": 5,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.833,
+            "row": 25
+          },
+          {
+            "non_empty": 6,
+            "number": 5,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.833,
+            "row": 26
+          },
+          {
+            "non_empty": 6,
+            "number": 5,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.833,
+            "row": 27
+          },
+          {
+            "non_empty": 6,
+            "number": 5,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.833,
+            "row": 28
+          },
+          {
+            "non_empty": 6,
+            "number": 5,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.833,
+            "row": 29
+          },
+          {
+            "non_empty": 6,
+            "number": 5,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.833,
+            "row": 30
+          },
+          {
+            "non_empty": 6,
+            "number": 5,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.833,
+            "row": 31
+          },
+          {
+            "non_empty": 6,
+            "number": 5,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.833,
+            "row": 32
+          },
+          {
+            "non_empty": 6,
+            "number": 5,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.833,
+            "row": 33
+          },
+          {
+            "non_empty": 6,
+            "number": 5,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.833,
+            "row": 34
+          },
+          {
+            "non_empty": 6,
+            "number": 5,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.833,
+            "row": 35
+          },
+          {
+            "non_empty": 6,
+            "number": 5,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.833,
+            "row": 36
+          },
+          {
+            "non_empty": 6,
+            "number": 5,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.833,
+            "row": 37
+          },
+          {
+            "non_empty": 6,
+            "number": 5,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.833,
+            "row": 38
+          },
+          {
+            "non_empty": 6,
+            "number": 5,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.833,
+            "row": 39
+          },
+          {
+            "non_empty": 6,
+            "number": 5,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.833,
+            "row": 40
+          }
+        ],
+        "year_samples": [
+          {
+            "cell": "A4",
+            "value": "54 年 1965"
+          },
+          {
+            "cell": "A5",
+            "value": "55 年 1966"
+          },
+          {
+            "cell": "A6",
+            "value": "56 年 1967"
+          },
+          {
+            "cell": "A7",
+            "value": "57 年 1968"
+          },
+          {
+            "cell": "A8",
+            "value": "58 年 1969"
+          },
+          {
+            "cell": "A9",
+            "value": "59 年 1970"
+          },
+          {
+            "cell": "A10",
+            "value": "60 年 1971"
+          },
+          {
+            "cell": "A11",
+            "value": "61 年 1972"
+          }
+        ],
+        "negative_count_in_scan": 0,
+        "negatives": []
+      }
+    ]
+  },
+  {
+    "file_name": "表1-5-歷年來臺旅客按年齡分.xlsx",
+    "sheet_count": 1,
+    "sheets": [
+      {
+        "sheet_name": "歷年來臺旅客-按年齡",
+        "dimensions": {
+          "max_row": 60,
+          "max_column": 9,
+          "scanned_rows": 40
+        },
+        "merged_cell_count": 1,
+        "merged_cells": [
+          "A1:I1"
+        ],
+        "first_majority_numeric_row": 3,
+        "head_rows": [
+          {
+            "row": 1,
+            "profile": {
+              "non_empty": 1,
+              "number": 0,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.0
+            },
+            "values": [
+              "歷年來臺旅客按年齡分\nVisitor Arri…",
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          {
+            "row": 2,
+            "profile": {
+              "non_empty": 9,
+              "number": 0,
+              "text": 9,
+              "date": 0,
+              "numeric_ratio": 0.0
+            },
+            "values": [
+              "年度\nYear",
+              "合計\nTotal",
+              "9歲及以下\n9 years \nand Under",
+              "10至19歲\n10-19\nyears",
+              "20至29歲\n20-29\nyears",
+              "30至39歲\n30-39\nyears",
+              "40至49歲\n40-49\nyears",
+              "50至59歲\n50-59\nyears",
+              "60歲以上\n60 years \nand Over"
+            ]
+          },
+          {
+            "row": 3,
+            "profile": {
+              "non_empty": 9,
+              "number": 8,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.889
+            },
+            "values": [
+              "57 年 1968",
+              250599.0,
+              4751.0,
+              7420.0,
+              44702.0,
+              59184.0,
+              62569.0,
+              39491.0,
+              32482.0
+            ]
+          },
+          {
+            "row": 4,
+            "profile": {
+              "non_empty": 9,
+              "number": 8,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.889
+            },
+            "values": [
+              "58 年 1969",
+              321188.0,
+              7467.0,
+              11100.0,
+              56580.0,
+              75664.0,
+              76554.0,
+              51771.0,
+              42052.0
+            ]
+          },
+          {
+            "row": 5,
+            "profile": {
+              "non_empty": 9,
+              "number": 8,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.889
+            },
+            "values": [
+              "59 年 1970",
+              409756.0,
+              7771.0,
+              13317.0,
+              70818.0,
+              99601.0,
+              93984.0,
+              66259.0,
+              58006.0
+            ]
+          },
+          {
+            "row": 6,
+            "profile": {
+              "non_empty": 9,
+              "number": 8,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.889
+            },
+            "values": [
+              "60 年 1971",
+              466570.0,
+              9234.0,
+              14407.0,
+              92906.0,
+              125854.0,
+              107455.0,
+              66277.0,
+              50437.0
+            ]
+          },
+          {
+            "row": 7,
+            "profile": {
+              "non_empty": 9,
+              "number": 8,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.889
+            },
+            "values": [
+              "61 年 1972",
+              499715.0,
+              10659.0,
+              12112.0,
+              85653.0,
+              145313.0,
+              123405.0,
+              70474.0,
+              52099.0
+            ]
+          },
+          {
+            "row": 8,
+            "profile": {
+              "non_empty": 9,
+              "number": 8,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.889
+            },
+            "values": [
+              "62 年 1973",
+              703775.0,
+              15601.0,
+              14566.0,
+              117968.0,
+              218055.0,
+              182168.0,
+              92718.0,
+              62699.0
+            ]
+          },
+          {
+            "row": 9,
+            "profile": {
+              "non_empty": 9,
+              "number": 8,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.889
+            },
+            "values": [
+              "63 年 1974",
+              702963.0,
+              13493.0,
+              13211.0,
+              119622.0,
+              223876.0,
+              184197.0,
+              91708.0,
+              56856.0
+            ]
+          },
+          {
+            "row": 10,
+            "profile": {
+              "non_empty": 9,
+              "number": 8,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.889
+            },
+            "values": [
+              "64 年 1975",
+              715630.0,
+              16275.0,
+              16722.0,
+              132109.0,
+              210587.0,
+              186051.0,
+              95238.0,
+              58648.0
+            ]
+          },
+          {
+            "row": 11,
+            "profile": {
+              "non_empty": 9,
+              "number": 8,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.889
+            },
+            "values": [
+              "65 年 1976",
+              853875.0,
+              17781.0,
+              18319.0,
+              150547.0,
+              238050.0,
+              226368.0,
+              123634.0,
+              79176.0
+            ]
+          },
+          {
+            "row": 12,
+            "profile": {
+              "non_empty": 9,
+              "number": 8,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.889
+            },
+            "values": [
+              "66 年 1977",
+              933936.0,
+              18632.0,
+              19267.0,
+              153523.0,
+              258843.0,
+              246742.0,
+              143786.0,
+              93143.0
+            ]
+          },
+          {
+            "row": 13,
+            "profile": {
+              "non_empty": 9,
+              "number": 8,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.889
+            },
+            "values": [
+              "67 年 1978",
+              1045916.0,
+              21764.0,
+              22659.0,
+              164513.0,
+              297287.0,
+              276243.0,
+              164705.0,
+              98745.0
+            ]
+          },
+          {
+            "row": 14,
+            "profile": {
+              "non_empty": 9,
+              "number": 8,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.889
+            },
+            "values": [
+              "68 年 1979",
+              1096735.0,
+              21619.0,
+              22741.0,
+              165400.0,
+              326711.0,
+              295246.0,
+              175074.0,
+              89944.0
+            ]
+          },
+          {
+            "row": 15,
+            "profile": {
+              "non_empty": 9,
+              "number": 8,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.889
+            },
+            "values": [
+              "69 年 1980",
+              1111130.0,
+              22965.0,
+              26154.0,
+              162749.0,
+              322756.0,
+              290714.0,
+              184194.0,
+              101598.0
+            ]
+          }
+        ],
+        "row_profiles": [
+          {
+            "non_empty": 1,
+            "number": 0,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.0,
+            "row": 1
+          },
+          {
+            "non_empty": 9,
+            "number": 0,
+            "text": 9,
+            "date": 0,
+            "numeric_ratio": 0.0,
+            "row": 2
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 3
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 4
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 5
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 6
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 7
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 8
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 9
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 10
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 11
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 12
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 13
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 14
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 15
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 16
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 17
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 18
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 19
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 20
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 21
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 22
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 23
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 24
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 25
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 26
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 27
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 28
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 29
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 30
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 31
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 32
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 33
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 34
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 35
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 36
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 37
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 38
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 39
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 40
+          }
+        ],
+        "year_samples": [
+          {
+            "cell": "A3",
+            "value": "57 年 1968"
+          },
+          {
+            "cell": "A4",
+            "value": "58 年 1969"
+          },
+          {
+            "cell": "A5",
+            "value": "59 年 1970"
+          },
+          {
+            "cell": "A6",
+            "value": "60 年 1971"
+          },
+          {
+            "cell": "A7",
+            "value": "61 年 1972"
+          },
+          {
+            "cell": "A8",
+            "value": "62 年 1973"
+          },
+          {
+            "cell": "A9",
+            "value": "63 年 1974"
+          },
+          {
+            "cell": "A10",
+            "value": "64 年 1975"
+          }
+        ],
+        "negative_count_in_scan": 0,
+        "negatives": []
+      }
+    ]
+  },
+  {
+    "file_name": "表1-7-歷年來臺旅客按搭乘交通工具及入境港口分.xlsx",
+    "sheet_count": 1,
+    "sheets": [
+      {
+        "sheet_name": "歷年來臺旅客-按搭乘交通工具及入境港口",
+        "dimensions": {
+          "max_row": 69,
+          "max_column": 13,
+          "scanned_rows": 40
+        },
+        "merged_cell_count": 5,
+        "merged_cells": [
+          "A1:M1",
+          "C2:G2",
+          "B2:B3",
+          "A2:A3",
+          "H2:M2"
+        ],
+        "first_majority_numeric_row": 4,
+        "head_rows": [
+          {
+            "row": 1,
+            "profile": {
+              "non_empty": 1,
+              "number": 0,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.0
+            },
+            "values": [
+              "歷年來臺旅客按搭乘交通工具及入境港口分\nVis…",
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          {
+            "row": 2,
+            "profile": {
+              "non_empty": 4,
+              "number": 0,
+              "text": 4,
+              "date": 0,
+              "numeric_ratio": 0.0
+            },
+            "values": [
+              "年度\nYear",
+              "合計\nTotal",
+              "輪船 Sea",
+              null,
+              null,
+              null,
+              null,
+              "飛機 Air",
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          {
+            "row": 3,
+            "profile": {
+              "non_empty": 11,
+              "number": 0,
+              "text": 11,
+              "date": 0,
+              "numeric_ratio": 0.0
+            },
+            "values": [
+              null,
+              null,
+              "小計\nSub-\ntotal",
+              "基隆\nKee-\nlung",
+              "臺中\nTai-\nchung",
+              "高雄\nKao-\nhsiung",
+              "其他\n\nOthers",
+              "小計\n\nSubtotal",
+              "松山\nSung-\nShan",
+              "桃園機場\n\nTTY",
+              "臺中\nTai-\nchung",
+              "高雄\nKao-\nhsiung"
+            ]
+          },
+          {
+            "row": 4,
+            "profile": {
+              "non_empty": 13,
+              "number": 12,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.923
+            },
+            "values": [
+              "50 年 1961",
+              34831.0,
+              6313.0,
+              5564.0,
+              0.0,
+              749.0,
+              0.0,
+              28518.0,
+              28518.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "row": 5,
+            "profile": {
+              "non_empty": 13,
+              "number": 12,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.923
+            },
+            "values": [
+              "51 年 1962",
+              44625.0,
+              7583.0,
+              7031.0,
+              0.0,
+              552.0,
+              0.0,
+              37042.0,
+              37042.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "row": 6,
+            "profile": {
+              "non_empty": 13,
+              "number": 12,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.923
+            },
+            "values": [
+              "52 年 1963",
+              61348.0,
+              7625.0,
+              6652.0,
+              0.0,
+              973.0,
+              0.0,
+              53723.0,
+              53723.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "row": 7,
+            "profile": {
+              "non_empty": 13,
+              "number": 12,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.923
+            },
+            "values": [
+              "53 年 1964",
+              83017.0,
+              9701.0,
+              9021.0,
+              0.0,
+              680.0,
+              0.0,
+              73316.0,
+              73316.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "row": 8,
+            "profile": {
+              "non_empty": 13,
+              "number": 12,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.923
+            },
+            "values": [
+              "54 年 1965",
+              118460.0,
+              10636.0,
+              9339.0,
+              0.0,
+              1297.0,
+              0.0,
+              107824.0,
+              107824.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "row": 9,
+            "profile": {
+              "non_empty": 13,
+              "number": 12,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.923
+            },
+            "values": [
+              "55 年 1966",
+              160279.0,
+              12147.0,
+              11028.0,
+              0.0,
+              1119.0,
+              0.0,
+              148132.0,
+              148132.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "row": 10,
+            "profile": {
+              "non_empty": 13,
+              "number": 12,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.923
+            },
+            "values": [
+              "56 年 1967",
+              198218.0,
+              12995.0,
+              11615.0,
+              0.0,
+              1380.0,
+              0.0,
+              185223.0,
+              185223.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "row": 11,
+            "profile": {
+              "non_empty": 13,
+              "number": 12,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.923
+            },
+            "values": [
+              "57 年 1968",
+              250599.0,
+              22996.0,
+              18858.0,
+              0.0,
+              4138.0,
+              0.0,
+              227603.0,
+              227603.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "row": 12,
+            "profile": {
+              "non_empty": 13,
+              "number": 12,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.923
+            },
+            "values": [
+              "58 年 1969",
+              321188.0,
+              22664.0,
+              15889.0,
+              0.0,
+              6775.0,
+              0.0,
+              298524.0,
+              298524.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "row": 13,
+            "profile": {
+              "non_empty": 13,
+              "number": 12,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.923
+            },
+            "values": [
+              "59 年 1970",
+              409756.0,
+              30261.0,
+              21032.0,
+              0.0,
+              9229.0,
+              0.0,
+              379495.0,
+              379495.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "row": 14,
+            "profile": {
+              "non_empty": 13,
+              "number": 12,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.923
+            },
+            "values": [
+              "60 年 1971",
+              466570.0,
+              36763.0,
+              25750.0,
+              0.0,
+              11013.0,
+              0.0,
+              429807.0,
+              429807.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "row": 15,
+            "profile": {
+              "non_empty": 13,
+              "number": 12,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.923
+            },
+            "values": [
+              "61 年 1972",
+              499715.0,
+              15815.0,
+              15116.0,
+              0.0,
+              699.0,
+              0.0,
+              483900.0,
+              483900.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "row_profiles": [
+          {
+            "non_empty": 1,
+            "number": 0,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.0,
+            "row": 1
+          },
+          {
+            "non_empty": 4,
+            "number": 0,
+            "text": 4,
+            "date": 0,
+            "numeric_ratio": 0.0,
+            "row": 2
+          },
+          {
+            "non_empty": 11,
+            "number": 0,
+            "text": 11,
+            "date": 0,
+            "numeric_ratio": 0.0,
+            "row": 3
+          },
+          {
+            "non_empty": 13,
+            "number": 12,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.923,
+            "row": 4
+          },
+          {
+            "non_empty": 13,
+            "number": 12,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.923,
+            "row": 5
+          },
+          {
+            "non_empty": 13,
+            "number": 12,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.923,
+            "row": 6
+          },
+          {
+            "non_empty": 13,
+            "number": 12,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.923,
+            "row": 7
+          },
+          {
+            "non_empty": 13,
+            "number": 12,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.923,
+            "row": 8
+          },
+          {
+            "non_empty": 13,
+            "number": 12,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.923,
+            "row": 9
+          },
+          {
+            "non_empty": 13,
+            "number": 12,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.923,
+            "row": 10
+          },
+          {
+            "non_empty": 13,
+            "number": 12,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.923,
+            "row": 11
+          },
+          {
+            "non_empty": 13,
+            "number": 12,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.923,
+            "row": 12
+          },
+          {
+            "non_empty": 13,
+            "number": 12,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.923,
+            "row": 13
+          },
+          {
+            "non_empty": 13,
+            "number": 12,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.923,
+            "row": 14
+          },
+          {
+            "non_empty": 13,
+            "number": 12,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.923,
+            "row": 15
+          },
+          {
+            "non_empty": 13,
+            "number": 12,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.923,
+            "row": 16
+          },
+          {
+            "non_empty": 13,
+            "number": 12,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.923,
+            "row": 17
+          },
+          {
+            "non_empty": 13,
+            "number": 12,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.923,
+            "row": 18
+          },
+          {
+            "non_empty": 13,
+            "number": 12,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.923,
+            "row": 19
+          },
+          {
+            "non_empty": 13,
+            "number": 12,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.923,
+            "row": 20
+          },
+          {
+            "non_empty": 13,
+            "number": 12,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.923,
+            "row": 21
+          },
+          {
+            "non_empty": 13,
+            "number": 12,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.923,
+            "row": 22
+          },
+          {
+            "non_empty": 13,
+            "number": 12,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.923,
+            "row": 23
+          },
+          {
+            "non_empty": 13,
+            "number": 12,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.923,
+            "row": 24
+          },
+          {
+            "non_empty": 13,
+            "number": 12,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.923,
+            "row": 25
+          },
+          {
+            "non_empty": 13,
+            "number": 12,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.923,
+            "row": 26
+          },
+          {
+            "non_empty": 13,
+            "number": 12,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.923,
+            "row": 27
+          },
+          {
+            "non_empty": 13,
+            "number": 12,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.923,
+            "row": 28
+          },
+          {
+            "non_empty": 13,
+            "number": 12,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.923,
+            "row": 29
+          },
+          {
+            "non_empty": 13,
+            "number": 12,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.923,
+            "row": 30
+          },
+          {
+            "non_empty": 13,
+            "number": 12,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.923,
+            "row": 31
+          },
+          {
+            "non_empty": 13,
+            "number": 12,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.923,
+            "row": 32
+          },
+          {
+            "non_empty": 13,
+            "number": 12,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.923,
+            "row": 33
+          },
+          {
+            "non_empty": 13,
+            "number": 12,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.923,
+            "row": 34
+          },
+          {
+            "non_empty": 13,
+            "number": 12,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.923,
+            "row": 35
+          },
+          {
+            "non_empty": 13,
+            "number": 12,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.923,
+            "row": 36
+          },
+          {
+            "non_empty": 13,
+            "number": 12,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.923,
+            "row": 37
+          },
+          {
+            "non_empty": 13,
+            "number": 12,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.923,
+            "row": 38
+          },
+          {
+            "non_empty": 13,
+            "number": 12,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.923,
+            "row": 39
+          },
+          {
+            "non_empty": 13,
+            "number": 12,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.923,
+            "row": 40
+          }
+        ],
+        "year_samples": [
+          {
+            "cell": "A4",
+            "value": "50 年 1961"
+          },
+          {
+            "cell": "A5",
+            "value": "51 年 1962"
+          },
+          {
+            "cell": "A6",
+            "value": "52 年 1963"
+          },
+          {
+            "cell": "A7",
+            "value": "53 年 1964"
+          },
+          {
+            "cell": "A8",
+            "value": "54 年 1965"
+          },
+          {
+            "cell": "A9",
+            "value": "55 年 1966"
+          },
+          {
+            "cell": "A10",
+            "value": "56 年 1967"
+          },
+          {
+            "cell": "A11",
+            "value": "57 年 1968"
+          }
+        ],
+        "negative_count_in_scan": 0,
+        "negatives": []
+      }
+    ]
+  },
+  {
+    "file_name": "表1-8-歷年來臺旅客按停留夜數分.xlsx",
+    "sheet_count": 1,
+    "sheets": [
+      {
+        "sheet_name": "歷年來臺旅客-按停留夜數",
+        "dimensions": {
+          "max_row": 58,
+          "max_column": 14,
+          "scanned_rows": 40
+        },
+        "merged_cell_count": 6,
+        "merged_cells": [
+          "B2:K2",
+          "M2:M3",
+          "A2:A3",
+          "N2:N3",
+          "L2:L3",
+          "A1:N1"
+        ],
+        "first_majority_numeric_row": 4,
+        "head_rows": [
+          {
+            "row": 1,
+            "profile": {
+              "non_empty": 1,
+              "number": 0,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.0
+            },
+            "values": [
+              "歷年來臺旅客按停留夜數分\nVisitor Ar…",
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          {
+            "row": 2,
+            "profile": {
+              "non_empty": 5,
+              "number": 0,
+              "text": 5,
+              "date": 0,
+              "numeric_ratio": 0.0
+            },
+            "values": [
+              "年度\nYear",
+              "停留夜數　Length of Stay (Ni…",
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              "停留夜數合計\nTotal Visitor\nNi…"
+            ]
+          },
+          {
+            "row": 3,
+            "profile": {
+              "non_empty": 10,
+              "number": 4,
+              "text": 6,
+              "date": 0,
+              "numeric_ratio": 0.4
+            },
+            "values": [
+              null,
+              1,
+              2,
+              3,
+              4,
+              "5-7",
+              "8-15",
+              "16-30",
+              "31-60",
+              "61-90",
+              "90以上\nOver 90 Nights",
+              null
+            ]
+          },
+          {
+            "row": 4,
+            "profile": {
+              "non_empty": 14,
+              "number": 13,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.929
+            },
+            "values": [
+              "60 年 1971",
+              73477.0,
+              118224.0,
+              110134.0,
+              43380.0,
+              49182.0,
+              34526.0,
+              20521.0,
+              0.0,
+              0.0,
+              0.0,
+              2068397.0
+            ]
+          },
+          {
+            "row": 5,
+            "profile": {
+              "non_empty": 14,
+              "number": 13,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.929
+            },
+            "values": [
+              "61 年 1972",
+              72013.0,
+              127955.0,
+              114194.0,
+              45948.0,
+              71164.0,
+              35377.0,
+              19542.0,
+              0.0,
+              0.0,
+              0.0,
+              2228071.0
+            ]
+          },
+          {
+            "row": 6,
+            "profile": {
+              "non_empty": 14,
+              "number": 13,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.929
+            },
+            "values": [
+              "62 年 1973",
+              72075.0,
+              164546.0,
+              177338.0,
+              73987.0,
+              125813.0,
+              39330.0,
+              24259.0,
+              0.0,
+              0.0,
+              0.0,
+              3109287.0
+            ]
+          },
+          {
+            "row": 7,
+            "profile": {
+              "non_empty": 14,
+              "number": 13,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.929
+            },
+            "values": [
+              "63 年 1974",
+              70726.0,
+              146818.0,
+              174725.0,
+              78197.0,
+              159100.0,
+              29267.0,
+              17506.0,
+              0.0,
+              0.0,
+              0.0,
+              2990854.0
+            ]
+          },
+          {
+            "row": 8,
+            "profile": {
+              "non_empty": 14,
+              "number": 13,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.929
+            },
+            "values": [
+              "64 年 1975",
+              53843.0,
+              139969.0,
+              205119.0,
+              73089.0,
+              107012.0,
+              58086.0,
+              49879.0,
+              0.0,
+              0.0,
+              0.0,
+              4326043.0
+            ]
+          },
+          {
+            "row": 9,
+            "profile": {
+              "non_empty": 14,
+              "number": 13,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.929
+            },
+            "values": [
+              "65 年 1976",
+              45516.0,
+              159775.0,
+              287766.0,
+              80455.0,
+              110908.0,
+              64647.0,
+              65210.0,
+              0.0,
+              0.0,
+              0.0,
+              5461767.0
+            ]
+          },
+          {
+            "row": 10,
+            "profile": {
+              "non_empty": 14,
+              "number": 13,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.929
+            },
+            "values": [
+              "66 年 1977",
+              52028.0,
+              181634.0,
+              331653.0,
+              91549.0,
+              136100.0,
+              69537.0,
+              70131.0,
+              0.0,
+              0.0,
+              0.0,
+              6120928.0
+            ]
+          },
+          {
+            "row": 11,
+            "profile": {
+              "non_empty": 14,
+              "number": 13,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.929
+            },
+            "values": [
+              "67 年 1978",
+              55119.0,
+              182334.0,
+              370591.0,
+              111029.0,
+              157098.0,
+              81795.0,
+              32535.0,
+              49806.0,
+              0.0,
+              0.0,
+              7018182.0
+            ]
+          },
+          {
+            "row": 12,
+            "profile": {
+              "non_empty": 14,
+              "number": 13,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.929
+            },
+            "values": [
+              "68 年 1979",
+              35115.0,
+              165450.0,
+              421795.0,
+              111497.0,
+              138474.0,
+              94065.0,
+              37010.0,
+              57761.0,
+              0.0,
+              0.0,
+              7638518.0
+            ]
+          },
+          {
+            "row": 13,
+            "profile": {
+              "non_empty": 14,
+              "number": 13,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.929
+            },
+            "values": [
+              "69 年 1980",
+              37856.0,
+              155538.0,
+              399599.0,
+              125284.0,
+              162439.0,
+              101181.0,
+              40458.0,
+              47115.0,
+              0.0,
+              0.0,
+              7231316.0
+            ]
+          },
+          {
+            "row": 14,
+            "profile": {
+              "non_empty": 14,
+              "number": 13,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.929
+            },
+            "values": [
+              "70 年 1981",
+              45277.0,
+              158066.0,
+              353173.0,
+              137982.0,
+              185398.0,
+              106726.0,
+              50921.0,
+              37716.0,
+              0.0,
+              0.0,
+              7118456.0
+            ]
+          },
+          {
+            "row": 15,
+            "profile": {
+              "non_empty": 14,
+              "number": 13,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.929
+            },
+            "values": [
+              "71 年 1982",
+              49336.0,
+              161754.0,
+              332419.0,
+              143547.0,
+              188996.0,
+              103596.0,
+              48043.0,
+              27976.0,
+              0.0,
+              0.0,
+              6474943.0
+            ]
+          }
+        ],
+        "row_profiles": [
+          {
+            "non_empty": 1,
+            "number": 0,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.0,
+            "row": 1
+          },
+          {
+            "non_empty": 5,
+            "number": 0,
+            "text": 5,
+            "date": 0,
+            "numeric_ratio": 0.0,
+            "row": 2
+          },
+          {
+            "non_empty": 10,
+            "number": 4,
+            "text": 6,
+            "date": 0,
+            "numeric_ratio": 0.4,
+            "row": 3
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 4
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 5
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 6
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 7
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 8
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 9
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 10
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 11
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 12
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 13
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 14
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 15
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 16
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 17
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 18
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 19
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 20
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 21
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 22
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 23
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 24
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 25
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 26
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 27
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 28
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 29
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 30
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 31
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 32
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 33
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 34
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 35
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 36
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 37
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 38
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 39
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 40
+          }
+        ],
+        "year_samples": [
+          {
+            "cell": "A4",
+            "value": "60 年 1971"
+          },
+          {
+            "cell": "A5",
+            "value": "61 年 1972"
+          },
+          {
+            "cell": "A6",
+            "value": "62 年 1973"
+          },
+          {
+            "cell": "A7",
+            "value": "63 年 1974"
+          },
+          {
+            "cell": "A8",
+            "value": "64 年 1975"
+          },
+          {
+            "cell": "A9",
+            "value": "65 年 1976"
+          },
+          {
+            "cell": "A10",
+            "value": "66 年 1977"
+          },
+          {
+            "cell": "A11",
+            "value": "67 年 1978"
+          }
+        ],
+        "negative_count_in_scan": 0,
+        "negatives": []
+      }
+    ]
+  },
+  {
+    "file_name": "表1-9-歷年來臺旅客按目的分.xlsx",
+    "sheet_count": 1,
+    "sheets": [
+      {
+        "sheet_name": "歷年來臺旅客-按目的",
+        "dimensions": {
+          "max_row": 56,
+          "max_column": 14,
+          "scanned_rows": 40
+        },
+        "merged_cell_count": 1,
+        "merged_cells": [
+          "A1:N1"
+        ],
+        "first_majority_numeric_row": 3,
+        "head_rows": [
+          {
+            "row": 1,
+            "profile": {
+              "non_empty": 1,
+              "number": 0,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.0
+            },
+            "values": [
+              "歷年來臺旅客按目的分\nVisitor Arri…",
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          {
+            "row": 2,
+            "profile": {
+              "non_empty": 14,
+              "number": 0,
+              "text": 14,
+              "date": 0,
+              "numeric_ratio": 0.0
+            },
+            "values": [
+              "年度\nYear",
+              "合計\nTotal",
+              "業務\nBusiness",
+              "觀光\nPleasure",
+              "探親\nVisit\nRelatives",
+              "會議\nConference",
+              "求學\nStudy",
+              "工商考察\nCommercial",
+              "業務與觀光\nBusiness/\nPleasure",
+              "渡假\nVacation",
+              "展覽\nExhibition",
+              "醫療\nMedical Treatment"
+            ]
+          },
+          {
+            "row": 3,
+            "profile": {
+              "non_empty": 14,
+              "number": 13,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.929
+            },
+            "values": [
+              "61 年 1972",
+              580033.0,
+              32653.0,
+              73535.0,
+              3301.0,
+              0.0,
+              0.0,
+              3482.0,
+              300883.0,
+              138358.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "row": 4,
+            "profile": {
+              "non_empty": 14,
+              "number": 13,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.929
+            },
+            "values": [
+              "62 年 1973",
+              824393.0,
+              17035.0,
+              115574.0,
+              2422.0,
+              0.0,
+              0.0,
+              2622.0,
+              552556.0,
+              132158.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "row": 5,
+            "profile": {
+              "non_empty": 14,
+              "number": 13,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.929
+            },
+            "values": [
+              "63 年 1974",
+              819821.0,
+              20920.0,
+              113824.0,
+              1606.0,
+              0.0,
+              0.0,
+              0.0,
+              538400.0,
+              142636.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "row": 6,
+            "profile": {
+              "non_empty": 14,
+              "number": 13,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.929
+            },
+            "values": [
+              "64 年 1975",
+              853140.0,
+              30835.0,
+              131301.0,
+              1083.0,
+              0.0,
+              0.0,
+              455.0,
+              521220.0,
+              159798.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "row": 7,
+            "profile": {
+              "non_empty": 14,
+              "number": 13,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.929
+            },
+            "values": [
+              "65 年 1976",
+              1008126.0,
+              31307.0,
+              150956.0,
+              638.0,
+              0.0,
+              0.0,
+              0.0,
+              651685.0,
+              168803.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "row": 8,
+            "profile": {
+              "non_empty": 14,
+              "number": 13,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.929
+            },
+            "values": [
+              "66 年 1977",
+              1110182.0,
+              33509.0,
+              162558.0,
+              124.0,
+              0.0,
+              0.0,
+              0.0,
+              736499.0,
+              161938.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "row": 9,
+            "profile": {
+              "non_empty": 14,
+              "number": 13,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.929
+            },
+            "values": [
+              "67 年 1978",
+              1270977.0,
+              43426.0,
+              216367.0,
+              239.0,
+              0.0,
+              0.0,
+              0.0,
+              810423.0,
+              190428.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "row": 10,
+            "profile": {
+              "non_empty": 14,
+              "number": 13,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.929
+            },
+            "values": [
+              "68 年 1979",
+              1340382.0,
+              63098.0,
+              225978.0,
+              1875.0,
+              0.0,
+              0.0,
+              0.0,
+              928121.0,
+              111861.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "row": 11,
+            "profile": {
+              "non_empty": 14,
+              "number": 13,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.929
+            },
+            "values": [
+              "69 年 1980",
+              1393254.0,
+              73096.0,
+              252309.0,
+              11178.0,
+              0.0,
+              0.0,
+              0.0,
+              984549.0,
+              62218.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "row": 12,
+            "profile": {
+              "non_empty": 14,
+              "number": 13,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.929
+            },
+            "values": [
+              "70 年 1981",
+              1409465.0,
+              129756.0,
+              1095754.0,
+              43841.0,
+              0.0,
+              7122.0,
+              0.0,
+              0.0,
+              101079.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "row": 13,
+            "profile": {
+              "non_empty": 14,
+              "number": 13,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.929
+            },
+            "values": [
+              "71 年 1982",
+              1419178.0,
+              145692.0,
+              1005655.0,
+              54620.0,
+              0.0,
+              13766.0,
+              0.0,
+              0.0,
+              99058.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "row": 14,
+            "profile": {
+              "non_empty": 14,
+              "number": 13,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.929
+            },
+            "values": [
+              "72 年 1983",
+              1457404.0,
+              181740.0,
+              974330.0,
+              63494.0,
+              0.0,
+              16545.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "row": 15,
+            "profile": {
+              "non_empty": 14,
+              "number": 13,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.929
+            },
+            "values": [
+              "73 年 1984",
+              1516138.0,
+              207253.0,
+              966405.0,
+              89171.0,
+              6533.0,
+              15276.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "row_profiles": [
+          {
+            "non_empty": 1,
+            "number": 0,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.0,
+            "row": 1
+          },
+          {
+            "non_empty": 14,
+            "number": 0,
+            "text": 14,
+            "date": 0,
+            "numeric_ratio": 0.0,
+            "row": 2
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 3
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 4
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 5
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 6
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 7
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 8
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 9
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 10
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 11
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 12
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 13
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 14
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 15
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 16
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 17
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 18
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 19
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 20
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 21
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 22
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 23
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 24
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 25
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 26
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 27
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 28
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 29
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 30
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 31
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 32
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 33
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 34
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 35
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 36
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 37
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 38
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 39
+          },
+          {
+            "non_empty": 14,
+            "number": 13,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.929,
+            "row": 40
+          }
+        ],
+        "year_samples": [
+          {
+            "cell": "A3",
+            "value": "61 年 1972"
+          },
+          {
+            "cell": "A4",
+            "value": "62 年 1973"
+          },
+          {
+            "cell": "A5",
+            "value": "63 年 1974"
+          },
+          {
+            "cell": "A6",
+            "value": "64 年 1975"
+          },
+          {
+            "cell": "A7",
+            "value": "65 年 1976"
+          },
+          {
+            "cell": "A8",
+            "value": "66 年 1977"
+          },
+          {
+            "cell": "A9",
+            "value": "67 年 1978"
+          },
+          {
+            "cell": "A10",
+            "value": "68 年 1979"
+          }
+        ],
+        "negative_count_in_scan": 0,
+        "negatives": []
+      }
+    ]
+  },
+  {
+    "file_name": "表2-2-歷年中華民國國民出國目的地人次統計.xlsx",
+    "sheet_count": 1,
+    "sheets": [
+      {
+        "sheet_name": "歷年出國按目的地",
+        "dimensions": {
+          "max_row": 52,
+          "max_column": 42,
+          "scanned_rows": 40
+        },
+        "merged_cell_count": 4,
+        "merged_cells": [
+          "AP2:AP3",
+          "AO2:AO3",
+          "A2:A3",
+          "A52:AP52"
+        ],
+        "first_majority_numeric_row": 4,
+        "head_rows": [
+          {
+            "row": 1,
+            "profile": {
+              "non_empty": 1,
+              "number": 0,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.0
+            },
+            "values": [
+              "歷年中華民國國民出國人次按目的地統計\nOutb…",
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          {
+            "row": 2,
+            "profile": {
+              "non_empty": 8,
+              "number": 0,
+              "text": 8,
+              "date": 0,
+              "numeric_ratio": 0.0
+            },
+            "values": [
+              "首站抵達地\nFirst Destination",
+              "亞洲地區 ASIA",
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          {
+            "row": 3,
+            "profile": {
+              "non_empty": 39,
+              "number": 0,
+              "text": 39,
+              "date": 0,
+              "numeric_ratio": 0.0
+            },
+            "values": [
+              null,
+              "香港\nHong Kong",
+              "澳門 Macao",
+              "大陸 Mainland China",
+              "日本 \nJapan",
+              "韓國 Korea",
+              "新加坡 Singapore",
+              "馬來西亞 Malaysia",
+              "泰國 Thailand",
+              "菲律賓 Philippines",
+              "印尼 Indonesia",
+              "汶淶 Brunei"
+            ]
+          },
+          {
+            "row": 4,
+            "profile": {
+              "non_empty": 36,
+              "number": 35,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.972
+            },
+            "values": [
+              "69年1980",
+              63812.0,
+              0.0,
+              0.0,
+              173581.0,
+              76995.0,
+              19563.0,
+              4418.0,
+              14956.0,
+              35718.0,
+              4507.0,
+              0.0
+            ]
+          },
+          {
+            "row": 5,
+            "profile": {
+              "non_empty": 36,
+              "number": 35,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.972
+            },
+            "values": [
+              "70年1981",
+              72418.0,
+              0.0,
+              0.0,
+              218486.0,
+              98241.0,
+              20251.0,
+              5035.0,
+              15919.0,
+              35170.0,
+              5694.0,
+              0.0
+            ]
+          },
+          {
+            "row": 6,
+            "profile": {
+              "non_empty": 36,
+              "number": 35,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.972
+            },
+            "values": [
+              "71年1982",
+              81558.0,
+              0.0,
+              0.0,
+              260414.0,
+              67002.0,
+              24124.0,
+              8996.0,
+              21726.0,
+              42274.0,
+              6985.0,
+              0.0
+            ]
+          },
+          {
+            "row": 7,
+            "profile": {
+              "non_empty": 36,
+              "number": 35,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.972
+            },
+            "values": [
+              "72年1983",
+              98754.0,
+              0.0,
+              0.0,
+              256102.0,
+              75007.0,
+              25656.0,
+              10320.0,
+              23631.0,
+              37375.0,
+              7693.0,
+              0.0
+            ]
+          },
+          {
+            "row": 8,
+            "profile": {
+              "non_empty": 36,
+              "number": 35,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.972
+            },
+            "values": [
+              "73年1984",
+              109075.0,
+              0.0,
+              0.0,
+              292127.0,
+              73088.0,
+              29648.0,
+              12974.0,
+              22619.0,
+              36549.0,
+              8221.0,
+              0.0
+            ]
+          },
+          {
+            "row": 9,
+            "profile": {
+              "non_empty": 36,
+              "number": 35,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.972
+            },
+            "values": [
+              "74年1985",
+              118405.0,
+              0.0,
+              0.0,
+              312173.0,
+              90272.0,
+              31212.0,
+              17150.0,
+              30467.0,
+              34303.0,
+              6780.0,
+              0.0
+            ]
+          },
+          {
+            "row": 10,
+            "profile": {
+              "non_empty": 36,
+              "number": 35,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.972
+            },
+            "values": [
+              "75年1986",
+              121427.0,
+              0.0,
+              0.0,
+              253524.0,
+              81644.0,
+              30831.0,
+              30841.0,
+              63271.0,
+              32510.0,
+              7058.0,
+              0.0
+            ]
+          },
+          {
+            "row": 11,
+            "profile": {
+              "non_empty": 36,
+              "number": 35,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.972
+            },
+            "values": [
+              "76年1987",
+              195501.0,
+              0.0,
+              0.0,
+              295007.0,
+              98014.0,
+              40194.0,
+              45411.0,
+              115472.0,
+              36866.0,
+              16035.0,
+              0.0
+            ]
+          },
+          {
+            "row": 12,
+            "profile": {
+              "non_empty": 36,
+              "number": 35,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.972
+            },
+            "values": [
+              "77年1988",
+              621846.0,
+              0.0,
+              0.0,
+              340488.0,
+              100569.0,
+              45989.0,
+              42251.0,
+              154853.0,
+              44309.0,
+              18994.0,
+              0.0
+            ]
+          },
+          {
+            "row": 13,
+            "profile": {
+              "non_empty": 36,
+              "number": 35,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.972
+            },
+            "values": [
+              "78年1989",
+              810977.0,
+              0.0,
+              0.0,
+              474245.0,
+              133867.0,
+              70924.0,
+              59936.0,
+              258668.0,
+              80678.0,
+              23301.0,
+              0.0
+            ]
+          },
+          {
+            "row": 14,
+            "profile": {
+              "non_empty": 36,
+              "number": 35,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.972
+            },
+            "values": [
+              "79年1990",
+              1245764.0,
+              0.0,
+              0.0,
+              591495.0,
+              221454.0,
+              96607.0,
+              57074.0,
+              355962.0,
+              65250.0,
+              32397.0,
+              0.0
+            ]
+          },
+          {
+            "row": 15,
+            "profile": {
+              "non_empty": 36,
+              "number": 35,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.972
+            },
+            "values": [
+              "80年1991",
+              1368295.0,
+              0.0,
+              0.0,
+              653242.0,
+              284902.0,
+              153811.0,
+              79820.0,
+              346310.0,
+              69527.0,
+              80386.0,
+              0.0
+            ]
+          }
+        ],
+        "row_profiles": [
+          {
+            "non_empty": 1,
+            "number": 0,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.0,
+            "row": 1
+          },
+          {
+            "non_empty": 8,
+            "number": 0,
+            "text": 8,
+            "date": 0,
+            "numeric_ratio": 0.0,
+            "row": 2
+          },
+          {
+            "non_empty": 39,
+            "number": 0,
+            "text": 39,
+            "date": 0,
+            "numeric_ratio": 0.0,
+            "row": 3
+          },
+          {
+            "non_empty": 36,
+            "number": 35,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.972,
+            "row": 4
+          },
+          {
+            "non_empty": 36,
+            "number": 35,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.972,
+            "row": 5
+          },
+          {
+            "non_empty": 36,
+            "number": 35,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.972,
+            "row": 6
+          },
+          {
+            "non_empty": 36,
+            "number": 35,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.972,
+            "row": 7
+          },
+          {
+            "non_empty": 36,
+            "number": 35,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.972,
+            "row": 8
+          },
+          {
+            "non_empty": 36,
+            "number": 35,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.972,
+            "row": 9
+          },
+          {
+            "non_empty": 36,
+            "number": 35,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.972,
+            "row": 10
+          },
+          {
+            "non_empty": 36,
+            "number": 35,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.972,
+            "row": 11
+          },
+          {
+            "non_empty": 36,
+            "number": 35,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.972,
+            "row": 12
+          },
+          {
+            "non_empty": 36,
+            "number": 35,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.972,
+            "row": 13
+          },
+          {
+            "non_empty": 36,
+            "number": 35,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.972,
+            "row": 14
+          },
+          {
+            "non_empty": 36,
+            "number": 35,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.972,
+            "row": 15
+          },
+          {
+            "non_empty": 36,
+            "number": 35,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.972,
+            "row": 16
+          },
+          {
+            "non_empty": 36,
+            "number": 35,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.972,
+            "row": 17
+          },
+          {
+            "non_empty": 36,
+            "number": 35,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.972,
+            "row": 18
+          },
+          {
+            "non_empty": 36,
+            "number": 35,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.972,
+            "row": 19
+          },
+          {
+            "non_empty": 36,
+            "number": 35,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.972,
+            "row": 20
+          },
+          {
+            "non_empty": 36,
+            "number": 35,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.972,
+            "row": 21
+          },
+          {
+            "non_empty": 36,
+            "number": 35,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.972,
+            "row": 22
+          },
+          {
+            "non_empty": 36,
+            "number": 35,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.972,
+            "row": 23
+          },
+          {
+            "non_empty": 36,
+            "number": 35,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.972,
+            "row": 24
+          },
+          {
+            "non_empty": 36,
+            "number": 35,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.972,
+            "row": 25
+          },
+          {
+            "non_empty": 36,
+            "number": 35,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.972,
+            "row": 26
+          },
+          {
+            "non_empty": 36,
+            "number": 35,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.972,
+            "row": 27
+          },
+          {
+            "non_empty": 36,
+            "number": 35,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.972,
+            "row": 28
+          },
+          {
+            "non_empty": 36,
+            "number": 35,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.972,
+            "row": 29
+          },
+          {
+            "non_empty": 36,
+            "number": 35,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.972,
+            "row": 30
+          },
+          {
+            "non_empty": 36,
+            "number": 35,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.972,
+            "row": 31
+          },
+          {
+            "non_empty": 36,
+            "number": 35,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.972,
+            "row": 32
+          },
+          {
+            "non_empty": 36,
+            "number": 35,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.972,
+            "row": 33
+          },
+          {
+            "non_empty": 36,
+            "number": 35,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.972,
+            "row": 34
+          },
+          {
+            "non_empty": 36,
+            "number": 35,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.972,
+            "row": 35
+          },
+          {
+            "non_empty": 36,
+            "number": 35,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.972,
+            "row": 36
+          },
+          {
+            "non_empty": 36,
+            "number": 35,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.972,
+            "row": 37
+          },
+          {
+            "non_empty": 36,
+            "number": 35,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.972,
+            "row": 38
+          },
+          {
+            "non_empty": 36,
+            "number": 35,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.972,
+            "row": 39
+          },
+          {
+            "non_empty": 36,
+            "number": 35,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.972,
+            "row": 40
+          }
+        ],
+        "year_samples": [
+          {
+            "cell": "A4",
+            "value": "69年1980"
+          },
+          {
+            "cell": "A5",
+            "value": "70年1981"
+          },
+          {
+            "cell": "A6",
+            "value": "71年1982"
+          },
+          {
+            "cell": "A7",
+            "value": "72年1983"
+          },
+          {
+            "cell": "A8",
+            "value": "73年1984"
+          },
+          {
+            "cell": "A9",
+            "value": "74年1985"
+          },
+          {
+            "cell": "A10",
+            "value": "75年1986"
+          },
+          {
+            "cell": "A11",
+            "value": "76年1987"
+          }
+        ],
+        "negative_count_in_scan": 0,
+        "negatives": []
+      }
+    ]
+  },
+  {
+    "file_name": "表2-3-歷年中華民國國民出國按年齡分.xlsx",
+    "sheet_count": 1,
+    "sheets": [
+      {
+        "sheet_name": "歷年出國人次按年齡",
+        "dimensions": {
+          "max_row": 34,
+          "max_column": 9,
+          "scanned_rows": 34
+        },
+        "merged_cell_count": 1,
+        "merged_cells": [
+          "A1:I1"
+        ],
+        "first_majority_numeric_row": 3,
+        "head_rows": [
+          {
+            "row": 1,
+            "profile": {
+              "non_empty": 1,
+              "number": 0,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.0
+            },
+            "values": [
+              "歷年中華民國國民出國人次按年齡分\nOutbou…",
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          },
+          {
+            "row": 2,
+            "profile": {
+              "non_empty": 9,
+              "number": 0,
+              "text": 9,
+              "date": 0,
+              "numeric_ratio": 0.0
+            },
+            "values": [
+              "年度\nYear",
+              "合計\nTotal",
+              "12歲以下\n12 and Under",
+              "13歲至19歲\n13-19",
+              "20至29歲\n20-29",
+              "30至39歲\n30-39",
+              "40至49歲\n40-49",
+              "50至59歲\n50-59",
+              "60歲及以上\n60 and Over"
+            ]
+          },
+          {
+            "row": 3,
+            "profile": {
+              "non_empty": 9,
+              "number": 8,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.889
+            },
+            "values": [
+              "83 年 1994",
+              4744434.0,
+              229946.0,
+              149377.0,
+              848742.0,
+              1341542.0,
+              1060228.0,
+              553786.0,
+              560813.0
+            ]
+          },
+          {
+            "row": 4,
+            "profile": {
+              "non_empty": 9,
+              "number": 8,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.889
+            },
+            "values": [
+              "84 年 1995",
+              5188658.0,
+              264834.0,
+              175463.0,
+              885733.0,
+              1433708.0,
+              1232282.0,
+              594795.0,
+              601843.0
+            ]
+          },
+          {
+            "row": 5,
+            "profile": {
+              "non_empty": 9,
+              "number": 8,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.889
+            },
+            "values": [
+              "85 年 1996",
+              5713535.0,
+              295856.0,
+              185797.0,
+              946872.0,
+              1541242.0,
+              1416450.0,
+              658686.0,
+              668632.0
+            ]
+          },
+          {
+            "row": 6,
+            "profile": {
+              "non_empty": 9,
+              "number": 8,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.889
+            },
+            "values": [
+              "86 年 1997",
+              6161932.0,
+              329484.0,
+              206522.0,
+              987896.0,
+              1635185.0,
+              1556780.0,
+              723567.0,
+              722498.0
+            ]
+          },
+          {
+            "row": 7,
+            "profile": {
+              "non_empty": 9,
+              "number": 8,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.889
+            },
+            "values": [
+              "87 年 1998",
+              5912383.0,
+              309263.0,
+              190905.0,
+              957483.0,
+              1596654.0,
+              1534787.0,
+              694042.0,
+              629249.0
+            ]
+          },
+          {
+            "row": 8,
+            "profile": {
+              "non_empty": 9,
+              "number": 8,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.889
+            },
+            "values": [
+              "88 年 1999",
+              6558663.0,
+              347768.0,
+              205439.0,
+              1063358.0,
+              1706145.0,
+              1675817.0,
+              819471.0,
+              740665.0
+            ]
+          },
+          {
+            "row": 9,
+            "profile": {
+              "non_empty": 9,
+              "number": 8,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.889
+            },
+            "values": [
+              "89 年 2000",
+              7328784.0,
+              372997.0,
+              215373.0,
+              1183005.0,
+              1895705.0,
+              1870102.0,
+              960780.0,
+              830822.0
+            ]
+          },
+          {
+            "row": 10,
+            "profile": {
+              "non_empty": 9,
+              "number": 8,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.889
+            },
+            "values": [
+              "90 年 2001",
+              7152877.0,
+              356148.0,
+              198212.0,
+              1144034.0,
+              1857176.0,
+              1835690.0,
+              992806.0,
+              768811.0
+            ]
+          },
+          {
+            "row": 11,
+            "profile": {
+              "non_empty": 9,
+              "number": 8,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.889
+            },
+            "values": [
+              "91 年 2002",
+              7319466.0,
+              362609.0,
+              187892.0,
+              1143178.0,
+              1856781.0,
+              1856786.0,
+              1099116.0,
+              813104.0
+            ]
+          },
+          {
+            "row": 12,
+            "profile": {
+              "non_empty": 9,
+              "number": 8,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.889
+            },
+            "values": [
+              "92 年 2003",
+              5923072.0,
+              314171.0,
+              143104.0,
+              916785.0,
+              1527652.0,
+              1510922.0,
+              917659.0,
+              592779.0
+            ]
+          },
+          {
+            "row": 13,
+            "profile": {
+              "non_empty": 9,
+              "number": 8,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.889
+            },
+            "values": [
+              "93 年 2004",
+              7780652.0,
+              410294.0,
+              196829.0,
+              1169039.0,
+              1958585.0,
+              1947352.0,
+              1272351.0,
+              826202.0
+            ]
+          },
+          {
+            "row": 14,
+            "profile": {
+              "non_empty": 9,
+              "number": 8,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.889
+            },
+            "values": [
+              "94 年 2005",
+              8208125.0,
+              435702.0,
+              213123.0,
+              1231561.0,
+              2056821.0,
+              2019107.0,
+              1411550.0,
+              840261.0
+            ]
+          },
+          {
+            "row": 15,
+            "profile": {
+              "non_empty": 9,
+              "number": 8,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.889
+            },
+            "values": [
+              "95 年 2006",
+              8671375.0,
+              463390.0,
+              237493.0,
+              1214104.0,
+              2126178.0,
+              2101623.0,
+              1599923.0,
+              928664.0
+            ]
+          }
+        ],
+        "row_profiles": [
+          {
+            "non_empty": 1,
+            "number": 0,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.0,
+            "row": 1
+          },
+          {
+            "non_empty": 9,
+            "number": 0,
+            "text": 9,
+            "date": 0,
+            "numeric_ratio": 0.0,
+            "row": 2
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 3
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 4
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 5
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 6
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 7
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 8
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 9
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 10
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 11
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 12
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 13
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 14
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 15
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 16
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 17
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 18
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 19
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 20
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 21
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 22
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 23
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 24
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 25
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 26
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 27
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 28
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 29
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 30
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 31
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 32
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 33
+          },
+          {
+            "non_empty": 9,
+            "number": 8,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.889,
+            "row": 34
+          }
+        ],
+        "year_samples": [
+          {
+            "cell": "A3",
+            "value": "83 年 1994"
+          },
+          {
+            "cell": "A4",
+            "value": "84 年 1995"
+          },
+          {
+            "cell": "A5",
+            "value": "85 年 1996"
+          },
+          {
+            "cell": "A6",
+            "value": "86 年 1997"
+          },
+          {
+            "cell": "A7",
+            "value": "87 年 1998"
+          },
+          {
+            "cell": "A8",
+            "value": "88 年 1999"
+          },
+          {
+            "cell": "A9",
+            "value": "89 年 2000"
+          },
+          {
+            "cell": "A10",
+            "value": "90 年 2001"
+          }
+        ],
+        "negative_count_in_scan": 0,
+        "negatives": []
+      }
+    ]
+  },
+  {
+    "file_name": "表4-1-歷年郵輪來臺旅客人次統計.xlsx",
+    "sheet_count": 1,
+    "sheets": [
+      {
+        "sheet_name": "歷年郵輪來臺遊客人次",
+        "dimensions": {
+          "max_row": 10,
+          "max_column": 3,
+          "scanned_rows": 10
+        },
+        "merged_cell_count": 1,
+        "merged_cells": [
+          "A1:C1"
+        ],
+        "first_majority_numeric_row": 3,
+        "head_rows": [
+          {
+            "row": 1,
+            "profile": {
+              "non_empty": 1,
+              "number": 0,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.0
+            },
+            "values": [
+              "歷年搭乘郵輪來臺旅客人數統計\nVisitor …",
+              null,
+              null
+            ]
+          },
+          {
+            "row": 2,
+            "profile": {
+              "non_empty": 3,
+              "number": 0,
+              "text": 3,
+              "date": 0,
+              "numeric_ratio": 0.0
+            },
+            "values": [
+              "年度\nYear",
+              "人數\nPersons",
+              "成長率 \n Rate of increase(…"
+            ]
+          },
+          {
+            "row": 3,
+            "profile": {
+              "non_empty": 3,
+              "number": 2,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.667
+            },
+            "values": [
+              "106 年 2017",
+              112548.0,
+              0
+            ]
+          },
+          {
+            "row": 4,
+            "profile": {
+              "non_empty": 3,
+              "number": 2,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.667
+            },
+            "values": [
+              "107 年 2018",
+              128305.0,
+              14.000248782741586
+            ]
+          },
+          {
+            "row": 5,
+            "profile": {
+              "non_empty": 3,
+              "number": 2,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.667
+            },
+            "values": [
+              "108 年 2019",
+              125251.0,
+              -2.380265772962862
+            ]
+          },
+          {
+            "row": 6,
+            "profile": {
+              "non_empty": 3,
+              "number": 2,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.667
+            },
+            "values": [
+              "109 年 2020",
+              9959.0,
+              -92.04876607771595
+            ]
+          },
+          {
+            "row": 7,
+            "profile": {
+              "non_empty": 3,
+              "number": 2,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.667
+            },
+            "values": [
+              "112 年 2023",
+              115081.0,
+              1055.5477457576062
+            ]
+          },
+          {
+            "row": 8,
+            "profile": {
+              "non_empty": 3,
+              "number": 2,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.667
+            },
+            "values": [
+              "113 年 2024",
+              90030.0,
+              -21.76814591461666
+            ]
+          },
+          {
+            "row": 9,
+            "profile": {
+              "non_empty": 3,
+              "number": 2,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.667
+            },
+            "values": [
+              "114 年 2025",
+              159252.0,
+              76.88770409863379
+            ]
+          },
+          {
+            "row": 10,
+            "profile": {
+              "non_empty": 2,
+              "number": 1,
+              "text": 1,
+              "date": 0,
+              "numeric_ratio": 0.5
+            },
+            "values": [
+              "總計 Grand Total",
+              740426.0,
+              null
+            ]
+          }
+        ],
+        "row_profiles": [
+          {
+            "non_empty": 1,
+            "number": 0,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.0,
+            "row": 1
+          },
+          {
+            "non_empty": 3,
+            "number": 0,
+            "text": 3,
+            "date": 0,
+            "numeric_ratio": 0.0,
+            "row": 2
+          },
+          {
+            "non_empty": 3,
+            "number": 2,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.667,
+            "row": 3
+          },
+          {
+            "non_empty": 3,
+            "number": 2,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.667,
+            "row": 4
+          },
+          {
+            "non_empty": 3,
+            "number": 2,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.667,
+            "row": 5
+          },
+          {
+            "non_empty": 3,
+            "number": 2,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.667,
+            "row": 6
+          },
+          {
+            "non_empty": 3,
+            "number": 2,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.667,
+            "row": 7
+          },
+          {
+            "non_empty": 3,
+            "number": 2,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.667,
+            "row": 8
+          },
+          {
+            "non_empty": 3,
+            "number": 2,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.667,
+            "row": 9
+          },
+          {
+            "non_empty": 2,
+            "number": 1,
+            "text": 1,
+            "date": 0,
+            "numeric_ratio": 0.5,
+            "row": 10
+          }
+        ],
+        "year_samples": [
+          {
+            "cell": "A3",
+            "value": "106 年 2017"
+          },
+          {
+            "cell": "A4",
+            "value": "107 年 2018"
+          },
+          {
+            "cell": "A5",
+            "value": "108 年 2019"
+          },
+          {
+            "cell": "A6",
+            "value": "109 年 2020"
+          },
+          {
+            "cell": "A7",
+            "value": "112 年 2023"
+          },
+          {
+            "cell": "A8",
+            "value": "113 年 2024"
+          },
+          {
+            "cell": "A9",
+            "value": "114 年 2025"
+          }
+        ],
+        "negative_count_in_scan": 3,
+        "negatives": [
+          {
+            "cell": "C5",
+            "value": -2.380265772962862
+          },
+          {
+            "cell": "C6",
+            "value": -92.04876607771595
+          },
+          {
+            "cell": "C8",
+            "value": -21.76814591461666
+          }
+        ]
+      }
+    ]
+  }
+]

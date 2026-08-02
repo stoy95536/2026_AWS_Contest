@@ -1,0 +1,3487 @@
+{
+  "catalog_version": "1.0",
+  "generated_at": "2026-08-02T10:43:59",
+  "confidence_thresholds": {
+    "auto": 0.85,
+    "minimum": 0.6
+  },
+  "summary": {
+    "file_count": 11,
+    "field_count": 193,
+    "high_confidence_field_count": 193,
+    "needs_manual_review_count": 2,
+    "fingerprint_cache": {
+      "distinct_structures": 11,
+      "hits": 0,
+      "misses": 11,
+      "hit_rate": 0.0
+    }
+  },
+  "files": [
+    {
+      "file_name": "表1-10-歷年來臺旅客觀光支出統計表.xlsx",
+      "sheet_topic": "表1-10-歷年來臺旅客觀光支出統計表",
+      "sheets": [
+        {
+          "sheet_name": "歷年觀光外匯收入",
+          "fingerprint": "947817070fc02678",
+          "header_rows": [
+            2
+          ],
+          "data_start_row": 3,
+          "data_end_row": 50,
+          "canonical_fields": [
+            {
+              "canonical_name": "觀光外匯收入_來臺人次",
+              "source_column": "來臺人次 No. of Visitors",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "B3:B50",
+              "sample_values": [
+                1110182.0,
+                1270977.0,
+                1340382.0
+              ],
+              "confidence": 0.9,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "觀光外匯收入_來臺旅客 觀光支出 (美元)",
+              "source_column": "來臺旅客 觀光支出 (美元) Visitor Expenditures (US$)",
+              "unit": "美元",
+              "dtype": "number",
+              "cell_range": "C3:C50",
+              "sample_values": [
+                527492000.0,
+                608000000.0,
+                919000000.0
+              ],
+              "confidence": 0.9,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "觀光外匯收入_成長率",
+              "source_column": "成長率 Growth Rate (%)",
+              "unit": "%",
+              "dtype": "number",
+              "cell_range": "D3:D50",
+              "sample_values": [
+                13.177,
+                15.2624,
+                51.1513
+              ],
+              "confidence": 0.9,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "觀光外匯收入_指數 80年=100",
+              "source_column": "指數 80年=100 Index 1991=100",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "E3:E50",
+              "sample_values": [
+                26.14,
+                30.13,
+                45.54
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "觀光外匯收入_每一旅客 平均在臺 消費額(美元）",
+              "source_column": "每一旅客 平均在臺 消費額(美元） Spending Per Person (US$)",
+              "unit": "美元",
+              "dtype": "number",
+              "cell_range": "F3:F50",
+              "sample_values": [
+                475.14,
+                478.37,
+                685.58
+              ],
+              "confidence": 0.9,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "觀光外匯收入_每一旅客 每日平均 消費額(美元）",
+              "source_column": "每一旅客 每日平均 消費額(美元） Spending Per Person Per Day (US$)",
+              "unit": "美元",
+              "dtype": "number",
+              "cell_range": "G3:G50",
+              "sample_values": [
+                72.43,
+                70.87,
+                95.22
+              ],
+              "confidence": 0.9,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "觀光外匯收入_每一旅客 平均在臺 停留夜數(夜)",
+              "source_column": "每一旅客 平均在臺 停留夜數(夜) Average Length of Stay (Nights)",
+              "unit": "夜",
+              "dtype": "number",
+              "cell_range": "H3:H50",
+              "sample_values": [
+                6.56,
+                6.75,
+                7.2
+              ],
+              "confidence": 0.9,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            }
+          ],
+          "dimension_columns": [
+            "年度"
+          ],
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "file_name": "表1-2-歷年來臺旅客按居住地分.xlsx",
+      "sheet_topic": "表1-2-歷年來臺旅客按居住地分",
+      "sheets": [
+        {
+          "sheet_name": "歷年來臺旅客-按居住地",
+          "fingerprint": "b3ad5edcec30b0a9",
+          "header_rows": [
+            2,
+            3,
+            4
+          ],
+          "data_start_row": 5,
+          "data_end_row": 74,
+          "canonical_fields": [
+            {
+              "canonical_name": "來臺旅客_亞洲地區_香港.澳門",
+              "source_column": "亞洲地區 > 香港.澳門 HongKong. Macao",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "C5:C74",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_亞洲地區_大陸",
+              "source_column": "亞洲地區 > 大陸 Mainland China",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "D5:D74",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_亞洲地區_日本",
+              "source_column": "亞洲地區 > 日本 Japan",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "E5:E74",
+              "sample_values": [
+                1042.0,
+                1476.0,
+                1998.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_亞洲地區_韓國",
+              "source_column": "亞洲地區 > 韓國 Korea",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "F5:F74",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_亞洲地區_印度",
+              "source_column": "亞洲地區 > 印度 India",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "G5:G74",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_亞洲地區_中東",
+              "source_column": "亞洲地區 > 中東 Middle East",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "H5:H74",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_亞洲地區_東南亞地區_馬來西亞",
+              "source_column": "亞洲地區 > 東南亞地區 > 馬來西亞 Malaysia",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "I5:I74",
+              "sample_values": [
+                2.0,
+                3.0,
+                7.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_亞洲地區_東南亞地區_新加坡",
+              "source_column": "亞洲地區 > 東南亞地區 > 新加坡 Singapore",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "J5:J74",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_亞洲地區_東南亞地區_印尼",
+              "source_column": "亞洲地區 > 東南亞地區 > 印尼 Indonesia",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "K5:K74",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_亞洲地區_東南亞地區_菲律賓",
+              "source_column": "亞洲地區 > 東南亞地區 > 菲律賓 Philippines",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "L5:L74",
+              "sample_values": [
+                360.0,
+                706.0,
+                614.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_亞洲地區_東南亞地區_泰國",
+              "source_column": "亞洲地區 > 東南亞地區 > 泰國 Thailand",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "M5:M74",
+              "sample_values": [
+                100.0,
+                281.0,
+                262.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_亞洲地區_東南亞地區_越南",
+              "source_column": "亞洲地區 > 東南亞地區 > 越南 Vietnam",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "N5:N74",
+              "sample_values": [
+                85.0,
+                17.0,
+                68.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_亞洲地區_東南亞地區_東南亞其他地區",
+              "source_column": "亞洲地區 > 東南亞地區 > 東南亞其他地區 Others",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "O5:O74",
+              "sample_values": [
+                -547.0,
+                -1007.0,
+                -951.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "residual",
+              "notes": [
+                "彙總欄（residual），不可與同群組明細欄一起加總",
+                "量值欄含負數，疑似小計調整或缺值標記"
+              ]
+            },
+            {
+              "canonical_name": "來臺旅客_亞洲地區_東南亞地區_東南亞小計",
+              "source_column": "亞洲地區 > 東南亞地區 > 東南亞小計 Sub-Total",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "P5:P74",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "subtotal",
+              "notes": [
+                "彙總欄（subtotal），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "來臺旅客_亞洲地區_亞洲其他地區",
+              "source_column": "亞洲地區 > 亞洲其他地區 Others",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "Q5:Q74",
+              "sample_values": [
+                559.0,
+                1007.0,
+                951.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "residual",
+              "notes": [
+                "彙總欄（residual），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "來臺旅客_亞洲地區_亞洲合計",
+              "source_column": "亞洲地區 > 亞洲合計 Total",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "R5:R74",
+              "sample_values": [
+                1601.0,
+                2483.0,
+                2949.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "total",
+              "notes": [
+                "彙總欄（total），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "來臺旅客_美洲地區_加拿大",
+              "source_column": "美洲地區 > 加拿大 Canada",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "S5:S74",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_美洲地區_美國",
+              "source_column": "美洲地區 > 美國 U.S.A.",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "T5:T74",
+              "sample_values": [
+                8646.0,
+                9851.0,
+                10613.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_美洲地區_墨西哥",
+              "source_column": "美洲地區 > 墨西哥 Mexico",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "U5:U74",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_美洲地區_巴西",
+              "source_column": "美洲地區 > 巴西 Brazil",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "V5:V74",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_美洲地區_阿根廷",
+              "source_column": "美洲地區 > 阿根廷 Argentina",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "W5:W74",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_美洲地區_美洲其他地區",
+              "source_column": "美洲地區 > 美洲其他地區 Others",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "X5:X74",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "residual",
+              "notes": [
+                "彙總欄（residual），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "來臺旅客_美洲地區_美洲合計",
+              "source_column": "美洲地區 > 美洲合計 Total",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "Y5:Y74",
+              "sample_values": [
+                8646.0,
+                9851.0,
+                10613.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "total",
+              "notes": [
+                "彙總欄（total），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "來臺旅客_歐洲地區_比利時",
+              "source_column": "歐洲地區 > 比利時 Belgium",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "Z5:Z74",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_歐洲地區_法國",
+              "source_column": "歐洲地區 > 法國 France",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AA5:AA74",
+              "sample_values": [
+                119.0,
+                144.0,
+                135.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_歐洲地區_德國",
+              "source_column": "歐洲地區 > 德國 Germany",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AB5:AB74",
+              "sample_values": [
+                187.0,
+                157.0,
+                201.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_歐洲地區_義大利",
+              "source_column": "歐洲地區 > 義大利 Italy",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AC5:AC74",
+              "sample_values": [
+                42.0,
+                34.0,
+                68.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_歐洲地區_荷蘭",
+              "source_column": "歐洲地區 > 荷蘭 Netherlands",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AD5:AD74",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_歐洲地區_瑞士",
+              "source_column": "歐洲地區 > 瑞士 Switzerland",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AE5:AE74",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_歐洲地區_西班牙",
+              "source_column": "歐洲地區 > 西班牙 Spain",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AF5:AF74",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_歐洲地區_英國",
+              "source_column": "歐洲地區 > 英國 U.K.",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AG5:AG74",
+              "sample_values": [
+                346.0,
+                419.0,
+                456.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_歐洲地區_奧地利",
+              "source_column": "歐洲地區 > 奧地利 Austria",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AH5:AH74",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_歐洲地區_希臘",
+              "source_column": "歐洲地區 > 希臘 Greece",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AI5:AI74",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_歐洲地區_瑞典",
+              "source_column": "歐洲地區 > 瑞典 Sweden",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AJ5:AJ74",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_歐洲地區_俄羅斯",
+              "source_column": "歐洲地區 > 俄羅斯 Russian",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AK5:AK74",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_歐洲地區_歐洲其他地區",
+              "source_column": "歐洲地區 > 歐洲其他地區 Others",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AL5:AL74",
+              "sample_values": [
+                237.0,
+                239.0,
+                259.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "residual",
+              "notes": [
+                "彙總欄（residual），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "來臺旅客_歐洲地區_歐洲合計",
+              "source_column": "歐洲地區 > 歐洲合計 Total",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AM5:AM74",
+              "sample_values": [
+                931.0,
+                993.0,
+                1119.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "total",
+              "notes": [
+                "彙總欄（total），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "來臺旅客_大洋洲_澳大利亞",
+              "source_column": "大洋洲 > 澳大利亞 Australia",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AN5:AN74",
+              "sample_values": [
+                65.0,
+                112.0,
+                115.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_大洋洲_紐西蘭",
+              "source_column": "大洋洲 > 紐西蘭 New Zealand",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AO5:AO74",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_大洋洲_大洋洲其他地區",
+              "source_column": "大洋洲 > 大洋洲其他地區 Others",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AP5:AP74",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "residual",
+              "notes": [
+                "彙總欄（residual），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "來臺旅客_大洋洲_大洋洲合計",
+              "source_column": "大洋洲 > 大洋洲合計 Total",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AQ5:AQ74",
+              "sample_values": [
+                65.0,
+                112.0,
+                115.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "total",
+              "notes": [
+                "彙總欄（total），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "來臺旅客_非洲地區_南非",
+              "source_column": "非洲地區 > 南非 S. Africa",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AR5:AR74",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_非洲地區_非洲其他地區",
+              "source_column": "非洲地區 > 非洲其他地區 Others",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AS5:AS74",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "residual",
+              "notes": [
+                "彙總欄（residual），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "來臺旅客_非洲地區_非洲合計",
+              "source_column": "非洲地區 > 非洲合計 Total",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AT5:AT74",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "total",
+              "notes": [
+                "彙總欄（total），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "來臺旅客_未列明",
+              "source_column": "未列明 Unstated",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AU5:AU74",
+              "sample_values": [
+                3731.0,
+                4720.0,
+                1913.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "residual",
+              "notes": [
+                "彙總欄（residual），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "來臺旅客_總計",
+              "source_column": "總計 Grand Total",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AV5:AV74",
+              "sample_values": [
+                14974.0,
+                18159.0,
+                16709.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "total",
+              "notes": [
+                "彙總欄（total），不可與同群組明細欄一起加總"
+              ]
+            }
+          ],
+          "dimension_columns": [
+            "年度"
+          ],
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "file_name": "表1-3-歷年來臺旅客按國籍分.xlsx",
+      "sheet_topic": "表1-3-歷年來臺旅客按國籍分",
+      "sheets": [
+        {
+          "sheet_name": "歷年來臺旅客-按國籍",
+          "fingerprint": "401c2e87bbf01a8d",
+          "header_rows": [
+            2,
+            3,
+            4
+          ],
+          "data_start_row": 5,
+          "data_end_row": 66,
+          "canonical_fields": [
+            {
+              "canonical_name": "來臺旅客_亞洲地區_日本",
+              "source_column": "亞洲地區 > 日本 Japan",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "C5:C66",
+              "sample_values": [
+                22733.0,
+                40424.0,
+                56677.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_韓國",
+              "source_column": "韓國 Korea",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "D5:D66",
+              "sample_values": [
+                1066.0,
+                1571.0,
+                2149.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_印度",
+              "source_column": "印度 India",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "E5:E66",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_中東",
+              "source_column": "中東 Middle East",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "F5:F66",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_東南亞地區_馬來西亞",
+              "source_column": "東南亞地區 > 馬來西亞 Malaysia",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "G5:G66",
+              "sample_values": [
+                2592.0,
+                4465.0,
+                5290.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_東南亞地區_新加坡",
+              "source_column": "東南亞地區 > 新加坡 Singapore",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "H5:H66",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_東南亞地區_印尼",
+              "source_column": "東南亞地區 > 印尼 Indonesia",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "I5:I66",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_東南亞地區_菲律賓",
+              "source_column": "東南亞地區 > 菲律賓 Philippines",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "J5:J66",
+              "sample_values": [
+                5161.0,
+                6231.0,
+                9345.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_東南亞地區_泰國",
+              "source_column": "東南亞地區 > 泰國 Thailand",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "K5:K66",
+              "sample_values": [
+                2195.0,
+                2842.0,
+                3782.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_東南亞地區_越南",
+              "source_column": "東南亞地區 > 越南 Vietnam",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "L5:L66",
+              "sample_values": [
+                803.0,
+                824.0,
+                1045.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_東南亞地區_東南亞其他地區",
+              "source_column": "東南亞地區 > 東南亞其他地區 Others",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "M5:M66",
+              "sample_values": [
+                -10751.0,
+                -14362.0,
+                -19462.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "residual",
+              "notes": [
+                "彙總欄（residual），不可與同群組明細欄一起加總",
+                "量值欄含負數，疑似小計調整或缺值標記"
+              ]
+            },
+            {
+              "canonical_name": "來臺旅客_東南亞地區_東南亞小計",
+              "source_column": "東南亞地區 > 東南亞小計 Sub-Total",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "N5:N66",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "subtotal",
+              "notes": [
+                "彙總欄（subtotal），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "來臺旅客_亞洲其他地區",
+              "source_column": "亞洲其他地區 Others",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "O5:O66",
+              "sample_values": [
+                10751.0,
+                14362.0,
+                19462.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "residual",
+              "notes": [
+                "彙總欄（residual），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "來臺旅客_亞洲合計",
+              "source_column": "亞洲合計 Total",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "P5:P66",
+              "sample_values": [
+                34550.0,
+                56357.0,
+                78288.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "total",
+              "notes": [
+                "彙總欄（total），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "來臺旅客_美洲地區_加拿大",
+              "source_column": "美洲地區 > 加拿大 Canada",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "Q5:Q66",
+              "sample_values": [
+                1010.0,
+                1369.0,
+                1946.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_美國",
+              "source_column": "美國 U.S.A.",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "R5:R66",
+              "sample_values": [
+                38754.0,
+                47843.0,
+                62963.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_墨西哥",
+              "source_column": "墨西哥 Mexico",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "S5:S66",
+              "sample_values": [
+                120.0,
+                165.0,
+                208.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_巴西",
+              "source_column": "巴西 Brazil",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "T5:T66",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_阿根廷",
+              "source_column": "阿根廷 Argentina",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "U5:U66",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_美洲其他地區",
+              "source_column": "美洲其他地區 Others",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "V5:V66",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "residual",
+              "notes": [
+                "彙總欄（residual），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "來臺旅客_美洲合計",
+              "source_column": "美洲合計 Total",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "W5:W66",
+              "sample_values": [
+                39884.0,
+                49377.0,
+                65117.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "total",
+              "notes": [
+                "彙總欄（total），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "來臺旅客_歐洲地區_比利時",
+              "source_column": "歐洲地區 > 比利時 Belgium",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "X5:X66",
+              "sample_values": [
+                127.0,
+                159.0,
+                167.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_法國",
+              "source_column": "法國 France",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "Y5:Y66",
+              "sample_values": [
+                265.0,
+                371.0,
+                437.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_德國",
+              "source_column": "德國 Germany",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "Z5:Z66",
+              "sample_values": [
+                1089.0,
+                1553.0,
+                1707.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_義大利",
+              "source_column": "義大利 Italy",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AA5:AA66",
+              "sample_values": [
+                262.0,
+                367.0,
+                405.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_荷蘭",
+              "source_column": "荷蘭 Netherlands",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AB5:AB66",
+              "sample_values": [
+                254.0,
+                380.0,
+                442.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_瑞士",
+              "source_column": "瑞士 Switzerland",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AC5:AC66",
+              "sample_values": [
+                351.0,
+                471.0,
+                617.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_西班牙",
+              "source_column": "西班牙 Spain",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AD5:AD66",
+              "sample_values": [
+                147.0,
+                162.0,
+                192.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_英國",
+              "source_column": "英國 U.K.",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AE5:AE66",
+              "sample_values": [
+                2619.0,
+                3252.0,
+                4343.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_奧地利",
+              "source_column": "奧地利 Austria",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AF5:AF66",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_希臘",
+              "source_column": "希臘 Greece",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AG5:AG66",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_瑞典",
+              "source_column": "瑞典 Sweden",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AH5:AH66",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_歐洲其他地區",
+              "source_column": "歐洲其他地區 Others",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AI5:AI66",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "residual",
+              "notes": [
+                "彙總欄（residual），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "來臺旅客_歐洲合計",
+              "source_column": "歐洲合計 Total",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AJ5:AJ66",
+              "sample_values": [
+                5114.0,
+                6715.0,
+                8310.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "total",
+              "notes": [
+                "彙總欄（total），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "來臺旅客_大洋洲_澳大利亞",
+              "source_column": "大洋洲 > 澳大利亞 Australia",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AK5:AK66",
+              "sample_values": [
+                1849.0,
+                3503.0,
+                4773.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_紐西蘭",
+              "source_column": "紐西蘭 New Zealand",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AL5:AL66",
+              "sample_values": [
+                218.0,
+                432.0,
+                534.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_大洋洲其他地區",
+              "source_column": "大洋洲其他地區 Others",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AM5:AM66",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "residual",
+              "notes": [
+                "彙總欄（residual），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "來臺旅客_大洋洲合計",
+              "source_column": "大洋洲合計 Total",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AN5:AN66",
+              "sample_values": [
+                2067.0,
+                3935.0,
+                5307.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "total",
+              "notes": [
+                "彙總欄（total），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "來臺旅客_非洲地區_南非",
+              "source_column": "非洲地區 > 南非 S. Africa",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AO5:AO66",
+              "sample_values": [
+                86.0,
+                152.0,
+                226.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_非洲其他地區",
+              "source_column": "非洲其他地區 Others",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AP5:AP66",
+              "sample_values": [
+                0.0,
+                4.0,
+                26.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "residual",
+              "notes": [
+                "彙總欄（residual），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "來臺旅客_非洲合計",
+              "source_column": "非洲合計 Total",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AQ5:AQ66",
+              "sample_values": [
+                86.0,
+                156.0,
+                252.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "total",
+              "notes": [
+                "彙總欄（total），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "來臺旅客_未列明",
+              "source_column": "未列明 Unstated",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AR5:AR66",
+              "sample_values": [
+                1316.0,
+                1920.0,
+                3005.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "residual",
+              "notes": [
+                "彙總欄（residual），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "來臺旅客_華僑",
+              "source_column": "華僑 Overseas chinese",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AS5:AS66",
+              "sample_values": [
+                12464.0,
+                15206.0,
+                22669.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_總計",
+              "source_column": "總計 Grand Total",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AT5:AT66",
+              "sample_values": [
+                95481.0,
+                133666.0,
+                182948.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "total",
+              "notes": [
+                "彙總欄（total），不可與同群組明細欄一起加總"
+              ]
+            }
+          ],
+          "dimension_columns": [
+            "年度"
+          ],
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "file_name": "表1-4-歷年來臺旅客按性別分.xlsx",
+      "sheet_topic": "表1-4-歷年來臺旅客按性別分",
+      "sheets": [
+        {
+          "sheet_name": "歷年來臺旅客-按性別",
+          "fingerprint": "78177eca26ac4280",
+          "header_rows": [
+            2,
+            3
+          ],
+          "data_start_row": 4,
+          "data_end_row": 64,
+          "canonical_fields": [
+            {
+              "canonical_name": "來臺旅客_合計",
+              "source_column": "合計 Total",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "B4:B64",
+              "sample_values": [
+                118460.0,
+                160279.0,
+                198218.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "total",
+              "notes": [
+                "彙總欄（total），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "來臺旅客_男_人次",
+              "source_column": "男 Male > 人次 No. of Visitors",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "C4:C64",
+              "sample_values": [
+                82031.0,
+                114191.0,
+                138470.0
+              ],
+              "confidence": 0.9,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_男_佔合計百分比 %",
+              "source_column": "男 Male > 佔合計百分比 % of Total",
+              "unit": "%",
+              "dtype": "number",
+              "cell_range": "D4:D64",
+              "sample_values": [
+                69.2478,
+                71.2451,
+                69.8574
+              ],
+              "confidence": 0.9,
+              "alignment_method": "rule",
+              "aggregation_role": "total",
+              "notes": [
+                "彙總欄（total），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "來臺旅客_女_人次",
+              "source_column": "女 Female > 人次 No. of Visitors",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "E4:E64",
+              "sample_values": [
+                36429.0,
+                46088.0,
+                59748.0
+              ],
+              "confidence": 0.9,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_女_佔合計百分比 %",
+              "source_column": "女 Female > 佔合計百分比 % of Total",
+              "unit": "%",
+              "dtype": "number",
+              "cell_range": "F4:F64",
+              "sample_values": [
+                30.7522,
+                28.7549,
+                30.1426
+              ],
+              "confidence": 0.9,
+              "alignment_method": "rule",
+              "aggregation_role": "total",
+              "notes": [
+                "彙總欄（total），不可與同群組明細欄一起加總"
+              ]
+            }
+          ],
+          "dimension_columns": [
+            "年度"
+          ],
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "file_name": "表1-5-歷年來臺旅客按年齡分.xlsx",
+      "sheet_topic": "表1-5-歷年來臺旅客按年齡分",
+      "sheets": [
+        {
+          "sheet_name": "歷年來臺旅客-按年齡",
+          "fingerprint": "44db5f47c5d0817c",
+          "header_rows": [
+            2
+          ],
+          "data_start_row": 3,
+          "data_end_row": 60,
+          "canonical_fields": [
+            {
+              "canonical_name": "來臺旅客_合計",
+              "source_column": "合計 Total",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "B3:B60",
+              "sample_values": [
+                250599.0,
+                321188.0,
+                409756.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "total",
+              "notes": [
+                "彙總欄（total），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "來臺旅客_9歲及以下 9",
+              "source_column": "9歲及以下 9 years and Under",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "C3:C60",
+              "sample_values": [
+                4751.0,
+                7467.0,
+                7771.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_10至19歲 10-19",
+              "source_column": "10至19歲 10-19 years",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "D3:D60",
+              "sample_values": [
+                7420.0,
+                11100.0,
+                13317.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_20至29歲 20-29",
+              "source_column": "20至29歲 20-29 years",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "E3:E60",
+              "sample_values": [
+                44702.0,
+                56580.0,
+                70818.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_30至39歲 30-39",
+              "source_column": "30至39歲 30-39 years",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "F3:F60",
+              "sample_values": [
+                59184.0,
+                75664.0,
+                99601.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_40至49歲 40-49",
+              "source_column": "40至49歲 40-49 years",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "G3:G60",
+              "sample_values": [
+                62569.0,
+                76554.0,
+                93984.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_50至59歲 50-59",
+              "source_column": "50至59歲 50-59 years",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "H3:H60",
+              "sample_values": [
+                39491.0,
+                51771.0,
+                66259.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_60歲以上 60",
+              "source_column": "60歲以上 60 years and Over",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "I3:I60",
+              "sample_values": [
+                32482.0,
+                42052.0,
+                58006.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            }
+          ],
+          "dimension_columns": [
+            "年度"
+          ],
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "file_name": "表1-7-歷年來臺旅客按搭乘交通工具及入境港口分.xlsx",
+      "sheet_topic": "表1-7-歷年來臺旅客按搭乘交通工具及入境港口分",
+      "sheets": [
+        {
+          "sheet_name": "歷年來臺旅客-按搭乘交通工具及入境港口",
+          "fingerprint": "4c613da88cebcf96",
+          "header_rows": [
+            2,
+            3
+          ],
+          "data_start_row": 4,
+          "data_end_row": 68,
+          "canonical_fields": [
+            {
+              "canonical_name": "來臺旅客_合計",
+              "source_column": "合計 Total",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "B4:B68",
+              "sample_values": [
+                34831.0,
+                44625.0,
+                61348.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "total",
+              "notes": [
+                "彙總欄（total），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "來臺旅客_輪船_小計",
+              "source_column": "輪船 Sea > 小計 Sub- total",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "C4:C68",
+              "sample_values": [
+                6313.0,
+                7583.0,
+                7625.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "subtotal",
+              "notes": [
+                "彙總欄（subtotal），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "來臺旅客_輪船_基隆",
+              "source_column": "輪船 Sea > 基隆 Kee- lung",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "D4:D68",
+              "sample_values": [
+                5564.0,
+                7031.0,
+                6652.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_輪船_臺中",
+              "source_column": "輪船 Sea > 臺中 Tai- chung",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "E4:E68",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_輪船_高雄",
+              "source_column": "輪船 Sea > 高雄 Kao- hsiung",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "F4:F68",
+              "sample_values": [
+                749.0,
+                552.0,
+                973.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_輪船_其他",
+              "source_column": "輪船 Sea > 其他 Others",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "G4:G68",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "residual",
+              "notes": [
+                "彙總欄（residual），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "來臺旅客_飛機_小計",
+              "source_column": "飛機 Air > 小計 Subtotal",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "H4:H68",
+              "sample_values": [
+                28518.0,
+                37042.0,
+                53723.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "subtotal",
+              "notes": [
+                "彙總欄（subtotal），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "來臺旅客_飛機_松山",
+              "source_column": "飛機 Air > 松山 Sung- Shan",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "I4:I68",
+              "sample_values": [
+                28518.0,
+                37042.0,
+                53723.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_飛機_桃園機場",
+              "source_column": "飛機 Air > 桃園機場 TTY",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "J4:J68",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_飛機_臺中",
+              "source_column": "飛機 Air > 臺中 Tai- chung",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "K4:K68",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_飛機_高雄",
+              "source_column": "飛機 Air > 高雄 Kao- hsiung",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "L4:L68",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_飛機_其他",
+              "source_column": "飛機 Air > 其他 Others",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "M4:M68",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "residual",
+              "notes": [
+                "彙總欄（residual），不可與同群組明細欄一起加總"
+              ]
+            }
+          ],
+          "dimension_columns": [
+            "年度"
+          ],
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "file_name": "表1-8-歷年來臺旅客按停留夜數分.xlsx",
+      "sheet_topic": "表1-8-歷年來臺旅客按停留夜數分",
+      "sheets": [
+        {
+          "sheet_name": "歷年來臺旅客-按停留夜數",
+          "fingerprint": "28ffcaa1c7e544ea",
+          "header_rows": [
+            2,
+            3
+          ],
+          "data_start_row": 4,
+          "data_end_row": 58,
+          "canonical_fields": [
+            {
+              "canonical_name": "來臺旅客_停留夜數_1",
+              "source_column": "停留夜數 Length of Stay (Nights) > 1",
+              "unit": "夜",
+              "dtype": "number",
+              "cell_range": "B4:B58",
+              "sample_values": [
+                73477.0,
+                72013.0,
+                72075.0
+              ],
+              "confidence": 0.9,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_停留夜數_2",
+              "source_column": "停留夜數 Length of Stay (Nights) > 2",
+              "unit": "夜",
+              "dtype": "number",
+              "cell_range": "C4:C58",
+              "sample_values": [
+                118224.0,
+                127955.0,
+                164546.0
+              ],
+              "confidence": 0.9,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_停留夜數_3",
+              "source_column": "停留夜數 Length of Stay (Nights) > 3",
+              "unit": "夜",
+              "dtype": "number",
+              "cell_range": "D4:D58",
+              "sample_values": [
+                110134.0,
+                114194.0,
+                177338.0
+              ],
+              "confidence": 0.9,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_停留夜數_4",
+              "source_column": "停留夜數 Length of Stay (Nights) > 4",
+              "unit": "夜",
+              "dtype": "number",
+              "cell_range": "E4:E58",
+              "sample_values": [
+                43380.0,
+                45948.0,
+                73987.0
+              ],
+              "confidence": 0.9,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_停留夜數_5-7",
+              "source_column": "停留夜數 Length of Stay (Nights) > 5-7",
+              "unit": "夜",
+              "dtype": "number",
+              "cell_range": "F4:F58",
+              "sample_values": [
+                49182.0,
+                71164.0,
+                125813.0
+              ],
+              "confidence": 0.9,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_停留夜數_8-15",
+              "source_column": "停留夜數 Length of Stay (Nights) > 8-15",
+              "unit": "夜",
+              "dtype": "number",
+              "cell_range": "G4:G58",
+              "sample_values": [
+                34526.0,
+                35377.0,
+                39330.0
+              ],
+              "confidence": 0.9,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_停留夜數_16-30",
+              "source_column": "停留夜數 Length of Stay (Nights) > 16-30",
+              "unit": "夜",
+              "dtype": "number",
+              "cell_range": "H4:H58",
+              "sample_values": [
+                20521.0,
+                19542.0,
+                24259.0
+              ],
+              "confidence": 0.9,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_停留夜數_31-60",
+              "source_column": "停留夜數 Length of Stay (Nights) > 31-60",
+              "unit": "夜",
+              "dtype": "number",
+              "cell_range": "I4:I58",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.9,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_停留夜數_61-90",
+              "source_column": "停留夜數 Length of Stay (Nights) > 61-90",
+              "unit": "夜",
+              "dtype": "number",
+              "cell_range": "J4:J58",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.9,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_停留夜數_90以上",
+              "source_column": "停留夜數 Length of Stay (Nights) > 90以上 Over 90 Nights",
+              "unit": "夜",
+              "dtype": "number",
+              "cell_range": "K4:K58",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.9,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_停留夜數合計",
+              "source_column": "停留夜數合計 Total Visitor Nights",
+              "unit": "夜",
+              "dtype": "number",
+              "cell_range": "L4:L58",
+              "sample_values": [
+                2068397.0,
+                2228071.0,
+                3109287.0
+              ],
+              "confidence": 0.9,
+              "alignment_method": "rule",
+              "aggregation_role": "total",
+              "notes": [
+                "彙總欄（total），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "來臺旅客_人數合計",
+              "source_column": "人數合計 Total Visitors",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "M4:M58",
+              "sample_values": [
+                449444.0,
+                486193.0,
+                677348.0
+              ],
+              "confidence": 0.9,
+              "alignment_method": "rule",
+              "aggregation_role": "total",
+              "notes": [
+                "彙總欄（total），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "來臺旅客_平均停留夜數 (夜數)",
+              "source_column": "平均停留夜數 (夜數) Average Length of Stay (Nights)",
+              "unit": "夜",
+              "dtype": "number",
+              "cell_range": "N4:N58",
+              "sample_values": [
+                4.6021,
+                4.5827,
+                4.5904
+              ],
+              "confidence": 0.9,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            }
+          ],
+          "dimension_columns": [
+            "年度"
+          ],
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "file_name": "表1-9-歷年來臺旅客按目的分.xlsx",
+      "sheet_topic": "表1-9-歷年來臺旅客按目的分",
+      "sheets": [
+        {
+          "sheet_name": "歷年來臺旅客-按目的",
+          "fingerprint": "3b2300c0ed3940c5",
+          "header_rows": [
+            2
+          ],
+          "data_start_row": 3,
+          "data_end_row": 56,
+          "canonical_fields": [
+            {
+              "canonical_name": "來臺旅客_合計",
+              "source_column": "合計 Total",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "B3:B56",
+              "sample_values": [
+                580033.0,
+                824393.0,
+                819821.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "total",
+              "notes": [
+                "彙總欄（total），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "來臺旅客_業務",
+              "source_column": "業務 Business",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "C3:C56",
+              "sample_values": [
+                32653.0,
+                17035.0,
+                20920.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_觀光",
+              "source_column": "觀光 Pleasure",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "D3:D56",
+              "sample_values": [
+                73535.0,
+                115574.0,
+                113824.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_探親",
+              "source_column": "探親 Visit Relatives",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "E3:E56",
+              "sample_values": [
+                3301.0,
+                2422.0,
+                1606.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_會議",
+              "source_column": "會議 Conference",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "F3:F56",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_求學",
+              "source_column": "求學 Study",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "G3:G56",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_工商考察",
+              "source_column": "工商考察 Commercial",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "H3:H56",
+              "sample_values": [
+                3482.0,
+                2622.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_業務與觀光",
+              "source_column": "業務與觀光 Business/ Pleasure",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "I3:I56",
+              "sample_values": [
+                300883.0,
+                552556.0,
+                538400.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_渡假",
+              "source_column": "渡假 Vacation",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "J3:J56",
+              "sample_values": [
+                138358.0,
+                132158.0,
+                142636.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_展覽",
+              "source_column": "展覽 Exhibition",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "K3:K56",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_醫療",
+              "source_column": "醫療 Medical Treatment",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "L3:L56",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "來臺旅客_其他",
+              "source_column": "其他 Others",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "M3:M56",
+              "sample_values": [
+                27821.0,
+                2026.0,
+                2435.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "residual",
+              "notes": [
+                "彙總欄（residual），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "來臺旅客_未列明",
+              "source_column": "未列明 Unstated",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "N3:N56",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "residual",
+              "notes": [
+                "彙總欄（residual），不可與同群組明細欄一起加總"
+              ]
+            }
+          ],
+          "dimension_columns": [
+            "年度"
+          ],
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "file_name": "表2-2-歷年中華民國國民出國目的地人次統計.xlsx",
+      "sheet_topic": "表2-2-歷年中華民國國民出國目的地人次統計",
+      "sheets": [
+        {
+          "sheet_name": "歷年出國按目的地",
+          "fingerprint": "10f417f00a4ee66f",
+          "header_rows": [
+            2,
+            3
+          ],
+          "data_start_row": 4,
+          "data_end_row": 49,
+          "canonical_fields": [
+            {
+              "canonical_name": "出國_亞洲地區_香港",
+              "source_column": "亞洲地區 ASIA > 香港 Hong Kong",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "B4:B49",
+              "sample_values": [
+                63812.0,
+                72418.0,
+                81558.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "出國_澳門",
+              "source_column": "澳門 Macao",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "C4:C49",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "出國_大陸",
+              "source_column": "大陸 Mainland China",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "D4:D49",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "出國_日本",
+              "source_column": "日本 Japan",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "E4:E49",
+              "sample_values": [
+                173581.0,
+                218486.0,
+                260414.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "出國_韓國",
+              "source_column": "韓國 Korea",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "F4:F49",
+              "sample_values": [
+                76995.0,
+                98241.0,
+                67002.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "出國_新加坡",
+              "source_column": "新加坡 Singapore",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "G4:G49",
+              "sample_values": [
+                19563.0,
+                20251.0,
+                24124.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "出國_馬來西亞",
+              "source_column": "馬來西亞 Malaysia",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "H4:H49",
+              "sample_values": [
+                4418.0,
+                5035.0,
+                8996.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "出國_泰國",
+              "source_column": "泰國 Thailand",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "I4:I49",
+              "sample_values": [
+                14956.0,
+                15919.0,
+                21726.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "出國_菲律賓",
+              "source_column": "菲律賓 Philippines",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "J4:J49",
+              "sample_values": [
+                35718.0,
+                35170.0,
+                42274.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "出國_印尼",
+              "source_column": "印尼 Indonesia",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "K4:K49",
+              "sample_values": [
+                4507.0,
+                5694.0,
+                6985.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "出國_汶淶",
+              "source_column": "汶淶 Brunei",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "L4:L49",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "出國_越南",
+              "source_column": "越南 Vietnam",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "M4:M49",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "出國_緬甸",
+              "source_column": "緬甸 Myanmar",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "N4:N49",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "出國_柬埔寨",
+              "source_column": "柬埔寨 Cambodia",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "O4:O49",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "出國_阿拉伯聯合大公國",
+              "source_column": "阿拉伯聯合大公國 United Arab Emirates",
+              "unit": "%",
+              "dtype": "number",
+              "cell_range": "P4:P49",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.9,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "出國_土耳其",
+              "source_column": "土耳其 Turkey",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "Q4:Q49",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "出國_亞洲合計",
+              "source_column": "亞洲合計 Total",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "S4:S49",
+              "sample_values": [
+                402244.0,
+                480673.0,
+                522434.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "total",
+              "notes": [
+                "彙總欄（total），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "出國_美洲地區_美國",
+              "source_column": "美洲地區 AMERICA > 美國 U.S.A.",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "T4:T49",
+              "sample_values": [
+                69448.0,
+                76399.0,
+                98995.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "出國_加拿大",
+              "source_column": "加拿大 Canada",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "U4:U49",
+              "sample_values": [
+                1548.0,
+                1741.0,
+                2046.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "出國_美洲合計",
+              "source_column": "美洲合計 Total",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "W4:W49",
+              "sample_values": [
+                73754.0,
+                80901.0,
+                104135.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "total",
+              "notes": [
+                "彙總欄（total），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "出國_歐洲地區_法國",
+              "source_column": "歐洲地區 EUROPE > 法國 France",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "X4:X49",
+              "sample_values": [
+                586.0,
+                877.0,
+                1427.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "出國_德國",
+              "source_column": "德國 Germany",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "Y4:Y49",
+              "sample_values": [
+                1239.0,
+                1345.0,
+                1275.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "出國_義大利",
+              "source_column": "義大利 Italy",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "Z4:Z49",
+              "sample_values": [
+                461.0,
+                683.0,
+                974.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "出國_荷蘭",
+              "source_column": "荷蘭 Netherlands",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AA4:AA49",
+              "sample_values": [
+                206.0,
+                264.0,
+                297.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "出國_瑞士",
+              "source_column": "瑞士 Switzerland",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AB4:AB49",
+              "sample_values": [
+                207.0,
+                321.0,
+                325.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "出國_英國",
+              "source_column": "英國 U.K.",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AC4:AC49",
+              "sample_values": [
+                898.0,
+                1499.0,
+                1261.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "出國_奧地利",
+              "source_column": "奧地利 Austria",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AD4:AD49",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "出國_歐洲合計",
+              "source_column": "歐洲合計 Total",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AF4:AF49",
+              "sample_values": [
+                4830.0,
+                6777.0,
+                7786.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "total",
+              "notes": [
+                "彙總欄（total），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "出國_大洋洲_澳大利亞",
+              "source_column": "大洋洲 OCEANIA > 澳大利亞 Australia",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AG4:AG49",
+              "sample_values": [
+                999.0,
+                1368.0,
+                1041.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "出國_紐西蘭",
+              "source_column": "紐西蘭 New Zealand",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AH4:AH49",
+              "sample_values": [
+                75.0,
+                123.0,
+                182.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "出國_帛琉",
+              "source_column": "帛琉 Palau",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AI4:AI49",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "出國_大洋洲合計",
+              "source_column": "大洋洲合計 Total",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AK4:AK49",
+              "sample_values": [
+                1300.0,
+                1779.0,
+                1444.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "total",
+              "notes": [
+                "彙總欄（total），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "出國_非洲_南非",
+              "source_column": "非洲 Africa > 南非 S.Africa",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AL4:AL49",
+              "sample_values": [
+                946.0,
+                2186.0,
+                2441.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "出國_非洲合計",
+              "source_column": "非洲合計 Total",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AN4:AN49",
+              "sample_values": [
+                2773.0,
+                5407.0,
+                4870.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "total",
+              "notes": [
+                "彙總欄（total），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "出國_其他",
+              "source_column": "其他 Others",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "AO4:AO49",
+              "sample_values": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "residual",
+              "notes": [
+                "彙總欄（residual），不可與同群組明細欄一起加總"
+              ]
+            }
+          ],
+          "dimension_columns": [
+            "年度"
+          ],
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "file_name": "表2-3-歷年中華民國國民出國按年齡分.xlsx",
+      "sheet_topic": "表2-3-歷年中華民國國民出國按年齡分",
+      "sheets": [
+        {
+          "sheet_name": "歷年出國人次按年齡",
+          "fingerprint": "39cd7ea7401024df",
+          "header_rows": [
+            2
+          ],
+          "data_start_row": 3,
+          "data_end_row": 34,
+          "canonical_fields": [
+            {
+              "canonical_name": "出國人次_合計",
+              "source_column": "合計 Total",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "B3:B34",
+              "sample_values": [
+                4744434.0,
+                5188658.0,
+                5713535.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "total",
+              "notes": [
+                "彙總欄（total），不可與同群組明細欄一起加總"
+              ]
+            },
+            {
+              "canonical_name": "出國人次_12歲以下 12",
+              "source_column": "12歲以下 12 and Under",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "C3:C34",
+              "sample_values": [
+                229946.0,
+                264834.0,
+                295856.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "出國人次_13歲至19歲 13-19",
+              "source_column": "13歲至19歲 13-19",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "D3:D34",
+              "sample_values": [
+                149377.0,
+                175463.0,
+                185797.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "出國人次_20至29歲 20-29",
+              "source_column": "20至29歲 20-29",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "E3:E34",
+              "sample_values": [
+                848742.0,
+                885733.0,
+                946872.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "出國人次_30至39歲 30-39",
+              "source_column": "30至39歲 30-39",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "F3:F34",
+              "sample_values": [
+                1341542.0,
+                1433708.0,
+                1541242.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "出國人次_40至49歲 40-49",
+              "source_column": "40至49歲 40-49",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "G3:G34",
+              "sample_values": [
+                1060228.0,
+                1232282.0,
+                1416450.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "出國人次_50至59歲 50-59",
+              "source_column": "50至59歲 50-59",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "H3:H34",
+              "sample_values": [
+                553786.0,
+                594795.0,
+                658686.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "出國人次_60歲及以上 60",
+              "source_column": "60歲及以上 60 and Over",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "I3:I34",
+              "sample_values": [
+                560813.0,
+                601843.0,
+                668632.0
+              ],
+              "confidence": 0.855,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            }
+          ],
+          "dimension_columns": [
+            "年度"
+          ],
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "file_name": "表4-1-歷年郵輪來臺旅客人次統計.xlsx",
+      "sheet_topic": "表4-1-歷年郵輪來臺旅客人次統計",
+      "sheets": [
+        {
+          "sheet_name": "歷年郵輪來臺遊客人次",
+          "fingerprint": "e4222e4dcd7cebd3",
+          "header_rows": [
+            2
+          ],
+          "data_start_row": 3,
+          "data_end_row": 9,
+          "canonical_fields": [
+            {
+              "canonical_name": "郵輪來臺遊客人次_人數",
+              "source_column": "人數 Persons",
+              "unit": "人次",
+              "dtype": "number",
+              "cell_range": "B3:B9",
+              "sample_values": [
+                112548.0,
+                128305.0,
+                125251.0
+              ],
+              "confidence": 0.9,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            },
+            {
+              "canonical_name": "郵輪來臺遊客人次_成長率",
+              "source_column": "成長率 Rate of increase(%)",
+              "unit": "%",
+              "dtype": "number",
+              "cell_range": "C3:C9",
+              "sample_values": [
+                0.0,
+                14.0002,
+                -2.3803
+              ],
+              "confidence": 0.9,
+              "alignment_method": "rule",
+              "aggregation_role": "detail"
+            }
+          ],
+          "dimension_columns": [
+            "年度"
+          ],
+          "warnings": []
+        }
+      ]
+    }
+  ],
+  "field_dictionary": {
+    "來臺旅客_亞洲地區_日本": [
+      {
+        "file": "表1-2-歷年來臺旅客按居住地分.xlsx",
+        "sheet": "歷年來臺旅客-按居住地",
+        "column": "亞洲地區 > 日本 Japan",
+        "cell_range": "E5:E74"
+      },
+      {
+        "file": "表1-3-歷年來臺旅客按國籍分.xlsx",
+        "sheet": "歷年來臺旅客-按國籍",
+        "column": "亞洲地區 > 日本 Japan",
+        "cell_range": "C5:C66"
+      }
+    ],
+    "來臺旅客_合計": [
+      {
+        "file": "表1-4-歷年來臺旅客按性別分.xlsx",
+        "sheet": "歷年來臺旅客-按性別",
+        "column": "合計 Total",
+        "cell_range": "B4:B64"
+      },
+      {
+        "file": "表1-5-歷年來臺旅客按年齡分.xlsx",
+        "sheet": "歷年來臺旅客-按年齡",
+        "column": "合計 Total",
+        "cell_range": "B3:B60"
+      },
+      {
+        "file": "表1-7-歷年來臺旅客按搭乘交通工具及入境港口分.xlsx",
+        "sheet": "歷年來臺旅客-按搭乘交通工具及入境港口",
+        "column": "合計 Total",
+        "cell_range": "B4:B68"
+      },
+      {
+        "file": "表1-9-歷年來臺旅客按目的分.xlsx",
+        "sheet": "歷年來臺旅客-按目的",
+        "column": "合計 Total",
+        "cell_range": "B3:B56"
+      }
+    ],
+    "來臺旅客_大洋洲_澳大利亞": [
+      {
+        "file": "表1-2-歷年來臺旅客按居住地分.xlsx",
+        "sheet": "歷年來臺旅客-按居住地",
+        "column": "大洋洲 > 澳大利亞 Australia",
+        "cell_range": "AN5:AN74"
+      },
+      {
+        "file": "表1-3-歷年來臺旅客按國籍分.xlsx",
+        "sheet": "歷年來臺旅客-按國籍",
+        "column": "大洋洲 > 澳大利亞 Australia",
+        "cell_range": "AK5:AK66"
+      }
+    ],
+    "來臺旅客_未列明": [
+      {
+        "file": "表1-2-歷年來臺旅客按居住地分.xlsx",
+        "sheet": "歷年來臺旅客-按居住地",
+        "column": "未列明 Unstated",
+        "cell_range": "AU5:AU74"
+      },
+      {
+        "file": "表1-3-歷年來臺旅客按國籍分.xlsx",
+        "sheet": "歷年來臺旅客-按國籍",
+        "column": "未列明 Unstated",
+        "cell_range": "AR5:AR66"
+      },
+      {
+        "file": "表1-9-歷年來臺旅客按目的分.xlsx",
+        "sheet": "歷年來臺旅客-按目的",
+        "column": "未列明 Unstated",
+        "cell_range": "N3:N56"
+      }
+    ],
+    "來臺旅客_歐洲地區_比利時": [
+      {
+        "file": "表1-2-歷年來臺旅客按居住地分.xlsx",
+        "sheet": "歷年來臺旅客-按居住地",
+        "column": "歐洲地區 > 比利時 Belgium",
+        "cell_range": "Z5:Z74"
+      },
+      {
+        "file": "表1-3-歷年來臺旅客按國籍分.xlsx",
+        "sheet": "歷年來臺旅客-按國籍",
+        "column": "歐洲地區 > 比利時 Belgium",
+        "cell_range": "X5:X66"
+      }
+    ],
+    "來臺旅客_總計": [
+      {
+        "file": "表1-2-歷年來臺旅客按居住地分.xlsx",
+        "sheet": "歷年來臺旅客-按居住地",
+        "column": "總計 Grand Total",
+        "cell_range": "AV5:AV74"
+      },
+      {
+        "file": "表1-3-歷年來臺旅客按國籍分.xlsx",
+        "sheet": "歷年來臺旅客-按國籍",
+        "column": "總計 Grand Total",
+        "cell_range": "AT5:AT66"
+      }
+    ],
+    "來臺旅客_美洲地區_加拿大": [
+      {
+        "file": "表1-2-歷年來臺旅客按居住地分.xlsx",
+        "sheet": "歷年來臺旅客-按居住地",
+        "column": "美洲地區 > 加拿大 Canada",
+        "cell_range": "S5:S74"
+      },
+      {
+        "file": "表1-3-歷年來臺旅客按國籍分.xlsx",
+        "sheet": "歷年來臺旅客-按國籍",
+        "column": "美洲地區 > 加拿大 Canada",
+        "cell_range": "Q5:Q66"
+      }
+    ],
+    "來臺旅客_非洲地區_南非": [
+      {
+        "file": "表1-2-歷年來臺旅客按居住地分.xlsx",
+        "sheet": "歷年來臺旅客-按居住地",
+        "column": "非洲地區 > 南非 S. Africa",
+        "cell_range": "AR5:AR74"
+      },
+      {
+        "file": "表1-3-歷年來臺旅客按國籍分.xlsx",
+        "sheet": "歷年來臺旅客-按國籍",
+        "column": "非洲地區 > 南非 S. Africa",
+        "cell_range": "AO5:AO66"
+      }
+    ]
+  },
+  "join_keys": [
+    {
+      "dimension": "年度",
+      "files": [
+        "表1-10-歷年來臺旅客觀光支出統計表.xlsx",
+        "表1-2-歷年來臺旅客按居住地分.xlsx",
+        "表1-3-歷年來臺旅客按國籍分.xlsx",
+        "表1-4-歷年來臺旅客按性別分.xlsx",
+        "表1-5-歷年來臺旅客按年齡分.xlsx",
+        "表1-7-歷年來臺旅客按搭乘交通工具及入境港口分.xlsx",
+        "表1-8-歷年來臺旅客按停留夜數分.xlsx",
+        "表1-9-歷年來臺旅客按目的分.xlsx",
+        "表2-2-歷年中華民國國民出國目的地人次統計.xlsx",
+        "表2-3-歷年中華民國國民出國按年齡分.xlsx",
+        "表4-1-歷年郵輪來臺旅客人次統計.xlsx"
+      ]
+    }
+  ],
+  "needs_manual_review": [
+    {
+      "canonical_name_guess": "亞洲地區 > 東南亞地區 > 東南亞其他地區 Others",
+      "source_column": "亞洲地區 > 東南亞地區 > 東南亞其他地區 Others",
+      "file": "表1-2-歷年來臺旅客按居住地分.xlsx",
+      "sheet": "歷年來臺旅客-按居住地",
+      "cells": [
+        "O5",
+        "O6",
+        "O7",
+        "O8",
+        "O9"
+      ],
+      "affected_cell_count": 45,
+      "reason": "量值欄含負數，疑似小計調整或缺值標記，不應直接納入加總"
+    },
+    {
+      "canonical_name_guess": "東南亞地區 > 東南亞其他地區 Others",
+      "source_column": "東南亞地區 > 東南亞其他地區 Others",
+      "file": "表1-3-歷年來臺旅客按國籍分.xlsx",
+      "sheet": "歷年來臺旅客-按國籍",
+      "cells": [
+        "M5",
+        "M6",
+        "M7",
+        "M8",
+        "M9"
+      ],
+      "affected_cell_count": 36,
+      "reason": "量值欄含負數，疑似小計調整或缺值標記，不應直接納入加總"
+    }
+  ]
+}

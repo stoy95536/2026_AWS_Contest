@@ -1,15 +1,49 @@
 # Secrets
 .env
+.env.*
+!.env.example
 
 # Python
 __pycache__/
-*.pyc
-*.pyo
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+env/
 
 # Temp uploads and task outputs
 uploads/
 outputs/*/
 
+# 開發期測試用 Excel（自網路取得，非決賽檔案，不進 repo）
+Task1/data/
+
 # IDE
 .vscode/
 .idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Logs
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# pytest
+.pytest_cache/
+
+# mypy
+.mypy_cache/
