@@ -108,6 +108,9 @@ def run_pipeline(
             output_dir=output_dir,
         )
 
+        # 確保每頁有圖表資料（用舊 pipeline 的填充邏輯補足）
+        enriched_specs = _ensure_chart_data(enriched_specs, analysis_json_path)
+
         slide_spec_path = os.path.join(output_dir, "slide_spec.json")
         qa_report_path = os.path.join(output_dir, "qa_report.json")
         print(f"  ✓ 產出: {slide_spec_path}")
@@ -171,6 +174,56 @@ def run_pipeline_from_files(
         use_llm=use_llm,
         target_institution=target_institution,
     )
+
+
+def _ensure_chart_data(slide_specs: list[dict], analysis_json_path: str) -> list[dict]:
+    """
+    確保每頁 slide_spec 有圖表資料。
+    如果 Task2 產出的 slide_spec 中 chart 有 series 但資料來自 analysis_result.json
+    中的 chart_data，則直接引用；如果沒有，用 analysis_result.json 的 chart_data 補填。
+    """
+    try:
+        with open(analysis_json_path, "r", encoding="utf-8") as f:
+            payload = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return slide_specs
+
+    chart_data_list = payload.get("chart_data", [])
+    if not chart_data_list:
+        return slide_specs
+
+    # 找出沒有圖表資料的分析頁
+    chart_idx = 0
+    for spec in slide_specs:
+        layout = spec.get("layout", "")
+        # 跳過非分析頁
+        if layout in ("cover", "toc", "chapter_divider", "thank_you"):
+            continue
+
+        # 已有有效圖表資料就跳過
+        chart = spec.get("chart")
+        if chart and isinstance(chart, dict):
+            series = chart.get("series", [])
+            if series and any(isinstance(s, dict) and s.get("data") for s in series):
+                continue
+            data_points = chart.get("data_points", [])
+            if data_points:
+                continue
+
+        # 從 analysis_result.json 的 chart_data 補填
+        if chart_idx < len(chart_data_list):
+            cd = chart_data_list[chart_idx]
+            spec["chart"] = {
+                "type": cd.get("chart_type", "bar"),
+                "title": cd.get("title", ""),
+                "categories": cd.get("categories", []),
+                "series": cd.get("series", []),
+            }
+            if not spec.get("headline"):
+                spec["headline"] = cd.get("title", "")
+            chart_idx += 1
+
+    return slide_specs
 
 
 if __name__ == "__main__":
