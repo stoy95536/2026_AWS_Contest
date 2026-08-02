@@ -10,6 +10,7 @@
 必然，不是靠事後比對維持的巧合。
 """
 
+from .lineage_loader import load_chart_series, load_lineage_tracker, load_metrics
 from .result import SCHEMA_VERSION, AnalysisResult, ChartSpec, format_display
 from .writers import (
     write_all,
@@ -23,6 +24,9 @@ __all__ = [
     "AnalysisResult",
     "ChartSpec",
     "format_display",
+    "load_chart_series",
+    "load_lineage_tracker",
+    "load_metrics",
     "write_all",
     "write_analysis_excel",
     "write_analysis_json",

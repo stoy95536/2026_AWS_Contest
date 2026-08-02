@@ -84,6 +84,7 @@ def run(data_dir: str, output_dir: str) -> AnalysisResult:
     result = AnalysisResult(
         prompt="（規則式後備配方：依資料量級自動挑選指標）",
         catalog_summary=summary,
+        data_summary=dataset.to_data_summary(),
     )
 
     for file_name in sorted({m.file_name for m in dataset.fields.values()}):

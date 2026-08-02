@@ -65,6 +65,42 @@ class Dataset:
         values = self.frame[COL_PERIOD].dropna().unique()
         return sorted(int(v) for v in values)
 
+    def to_data_summary(self) -> dict[str, Any]:
+        """
+        組出成員 B 的 `PlannerAgent.plan_structure(data_summary)` 預期的形狀。
+
+        鍵名沿用他既有的簽名 `{institutions, metrics, periods, record_count}`，
+        讓他一行程式都不用改：
+
+          metrics      量測概念（來臺旅客、觀光外匯收入…），即 canonical 名稱的
+                       前綴——「這份資料在量什麼」
+          institutions 維度值（日本、韓國、30至39歲…），即 canonical 名稱的末段
+                       ——「按什麼拆分」。這個鍵名是信用卡時代留下的，在旅遊
+                       資料裡裝的是國家與分類；決賽前一天不是重構共用介面的時機
+
+        他的 `classify_data` 用關鍵字把 metrics 分成量能／比率／風險類，
+        `_infer_domain` 把兩者併成文字猜領域——兩者都吃字串清單，
+        所以這裡給的是名稱不是數值。
+        """
+        concepts: list[str] = []
+        dimensions: list[str] = []
+        for canonical in self.fields:
+            head, _, tail = canonical.partition("_")
+            if head and head not in concepts:
+                concepts.append(head)
+            leaf = tail.rsplit("_", 1)[-1].strip() if tail else ""
+            if leaf and leaf not in dimensions:
+                dimensions.append(leaf)
+
+        return {
+            "metrics": concepts,
+            "institutions": dimensions,
+            "periods": [str(p) for p in self.periods()],
+            "record_count": len(self.frame),
+            "field_count": len(self.fields),
+            "files": sorted({m.file_name for m in self.fields.values()}),
+        }
+
     def describe(self) -> dict[str, Any]:
         return {
             "record_count": len(self.frame),

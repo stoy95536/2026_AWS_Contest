@@ -72,8 +72,11 @@ def test_圖表值就是metric值(result):
     metrics = {m["metric_id"]: m["value"] for m in payload["metrics"]}
     for chart in payload["chart_data"]:
         for series in chart["series"]:
-            for point in series["points"]:
-                assert point["value"] == metrics[point["metric_id"]]
+            # values 與 metric_ids 同序等長，成員 C 直接吃 values，
+            # 成員 D 用 metric_ids 回溯
+            assert len(series["values"]) == len(series["metric_ids"])
+            for value, metric_id in zip(series["values"], series["metric_ids"]):
+                assert value == metrics[metric_id]
 
 
 def test_四份輸出的metric數一致(result, tmp_path):
@@ -92,9 +95,11 @@ def test_na不被補零(result):
     assert na_metric["value"] is None
     assert na_metric["display_value"] == "N/A"
 
-    point = payload["chart_data"][0]["series"][0]["points"][2]
-    assert point["value"] is None
-    assert point["status"] == "na"
+    series = payload["chart_data"][0]["series"][0]
+    assert series["values"][2] is None
+    assert series["metric_ids"][2] == "m_na"
+    # 整張圖只要有一個點不是 passed，圖的狀態就不該是 passed
+    assert payload["chart_data"][0]["validation_status"] != "passed"
 
 
 def test_血緣沿用舊格式讓組員d不必改程式(result):

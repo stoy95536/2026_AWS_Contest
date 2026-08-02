@@ -94,6 +94,14 @@ class AnalysisResult:
     charts: list[ChartSpec] = field(default_factory=list)
     prompt: str = ""
     catalog_summary: dict[str, Any] = field(default_factory=dict)
+    data_summary: dict[str, Any] = field(default_factory=dict)
+    """給成員 B 的 `PlannerAgent.plan_structure(data_summary)` 直接使用。
+
+    鍵名 `{institutions, metrics, periods, record_count}` 沿用他既有的簽名，
+    他一行程式都不必改。`institutions` 這個名字是信用卡時代留下的，在旅遊
+    資料裡裝的是維度值（國家、年齡層、交通工具）——與其要他改欄位名，
+    不如由我這邊填成他預期的形狀，決賽前一天不是重構介面的時機。"""
+
     generated_at: str = field(
         default_factory=lambda: datetime.now().isoformat(timespec="seconds")
     )
@@ -141,33 +149,53 @@ class AnalysisResult:
 
     def chart_payloads(self) -> list[dict[str, Any]]:
         """
-        chart_data（給成員 C 畫原生圖表）。
+        chart_data，格式依 CLAUDE.md「對外介面」第（二）節。
 
-        每個資料點都附 `metric_id`，讓圖上的數字能被回溯校驗。
-        引用到不存在或 N/A 的 metric 時照實輸出 null，不補 0——
-        圖表上的斷點是真實資訊，補 0 會畫出一條假的下探曲線。
+        `series` 是**扁平**的 `{name, values}`——成員 C 的
+        `chart_factory.create_bar_chart(categories, series_data)` 直接吃得下，
+        不需要他再攤平一次。
+
+        每個系列額外附 `metric_ids`，與 `values` 同序等長。這一欄同時服務兩個人：
+        成員 D 的 `ppt_reconciler._check_chart_data` 讀的正是
+        `chart["series"][i]["metric_ids"]`；而它也讓圖上任何一個數字都能回查
+        到 metric 與原始儲存格。
+
+        N/A 照實輸出 null，不補 0——圖表上的斷點是真實資訊，
+        補 0 會畫出一條假的下探曲線。
         """
         payloads = []
         for chart in self.charts:
             series = []
+            sources: list[dict[str, str]] = []
+            statuses: list[str] = []
+
             for name, metric_ids in chart.category_metric_map.items():
-                points = []
+                values, ids = [], []
                 for mid in metric_ids:
                     m = self.metric(mid)
-                    points.append({
-                        "metric_id": mid,
-                        "value": serialize_value(m.value) if m else None,
-                        "status": m.validation_status if m else "missing",
-                    })
-                series.append({"name": name, "points": points})
+                    values.append(serialize_value(m.value) if m else None)
+                    ids.append(mid)
+                    if m:
+                        statuses.append(m.validation_status)
+                        for ref in m.source_refs:
+                            if ref not in sources:
+                                sources.append(ref)
+                series.append({"name": name, "values": values, "metric_ids": ids})
 
             payloads.append({
-                "chart_id": chart.chart_id,
+                "chart_data_id": chart.chart_id,
                 "chart_type": chart.chart_type,
                 "title": chart.title,
                 "unit": chart.unit,
                 "categories": chart.categories,
                 "series": series,
+                "source": sources,
+                # 整張圖的狀態取最差值：只要有一個點沒過，這張圖就不該被當成
+                # 完全可信——把它藏起來只會讓錯誤數字更容易被畫進簡報
+                "validation_status": (
+                    "passed" if statuses and set(statuses) == {"passed"}
+                    else ("na" if statuses else "missing")
+                ),
                 "note": chart.note,
             })
         return payloads
@@ -189,6 +217,7 @@ class AnalysisResult:
                 ),
                 "catalog": self.catalog_summary,
             },
+            "data_summary": self.data_summary,
             "metrics": self.metric_payloads(),
             "chart_data": self.chart_payloads(),
         }
