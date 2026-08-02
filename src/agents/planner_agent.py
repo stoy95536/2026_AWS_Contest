@@ -30,9 +30,9 @@ class PlannerAgent:
     - 格式遵循 README 5.2
     """
 
-    def __init__(self, model_id: str = "anthropic.claude-sonnet-4-20250514", region: str = "us-east-1"):
-        self.model_id = model_id
-        self.region = region
+    def __init__(self, model_id: str = None, region: str = None):
+        self.model_id = model_id or os.environ.get("MODEL_ID", "anthropic.claude-sonnet-4-20250514")
+        self.region = region or os.environ.get("AWS_REGION") or os.environ.get("AWS_DEFAULT_REGION", "us-east-1")
         self._client = None
 
     @property

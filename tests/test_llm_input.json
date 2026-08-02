@@ -1,0 +1,80 @@
+{
+  "description": "LLM Agent 測試用資料 — 用來驗證 Bedrock Claude 是否能正常運作",
+  "data_summary": {
+    "institutions": ["台新銀行", "中國信託", "國泰世華", "玉山銀行", "台北富邦"],
+    "metrics": ["流通卡數", "有效卡數", "當月簽帳金額", "逾期放款比率"],
+    "periods": ["11401", "11402", "11403", "11404", "11405", "11406"],
+    "record_count": 120
+  },
+  "mock_metric_data": [
+    {
+      "metric_id": "market_total_cards_11406",
+      "metric_name": "市場流通卡數",
+      "value": 60485911,
+      "display_value": "6,049 萬張",
+      "unit": "張",
+      "period": "11406",
+      "formula": "SUM(all institutions)",
+      "source": [{"file": "附件四_預期修正參照資料.xlsx", "sheet": "P.7預期修正_流通卡數", "range": "B2:M34"}],
+      "validation_status": "passed"
+    },
+    {
+      "metric_id": "taishin_market_share_11406",
+      "metric_name": "台新銀行市占率",
+      "value": 10.6,
+      "display_value": "10.6%",
+      "unit": "%",
+      "period": "11406",
+      "formula": "台新流通卡數 / 市場總流通卡數 * 100",
+      "source": [{"file": "附件四_預期修正參照資料.xlsx", "sheet": "P.7預期修正_流通卡數", "range": "B15"}],
+      "validation_status": "passed"
+    },
+    {
+      "metric_id": "taishin_effective_rate_11406",
+      "metric_name": "台新有效卡率",
+      "value": 72.3,
+      "display_value": "72.3%",
+      "unit": "%",
+      "period": "11406",
+      "formula": "台新有效卡數 / 台新流通卡數 * 100",
+      "source": [{"file": "附件四_預期修正參照資料.xlsx", "sheet": "P.5預期修正_流通卡數", "range": "B15,C15"}],
+      "validation_status": "passed"
+    },
+    {
+      "metric_id": "taishin_purchase_amount_11406",
+      "metric_name": "台新當月簽帳金額",
+      "value": 28500000,
+      "display_value": "285 億元",
+      "unit": "千元",
+      "period": "11406",
+      "formula": "原始值",
+      "source": [{"file": "附件四_預期修正參照資料.xlsx", "sheet": "P.5預期修正_當月簽帳金額", "range": "G15"}],
+      "validation_status": "passed"
+    },
+    {
+      "metric_id": "taishin_overdue_rate_11406",
+      "metric_name": "台新逾期放款比率",
+      "value": 0.35,
+      "display_value": "0.35%",
+      "unit": "%",
+      "period": "11406",
+      "formula": "逾期放款 / 總放款 * 100",
+      "source": [{"file": "附件四_預期修正參照資料.xlsx", "sheet": "風險指標", "range": "D15"}],
+      "validation_status": "passed"
+    }
+  ],
+  "test_slide_spec": {
+    "slide_no": 5,
+    "layout": "trend_chart",
+    "title": "市場規模趨勢",
+    "headline": "",
+    "chart": {
+      "type": "combo",
+      "series_metric_ids": ["market_total_cards_11406", "taishin_purchase_amount_11406"]
+    },
+    "kpis": [],
+    "insights": [],
+    "recommendations": [],
+    "source_ids": ["market_total_cards_11406", "taishin_purchase_amount_11406"]
+  }
+}
