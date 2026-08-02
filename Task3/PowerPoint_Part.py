@@ -15,7 +15,26 @@ import json
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
 from src.presentation import TemplateParser, ChartFactory, PPTGenerator
-from src.agents.planner_agent import DEFAULT_SLIDE_STRUCTURE
+
+# 預設 16 頁骨架（原 planner_agent 重構後已移除 DEFAULT_SLIDE_STRUCTURE，此處作為 fallback）
+DEFAULT_SLIDE_STRUCTURE = [
+    {"slide_no": 1, "layout": "cover", "title": "業務分析與經營洞察簡報"},
+    {"slide_no": 2, "layout": "toc", "title": "目錄"},
+    {"slide_no": 3, "layout": "executive_summary", "title": "Executive Summary"},
+    {"slide_no": 4, "layout": "chapter_divider", "title": "Chapter 01 趨勢分析"},
+    {"slide_no": 5, "layout": "trend_chart", "title": "市場規模趨勢"},
+    {"slide_no": 6, "layout": "ranking_chart", "title": "市占率排名"},
+    {"slide_no": 7, "layout": "chapter_divider", "title": "Chapter 02 同業比較"},
+    {"slide_no": 8, "layout": "comparison_chart", "title": "規模 vs 成長"},
+    {"slide_no": 9, "layout": "comparison_chart", "title": "佔比比較"},
+    {"slide_no": 10, "layout": "chapter_divider", "title": "Chapter 03 活躍度"},
+    {"slide_no": 11, "layout": "trend_chart", "title": "消費金額趨勢"},
+    {"slide_no": 12, "layout": "comparison_chart", "title": "結構分析"},
+    {"slide_no": 13, "layout": "chapter_divider", "title": "Chapter 04 風險"},
+    {"slide_no": 14, "layout": "comparison_chart", "title": "風險指標比較"},
+    {"slide_no": 15, "layout": "strategy", "title": "策略建議與行動方案"},
+    {"slide_no": 16, "layout": "thank_you", "title": "感謝頁"},
+]
 
 
 def run_task3(

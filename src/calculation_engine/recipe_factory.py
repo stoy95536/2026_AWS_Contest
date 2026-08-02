@@ -182,7 +182,14 @@ def latest_common_year(dataset: Dataset, file_name: str) -> int | None:
     取到那一列會得到一整排 N/A。
     """
     frame = dataset.frame
-    subset = frame[(frame[COL_FILE] == file_name) & frame["value"].notna()]
+    subset = frame[
+        (frame[COL_FILE] == file_name)
+        & frame["value"].notna()
+        & frame["period"].notna()
+    ]
     if subset.empty:
         return None
-    return int(subset["period"].max())
+    max_period = subset["period"].max()
+    if max_period is None or (hasattr(max_period, '__class__') and 'NAType' in type(max_period).__name__):
+        return None
+    return int(max_period)

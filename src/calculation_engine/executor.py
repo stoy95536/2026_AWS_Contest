@@ -88,6 +88,10 @@ class MetricRecipe:
     @classmethod
     def from_dict(cls, payload: dict[str, Any]) -> "MetricRecipe":
         try:
+            raw_steps = payload["steps"]
+            # 防護：LLM 偶爾把 steps 輸出成字串而非陣列
+            if not isinstance(raw_steps, list):
+                raise ExecutionError(f"steps 應為陣列，實際為 {type(raw_steps).__name__}")
             steps = [
                 StepSpec(
                     id=s["id"],
@@ -95,8 +99,11 @@ class MetricRecipe:
                     params=s.get("params", {}),
                     input=s.get("input"),
                 )
-                for s in payload["steps"]
+                for s in raw_steps
+                if isinstance(s, dict)
             ]
+            if not steps:
+                raise ExecutionError("steps 陣列無有效步驟")
             return cls(
                 metric_id=payload["metric_id"],
                 metric_name=payload["metric_name"],

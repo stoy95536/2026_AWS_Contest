@@ -241,33 +241,61 @@ SYSTEM_PROMPT = """你是資料分析規劃器。你的職責是把使用者的�
    （例如「日本」同時出現在按居住地與按國籍兩份），不指定會把同一批對象重複
    計算，而且在比率中分子分母會同時加倍互相抵銷，看起來完全正常但絕對值是錯的。
 
-2. **收斂成單一數值才能餵給 ratio 或 growth_rate**。用 filter → filter_by_period
-   → group_sum(group_col='period') 這個順序，最後會得到一列。
+2. **每個配方最終必須收斂成「1 列 1 值」才能當指標**。資料是長表結構：每列
+   有 (file, canonical, period, value)。如果你要 2024 年某欄位的值，正確的
+   步驟順序是：
+     filter(file) → filter(canonical) → filter_by_period(2024, 2024)
+   如此會剩下剛好 1 列。若你漏了 filter(canonical)，就會剩下該檔案所有欄位
+   × 1 年 = 幾十列，積木會報錯「產生 N 列，無法當成單一數值使用」。
 
-3. **注意 aggregation_role**。要加總明細時不要把 subtotal 或 total 欄一起算進去。
+3. **要做趨勢指標（多年值做一張折線圖）時**，為每一年做一個獨立的 metric，
+   而不是試圖讓一個 metric 回傳整條趨勢。例如「2020~2024 歷年旅客人次」
+   應該拆成 5 個配方（visitors_2020, visitors_2021, ..., visitors_2024），
+   然後在 charts 的 series.metric_ids 引用這 5 個 id。
+
+4. **收斂成單一數值才能餵給 ratio 或 growth_rate**。用 filter(file) →
+   filter(canonical) → filter_by_period(year, year) 這個順序，最後會得到
+   一列。如果仍需加總（例如合併多個明細欄），再加一步
+   group_sum(group_col='period', detail_only=false)。
+
+5. **注意 aggregation_role**。要加總明細時不要把 subtotal 或 total 欄一起算進去。
    若你已經用 canonical 鎖定單一欄位，請設 detail_only=false，否則該欄若本身是
    總計欄會被濾光。
 
-4. **比率的分母優先用報表既有的 total 欄**，而不是自行加總明細——這樣數字能與
+6. **比率的分母優先用報表既有的 total 欄**，而不是自行加總明細——這樣數字能與
    報表原文對得起來，評審可以直接核對。並在 assumption_statement 說明你的選擇。
 
-5. **assumption_statement 必填**，用一句話寫清楚分子分母怎麼界定、期間怎麼取。
+7. **assumption_statement 必填**，用一句話寫清楚分子分母怎麼界定、期間怎麼取。
    遇到語意模糊時不要停下來問，直接寫下你的假設繼續——這會存進資料血緣供人事後
    核對。
 
-6. **步驟間引用**用 {"$ref": "步驟id"}，例如
+8. **步驟間引用**用 {"$ref": "步驟id"}，例如
    ratio 的 params: {"numerator": {"$ref": "num_s"}, "denominator": {"$ref": "den_s"}}
 
-## 配方範例（2024 年日本旅客占比）
+9. **每個配方產出一個數字**。不要試圖在一個配方裡產出多筆資料。如果提問要求
+   「前 5 名國家的市占率」，就做 5 個配方，每個配方只算一個國家。
+
+## 配方範例
+
+### 範例 1：2024 年日本旅客占比（單一值）
 
 steps:
-  {"id":"num_f","block":"filter","input":"dataset","params":{"column":"file","operator":"==","value":"表1-3-歷年來臺旅客按國籍分.xlsx"}}
-  {"id":"num_c","block":"filter","input":"num_f","params":{"column":"canonical","operator":"==","value":"來臺旅客_亞洲地區_日本"}}
-  {"id":"num_y","block":"filter_by_period","input":"num_c","params":{"start":2024,"end":2024}}
-  {"id":"num_s","block":"group_sum","input":"num_y","params":{"group_col":"period","detail_only":false}}
-  （分母同樣四步，改用總計欄，id 換成 den_*）
-  {"id":"r","block":"ratio","params":{"numerator":{"$ref":"num_s"},"denominator":{"$ref":"den_s"}}}
+  {"id":"f1","block":"filter","input":"dataset","params":{"column":"file","operator":"==","value":"歷年來臺旅客按目的分.xlsx"}}
+  {"id":"f2","block":"filter","input":"f1","params":{"column":"canonical","operator":"==","value":"來臺旅客_亞洲地區_日本"}}
+  {"id":"f3","block":"filter_by_period","input":"f2","params":{"start":2024,"end":2024}}
+  {"id":"den_f","block":"filter","input":"dataset","params":{"column":"file","operator":"==","value":"歷年來臺旅客按目的分.xlsx"}}
+  {"id":"den_c","block":"filter","input":"den_f","params":{"column":"canonical","operator":"==","value":"來臺旅客_合計"}}
+  {"id":"den_y","block":"filter_by_period","input":"den_c","params":{"start":2024,"end":2024}}
+  {"id":"r","block":"ratio","params":{"numerator":{"$ref":"f3"},"denominator":{"$ref":"den_y"},"as_percent":true}}
 output: "r"
+
+### 範例 2：趨勢圖（多年值拆成多個 metric）
+
+如果要做 2020~2024 年歷年旅客人次趨勢圖，定義 5 個 metric：
+  metric_id: "visitors_2020", steps: [filter(file), filter(canonical="合計"), filter_by_period(2020,2020)], output 最後的 filter 步驟
+  metric_id: "visitors_2021", ...（同上改年份）
+  ...
+然後 charts: [{"chart_id":"trend_visitors","chart_type":"line","title":"歷年來臺旅客","categories":["2020","2021","2022","2023","2024"],"series":[{"name":"旅客人次","metric_ids":["visitors_2020","visitors_2021","visitors_2022","visitors_2023","visitors_2024"]}]}]
 
 ## 圖表
 若使用者的問題適合用圖呈現，在 charts 裡定義，series 的 metric_ids 必須引用你在
@@ -373,13 +401,16 @@ class LLMPlanner:
 
         recipes = []
         for item in metrics:
+            # LLM 偶爾會回傳非 dict 的元素（例如字串），直接跳過
+            if not isinstance(item, dict):
+                continue
             try:
                 recipes.append(MetricRecipe.from_dict(item))
             except Exception as e:
-                # 單一配方格式錯誤不該讓整批作廢，其他的照樣執行
-                raise LLMPlannerError(
-                    f"配方 '{item.get('metric_id', '?')}' 格式錯誤：{e}"
-                ) from e
+                # 單一配方格式錯誤不該讓整批作廢，記錄後繼續
+                mid = item.get("metric_id", "?") if isinstance(item, dict) else "?"
+                print(f"    [skip] 配方 '{mid}' 格式錯誤：{e}")
+                continue
 
         return PlanResult(
             recipes=recipes,

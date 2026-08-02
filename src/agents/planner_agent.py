@@ -275,15 +275,58 @@ class PlannerAgent:
                     slides.append(page)
                     slide_no += 1
 
-        # 補齊到 last_analysis_page
-        while slide_no <= last_analysis_page:
-            remaining_metrics = [m for m in metric_names if not any(
-                m in s.get("title", "") for s in slides
-            )]
-            fill_metric = remaining_metrics[0] if remaining_metrics else metric_names[0] if metric_names else "補充指標"
+        # 補齊到 last_analysis_page — 用剩餘的 metrics 資料生成圖表頁
+        used_metric_ids = set()
+        for s in slides:
+            used_metric_ids.update(s.get("source_ids", []))
+            chart = s.get("chart")
+            if chart and isinstance(chart, dict):
+                used_metric_ids.update(chart.get("series_metric_ids", []))
+
+        # 收集所有 passed 指標（含已用過的——可用不同角度重新呈現）
+        all_passed = []
+        if metrics:
+            all_passed = [
+                m for m in metrics
+                if m.get("validation_status") == "passed"
+                and m.get("value") is not None
+            ]
+
+        # 先用「未被任何 chart_data 引用」的指標
+        remaining_passed = [m for m in all_passed if m.get("metric_id") not in used_metric_ids]
+        # 如果不夠，也可重用已被引用的（以不同的視角呈現）
+        if not remaining_passed:
+            remaining_passed = all_passed
+
+        fill_idx = 0
+        while slide_no <= last_analysis_page and fill_idx < len(remaining_passed):
+            # 每頁最多 5 個指標做成比較圖
+            batch = remaining_passed[fill_idx:fill_idx + 5]
+            fill_idx += 5
+
+            if not batch:
+                break
+
             layout = "comparison_chart" if "cross_section" in data_types else "trend_chart"
-            s = self._make_slide(slide_no, layout, f"{fill_metric}分析")
-            s["headline"] = f"{fill_metric}深度分析"
+            title = batch[0].get("metric_name", "指標分析") if batch else "補充分析"
+            s = self._make_slide(slide_no, layout, f"{title}")
+            s["headline"] = f"{title}"
+
+            # 用真實 metric 資料建構圖表
+            cat_names = [m.get("metric_name", "")[:12] for m in batch]
+            cat_values = [m.get("value", 0) for m in batch]
+            unit = batch[0].get("unit", "值") if batch else "值"
+            s["chart"] = {
+                "type": "bar",
+                "series_metric_ids": [m["metric_id"] for m in batch],
+                "series": [{
+                    "name": unit,
+                    "values": cat_values,
+                    "metric_ids": [m["metric_id"] for m in batch],
+                }],
+                "categories": cat_names,
+            }
+            s["source_ids"] = [m["metric_id"] for m in batch]
             slides.append(s)
             slide_no += 1
 

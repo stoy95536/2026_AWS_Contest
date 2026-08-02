@@ -74,8 +74,10 @@ def fill_chart(slide: Slide, spec: dict, chart_factory: ChartFactory):
     elif series_list and categories:
         series_data = {}
         for s in series_list:
-            if "data" in s and s["data"]:
-                series_data[s.get("name", "Series")] = s["data"]
+            # 相容兩種 key：Task2 Agent 產出用 "values"，舊版用 "data"
+            values = s.get("data") or s.get("values")
+            if values:
+                series_data[s.get("name", "Series")] = values
 
         if series_data:
             y_axis_label = chart_spec.get("y_axis", {}).get("label", "")
