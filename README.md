@@ -2,7 +2,9 @@
 Just for 2026/08/01 ~ 2026/08/02 Contest 
 # LLM 驅動之 Excel 報表轉簡報自動化系統
 
-> 競賽專案：讀取信用卡業務 Excel 資料，依指定系統提示詞完成分析，並套用台新新光金控簡報版型，自動產出可編輯、可追溯且數值正確的 16 頁策略簡報。
+> 競賽專案：讀取**決賽現場提供之多份 Excel 資料**（依主辦方最新公告，決賽將提供 **11 份旅遊業務相關 Excel 檔案**，欄位結構與業務指標事先未知），依系統提示詞／使用者通用 Prompt 完成分析，並套用台新新光金控簡報版型，自動產出可編輯、可追溯且數值正確的策略簡報。
+>
+> ⚠️ **資料領域變更說明**：命題文件原以金管會公開信用卡業務統計資料作為示範資料來源，但主辦方後續說明決賽當天將改用**旅遊業務相關 Excel 資料（11 份）**，並期待系統能吃「通用 Prompt」直接一步到位生成簡報，而非針對特定領域寫死指標。本專案架構因此調整為**領域無關（domain-agnostic）**設計：不預先寫死業務指標，改以「通用運算積木 + 資料目錄 + LLM Function Calling」因應任意領域、任意數量的 Excel 輸入。信用卡範例資料仍保留作為開發期間的測試/模擬資料。
 
 ---
 
@@ -13,16 +15,16 @@ Just for 2026/08/01 ~ 2026/08/02 Contest
 系統輸入：
 
 1. 台新新光金控 PowerPoint 簡報版型。
-2. 信用卡業務統計 Excel 資料。
-3. 系統提示詞與簡報分析需求。
+2. **多份 Excel 業務資料**（決賽現場提供，本次為 11 份旅遊業務相關資料；欄位結構、業務指標事先未知）。
+3. 系統提示詞／使用者通用 Prompt（例：「整年度市占率」「哪個景點成長最快」）。
 4. 收件主管或輸出位置等執行參數。
 
 系統輸出：
 
-1. 16 頁「銀行信用卡市場分析與經營洞察簡報」。
+1. 依 Prompt 動態規劃章節之策略簡報（頁數以 16 頁為基準，章節主題依實際資料與 Prompt 動態產生，不寫死於單一業務領域）。
 2. 與簡報同步的分析結果 Excel。
 3. 可編輯的 PowerPoint 原生圖表、表格與文字物件。
-4. 每個數值的來源欄位、計算公式與校驗紀錄。
+4. 每個數值的來源檔案／工作表／儲存格、計算積木鏈、計算假設聲明與校驗紀錄。
 5. 可部署的 Live Demo 與完整 GitHub 原始碼。
 
 ---
@@ -53,6 +55,14 @@ LLM 僅負責：
 
 不得先將 Excel 轉為圖片，再由視覺模型辨識數值。
 
+### 2.2a 多檔案先建「資料目錄」，LLM 不直接讀原始 Excel
+
+因決賽將一次提供多份（11 份）領域未知的 Excel，系統需先離線建立 **Data Catalog**：跨檔案欄位語意比對（規則式比對 → embedding 相似度 → LLM/人工仲裁，逐層才升級成本）、統一欄位詞典、跨檔案關聯鍵推斷。LLM 後續只讀取精簡的 Data Catalog，不直接讀 11 份原始 Excel，藉此降低 context 負擔與欄位幻覺風險。詳細設計見 [`task1.md`](./task1.md)。
+
+### 2.2b LLM 只能呼叫「白名單積木」，不得生成任意計算程式碼
+
+為兼顧「通用 Prompt 一步到位生成」與「數字精確可追溯」，LLM 不直接生成 pandas 程式碼，也不寫死業務指標函式，而是透過 Function Calling 呼叫一組固定、領域無關的通用運算積木（`filter`、`group_sum`、`ratio`、`growth_rate`、`rank_top_n`、`pivot`、`join` 等，共 10 餘個）。任何業務指標（市占率、YoY、平均消費等）皆為積木的組合結果，換領域不需新增函式。LLM 同時須輸出非阻斷式的「計算假設聲明」，說明其對業務定義的理解，供人事後核對，而不是每次遇到模糊語意就中斷詢問使用者。詳細設計見 [`task1.md`](./task1.md)。
+
 ### 2.3 PowerPoint 必須保留原生物件
 
 簡報中的圖表、表格與文字，應由 `python-pptx`、`PptxGenJS` 或其他簡報函式庫產生為可編輯物件，不得只貼上整頁圖片。
@@ -73,12 +83,16 @@ LLM 僅負責：
 
 ## 3. 建議系統流程
 
+> 完整版含資料目錄建置與白名單積木細節，請見 [`task1.md`](./task1.md)。
+
 ```mermaid
 flowchart LR
-    A[上傳 Excel、PPT 模板及提示詞] --> B[Excel 結構解析]
-    B --> C[資料標準化與單位辨識]
-    C --> D[指標計算引擎]
-    D --> E[數值校驗與資料血緣]
+    A[上傳多份 Excel、PPT 模板及提示詞] --> B[逐檔解析：Excel 原生結構]
+    B --> C[欄位語意比對：規則→embedding→LLM/人工]
+    C --> C2[輸出 Data Catalog]
+    C2 --> D[LLM 讀 Catalog，組合白名單積木]
+    D --> D2[計算假設聲明 + 積木執行引擎]
+    D2 --> E[Sanity Check 與資料血緣]
     E --> F[LLM 分析規劃與洞察生成]
     F --> G[圖表與頁面規格 JSON]
     G --> H[PPT 原生物件生成]
@@ -96,61 +110,50 @@ flowchart LR
 
 **主要負責人：成員 A — Data Engineer／Calculation Owner**
 
+> 📄 **完整架構規格請見 [`task1.md`](./task1.md)**，以下為摘要。原本針對信用卡資料設計的「指標計算函式庫」（流通卡數、有效卡率、呆帳率…逐一寫死函式）已**不再適用**：因決賽當天提供的是 11 份**領域未知的旅遊業務 Excel**，且主辦方要求系統能吃「通用 Prompt」直接生成，不能針對單一領域寫死指標。
+
 ### 工作目標
 
-建立可靠的資料層，確保所有簡報數值不是由 LLM 猜測，而是由程式從原始 Excel 精確計算。
+建立可靠、**領域無關**的資料層，確保所有簡報數值不是由 LLM 猜測，而是由程式從原始 Excel 精確計算，且能因應決賽當天才公布、欄位結構未知的多份 Excel。
 
-### 工作內容
+### 工作內容（新版摘要，詳見 task1.md）
 
-1. 讀取多工作表 Excel，辨識欄位、月份、銀行名稱、數值與單位。
-2. 將不同工作表轉為統一的標準資料格式，例如：
-
-```text
-institution | period | metric | value | unit | source_sheet | source_cell
-```
-
-3. 建立指標計算函式：
-   - 流通卡數。
-   - 有效卡數。
-   - 有效卡率。
-   - 當月簽帳金額。
-   - 平均每卡簽帳金額。
-   - 月增率 MoM。
-   - 年增率 YoY。
-   - 市占率。
-   - 市占率變化。
-   - 循環信用餘額。
-   - 分期付款餘額。
-   - 逾期率、呆帳率及備抵呆帳提足率。
-4. 建立排名、Top N、規模與成長象限、熱力圖所需資料。
-5. 處理單位轉換，例如元、千元、百萬元、億元、張、萬張及百分比。
-6. 針對除以零、缺值、重複欄位及月份不完整建立例外處理。
-7. 建立資料血緣紀錄，保存每個衍生數值的來源與公式。
-8. 匯出 `analysis_result.xlsx` 或 `analysis_data.json` 供其他模組使用。
+1. **資料目錄建置（一次性、離線）**：逐檔解析多份 Excel 的工作表、欄位、型別、單位；跨檔案欄位語意比對（規則式比對 → embedding 相似度 → LLM/人工仲裁，逐層才升級成本）；建立統一欄位詞典與跨檔案關聯鍵；輸出精簡的 `data_catalog.json`。
+2. **通用運算積木庫**：以 10 餘個領域無關的統計原語（`filter`、`filter_by_period`、`group_sum`、`group_mean`、`ratio`、`growth_rate`、`rank_top_n`、`pivot`、`join`、`cumulative_sum`）取代逐一寫死的業務指標函式；任何業務指標（市占率、YoY、平均消費…）皆為積木組合的結果。
+3. **LLM Function Calling 執行流程**：LLM 讀取 `data_catalog.json`（非原始 Excel）→ 產生非阻斷式「計算假設聲明」→ 透過 function calling 選積木、填參數（欄位僅能從 Catalog 白名單選取，禁止自由輸入）→ 積木執行引擎確定性運算。
+4. **Sanity Check 與例外處理**：比率是否落在 0–100%、分母是否為 0、結果是否 NaN；失敗則回饋 LLM 重新組積木（最多重試 2 次），仍失敗標記「需人工確認」；除以零、缺值、重複欄位、月份不完整一律明確處理，不默默吞錯。
+5. **資料血緣紀錄**：保存來源檔案、工作表、儲存格範圍、積木調用鏈、計算假設聲明、校驗結果。
+6. **標準化輸出**：匯出 `data_catalog.json`、`analysis_result.xlsx`、`data_lineage.json`，供成員 B／C／D 使用。
 
 ### 必須特別處理的問題
 
-- 沒有提供前一年同期資料時，不得自行產生 YoY。
-- 市占率的分母必須是同期間市場總計。
-- 圖表座標軸須依實際單位設定，不得混用「元、千元、億元」。
-- 排名必須由程式排序，不能由 LLM 憑語意排列。
-- 平均每卡簽帳金額須明確定義分母為有效卡數或流通卡數。
+- 沒有提供前一年同期資料時，不得自行產生 YoY，輸出 `N/A` 並附原因。
+- 市占率等比率的分母必須明確定義（由 LLM 輸出假設聲明供人核對，而非事後猜測）。
+- 圖表座標軸須依實際單位設定，不得混用不同量級單位。
+- 排名必須由積木（程式）排序，不能由 LLM 憑語意排列。
+- 欄位比對信心不足時，優先列為人工核對清單，不強行自動配對。
+- LLM 不得生成任意計算程式碼，僅能呼叫白名單積木。
 
 ### 交付成果
 
-- `src/data_loader/`
-- `src/calculation_engine/`
-- `src/validation/data_validator.py`
+- `src/catalog_builder/`（多檔案解析、欄位比對、關聯推斷）
+- `src/calculation_engine/blocks/`（白名單積木）
+- `src/calculation_engine/executor.py`（function calling 執行引擎）
+- `src/validation/sanity_check.py`
+- `src/validation/data_lineage.py`
+- `outputs/data_catalog.json`
 - `outputs/analysis_result.xlsx`
 - `outputs/data_lineage.json`
-- 指標計算單元測試。
+- 積木單元測試。
 
 ### 驗收標準
 
+- 11 份檔案可一次上傳並完成 Catalog 建置。
 - 指定抽查數值與原始 Excel 完全一致。
 - 所有比例計算誤差不超過設定的四捨五入範圍。
 - 缺少同期資料時，輸出 `N/A` 並附原因。
-- 每個簡報 KPI 都可回查來源工作表、儲存格及公式。
+- 每個簡報 KPI 都可回查來源檔案、工作表、儲存格、積木鏈與假設聲明。
+- 積木庫可在不新增函式的前提下，同時覆蓋信用卡與旅遊資料的指標需求。
 
 ---
 
@@ -165,14 +168,14 @@ institution | period | metric | value | unit | source_sheet | source_cell
 ### 工作內容
 
 1. 整理附件中的系統提示詞，轉換為可程式化的 Prompt Template。
-2. 定義 LLM 可使用的工具：
-   - 查詢指標。
-   - 取得銀行排名。
+2. 定義 LLM 可使用的工具（對接 Task 1 之白名單積木，領域無關）：
+   - 查詢指標（呼叫積木組合）。
+   - 取得排名（依實際資料維度，如國家／機構／景點）。
    - 取得期間趨勢。
-   - 取得市場平均。
+   - 取得整體平均／總計。
    - 取得數值來源與校驗狀態。
 3. 將任務拆分為多個 Agent 或階段：
-   - Planner Agent：規劃 16 頁簡報結構。
+   - Planner Agent：依實際資料目錄與 Prompt **動態規劃**簡報章節結構（以 16 頁為基準，章節主題不寫死於單一業務領域，例如信用卡情境可能是「同業競爭分析」，旅遊情境可能是「客源國比較」）。
    - Analyst Agent：選擇指標與比較對象。
    - Insight Agent：撰寫商業洞察。
    - Reviewer Agent：檢查敘述是否與數據一致。
@@ -250,34 +253,36 @@ institution | period | metric | value | unit | source_sheet | source_cell
    - 市占率圖。
    - 月度趨勢折線圖。
    - 規模 vs 成長散點圖。
-   - 有效卡率比較圖。
+   - 佔比／滲透率比較圖（如原本的有效卡率比較圖，通用化為任意「率」指標）。
    - 熱力圖。
-   - 循環信用與分期堆疊圖。
-   - 風險象限圖。
+   - 分項堆疊圖（如原本的循環信用與分期堆疊圖，通用化為任意複合結構指標）。
+   - 風險／異常象限圖。
 4. 建立原生 PowerPoint 表格，不以圖片模擬表格。
 5. 將 `slide_spec.json` 轉換為 PowerPoint 頁面。
 6. 確保圖表的資料可透過 PowerPoint「編輯資料」檢視。
 7. 處理長文字、自動換行、字級縮放及圖表標籤碰撞。
-8. 產出 16 頁簡報，頁面建議如下：
+8. 產出以 16 頁為基準的簡報，**章節主題由 Planner Agent（成員 B）依實際 Data Catalog 與 Prompt 動態規劃**，不寫死於單一業務領域；固定不變的只有「封面／目錄／Executive Summary／感謝頁」等版面骨架。以下為**信用卡情境範例**（開發期間可先用此驗證 PPT 產生邏輯），供對照通用結構：
 
-| 頁次 | 內容 |
-|---|---|
-| 1 | 封面 |
-| 2 | 目錄 |
-| 3 | Executive Summary |
-| 4 | Chapter 01 市場整體概況 |
-| 5 | 市場規模趨勢 |
-| 6 | 市占率排名 |
-| 7 | Chapter 02 同業競爭分析 |
-| 8 | 規模 vs 成長 |
-| 9 | 有效卡率比較 |
-| 10 | Chapter 03 客戶活躍度與獲利能力 |
-| 11 | 每卡簽帳金額 |
-| 12 | 循環信用與分期 |
-| 13 | Chapter 04 風險與警訊 |
-| 14 | 風險指標比較 |
-| 15 | Chapter 05 台新策略建議 |
-| 16 | 感謝頁／資料來源 |
+| 頁次 | 固定骨架 | 信用卡情境範例（僅供對照，非寫死） |
+|---|---|---|
+| 1 | 封面 | 封面 |
+| 2 | 目錄 | 目錄 |
+| 3 | Executive Summary | Executive Summary |
+| 4 | Chapter 01（動態） | 市場整體概況 |
+| 5 | 動態頁 | 市場規模趨勢 |
+| 6 | 動態頁 | 市占率排名 |
+| 7 | Chapter 02（動態） | 同業競爭分析 |
+| 8 | 動態頁 | 規模 vs 成長 |
+| 9 | 動態頁 | 有效卡率比較 |
+| 10 | Chapter 03（動態） | 客戶活躍度與獲利能力 |
+| 11 | 動態頁 | 每卡簽帳金額 |
+| 12 | 動態頁 | 循環信用與分期 |
+| 13 | Chapter 04（動態） | 風險與警訊 |
+| 14 | 動態頁 | 風險指標比較 |
+| 15 | Chapter 05（動態） | 台新策略建議 |
+| 16 | 感謝頁／資料來源 | 感謝頁／資料來源 |
+
+> 若決賽當天為旅遊資料，Chapter 主題可能改為「整體觀光概況」「主要客源國比較」「季節性／旺淡季」「消費力與停留天數」「策略建議」等，實際由 Planner Agent 依 Data Catalog 內容動態決定。
 
 ### 必須特別處理的問題
 
@@ -379,6 +384,8 @@ institution | period | metric | value | unit | source_sheet | source_cell
 
 ## 5.1 資料引擎輸出格式
 
+> 以下為信用卡情境的**示例**（schema 結構不變，欄位值換領域即可沿用）；正式版 schema（新增 `assumption_statement`、`block_chain` 等欄位）請見 [`task1.md`](./task1.md) 第 5 節。
+
 ```json
 {
   "metric_id": "market_total_cards_11412",
@@ -394,6 +401,25 @@ institution | period | metric | value | unit | source_sheet | source_cell
       "sheet": "P.5預期修正_流通卡數",
       "range": "B2:M34"
     }
+  ],
+  "validation_status": "passed"
+}
+```
+
+旅遊情境對應範例：
+
+```json
+{
+  "metric_id": "tourist_share_japan_2025",
+  "metric_name": "日本旅客市占率",
+  "value": 0.187,
+  "display_value": "18.7%",
+  "unit": "%",
+  "period": "2025",
+  "assumption_statement": "市占率 = 日本旅客人次 ÷ 全部國家旅客人次總和，期間為2025年1-12月",
+  "block_chain": ["group_sum(日本)", "group_sum(ALL)", "ratio"],
+  "source": [
+    {"file": "附件_旅客統計_01.xlsx", "sheet": "工作表1", "range": "B2:M13"}
   ],
   "validation_status": "passed"
 }
@@ -449,6 +475,7 @@ institution | period | metric | value | unit | source_sheet | source_cell
 ```text
 project-root/
 ├─ README.md
+├─ task1.md                     # Task 1 完整架構規格（成員A）
 ├─ requirements.txt
 ├─ .env.example
 ├─ app/
@@ -459,11 +486,14 @@ project-root/
 │  ├─ slide_planner.md
 │  └─ insight_reviewer.md
 ├─ schemas/
+│  ├─ data_catalog.schema.json  # 新增：資料目錄 schema
 │  ├─ metric.schema.json
 │  └─ slide_spec.schema.json
 ├─ src/
-│  ├─ data_loader/
+│  ├─ catalog_builder/          # 新增：多檔案解析、欄位比對、關聯推斷
 │  ├─ calculation_engine/
+│  │  ├─ blocks/                # 新增：白名單積木（領域無關）
+│  │  └─ executor.py            # 新增：LLM function calling 執行引擎
 │  ├─ agents/
 │  ├─ presentation/
 │  ├─ validation/
@@ -475,6 +505,7 @@ project-root/
 │  ├─ integration/
 │  └─ fixtures/
 ├─ outputs/
+│  └─ data_catalog.json         # 新增：資料目錄輸出
 ├─ deployment/
 └─ docs/
    ├─ architecture.md
@@ -563,7 +594,7 @@ project-root/
 | 完成度 15% | 端到端 Pipeline、16 頁簡報、Excel、寄送及 Demo |
 | 技術可行性 25% | 結構化解析、確定性計算、Agent、原生 PPT 物件 |
 | 商業應用性 50% | 數值正確、簡報品質、端到端速度、商業洞察 |
-| 主題切合度 5% | 聚焦金融信用卡業務報表自動化 |
+| 主題切合度 5% | 聚焦金融業管報自動化痛點，並以領域無關架構因應決賽當天公布之旅遊資料 |
 | 創意度 5% | 資料血緣、回溯校驗、多 Agent 與可編輯簡報 |
 | 加分：口述驅動 | 支援語音轉文字後啟動同一 Pipeline |
 | 加分：Kiro | 使用 Kiro 管理規格、Agent 與整合開發 |
