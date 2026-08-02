@@ -108,8 +108,17 @@ def run_pipeline(
             output_dir=output_dir,
         )
 
-        # 確保每頁有圖表資料（用舊 pipeline 的填充邏輯補足）
+        # 確保每頁有圖表資料
+        # 從 analysis_result.json 的 chart_data 補填
         enriched_specs = _ensure_chart_data(enriched_specs, analysis_json_path)
+
+        # 如果圖表仍不足，用 MetricCalculator 直接算
+        charts_count = sum(1 for s in enriched_specs
+                         if s.get("chart") and isinstance(s.get("chart"), dict)
+                         and (s["chart"].get("series") or s["chart"].get("data_points")))
+        if charts_count < 5:
+            print("  [補填] chart_data 不足，使用計算引擎直接填充...")
+            _populate_from_excel(enriched_specs, excel_dir)
 
         slide_spec_path = os.path.join(output_dir, "slide_spec.json")
         qa_report_path = os.path.join(output_dir, "qa_report.json")
@@ -213,17 +222,144 @@ def _ensure_chart_data(slide_specs: list[dict], analysis_json_path: str) -> list
         # 從 analysis_result.json 的 chart_data 補填
         if chart_idx < len(chart_data_list):
             cd = chart_data_list[chart_idx]
+            # Task1 用 "values" 而非 "data"
+            series = cd.get("series", [])
+            converted_series = []
+            for s in series:
+                converted_series.append({
+                    "name": s.get("name", ""),
+                    "data": s.get("values", s.get("data", [])),
+                })
             spec["chart"] = {
                 "type": cd.get("chart_type", "bar"),
                 "title": cd.get("title", ""),
                 "categories": cd.get("categories", []),
-                "series": cd.get("series", []),
+                "series": converted_series,
             }
             if not spec.get("headline"):
                 spec["headline"] = cd.get("title", "")
             chart_idx += 1
 
     return slide_specs
+
+
+def _populate_from_excel(slide_specs: list[dict], excel_dir: str):
+    """
+    當 chart_data 不足時，直接用 Excel 資料 + MetricCalculator 填充圖表。
+    """
+    from src.data_loader import ExcelLoader, DataStandardizer
+    from src.calculation_engine import MetricCalculator, DataLineageTracker
+
+    # 找到所有 Excel 檔案
+    excel_files = list(Path(excel_dir).glob("*.xlsx")) + list(Path(excel_dir).glob("*.xls"))
+    if not excel_files:
+        return
+
+    # 載入第一個 Excel
+    excel_path = str(excel_files[0])
+    loader = ExcelLoader(excel_path)
+    standardizer = DataStandardizer(excel_path)
+    for sheet_name in loader.get_sheet_names():
+        try:
+            header_row = loader.detect_header_row(sheet_name)
+            df = loader.read_sheet_to_dataframe(sheet_name, header_row=header_row)
+            if not df.empty:
+                standardizer.standardize_dataframe(df, sheet_name)
+        except Exception:
+            pass
+    loader.close()
+
+    std_data = standardizer.to_dataframe()
+    if std_data.empty:
+        return
+
+    lineage = DataLineageTracker()
+    calc = MetricCalculator(std_data, lineage)
+    periods = calc.get_all_periods()
+    if not periods:
+        return
+
+    latest = periods[-1]
+    prev = calc.compute_prev_period(latest)
+    real_institutions = [i for i in calc.get_all_institutions() if i != "總計"]
+
+    # 填充圖表
+    comparison_count = 0
+    trend_count = 0
+    for spec in slide_specs:
+        layout = spec.get("layout", "")
+        if layout in ("cover", "toc", "chapter_divider", "thank_you", "executive_summary", "strategy"):
+            continue
+
+        # 已有有效圖表就跳過
+        chart = spec.get("chart")
+        if chart and isinstance(chart, dict):
+            series = chart.get("series", [])
+            if series and any(isinstance(s, dict) and s.get("data") and any(v for v in s["data"] if v) for s in series):
+                continue
+
+        top8 = calc.ranking(latest, "流通卡數", top_n=8)
+        inst_list = top8["institution"].tolist()
+        categories = [c.replace("商業銀行", "").replace("國際", "") for c in inst_list]
+        months = [f"{int(p[3:])}月" for p in periods]
+
+        if layout == "trend_chart":
+            trend_count += 1
+            if trend_count == 1:
+                monthly_cards = [calc._get_market_total(p, "流通卡數") or 0 for p in periods]
+                monthly_amount = [calc._get_market_total(p, "當月簽帳金額") or 0 for p in periods]
+                spec["chart"] = {
+                    "type": "combo",
+                    "title": "市場規模趨勢",
+                    "categories": months,
+                    "series": [
+                        {"name": "流通卡數(萬張)", "data": [v/10000 for v in monthly_cards]},
+                        {"name": "簽帳金額(億元)", "data": [v/1000000 for v in monthly_amount]},
+                    ],
+                }
+            else:
+                top5 = calc.ranking(latest, "當月簽帳金額", top_n=5)
+                series_list = []
+                for inst in top5["institution"].tolist():
+                    monthly = [calc._get_value(inst, p, "當月簽帳金額") or 0 for p in periods]
+                    series_list.append({"name": inst.replace("商業銀行", ""), "data": [round(v/1000000, 1) for v in monthly]})
+                spec["chart"] = {"type": "line", "title": "Top 5 簽帳金額趨勢", "categories": months, "series": series_list}
+
+        elif layout == "scatter_chart":
+            data_points = []
+            for inst in real_institutions[:12]:
+                cards = calc._get_value(inst, latest, "流通卡數")
+                mom = calc.mom_growth(inst, latest, prev, "流通卡數")
+                if cards and mom is not None:
+                    data_points.append({"name": inst, "x": cards/10000, "y": mom})
+            spec["chart"] = {"type": "scatter", "title": "規模 vs 成長", "data_points": data_points}
+
+        elif layout in ("comparison_chart", "ranking_chart", "stacked_chart", "risk_chart"):
+            comparison_count += 1
+            if comparison_count == 1:
+                shares = [calc.market_share(i, latest, "流通卡數") or 0 for i in inst_list]
+                amount_shares = [calc.market_share(i, latest, "當月簽帳金額") or 0 for i in inst_list]
+                spec["chart"] = {"type": "bar", "title": "卡數 vs 簽帳市占率", "categories": categories, "series": [{"name": "卡數市占(%)", "data": shares}, {"name": "簽帳市占(%)", "data": amount_shares}]}
+            elif comparison_count == 2:
+                cats, vals = [], []
+                for inst in inst_list:
+                    cards = calc._get_value(inst, latest, "流通卡數")
+                    amount = calc._get_value(inst, latest, "當月簽帳金額")
+                    if cards and amount and cards > 0:
+                        cats.append(inst.replace("商業銀行", "").replace("國際", ""))
+                        vals.append(round(amount * 1000 / cards, 0))
+                spec["chart"] = {"type": "bar", "title": "每卡簽帳金額(元/卡)", "categories": cats, "series": [{"name": "每卡簽帳(元)", "data": vals}]}
+            elif comparison_count == 3:
+                top10 = calc.ranking(latest, "流通卡數", top_n=10)
+                spec["chart"] = {"type": "bar", "title": "流通卡數 Top 10", "categories": [c.replace("商業銀行", "") for c in top10["institution"].tolist()], "series": [{"name": "萬張", "data": [round(v/10000, 1) for v in top10["value"].tolist()]}]}
+            else:
+                cats, moms = [], []
+                for inst in inst_list:
+                    mom = calc.mom_growth(inst, latest, prev, "流通卡數")
+                    if mom is not None:
+                        cats.append(inst.replace("商業銀行", "").replace("國際", ""))
+                        moms.append(mom)
+                spec["chart"] = {"type": "bar", "title": f"月增率({prev}→{latest})", "categories": cats, "series": [{"name": "MoM(%)", "data": moms}]}
 
 
 if __name__ == "__main__":
