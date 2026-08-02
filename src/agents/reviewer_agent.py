@@ -27,7 +27,7 @@ class ReviewerAgent:
     """
 
     def __init__(self, model_id: str = None, region: str = None):
-        self.model_id = model_id or os.environ.get("MODEL_ID", "us.anthropic.claude-sonnet-4-20250514-v1:0")
+        self.model_id = model_id or os.environ.get("MODEL_ID", "us.anthropic.claude-sonnet-4-5-20250929-v1:0")
         self.region = region or os.environ.get("AWS_REGION") or os.environ.get("AWS_DEFAULT_REGION", "us-west-2")
         self._client = None
 
