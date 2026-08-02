@@ -12,3 +12,31 @@
 - 驗證結果：市場流通卡數 6,049 萬張、台新市占率 11.0%、排名第五，所有數據與附件三預期一致
 - 16 頁 PPT 全部使用附件一模板 layout，7 頁含原生可編輯圖表
 - 修正空白 placeholder 問題、修正散佈圖生成邏輯
+
+完成 Task 1 領域無關架構重寫（分支 feature/task1-catalog，main 未動） 08/02-Henry
+- 背景：主辦方確認決賽提供 11 份旅遊業務 Excel、欄位結構事先未知，原信用卡專屬指標函式（有效卡率、市占率…）換領域全部要重寫，故改為「資料目錄 + 白名單通用積木 + LLM Function Calling」
+- 新增 src/catalog_builder/：loaders（統一 .xlsx/.xls/.csv）、structure_detector（動態偵測多層表頭）、normalizer（wide→long、民國年、兩種版面方向）、cell_tracker（A1 座標）、fingerprint（Layer 0 runtime 指紋）、field_matcher（Layer 1 規則式比對）、catalog（輸出 data_catalog.json）
+- 新增 src/calculation_engine/blocks/：10 個領域無關積木（filter, filter_by_period, group_sum, group_mean, ratio, growth_rate, rank_top_n, pivot, join, cumulative_sum），任何業務指標皆為其組合，換領域不新增函式
+- 新增 src/calculation_engine/：dataset（長表）、executor（白名單派發+血緣+重試）、llm_planner（Bedrock Function Calling）、recipe_factory（LLM 不可用時的規則式後備）
+- 新增 src/validation/sanity_check.py：比率範圍、分母、NaN/Inf、明細加總對帳、跨檔重複計算
+- 新增 src/export/：同源輸出 analysis_result.json / .xlsx / data_lineage.json，圖表值由 metric 查表產生，三方一致是結構必然
+- 新增 Task1/run_task1.py 執行入口，支援 --prompt / --prompt-file / --no-llm
+- 新增 91 個單元測試（tests/test_blocks, test_executor, test_export, test_llm_planner, test_loaders）
+- 舊架構（data_standardizer.py, metrics.py）一行未刪，成員 D 現有 pipeline 不受影響
+- 驗證：旅遊 11 份→179 指標、193 欄位卡；信用卡附件四→20 指標；四方一致性（metric JSON / Excel / chart_data / lineage）嚴格比對 0 不一致；抽查數值逐格回原檔相符
+- 修正 15 項缺陷，其中 11 項屬「不拋例外但算錯」，詳見 .kiro/specs/task1-data-engine/development-log.md
+
+版控與環境整理 08/02-Henry
+- .pyc 移出版控（19 個）：.gitignore 雖有 __pycache__/ 但這些檔在 .gitignore 之前就被 commit，已追蹤檔案不受 .gitignore 約束，導致任何人跑程式都會冒出二進位檔修改（origin/main 的 618c1d6 "merge: resolve pyc conflict" 即為此問題）→ 大家 pull 後會看到 19 個檔案消失，屬正常
+- .gitignore 補上 .env.*（原本只有 .env，不涵蓋 .env.bak 等衍生檔，憑證輪替時容易外洩）
+- requirements.txt 新增 xlrd==2.0.2（讀舊版 .xls）→ 請大家重跑 pip install -r requirements.txt
+- .kiro/specs/task1-data-engine/ 改為 Kiro 三層規格（requirements / design / tasks）並補 development-log
+
+給 B/C/D 的介接（範例檔在 Task1/samples/，含 README） 08/02-Henry
+- B：不用改程式。analysis_result.json 的 data_summary 鍵名沿用你 plan_structure(data_summary) 的簽名，已實測直接呼叫產出 16 頁。KPI 請只引用 metric_id，不要自己抄數字
+- C：加一行 from src.export import load_chart_series，取得 categories + series_data 直接餵 create_bar_chart。注意值可能是 None（如 2021 疫情年無資料），請讓圖表留空不要補 0
+- D：加一行 from src.export import load_lineage_tracker。你的 DataLineageTracker 沒有讀檔方法所以原本載不進 JSON，loader 放在 src/export/，沒有改到你的 data_lineage.py。血緣現在帶真實 A1 座標可逐格核對
+- 待確認 1（D）：outputs/ 寫入衝突，你的 pipeline.py 和我的 run_task1.py 都寫 analysis_result.xlsx 與 data_lineage.json，後跑的會覆蓋且不報錯
+- 待確認 2（B、D）：ppt_reconciler._check_chart_data 讀 chart["series"][i]["metric_ids"]，但 slide_spec 實際是 series_metric_ids，鍵名不符導致圖表校驗一直空轉，QA 報告該項會永遠顯示綠燈
+- 待確認 3（D）：server.py 已把 user_prompt_path 傳進 pipeline，但 pipeline.py 只宣告未讀取，使用者輸入的 Prompt 目前存到硬碟後就被丟棄
+- 提醒：貼 AWS 憑證到 .env 時記得去掉 PowerShell 的 $Env: 前綴，否則 dotenv 會把整串當成鍵名而讀不到憑證
