@@ -24,6 +24,7 @@ from __future__ import annotations
 
 import argparse
 import os
+import re
 import sys
 from pathlib import Path
 
@@ -79,6 +80,24 @@ LLM_MAX_RETRIES = 2
 
 不設無限重試：連錯兩次通常代表問題出在資料或提問本身，再問下去只是燒錢
 燒時間。仍失敗就落回規則式後備，至少產出得了東西。"""
+
+
+def metric_slug(canonical: str, file_name: str) -> str:
+    """
+    產生唯一的 metric_id 前綴。
+
+    **必須含檔名**：同一個 canonical 常橫跨多份檔案（「來臺旅客_亞洲地區_日本」
+    同時存在於表1-2 按居住地與表1-3 按國籍），兩者是同一批旅客的不同統計口徑，
+    數值不同（1,483,176 vs 1,479,392）。只用 canonical 當 id 會讓兩個不同的
+    數字共用同一個 metric_id——成員 B 引用它做 KPI、成員 D 回溯血緣，
+    兩邊可能拿到不同的值，正是本專案要消滅的「簡報數字與 Excel 不符」。
+
+    取檔名開頭的表號（「表1-2」）而非完整檔名，是為了讓 metric_id 保持可讀。
+    """
+    stem = Path(file_name).stem
+    token = re.match(r"^[^-]+-[^-]+", stem)
+    prefix = (token.group(0) if token else stem[:8]).replace(" ", "")
+    return f"{prefix}_{canonical}".replace(" ", "")
 
 
 def _safe(executor: Executor, payload: dict) -> object | None:
@@ -205,12 +224,14 @@ def plan_by_rules(
         if not fields:
             continue
 
-        total_field = find_total_field(dataset, file_name)
         print(f"  {Path(file_name).stem[:14]} ({year})")
 
         for canonical in fields:
             meta = dataset.fields[canonical]
-            slug = canonical.replace(" ", "")
+            # 總計欄必須取自「同一張工作表」——一個檔案常有多張表量測不同的
+            # 東西，跨表相除會得到毫無意義的比率
+            total_field = find_total_field(dataset, file_name, meta.sheet_name)
+            slug = metric_slug(canonical, file_name)
 
             if m := _safe(executor, value_recipe(
                 f"{slug}_{year}", f"{canonical} {year}",
@@ -240,7 +261,7 @@ def add_trend_chart(
 ) -> None:
     """為量級最大的欄位做一張趨勢圖。圖表值直接引用 metric，不另外計算。"""
     meta = dataset.fields[canonical]
-    slug = canonical.replace(" ", "")
+    slug = metric_slug(canonical, file_name)
     years, metric_ids = [], []
 
     for y in range(year - TREND_YEARS + 1, year + 1):

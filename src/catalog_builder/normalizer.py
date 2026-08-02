@@ -26,8 +26,13 @@ from dataclasses import dataclass, field
 from enum import Enum
 from typing import Any
 
-from .cell_tracker import CellRef, column_range
-from .structure_detector import ColumnInfo, SheetStructure
+from .cell_tracker import CellRef, column_range, to_a1
+from .structure_detector import (
+    ColumnInfo,
+    SheetStructure,
+    looks_like_period_header,
+    normalize_period_code,
+)
 
 # 「53年1964」「66 年 1977」「民國106年 2017」→ 取尾端西元四位數
 _AD_IN_MIXED = re.compile(r"(1[89]\d{2}|2[01]\d{2})\s*$")
@@ -129,6 +134,102 @@ def detect_period_column(structure: SheetStructure) -> int | None:
     return None
 
 
+def detect_period_header_columns(structure: SheetStructure) -> dict[int, int]:
+    """
+    找出「表頭本身就是期間代碼」的欄位，回傳 {欄號: 西元年}。
+
+    這是與旅遊報表相反的版面：
+
+        旅遊（年度為列）  年度 | 日本 | 韓國 …           期間在**欄裡**
+        財報（期間為欄）  金融機構名稱 | 11401 | 11402 …   期間在**欄名上**
+
+    兩種都很常見，只支援一種會讓另一種靜默產出 0 筆——實測附件四（信用卡）
+    在支援轉置之前正是 0 筆，而且不拋任何例外。
+    """
+    return {
+        column.index: year
+        for column in structure.columns
+        if (year := normalize_period_code(column.leaf_name)) is not None
+    }
+
+
+def _entity_column(structure: SheetStructure, period_cols: set[int]) -> int | None:
+    """
+    轉置版面中，哪一欄裝的是實體名稱（機構、國家、類別）。
+
+    取第一個「文字為主」的欄位——政府報表與財報的慣例是實體名稱放最左邊。
+    """
+    for column in structure.columns:
+        if column.index in period_cols:
+            continue
+        values = [v for v in _column_values(structure, column.index) if v is not None]
+        if not values:
+            continue
+        if sum(1 for v in values if not _is_number(v)) / len(values) > 0.5:
+            return column.index
+    return None
+
+
+def _normalize_transposed(
+    structure: SheetStructure, result: "NormalizedSheet", period_cols: dict[int, int]
+) -> None:
+    """
+    轉置版面的攤平：一列一個實體、一欄一個期間。
+
+    產出的長表與正常版面完全相同（period / dimension / value / A1 座標），
+    因此積木、執行引擎、輸出層一行都不用改——差異被侷限在這裡。
+    """
+    entity_col = _entity_column(structure, set(period_cols))
+    if entity_col is None:
+        result.warnings.append("期間在欄名上，但找不到實體名稱欄，無法攤平")
+        return
+
+    measure = structure.column_by_index(min(period_cols))
+    metric_name = structure.sheet_name
+
+    for row in range(structure.data_start_row, structure.data_end_row + 1):
+        entity = structure.cell(row, entity_col)
+        if entity is None or _is_number(entity):
+            continue
+        entity_name = " ".join(str(entity).split())
+        if not entity_name:
+            continue
+
+        # 實體名稱即維度；量測概念來自工作表名稱（如「P.5預期修正_流通卡數」）
+        dimension = entity_name
+        cols = sorted(period_cols)
+        result.column_ranges.setdefault(
+            dimension,
+            f"{to_a1(row, cols[0])}:{to_a1(row, cols[-1])}",
+        )
+
+        for col in cols:
+            value = structure.cell(row, col)
+            if value is None or not _is_number(value):
+                continue
+            record = LongRecord(
+                period=period_cols[col],
+                dimension=dimension,
+                value=float(value),
+                cell=CellRef(sheet=structure.sheet_name, row=row, col=col),
+            )
+            if value < 0:
+                record.is_anomalous = True
+                record.anomaly_reason = (
+                    f"量值出現負數 {value}，疑似小計調整或缺值標記"
+                )
+            result.records.append(record)
+
+        result.measure_columns.append(
+            ColumnInfo(index=row, letter=to_a1(row, cols[0])[:-len(str(row))], layers=[dimension])
+        )
+
+    result.warnings.append(
+        f"版面為「期間在欄名」，已轉置攤平；量測概念取自工作表名稱「{metric_name}」，"
+        f"同一年度的多個月份已併入該年度"
+    )
+
+
 def _looks_like_ratio(column: ColumnInfo, values: list[float]) -> bool:
     """
     此欄是否為比率／百分比欄。
@@ -212,6 +313,12 @@ def normalize_sheet(structure: SheetStructure, file_name: str) -> NormalizedShee
 
     if not structure.is_parsable:
         result.warnings.append("結構偵測失敗，略過正規化")
+        return result
+
+    # 先判斷版面方向：期間在欄名上時走轉置路徑
+    period_header_cols = detect_period_header_columns(structure)
+    if len(period_header_cols) >= 3:
+        _normalize_transposed(structure, result, period_header_cols)
         return result
 
     period_col = detect_period_column(structure)

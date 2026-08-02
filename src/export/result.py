@@ -277,6 +277,22 @@ class AnalysisResult:
         真正會出錯的是**引用了不存在的 metric_id**——那會讓圖上出現空洞。
         """
         problems = []
+
+        # 重複 metric_id 是「同一個 id 對應兩個不同數字」的靜默錯誤：
+        # 實測兩份檔案的同名欄位曾產生重複 id，值相差 3,784 人。
+        # 下游按 id 查值時拿到哪一個取決於寫入順序，無法預期。
+        from collections import Counter
+
+        counts = Counter(m.metric_id for m in self.metrics)
+        for metric_id, count in counts.items():
+            if count > 1:
+                values = {m.value for m in self.metrics if m.metric_id == metric_id}
+                problems.append(
+                    f"metric_id '{metric_id}' 重複 {count} 次"
+                    + (f"，且數值不同：{sorted(v for v in values if v is not None)}"
+                       if len(values) > 1 else "")
+                )
+
         for chart in self.charts:
             for name, metric_ids in chart.category_metric_map.items():
                 missing = [mid for mid in metric_ids if mid not in self._index]

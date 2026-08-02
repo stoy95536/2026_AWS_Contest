@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-02T10:33:54",
-  "total_records": 177,
+  "generated_at": "2026-08-02T10:44:00",
+  "total_records": 179,
   "records": {
-    "觀光外匯收入_來臺旅客觀光支出(美元)_2024": {
-      "metric_id": "觀光外匯收入_來臺旅客觀光支出(美元)_2024",
+    "表1-10_觀光外匯收入_來臺旅客觀光支出(美元)_2024": {
+      "metric_id": "表1-10_觀光外匯收入_來臺旅客觀光支出(美元)_2024",
       "metric_name": "觀光外匯收入_來臺旅客 觀光支出 (美元) 2024",
       "value": 10028000000.0,
       "display_value": "10,028,000,000",
@@ -30,10 +30,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "觀光外匯收入_來臺旅客觀光支出(美元)_yoy_2024": {
-      "metric_id": "觀光外匯收入_來臺旅客觀光支出(美元)_yoy_2024",
+    "表1-10_觀光外匯收入_來臺旅客觀光支出(美元)_yoy_2024": {
+      "metric_id": "表1-10_觀光外匯收入_來臺旅客觀光支出(美元)_yoy_2024",
       "metric_name": "觀光外匯收入_來臺旅客 觀光支出 (美元) 年增率",
       "value": 15.7833968364,
       "display_value": "15.78%",
@@ -65,10 +65,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "觀光外匯收入_來臺人次_2024": {
-      "metric_id": "觀光外匯收入_來臺人次_2024",
+    "表1-10_觀光外匯收入_來臺人次_2024": {
+      "metric_id": "表1-10_觀光外匯收入_來臺人次_2024",
       "metric_name": "觀光外匯收入_來臺人次 2024",
       "value": 7857686.0,
       "display_value": "7,857,686",
@@ -95,10 +95,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "觀光外匯收入_來臺人次_yoy_2024": {
-      "metric_id": "觀光外匯收入_來臺人次_yoy_2024",
+    "表1-10_觀光外匯收入_來臺人次_yoy_2024": {
+      "metric_id": "表1-10_觀光外匯收入_來臺人次_yoy_2024",
       "metric_name": "觀光外匯收入_來臺人次 年增率",
       "value": 21.1306513646,
       "display_value": "21.13%",
@@ -130,10 +130,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "觀光外匯收入_每一旅客平均在臺消費額(美元）_2024": {
-      "metric_id": "觀光外匯收入_每一旅客平均在臺消費額(美元）_2024",
+    "表1-10_觀光外匯收入_每一旅客平均在臺消費額(美元）_2024": {
+      "metric_id": "表1-10_觀光外匯收入_每一旅客平均在臺消費額(美元）_2024",
       "metric_name": "觀光外匯收入_每一旅客 平均在臺 消費額(美元） 2024",
       "value": 1276.0,
       "display_value": "1,276",
@@ -160,10 +160,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "觀光外匯收入_每一旅客平均在臺消費額(美元）_yoy_2024": {
-      "metric_id": "觀光外匯收入_每一旅客平均在臺消費額(美元）_yoy_2024",
+    "表1-10_觀光外匯收入_每一旅客平均在臺消費額(美元）_yoy_2024": {
+      "metric_id": "表1-10_觀光外匯收入_每一旅客平均在臺消費額(美元）_yoy_2024",
       "metric_name": "觀光外匯收入_每一旅客 平均在臺 消費額(美元） 年增率",
       "value": -4.4194756554,
       "display_value": "-4.42%",
@@ -195,10 +195,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "觀光外匯收入_指數80年=100_2024": {
-      "metric_id": "觀光外匯收入_指數80年=100_2024",
+    "表1-10_觀光外匯收入_指數80年=100_2024": {
+      "metric_id": "表1-10_觀光外匯收入_指數80年=100_2024",
       "metric_name": "觀光外匯收入_指數 80年=100 2024",
       "value": 496.93,
       "display_value": "496.93",
@@ -225,10 +225,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "觀光外匯收入_指數80年=100_yoy_2024": {
-      "metric_id": "觀光外匯收入_指數80年=100_yoy_2024",
+    "表1-10_觀光外匯收入_指數80年=100_yoy_2024": {
+      "metric_id": "表1-10_觀光外匯收入_指數80年=100_yoy_2024",
       "metric_name": "觀光外匯收入_指數 80年=100 年增率",
       "value": 15.7832195531,
       "display_value": "15.78%",
@@ -260,10 +260,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "觀光外匯收入_每一旅客每日平均消費額(美元）_2024": {
-      "metric_id": "觀光外匯收入_每一旅客每日平均消費額(美元）_2024",
+    "表1-10_觀光外匯收入_每一旅客每日平均消費額(美元）_2024": {
+      "metric_id": "表1-10_觀光外匯收入_每一旅客每日平均消費額(美元）_2024",
       "metric_name": "觀光外匯收入_每一旅客 每日平均 消費額(美元） 2024",
       "value": 182.83,
       "display_value": "182.83",
@@ -290,10 +290,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "觀光外匯收入_每一旅客每日平均消費額(美元）_yoy_2024": {
-      "metric_id": "觀光外匯收入_每一旅客每日平均消費額(美元）_yoy_2024",
+    "表1-10_觀光外匯收入_每一旅客每日平均消費額(美元）_yoy_2024": {
+      "metric_id": "表1-10_觀光外匯收入_每一旅客每日平均消費額(美元）_yoy_2024",
       "metric_name": "觀光外匯收入_每一旅客 每日平均 消費額(美元） 年增率",
       "value": 1.1955498976,
       "display_value": "1.20%",
@@ -325,10 +325,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "觀光外匯收入_來臺旅客觀光支出(美元)_2019": {
-      "metric_id": "觀光外匯收入_來臺旅客觀光支出(美元)_2019",
+    "表1-10_觀光外匯收入_來臺旅客觀光支出(美元)_2019": {
+      "metric_id": "表1-10_觀光外匯收入_來臺旅客觀光支出(美元)_2019",
       "metric_name": "觀光外匯收入_來臺旅客 觀光支出 (美元) 2019",
       "value": 14411000000.0,
       "display_value": "14,411,000,000",
@@ -355,10 +355,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "觀光外匯收入_來臺旅客觀光支出(美元)_2020": {
-      "metric_id": "觀光外匯收入_來臺旅客觀光支出(美元)_2020",
+    "表1-10_觀光外匯收入_來臺旅客觀光支出(美元)_2020": {
+      "metric_id": "表1-10_觀光外匯收入_來臺旅客觀光支出(美元)_2020",
       "metric_name": "觀光外匯收入_來臺旅客 觀光支出 (美元) 2020",
       "value": 1800000000.0,
       "display_value": "1,800,000,000",
@@ -385,10 +385,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "觀光外匯收入_來臺旅客觀光支出(美元)_2021": {
-      "metric_id": "觀光外匯收入_來臺旅客觀光支出(美元)_2021",
+    "表1-10_觀光外匯收入_來臺旅客觀光支出(美元)_2021": {
+      "metric_id": "表1-10_觀光外匯收入_來臺旅客觀光支出(美元)_2021",
       "metric_name": "觀光外匯收入_來臺旅客 觀光支出 (美元) 2021",
       "value": 745000000.0,
       "display_value": "745,000,000",
@@ -415,10 +415,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "觀光外匯收入_來臺旅客觀光支出(美元)_2022": {
-      "metric_id": "觀光外匯收入_來臺旅客觀光支出(美元)_2022",
+    "表1-10_觀光外匯收入_來臺旅客觀光支出(美元)_2022": {
+      "metric_id": "表1-10_觀光外匯收入_來臺旅客觀光支出(美元)_2022",
       "metric_name": "觀光外匯收入_來臺旅客 觀光支出 (美元) 2022",
       "value": 1781000000.0,
       "display_value": "1,781,000,000",
@@ -445,10 +445,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "觀光外匯收入_來臺旅客觀光支出(美元)_2023": {
-      "metric_id": "觀光外匯收入_來臺旅客觀光支出(美元)_2023",
+    "表1-10_觀光外匯收入_來臺旅客觀光支出(美元)_2023": {
+      "metric_id": "表1-10_觀光外匯收入_來臺旅客觀光支出(美元)_2023",
       "metric_name": "觀光外匯收入_來臺旅客 觀光支出 (美元) 2023",
       "value": 8661000000.0,
       "display_value": "8,661,000,000",
@@ -475,110 +475,110 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_亞洲地區_日本_2025": {
-      "metric_id": "來臺旅客_亞洲地區_日本_2025",
+    "表1-2_來臺旅客_亞洲地區_日本_2025": {
+      "metric_id": "表1-2_來臺旅客_亞洲地區_日本_2025",
       "metric_name": "來臺旅客_亞洲地區_日本 2025",
-      "value": 1479392.0,
-      "display_value": "1,479,392",
+      "value": 1483176.0,
+      "display_value": "1,483,176",
       "unit": "人次",
       "period": "2025",
-      "formula": "filter(column='file', operator='==', value='表1-3-歷年來臺旅客按國籍分.xlsx') → filter(column='canonical', operator='==', value='來臺旅客_亞洲地區_日本') → filter_by_period(start=2025, end=2025) → group_sum(group_col='period', detail_only=False)",
+      "formula": "filter(column='file', operator='==', value='表1-2-歷年來臺旅客按居住地分.xlsx') → filter(column='canonical', operator='==', value='來臺旅客_亞洲地區_日本') → filter_by_period(start=2025, end=2025) → group_sum(group_col='period', detail_only=False)",
       "block_chain": [
-        "filter(column='file', operator='==', value='表1-3-歷年來臺旅客按國籍分.xlsx')",
+        "filter(column='file', operator='==', value='表1-2-歷年來臺旅客按居住地分.xlsx')",
         "filter(column='canonical', operator='==', value='來臺旅客_亞洲地區_日本')",
         "filter_by_period(start=2025, end=2025)",
         "group_sum(group_col='period', detail_only=False)"
       ],
-      "assumption_statement": "取自「表1-3-歷年來臺旅客按國籍分.xlsx」的「來臺旅客_亞洲地區_日本」欄 2025 年度值",
+      "assumption_statement": "取自「表1-2-歷年來臺旅客按居住地分.xlsx」的「來臺旅客_亞洲地區_日本」欄 2025 年度值",
       "sources": [
         {
-          "file": "表1-3-歷年來臺旅客按國籍分.xlsx",
-          "sheet": "歷年來臺旅客-按國籍",
-          "range": "C66"
+          "file": "表1-2-歷年來臺旅客按居住地分.xlsx",
+          "sheet": "歷年來臺旅客-按居住地",
+          "range": "E74"
         }
       ],
       "source_cells": [
-        "歷年來臺旅客-按國籍!C66"
+        "歷年來臺旅客-按居住地!E74"
       ],
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_亞洲地區_日本_yoy_2025": {
-      "metric_id": "來臺旅客_亞洲地區_日本_yoy_2025",
+    "表1-2_來臺旅客_亞洲地區_日本_yoy_2025": {
+      "metric_id": "表1-2_來臺旅客_亞洲地區_日本_yoy_2025",
       "metric_name": "來臺旅客_亞洲地區_日本 年增率",
-      "value": 12.2135482246,
-      "display_value": "12.21%",
+      "value": 12.3965589364,
+      "display_value": "12.40%",
       "unit": "%",
       "period": "2025",
-      "formula": "來臺旅客_亞洲地區_日本 年增率 = (本期 − 基期) / 基期 × 100%（(1.479e+06 − 1.318e+06) / 1.318e+06）",
+      "formula": "來臺旅客_亞洲地區_日本 年增率 = (本期 − 基期) / 基期 × 100%（(1.483e+06 − 1.32e+06) / 1.32e+06）",
       "block_chain": [
-        "filter(column='file', operator='==', value='表1-3-歷年來臺旅客按國籍分.xlsx')",
+        "filter(column='file', operator='==', value='表1-2-歷年來臺旅客按居住地分.xlsx')",
         "filter(column='canonical', operator='==', value='來臺旅客_亞洲地區_日本')",
         "filter_by_period(start=2025, end=2025)",
         "group_sum(group_col='period', detail_only=False)",
-        "filter(column='file', operator='==', value='表1-3-歷年來臺旅客按國籍分.xlsx')",
+        "filter(column='file', operator='==', value='表1-2-歷年來臺旅客按居住地分.xlsx')",
         "filter(column='canonical', operator='==', value='來臺旅客_亞洲地區_日本')",
         "filter_by_period(start=2024, end=2024)",
         "group_sum(group_col='period', detail_only=False)",
         "growth_rate(label='來臺旅客_亞洲地區_日本 年增率')"
       ],
-      "assumption_statement": "以「表1-3-歷年來臺旅客按國籍分.xlsx」的「來臺旅客_亞洲地區_日本」欄 2024 年為基期；基期缺值時輸出 N/A，不以任何方式估算",
+      "assumption_statement": "以「表1-2-歷年來臺旅客按居住地分.xlsx」的「來臺旅客_亞洲地區_日本」欄 2024 年為基期；基期缺值時輸出 N/A，不以任何方式估算",
       "sources": [
         {
-          "file": "表1-3-歷年來臺旅客按國籍分.xlsx",
-          "sheet": "歷年來臺旅客-按國籍",
-          "range": "C65"
+          "file": "表1-2-歷年來臺旅客按居住地分.xlsx",
+          "sheet": "歷年來臺旅客-按居住地",
+          "range": "E73"
         }
       ],
       "source_cells": [
-        "歷年來臺旅客-按國籍!C65"
+        "歷年來臺旅客-按居住地!E73"
       ],
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_亞洲地區_日本_share_2025": {
-      "metric_id": "來臺旅客_亞洲地區_日本_share_2025",
+    "表1-2_來臺旅客_亞洲地區_日本_share_2025": {
+      "metric_id": "表1-2_來臺旅客_亞洲地區_日本_share_2025",
       "metric_name": "來臺旅客_亞洲地區_日本 占比",
-      "value": 28.6426441985,
-      "display_value": "28.64%",
+      "value": 20.7419622896,
+      "display_value": "20.74%",
       "unit": "%",
       "period": "2025",
-      "formula": "來臺旅客_亞洲地區_日本 占比 = 分子 / 分母 × 100%（1.479e+06 / 5.165e+06）",
+      "formula": "來臺旅客_亞洲地區_日本 占比 = 分子 / 分母 × 100%（1.483e+06 / 7.151e+06）",
       "block_chain": [
-        "filter(column='file', operator='==', value='表1-3-歷年來臺旅客按國籍分.xlsx')",
+        "filter(column='file', operator='==', value='表1-2-歷年來臺旅客按居住地分.xlsx')",
         "filter(column='canonical', operator='==', value='來臺旅客_亞洲地區_日本')",
         "filter_by_period(start=2025, end=2025)",
         "group_sum(group_col='period', detail_only=False)",
-        "filter(column='file', operator='==', value='表1-3-歷年來臺旅客按國籍分.xlsx')",
-        "filter(column='canonical', operator='==', value='來臺旅客_亞洲合計')",
+        "filter(column='file', operator='==', value='表1-2-歷年來臺旅客按居住地分.xlsx')",
+        "filter(column='canonical', operator='==', value='來臺旅客_亞洲地區_亞洲合計')",
         "filter_by_period(start=2025, end=2025)",
         "group_sum(group_col='period', detail_only=False)",
         "ratio(label='來臺旅客_亞洲地區_日本 占比')"
       ],
-      "assumption_statement": "分母採用「表1-3-歷年來臺旅客按國籍分.xlsx」的「來臺旅客_亞洲合計」欄，即報表既有的官方總計，非自行加總明細",
+      "assumption_statement": "分母採用「表1-2-歷年來臺旅客按居住地分.xlsx」的「來臺旅客_亞洲地區_亞洲合計」欄，即報表既有的官方總計，非自行加總明細",
       "sources": [
         {
-          "file": "表1-3-歷年來臺旅客按國籍分.xlsx",
-          "sheet": "歷年來臺旅客-按國籍",
-          "range": "P66"
+          "file": "表1-2-歷年來臺旅客按居住地分.xlsx",
+          "sheet": "歷年來臺旅客-按居住地",
+          "range": "R74"
         }
       ],
       "source_cells": [
-        "歷年來臺旅客-按國籍!P66"
+        "歷年來臺旅客-按居住地!R74"
       ],
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_亞洲地區_香港.澳門_2025": {
-      "metric_id": "來臺旅客_亞洲地區_香港.澳門_2025",
+    "表1-2_來臺旅客_亞洲地區_香港.澳門_2025": {
+      "metric_id": "表1-2_來臺旅客_亞洲地區_香港.澳門_2025",
       "metric_name": "來臺旅客_亞洲地區_香港.澳門 2025",
       "value": 1310139.0,
       "display_value": "1,310,139",
@@ -605,10 +605,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_亞洲地區_香港.澳門_yoy_2025": {
-      "metric_id": "來臺旅客_亞洲地區_香港.澳門_yoy_2025",
+    "表1-2_來臺旅客_亞洲地區_香港.澳門_yoy_2025": {
+      "metric_id": "表1-2_來臺旅客_亞洲地區_香港.澳門_yoy_2025",
       "metric_name": "來臺旅客_亞洲地區_香港.澳門 年增率",
       "value": -0.0639217927,
       "display_value": "-0.06%",
@@ -640,10 +640,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_亞洲地區_香港.澳門_share_2025": {
-      "metric_id": "來臺旅客_亞洲地區_香港.澳門_share_2025",
+    "表1-2_來臺旅客_亞洲地區_香港.澳門_share_2025": {
+      "metric_id": "表1-2_來臺旅客_亞洲地區_香港.澳門_share_2025",
       "metric_name": "來臺旅客_亞洲地區_香港.澳門 占比",
       "value": 18.3220694861,
       "display_value": "18.32%",
@@ -675,10 +675,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_亞洲地區_韓國_2025": {
-      "metric_id": "來臺旅客_亞洲地區_韓國_2025",
+    "表1-2_來臺旅客_亞洲地區_韓國_2025": {
+      "metric_id": "表1-2_來臺旅客_亞洲地區_韓國_2025",
       "metric_name": "來臺旅客_亞洲地區_韓國 2025",
       "value": 1016520.0,
       "display_value": "1,016,520",
@@ -705,10 +705,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_亞洲地區_韓國_yoy_2025": {
-      "metric_id": "來臺旅客_亞洲地區_韓國_yoy_2025",
+    "表1-2_來臺旅客_亞洲地區_韓國_yoy_2025": {
+      "metric_id": "表1-2_來臺旅客_亞洲地區_韓國_yoy_2025",
       "metric_name": "來臺旅客_亞洲地區_韓國 年增率",
       "value": 1.339267022,
       "display_value": "1.34%",
@@ -740,10 +740,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_亞洲地區_韓國_share_2025": {
-      "metric_id": "來臺旅客_亞洲地區_韓國_share_2025",
+    "表1-2_來臺旅客_亞洲地區_韓國_share_2025": {
+      "metric_id": "表1-2_來臺旅客_亞洲地區_韓國_share_2025",
       "metric_name": "來臺旅客_亞洲地區_韓國 占比",
       "value": 14.2158580685,
       "display_value": "14.22%",
@@ -775,10 +775,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_美洲地區_美國_2025": {
-      "metric_id": "來臺旅客_美洲地區_美國_2025",
+    "表1-2_來臺旅客_美洲地區_美國_2025": {
+      "metric_id": "表1-2_來臺旅客_美洲地區_美國_2025",
       "metric_name": "來臺旅客_美洲地區_美國 2025",
       "value": 715481.0,
       "display_value": "715,481",
@@ -805,10 +805,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_美洲地區_美國_yoy_2025": {
-      "metric_id": "來臺旅客_美洲地區_美國_yoy_2025",
+    "表1-2_來臺旅客_美洲地區_美國_yoy_2025": {
+      "metric_id": "表1-2_來臺旅客_美洲地區_美國_yoy_2025",
       "metric_name": "來臺旅客_美洲地區_美國 年增率",
       "value": 9.8603638463,
       "display_value": "9.86%",
@@ -840,10 +840,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_美洲地區_美國_share_2025": {
-      "metric_id": "來臺旅客_美洲地區_美國_share_2025",
+    "表1-2_來臺旅客_美洲地區_美國_share_2025": {
+      "metric_id": "表1-2_來臺旅客_美洲地區_美國_share_2025",
       "metric_name": "來臺旅客_美洲地區_美國 占比",
       "value": 10.005879222,
       "display_value": "10.01%",
@@ -875,10 +875,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_亞洲地區_大陸_2025": {
-      "metric_id": "來臺旅客_亞洲地區_大陸_2025",
+    "表1-2_來臺旅客_亞洲地區_大陸_2025": {
+      "metric_id": "表1-2_來臺旅客_亞洲地區_大陸_2025",
       "metric_name": "來臺旅客_亞洲地區_大陸 2025",
       "value": 637060.0,
       "display_value": "637,060",
@@ -905,10 +905,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_亞洲地區_大陸_yoy_2025": {
-      "metric_id": "來臺旅客_亞洲地區_大陸_yoy_2025",
+    "表1-2_來臺旅客_亞洲地區_大陸_yoy_2025": {
+      "metric_id": "表1-2_來臺旅客_亞洲地區_大陸_yoy_2025",
       "metric_name": "來臺旅客_亞洲地區_大陸 年增率",
       "value": 45.3771234015,
       "display_value": "45.38%",
@@ -940,10 +940,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_亞洲地區_大陸_share_2025": {
-      "metric_id": "來臺旅客_亞洲地區_大陸_share_2025",
+    "表1-2_來臺旅客_亞洲地區_大陸_share_2025": {
+      "metric_id": "表1-2_來臺旅客_亞洲地區_大陸_share_2025",
       "metric_name": "來臺旅客_亞洲地區_大陸 占比",
       "value": 8.9091749706,
       "display_value": "8.91%",
@@ -975,10 +975,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_亞洲地區_日本_2020": {
-      "metric_id": "來臺旅客_亞洲地區_日本_2020",
+    "表1-2_來臺旅客_亞洲地區_日本_2020": {
+      "metric_id": "表1-2_來臺旅客_亞洲地區_日本_2020",
       "metric_name": "來臺旅客_亞洲地區_日本 2020",
       "value": 269659.0,
       "display_value": "269,659",
@@ -1005,10 +1005,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_亞洲地區_日本_2021": {
-      "metric_id": "來臺旅客_亞洲地區_日本_2021",
+    "表1-2_來臺旅客_亞洲地區_日本_2021": {
+      "metric_id": "表1-2_來臺旅客_亞洲地區_日本_2021",
       "metric_name": "來臺旅客_亞洲地區_日本 2021",
       "value": 10056.0,
       "display_value": "10,056",
@@ -1035,10 +1035,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_亞洲地區_日本_2022": {
-      "metric_id": "來臺旅客_亞洲地區_日本_2022",
+    "表1-2_來臺旅客_亞洲地區_日本_2022": {
+      "metric_id": "表1-2_來臺旅客_亞洲地區_日本_2022",
       "metric_name": "來臺旅客_亞洲地區_日本 2022",
       "value": 87616.0,
       "display_value": "87,616",
@@ -1065,10 +1065,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_亞洲地區_日本_2023": {
-      "metric_id": "來臺旅客_亞洲地區_日本_2023",
+    "表1-2_來臺旅客_亞洲地區_日本_2023": {
+      "metric_id": "表1-2_來臺旅客_亞洲地區_日本_2023",
       "metric_name": "來臺旅客_亞洲地區_日本 2023",
       "value": 928235.0,
       "display_value": "928,235",
@@ -1095,10 +1095,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_亞洲地區_日本_2024": {
-      "metric_id": "來臺旅客_亞洲地區_日本_2024",
+    "表1-2_來臺旅客_亞洲地區_日本_2024": {
+      "metric_id": "表1-2_來臺旅客_亞洲地區_日本_2024",
       "metric_name": "來臺旅客_亞洲地區_日本 2024",
       "value": 1319592.0,
       "display_value": "1,319,592",
@@ -1125,10 +1125,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_華僑_2025": {
-      "metric_id": "來臺旅客_華僑_2025",
+    "表1-3_來臺旅客_華僑_2025": {
+      "metric_id": "表1-3_來臺旅客_華僑_2025",
       "metric_name": "來臺旅客_華僑 2025",
       "value": 1854949.0,
       "display_value": "1,854,949",
@@ -1155,10 +1155,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_華僑_yoy_2025": {
-      "metric_id": "來臺旅客_華僑_yoy_2025",
+    "表1-3_來臺旅客_華僑_yoy_2025": {
+      "metric_id": "表1-3_來臺旅客_華僑_yoy_2025",
       "metric_name": "來臺旅客_華僑 年增率",
       "value": 9.2837797792,
       "display_value": "9.28%",
@@ -1190,10 +1190,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_華僑_share_2025": {
-      "metric_id": "來臺旅客_華僑_share_2025",
+    "表1-3_來臺旅客_華僑_share_2025": {
+      "metric_id": "表1-3_來臺旅客_華僑_share_2025",
       "metric_name": "來臺旅客_華僑 占比",
       "value": 35.9138377208,
       "display_value": "35.91%",
@@ -1225,10 +1225,75 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_韓國_2025": {
-      "metric_id": "來臺旅客_韓國_2025",
+    "表1-3_來臺旅客_亞洲地區_日本_2025": {
+      "metric_id": "表1-3_來臺旅客_亞洲地區_日本_2025",
+      "metric_name": "來臺旅客_亞洲地區_日本 2025",
+      "value": 1479392.0,
+      "display_value": "1,479,392",
+      "unit": "人次",
+      "period": "2025",
+      "formula": "filter(column='file', operator='==', value='表1-3-歷年來臺旅客按國籍分.xlsx') → filter(column='canonical', operator='==', value='來臺旅客_亞洲地區_日本') → filter_by_period(start=2025, end=2025) → group_sum(group_col='period', detail_only=False)",
+      "block_chain": [
+        "filter(column='file', operator='==', value='表1-3-歷年來臺旅客按國籍分.xlsx')",
+        "filter(column='canonical', operator='==', value='來臺旅客_亞洲地區_日本')",
+        "filter_by_period(start=2025, end=2025)",
+        "group_sum(group_col='period', detail_only=False)"
+      ],
+      "assumption_statement": "取自「表1-3-歷年來臺旅客按國籍分.xlsx」的「來臺旅客_亞洲地區_日本」欄 2025 年度值",
+      "sources": [
+        {
+          "file": "表1-3-歷年來臺旅客按國籍分.xlsx",
+          "sheet": "歷年來臺旅客-按國籍",
+          "range": "C66"
+        }
+      ],
+      "source_cells": [
+        "歷年來臺旅客-按國籍!C66"
+      ],
+      "validation_status": "passed",
+      "validation_note": null,
+      "attempts": 1,
+      "timestamp": "2026-08-02T10:44:00"
+    },
+    "表1-3_來臺旅客_亞洲地區_日本_yoy_2025": {
+      "metric_id": "表1-3_來臺旅客_亞洲地區_日本_yoy_2025",
+      "metric_name": "來臺旅客_亞洲地區_日本 年增率",
+      "value": 12.2135482246,
+      "display_value": "12.21%",
+      "unit": "%",
+      "period": "2025",
+      "formula": "來臺旅客_亞洲地區_日本 年增率 = (本期 − 基期) / 基期 × 100%（(1.479e+06 − 1.318e+06) / 1.318e+06）",
+      "block_chain": [
+        "filter(column='file', operator='==', value='表1-3-歷年來臺旅客按國籍分.xlsx')",
+        "filter(column='canonical', operator='==', value='來臺旅客_亞洲地區_日本')",
+        "filter_by_period(start=2025, end=2025)",
+        "group_sum(group_col='period', detail_only=False)",
+        "filter(column='file', operator='==', value='表1-3-歷年來臺旅客按國籍分.xlsx')",
+        "filter(column='canonical', operator='==', value='來臺旅客_亞洲地區_日本')",
+        "filter_by_period(start=2024, end=2024)",
+        "group_sum(group_col='period', detail_only=False)",
+        "growth_rate(label='來臺旅客_亞洲地區_日本 年增率')"
+      ],
+      "assumption_statement": "以「表1-3-歷年來臺旅客按國籍分.xlsx」的「來臺旅客_亞洲地區_日本」欄 2024 年為基期；基期缺值時輸出 N/A，不以任何方式估算",
+      "sources": [
+        {
+          "file": "表1-3-歷年來臺旅客按國籍分.xlsx",
+          "sheet": "歷年來臺旅客-按國籍",
+          "range": "C65"
+        }
+      ],
+      "source_cells": [
+        "歷年來臺旅客-按國籍!C65"
+      ],
+      "validation_status": "passed",
+      "validation_note": null,
+      "attempts": 1,
+      "timestamp": "2026-08-02T10:44:00"
+    },
+    "表1-3_來臺旅客_韓國_2025": {
+      "metric_id": "表1-3_來臺旅客_韓國_2025",
       "metric_name": "來臺旅客_韓國 2025",
       "value": 1026379.0,
       "display_value": "1,026,379",
@@ -1255,10 +1320,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_韓國_yoy_2025": {
-      "metric_id": "來臺旅客_韓國_yoy_2025",
+    "表1-3_來臺旅客_韓國_yoy_2025": {
+      "metric_id": "表1-3_來臺旅客_韓國_yoy_2025",
       "metric_name": "來臺旅客_韓國 年增率",
       "value": 1.6181617469,
       "display_value": "1.62%",
@@ -1290,10 +1355,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_韓國_share_2025": {
-      "metric_id": "來臺旅客_韓國_share_2025",
+    "表1-3_來臺旅客_韓國_share_2025": {
+      "metric_id": "表1-3_來臺旅客_韓國_share_2025",
       "metric_name": "來臺旅客_韓國 占比",
       "value": 19.8718179562,
       "display_value": "19.87%",
@@ -1325,10 +1390,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_美國_2025": {
-      "metric_id": "來臺旅客_美國_2025",
+    "表1-3_來臺旅客_美國_2025": {
+      "metric_id": "表1-3_來臺旅客_美國_2025",
       "metric_name": "來臺旅客_美國 2025",
       "value": 729726.0,
       "display_value": "729,726",
@@ -1355,10 +1420,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_美國_yoy_2025": {
-      "metric_id": "來臺旅客_美國_yoy_2025",
+    "表1-3_來臺旅客_美國_yoy_2025": {
+      "metric_id": "表1-3_來臺旅客_美國_yoy_2025",
       "metric_name": "來臺旅客_美國 年增率",
       "value": 10.516989659,
       "display_value": "10.52%",
@@ -1390,10 +1455,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_美國_share_2025": {
-      "metric_id": "來臺旅客_美國_share_2025",
+    "表1-3_來臺旅客_美國_share_2025": {
+      "metric_id": "表1-3_來臺旅客_美國_share_2025",
       "metric_name": "來臺旅客_美國 占比",
       "value": 14.1282920148,
       "display_value": "14.13%",
@@ -1425,10 +1490,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_東南亞地區_菲律賓_2025": {
-      "metric_id": "來臺旅客_東南亞地區_菲律賓_2025",
+    "表1-3_來臺旅客_東南亞地區_菲律賓_2025": {
+      "metric_id": "表1-3_來臺旅客_東南亞地區_菲律賓_2025",
       "metric_name": "來臺旅客_東南亞地區_菲律賓 2025",
       "value": 644092.0,
       "display_value": "644,092",
@@ -1455,10 +1520,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_東南亞地區_菲律賓_yoy_2025": {
-      "metric_id": "來臺旅客_東南亞地區_菲律賓_yoy_2025",
+    "表1-3_來臺旅客_東南亞地區_菲律賓_yoy_2025": {
+      "metric_id": "表1-3_來臺旅客_東南亞地區_菲律賓_yoy_2025",
       "metric_name": "來臺旅客_東南亞地區_菲律賓 年增率",
       "value": 35.1017103447,
       "display_value": "35.10%",
@@ -1490,10 +1555,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_東南亞地區_菲律賓_share_2025": {
-      "metric_id": "來臺旅客_東南亞地區_菲律賓_share_2025",
+    "表1-3_來臺旅客_東南亞地區_菲律賓_share_2025": {
+      "metric_id": "表1-3_來臺旅客_東南亞地區_菲律賓_share_2025",
       "metric_name": "來臺旅客_東南亞地區_菲律賓 占比",
       "value": 12.4703242867,
       "display_value": "12.47%",
@@ -1525,10 +1590,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_華僑_2020": {
-      "metric_id": "來臺旅客_華僑_2020",
+    "表1-3_來臺旅客_華僑_2020": {
+      "metric_id": "表1-3_來臺旅客_華僑_2020",
       "metric_name": "來臺旅客_華僑 2020",
       "value": 281540.0,
       "display_value": "281,540",
@@ -1555,10 +1620,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_華僑_2021": {
-      "metric_id": "來臺旅客_華僑_2021",
+    "表1-3_來臺旅客_華僑_2021": {
+      "metric_id": "表1-3_來臺旅客_華僑_2021",
       "metric_name": "來臺旅客_華僑 2021",
       "value": 28069.0,
       "display_value": "28,069",
@@ -1585,10 +1650,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_華僑_2022": {
-      "metric_id": "來臺旅客_華僑_2022",
+    "表1-3_來臺旅客_華僑_2022": {
+      "metric_id": "表1-3_來臺旅客_華僑_2022",
       "metric_name": "來臺旅客_華僑 2022",
       "value": 65060.0,
       "display_value": "65,060",
@@ -1615,10 +1680,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_華僑_2023": {
-      "metric_id": "來臺旅客_華僑_2023",
+    "表1-3_來臺旅客_華僑_2023": {
+      "metric_id": "表1-3_來臺旅客_華僑_2023",
       "metric_name": "來臺旅客_華僑 2023",
       "value": 1375311.0,
       "display_value": "1,375,311",
@@ -1645,10 +1710,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_華僑_2024": {
-      "metric_id": "來臺旅客_華僑_2024",
+    "表1-3_來臺旅客_華僑_2024": {
+      "metric_id": "表1-3_來臺旅客_華僑_2024",
       "metric_name": "來臺旅客_華僑 2024",
       "value": 1697369.0,
       "display_value": "1,697,369",
@@ -1675,10 +1740,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_女_人次_2025": {
-      "metric_id": "來臺旅客_女_人次_2025",
+    "表1-4_來臺旅客_女_人次_2025": {
+      "metric_id": "表1-4_來臺旅客_女_人次_2025",
       "metric_name": "來臺旅客_女_人次 2025",
       "value": 4454666.0,
       "display_value": "4,454,666",
@@ -1705,10 +1770,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_女_人次_yoy_2025": {
-      "metric_id": "來臺旅客_女_人次_yoy_2025",
+    "表1-4_來臺旅客_女_人次_yoy_2025": {
+      "metric_id": "表1-4_來臺旅客_女_人次_yoy_2025",
       "metric_name": "來臺旅客_女_人次 年增率",
       "value": 9.2938377207,
       "display_value": "9.29%",
@@ -1740,10 +1805,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_女_人次_share_2025": {
-      "metric_id": "來臺旅客_女_人次_share_2025",
+    "表1-4_來臺旅客_女_人次_share_2025": {
+      "metric_id": "表1-4_來臺旅客_女_人次_share_2025",
       "metric_name": "來臺旅客_女_人次 占比",
       "value": 51.9522022563,
       "display_value": "51.95%",
@@ -1775,10 +1840,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_男_人次_2025": {
-      "metric_id": "來臺旅客_男_人次_2025",
+    "表1-4_來臺旅客_男_人次_2025": {
+      "metric_id": "表1-4_來臺旅客_男_人次_2025",
       "metric_name": "來臺旅客_男_人次 2025",
       "value": 4119881.0,
       "display_value": "4,119,881",
@@ -1805,10 +1870,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_男_人次_yoy_2025": {
-      "metric_id": "來臺旅客_男_人次_yoy_2025",
+    "表1-4_來臺旅客_男_人次_yoy_2025": {
+      "metric_id": "表1-4_來臺旅客_男_人次_yoy_2025",
       "metric_name": "來臺旅客_男_人次 年增率",
       "value": 8.9389934592,
       "display_value": "8.94%",
@@ -1840,10 +1905,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_男_人次_share_2025": {
-      "metric_id": "來臺旅客_男_人次_share_2025",
+    "表1-4_來臺旅客_男_人次_share_2025": {
+      "metric_id": "表1-4_來臺旅客_男_人次_share_2025",
       "metric_name": "來臺旅客_男_人次 占比",
       "value": 48.0477977437,
       "display_value": "48.05%",
@@ -1875,10 +1940,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_女_人次_2020": {
-      "metric_id": "來臺旅客_女_人次_2020",
+    "表1-4_來臺旅客_女_人次_2020": {
+      "metric_id": "表1-4_來臺旅客_女_人次_2020",
       "metric_name": "來臺旅客_女_人次 2020",
       "value": 686537.0,
       "display_value": "686,537",
@@ -1905,10 +1970,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_女_人次_2021": {
-      "metric_id": "來臺旅客_女_人次_2021",
+    "表1-4_來臺旅客_女_人次_2021": {
+      "metric_id": "表1-4_來臺旅客_女_人次_2021",
       "metric_name": "來臺旅客_女_人次 2021",
       "value": 48635.0,
       "display_value": "48,635",
@@ -1935,10 +2000,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_女_人次_2022": {
-      "metric_id": "來臺旅客_女_人次_2022",
+    "表1-4_來臺旅客_女_人次_2022": {
+      "metric_id": "表1-4_來臺旅客_女_人次_2022",
       "metric_name": "來臺旅客_女_人次 2022",
       "value": 371940.0,
       "display_value": "371,940",
@@ -1965,10 +2030,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_女_人次_2023": {
-      "metric_id": "來臺旅客_女_人次_2023",
+    "表1-4_來臺旅客_女_人次_2023": {
+      "metric_id": "表1-4_來臺旅客_女_人次_2023",
       "metric_name": "來臺旅客_女_人次 2023",
       "value": 3340993.0,
       "display_value": "3,340,993",
@@ -1995,10 +2060,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_女_人次_2024": {
-      "metric_id": "來臺旅客_女_人次_2024",
+    "表1-4_來臺旅客_女_人次_2024": {
+      "metric_id": "表1-4_來臺旅客_女_人次_2024",
       "metric_name": "來臺旅客_女_人次 2024",
       "value": 4075862.0,
       "display_value": "4,075,862",
@@ -2025,10 +2090,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_30至39歲30-39_2025": {
-      "metric_id": "來臺旅客_30至39歲30-39_2025",
+    "表1-5_來臺旅客_30至39歲30-39_2025": {
+      "metric_id": "表1-5_來臺旅客_30至39歲30-39_2025",
       "metric_name": "來臺旅客_30至39歲 30-39 2025",
       "value": 2004204.0,
       "display_value": "2,004,204",
@@ -2055,10 +2120,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_30至39歲30-39_yoy_2025": {
-      "metric_id": "來臺旅客_30至39歲30-39_yoy_2025",
+    "表1-5_來臺旅客_30至39歲30-39_yoy_2025": {
+      "metric_id": "表1-5_來臺旅客_30至39歲30-39_yoy_2025",
       "metric_name": "來臺旅客_30至39歲 30-39 年增率",
       "value": 10.2520080161,
       "display_value": "10.25%",
@@ -2090,10 +2155,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_20至29歲20-29_2025": {
-      "metric_id": "來臺旅客_20至29歲20-29_2025",
+    "表1-5_來臺旅客_20至29歲20-29_2025": {
+      "metric_id": "表1-5_來臺旅客_20至29歲20-29_2025",
       "metric_name": "來臺旅客_20至29歲 20-29 2025",
       "value": 1777382.0,
       "display_value": "1,777,382",
@@ -2120,10 +2185,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_20至29歲20-29_yoy_2025": {
-      "metric_id": "來臺旅客_20至29歲20-29_yoy_2025",
+    "表1-5_來臺旅客_20至29歲20-29_yoy_2025": {
+      "metric_id": "表1-5_來臺旅客_20至29歲20-29_yoy_2025",
       "metric_name": "來臺旅客_20至29歲 20-29 年增率",
       "value": 9.779179421,
       "display_value": "9.78%",
@@ -2155,10 +2220,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_40至49歲40-49_2025": {
-      "metric_id": "來臺旅客_40至49歲40-49_2025",
+    "表1-5_來臺旅客_40至49歲40-49_2025": {
+      "metric_id": "表1-5_來臺旅客_40至49歲40-49_2025",
       "metric_name": "來臺旅客_40至49歲 40-49 2025",
       "value": 1480285.0,
       "display_value": "1,480,285",
@@ -2185,10 +2250,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_40至49歲40-49_yoy_2025": {
-      "metric_id": "來臺旅客_40至49歲40-49_yoy_2025",
+    "表1-5_來臺旅客_40至49歲40-49_yoy_2025": {
+      "metric_id": "表1-5_來臺旅客_40至49歲40-49_yoy_2025",
       "metric_name": "來臺旅客_40至49歲 40-49 年增率",
       "value": 9.0242952163,
       "display_value": "9.02%",
@@ -2220,10 +2285,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_60歲以上60_2025": {
-      "metric_id": "來臺旅客_60歲以上60_2025",
+    "表1-5_來臺旅客_60歲以上60_2025": {
+      "metric_id": "表1-5_來臺旅客_60歲以上60_2025",
       "metric_name": "來臺旅客_60歲以上 60 2025",
       "value": 1251318.0,
       "display_value": "1,251,318",
@@ -2250,10 +2315,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_60歲以上60_yoy_2025": {
-      "metric_id": "來臺旅客_60歲以上60_yoy_2025",
+    "表1-5_來臺旅客_60歲以上60_yoy_2025": {
+      "metric_id": "表1-5_來臺旅客_60歲以上60_yoy_2025",
       "metric_name": "來臺旅客_60歲以上 60 年增率",
       "value": 8.3135256225,
       "display_value": "8.31%",
@@ -2285,10 +2350,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_50至59歲50-59_2025": {
-      "metric_id": "來臺旅客_50至59歲50-59_2025",
+    "表1-5_來臺旅客_50至59歲50-59_2025": {
+      "metric_id": "表1-5_來臺旅客_50至59歲50-59_2025",
       "metric_name": "來臺旅客_50至59歲 50-59 2025",
       "value": 1226980.0,
       "display_value": "1,226,980",
@@ -2315,10 +2380,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_50至59歲50-59_yoy_2025": {
-      "metric_id": "來臺旅客_50至59歲50-59_yoy_2025",
+    "表1-5_來臺旅客_50至59歲50-59_yoy_2025": {
+      "metric_id": "表1-5_來臺旅客_50至59歲50-59_yoy_2025",
       "metric_name": "來臺旅客_50至59歲 50-59 年增率",
       "value": 7.545486259,
       "display_value": "7.55%",
@@ -2350,10 +2415,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_30至39歲30-39_2020": {
-      "metric_id": "來臺旅客_30至39歲30-39_2020",
+    "表1-5_來臺旅客_30至39歲30-39_2020": {
+      "metric_id": "表1-5_來臺旅客_30至39歲30-39_2020",
       "metric_name": "來臺旅客_30至39歲 30-39 2020",
       "value": 316293.0,
       "display_value": "316,293",
@@ -2380,10 +2445,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_30至39歲30-39_2021": {
-      "metric_id": "來臺旅客_30至39歲30-39_2021",
+    "表1-5_來臺旅客_30至39歲30-39_2021": {
+      "metric_id": "表1-5_來臺旅客_30至39歲30-39_2021",
       "metric_name": "來臺旅客_30至39歲 30-39 2021",
       "value": 37689.0,
       "display_value": "37,689",
@@ -2410,10 +2475,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_30至39歲30-39_2022": {
-      "metric_id": "來臺旅客_30至39歲30-39_2022",
+    "表1-5_來臺旅客_30至39歲30-39_2022": {
+      "metric_id": "表1-5_來臺旅客_30至39歲30-39_2022",
       "metric_name": "來臺旅客_30至39歲 30-39 2022",
       "value": 239780.0,
       "display_value": "239,780",
@@ -2440,10 +2505,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_30至39歲30-39_2023": {
-      "metric_id": "來臺旅客_30至39歲30-39_2023",
+    "表1-5_來臺旅客_30至39歲30-39_2023": {
+      "metric_id": "表1-5_來臺旅客_30至39歲30-39_2023",
       "metric_name": "來臺旅客_30至39歲 30-39 2023",
       "value": 1508511.0,
       "display_value": "1,508,511",
@@ -2470,10 +2535,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_30至39歲30-39_2024": {
-      "metric_id": "來臺旅客_30至39歲30-39_2024",
+    "表1-5_來臺旅客_30至39歲30-39_2024": {
+      "metric_id": "表1-5_來臺旅客_30至39歲30-39_2024",
       "metric_name": "來臺旅客_30至39歲 30-39 2024",
       "value": 1817839.0,
       "display_value": "1,817,839",
@@ -2500,10 +2565,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_飛機_桃園機場_2025": {
-      "metric_id": "來臺旅客_飛機_桃園機場_2025",
+    "表1-7_來臺旅客_飛機_桃園機場_2025": {
+      "metric_id": "表1-7_來臺旅客_飛機_桃園機場_2025",
       "metric_name": "來臺旅客_飛機_桃園機場 2025",
       "value": 6629632.0,
       "display_value": "6,629,632",
@@ -2530,10 +2595,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_飛機_桃園機場_yoy_2025": {
-      "metric_id": "來臺旅客_飛機_桃園機場_yoy_2025",
+    "表1-7_來臺旅客_飛機_桃園機場_yoy_2025": {
+      "metric_id": "表1-7_來臺旅客_飛機_桃園機場_yoy_2025",
       "metric_name": "來臺旅客_飛機_桃園機場 年增率",
       "value": 5.1064932149,
       "display_value": "5.11%",
@@ -2565,10 +2630,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_飛機_高雄_2025": {
-      "metric_id": "來臺旅客_飛機_高雄_2025",
+    "表1-7_來臺旅客_飛機_高雄_2025": {
+      "metric_id": "表1-7_來臺旅客_飛機_高雄_2025",
       "metric_name": "來臺旅客_飛機_高雄 2025",
       "value": 710186.0,
       "display_value": "710,186",
@@ -2595,10 +2660,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_飛機_高雄_yoy_2025": {
-      "metric_id": "來臺旅客_飛機_高雄_yoy_2025",
+    "表1-7_來臺旅客_飛機_高雄_yoy_2025": {
+      "metric_id": "表1-7_來臺旅客_飛機_高雄_yoy_2025",
       "metric_name": "來臺旅客_飛機_高雄 年增率",
       "value": 15.1807377421,
       "display_value": "15.18%",
@@ -2630,10 +2695,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_飛機_松山_2025": {
-      "metric_id": "來臺旅客_飛機_松山_2025",
+    "表1-7_來臺旅客_飛機_松山_2025": {
+      "metric_id": "表1-7_來臺旅客_飛機_松山_2025",
       "metric_name": "來臺旅客_飛機_松山 2025",
       "value": 503940.0,
       "display_value": "503,940",
@@ -2660,10 +2725,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_飛機_松山_yoy_2025": {
-      "metric_id": "來臺旅客_飛機_松山_yoy_2025",
+    "表1-7_來臺旅客_飛機_松山_yoy_2025": {
+      "metric_id": "表1-7_來臺旅客_飛機_松山_yoy_2025",
       "metric_name": "來臺旅客_飛機_松山 年增率",
       "value": 2.3421681658,
       "display_value": "2.34%",
@@ -2695,10 +2760,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_飛機_臺中_2025": {
-      "metric_id": "來臺旅客_飛機_臺中_2025",
+    "表1-7_來臺旅客_飛機_臺中_2025": {
+      "metric_id": "表1-7_來臺旅客_飛機_臺中_2025",
       "metric_name": "來臺旅客_飛機_臺中 2025",
       "value": 221962.0,
       "display_value": "221,962",
@@ -2725,10 +2790,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_飛機_臺中_yoy_2025": {
-      "metric_id": "來臺旅客_飛機_臺中_yoy_2025",
+    "表1-7_來臺旅客_飛機_臺中_yoy_2025": {
+      "metric_id": "表1-7_來臺旅客_飛機_臺中_yoy_2025",
       "metric_name": "來臺旅客_飛機_臺中 年增率",
       "value": 24.2871861491,
       "display_value": "24.29%",
@@ -2760,10 +2825,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_輪船_基隆_2025": {
-      "metric_id": "來臺旅客_輪船_基隆_2025",
+    "表1-7_來臺旅客_輪船_基隆_2025": {
+      "metric_id": "表1-7_來臺旅客_輪船_基隆_2025",
       "metric_name": "來臺旅客_輪船_基隆 2025",
       "value": 182881.0,
       "display_value": "182,881",
@@ -2790,10 +2855,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_輪船_基隆_yoy_2025": {
-      "metric_id": "來臺旅客_輪船_基隆_yoy_2025",
+    "表1-7_來臺旅客_輪船_基隆_yoy_2025": {
+      "metric_id": "表1-7_來臺旅客_輪船_基隆_yoy_2025",
       "metric_name": "來臺旅客_輪船_基隆 年增率",
       "value": 39.5686582769,
       "display_value": "39.57%",
@@ -2825,10 +2890,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_飛機_桃園機場_2020": {
-      "metric_id": "來臺旅客_飛機_桃園機場_2020",
+    "表1-7_來臺旅客_飛機_桃園機場_2020": {
+      "metric_id": "表1-7_來臺旅客_飛機_桃園機場_2020",
       "metric_name": "來臺旅客_飛機_桃園機場 2020",
       "value": 1083842.0,
       "display_value": "1,083,842",
@@ -2855,10 +2920,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_飛機_桃園機場_2021": {
-      "metric_id": "來臺旅客_飛機_桃園機場_2021",
+    "表1-7_來臺旅客_飛機_桃園機場_2021": {
+      "metric_id": "表1-7_來臺旅客_飛機_桃園機場_2021",
       "metric_name": "來臺旅客_飛機_桃園機場 2021",
       "value": 118592.0,
       "display_value": "118,592",
@@ -2885,10 +2950,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_飛機_桃園機場_2022": {
-      "metric_id": "來臺旅客_飛機_桃園機場_2022",
+    "表1-7_來臺旅客_飛機_桃園機場_2022": {
+      "metric_id": "表1-7_來臺旅客_飛機_桃園機場_2022",
       "metric_name": "來臺旅客_飛機_桃園機場 2022",
       "value": 801744.0,
       "display_value": "801,744",
@@ -2915,10 +2980,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_飛機_桃園機場_2023": {
-      "metric_id": "來臺旅客_飛機_桃園機場_2023",
+    "表1-7_來臺旅客_飛機_桃園機場_2023": {
+      "metric_id": "表1-7_來臺旅客_飛機_桃園機場_2023",
       "metric_name": "來臺旅客_飛機_桃園機場 2023",
       "value": 5330727.0,
       "display_value": "5,330,727",
@@ -2945,10 +3010,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_飛機_桃園機場_2024": {
-      "metric_id": "來臺旅客_飛機_桃園機場_2024",
+    "表1-7_來臺旅客_飛機_桃園機場_2024": {
+      "metric_id": "表1-7_來臺旅客_飛機_桃園機場_2024",
       "metric_name": "來臺旅客_飛機_桃園機場 2024",
       "value": 6307538.0,
       "display_value": "6,307,538",
@@ -2975,10 +3040,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_停留夜數_3_2025": {
-      "metric_id": "來臺旅客_停留夜數_3_2025",
+    "表1-8_來臺旅客_停留夜數_3_2025": {
+      "metric_id": "表1-8_來臺旅客_停留夜數_3_2025",
       "metric_name": "來臺旅客_停留夜數_3 2025",
       "value": 1856125.0,
       "display_value": "1,856,125",
@@ -3005,10 +3070,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_停留夜數_3_yoy_2025": {
-      "metric_id": "來臺旅客_停留夜數_3_yoy_2025",
+    "表1-8_來臺旅客_停留夜數_3_yoy_2025": {
+      "metric_id": "表1-8_來臺旅客_停留夜數_3_yoy_2025",
       "metric_name": "來臺旅客_停留夜數_3 年增率",
       "value": 6.2479428727,
       "display_value": "6.25%",
@@ -3040,10 +3105,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_停留夜數_3_share_2025": {
-      "metric_id": "來臺旅客_停留夜數_3_share_2025",
+    "表1-8_來臺旅客_停留夜數_3_share_2025": {
+      "metric_id": "表1-8_來臺旅客_停留夜數_3_share_2025",
       "metric_name": "來臺旅客_停留夜數_3 占比",
       "value": 3.6175297584,
       "display_value": "3.62%",
@@ -3075,10 +3140,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_停留夜數_5-7_2025": {
-      "metric_id": "來臺旅客_停留夜數_5-7_2025",
+    "表1-8_來臺旅客_停留夜數_5-7_2025": {
+      "metric_id": "表1-8_來臺旅客_停留夜數_5-7_2025",
       "metric_name": "來臺旅客_停留夜數_5-7 2025",
       "value": 1334738.0,
       "display_value": "1,334,738",
@@ -3105,10 +3170,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_停留夜數_5-7_yoy_2025": {
-      "metric_id": "來臺旅客_停留夜數_5-7_yoy_2025",
+    "表1-8_來臺旅客_停留夜數_5-7_yoy_2025": {
+      "metric_id": "表1-8_來臺旅客_停留夜數_5-7_yoy_2025",
       "metric_name": "來臺旅客_停留夜數_5-7 年增率",
       "value": -0.7726385014,
       "display_value": "-0.77%",
@@ -3140,10 +3205,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_停留夜數_5-7_share_2025": {
-      "metric_id": "來臺旅客_停留夜數_5-7_share_2025",
+    "表1-8_來臺旅客_停留夜數_5-7_share_2025": {
+      "metric_id": "表1-8_來臺旅客_停留夜數_5-7_share_2025",
       "metric_name": "來臺旅客_停留夜數_5-7 占比",
       "value": 2.6013627502,
       "display_value": "2.60%",
@@ -3175,10 +3240,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_停留夜數_4_2025": {
-      "metric_id": "來臺旅客_停留夜數_4_2025",
+    "表1-8_來臺旅客_停留夜數_4_2025": {
+      "metric_id": "表1-8_來臺旅客_停留夜數_4_2025",
       "metric_name": "來臺旅客_停留夜數_4 2025",
       "value": 1178476.0,
       "display_value": "1,178,476",
@@ -3205,10 +3270,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_停留夜數_4_yoy_2025": {
-      "metric_id": "來臺旅客_停留夜數_4_yoy_2025",
+    "表1-8_來臺旅客_停留夜數_4_yoy_2025": {
+      "metric_id": "表1-8_來臺旅客_停留夜數_4_yoy_2025",
       "metric_name": "來臺旅客_停留夜數_4 年增率",
       "value": 3.1074605476,
       "display_value": "3.11%",
@@ -3240,10 +3305,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_停留夜數_4_share_2025": {
-      "metric_id": "來臺旅客_停留夜數_4_share_2025",
+    "表1-8_來臺旅客_停留夜數_4_share_2025": {
+      "metric_id": "表1-8_來臺旅客_停留夜數_4_share_2025",
       "metric_name": "來臺旅客_停留夜數_4 占比",
       "value": 2.2968129838,
       "display_value": "2.30%",
@@ -3275,10 +3340,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_停留夜數_2_2025": {
-      "metric_id": "來臺旅客_停留夜數_2_2025",
+    "表1-8_來臺旅客_停留夜數_2_2025": {
+      "metric_id": "表1-8_來臺旅客_停留夜數_2_2025",
       "metric_name": "來臺旅客_停留夜數_2 2025",
       "value": 1108841.0,
       "display_value": "1,108,841",
@@ -3305,10 +3370,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_停留夜數_2_yoy_2025": {
-      "metric_id": "來臺旅客_停留夜數_2_yoy_2025",
+    "表1-8_來臺旅客_停留夜數_2_yoy_2025": {
+      "metric_id": "表1-8_來臺旅客_停留夜數_2_yoy_2025",
       "metric_name": "來臺旅客_停留夜數_2 年增率",
       "value": 19.5089407446,
       "display_value": "19.51%",
@@ -3340,10 +3405,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_停留夜數_2_share_2025": {
-      "metric_id": "來臺旅客_停留夜數_2_share_2025",
+    "表1-8_來臺旅客_停留夜數_2_share_2025": {
+      "metric_id": "表1-8_來臺旅客_停留夜數_2_share_2025",
       "metric_name": "來臺旅客_停留夜數_2 占比",
       "value": 2.1610965398,
       "display_value": "2.16%",
@@ -3375,10 +3440,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_停留夜數_90以上_2025": {
-      "metric_id": "來臺旅客_停留夜數_90以上_2025",
+    "表1-8_來臺旅客_停留夜數_90以上_2025": {
+      "metric_id": "表1-8_來臺旅客_停留夜數_90以上_2025",
       "metric_name": "來臺旅客_停留夜數_90以上 2025",
       "value": 1072239.0,
       "display_value": "1,072,239",
@@ -3405,10 +3470,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_停留夜數_90以上_yoy_2025": {
-      "metric_id": "來臺旅客_停留夜數_90以上_yoy_2025",
+    "表1-8_來臺旅客_停留夜數_90以上_yoy_2025": {
+      "metric_id": "表1-8_來臺旅客_停留夜數_90以上_yoy_2025",
       "metric_name": "來臺旅客_停留夜數_90以上 年增率",
       "value": 20.1102931293,
       "display_value": "20.11%",
@@ -3440,10 +3505,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_停留夜數_90以上_share_2025": {
-      "metric_id": "來臺旅客_停留夜數_90以上_share_2025",
+    "表1-8_來臺旅客_停留夜數_90以上_share_2025": {
+      "metric_id": "表1-8_來臺旅客_停留夜數_90以上_share_2025",
       "metric_name": "來臺旅客_停留夜數_90以上 占比",
       "value": 2.0897603829,
       "display_value": "2.09%",
@@ -3475,10 +3540,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_停留夜數_3_2020": {
-      "metric_id": "來臺旅客_停留夜數_3_2020",
+    "表1-8_來臺旅客_停留夜數_3_2020": {
+      "metric_id": "表1-8_來臺旅客_停留夜數_3_2020",
       "metric_name": "來臺旅客_停留夜數_3 2020",
       "value": 310091.0,
       "display_value": "310,091",
@@ -3505,10 +3570,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_停留夜數_3_2021": {
-      "metric_id": "來臺旅客_停留夜數_3_2021",
+    "表1-8_來臺旅客_停留夜數_3_2021": {
+      "metric_id": "表1-8_來臺旅客_停留夜數_3_2021",
       "metric_name": "來臺旅客_停留夜數_3 2021",
       "value": 913.0,
       "display_value": "913.00",
@@ -3535,10 +3600,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_停留夜數_3_2022": {
-      "metric_id": "來臺旅客_停留夜數_3_2022",
+    "表1-8_來臺旅客_停留夜數_3_2022": {
+      "metric_id": "表1-8_來臺旅客_停留夜數_3_2022",
       "metric_name": "來臺旅客_停留夜數_3 2022",
       "value": 58284.0,
       "display_value": "58,284",
@@ -3565,10 +3630,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_停留夜數_3_2023": {
-      "metric_id": "來臺旅客_停留夜數_3_2023",
+    "表1-8_來臺旅客_停留夜數_3_2023": {
+      "metric_id": "表1-8_來臺旅客_停留夜數_3_2023",
       "metric_name": "來臺旅客_停留夜數_3 2023",
       "value": 1316664.0,
       "display_value": "1,316,664",
@@ -3595,10 +3660,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_停留夜數_3_2024": {
-      "metric_id": "來臺旅客_停留夜數_3_2024",
+    "表1-8_來臺旅客_停留夜數_3_2024": {
+      "metric_id": "表1-8_來臺旅客_停留夜數_3_2024",
       "metric_name": "來臺旅客_停留夜數_3 2024",
       "value": 1746975.0,
       "display_value": "1,746,975",
@@ -3625,10 +3690,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_觀光_2025": {
-      "metric_id": "來臺旅客_觀光_2025",
+    "表1-9_來臺旅客_觀光_2025": {
+      "metric_id": "表1-9_來臺旅客_觀光_2025",
       "metric_name": "來臺旅客_觀光 2025",
       "value": 5883794.0,
       "display_value": "5,883,794",
@@ -3655,10 +3720,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_觀光_yoy_2025": {
-      "metric_id": "來臺旅客_觀光_yoy_2025",
+    "表1-9_來臺旅客_觀光_yoy_2025": {
+      "metric_id": "表1-9_來臺旅客_觀光_yoy_2025",
       "metric_name": "來臺旅客_觀光 年增率",
       "value": 9.4415217889,
       "display_value": "9.44%",
@@ -3690,10 +3755,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_業務_2025": {
-      "metric_id": "來臺旅客_業務_2025",
+    "表1-9_來臺旅客_業務_2025": {
+      "metric_id": "表1-9_來臺旅客_業務_2025",
       "metric_name": "來臺旅客_業務 2025",
       "value": 447138.0,
       "display_value": "447,138",
@@ -3720,10 +3785,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_業務_yoy_2025": {
-      "metric_id": "來臺旅客_業務_yoy_2025",
+    "表1-9_來臺旅客_業務_yoy_2025": {
+      "metric_id": "表1-9_來臺旅客_業務_yoy_2025",
       "metric_name": "來臺旅客_業務 年增率",
       "value": -11.8802729883,
       "display_value": "-11.88%",
@@ -3755,10 +3820,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_探親_2025": {
-      "metric_id": "來臺旅客_探親_2025",
+    "表1-9_來臺旅客_探親_2025": {
+      "metric_id": "表1-9_來臺旅客_探親_2025",
       "metric_name": "來臺旅客_探親 2025",
       "value": 353347.0,
       "display_value": "353,347",
@@ -3785,10 +3850,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_探親_yoy_2025": {
-      "metric_id": "來臺旅客_探親_yoy_2025",
+    "表1-9_來臺旅客_探親_yoy_2025": {
+      "metric_id": "表1-9_來臺旅客_探親_yoy_2025",
       "metric_name": "來臺旅客_探親 年增率",
       "value": -2.5144774196,
       "display_value": "-2.51%",
@@ -3820,10 +3885,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_求學_2025": {
-      "metric_id": "來臺旅客_求學_2025",
+    "表1-9_來臺旅客_求學_2025": {
+      "metric_id": "表1-9_來臺旅客_求學_2025",
       "metric_name": "來臺旅客_求學 2025",
       "value": 67451.0,
       "display_value": "67,451",
@@ -3850,10 +3915,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_求學_yoy_2025": {
-      "metric_id": "來臺旅客_求學_yoy_2025",
+    "表1-9_來臺旅客_求學_yoy_2025": {
+      "metric_id": "表1-9_來臺旅客_求學_yoy_2025",
       "metric_name": "來臺旅客_求學 年增率",
       "value": 16.7558117395,
       "display_value": "16.76%",
@@ -3885,10 +3950,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_會議_2025": {
-      "metric_id": "來臺旅客_會議_2025",
+    "表1-9_來臺旅客_會議_2025": {
+      "metric_id": "表1-9_來臺旅客_會議_2025",
       "metric_name": "來臺旅客_會議 2025",
       "value": 60741.0,
       "display_value": "60,741",
@@ -3915,10 +3980,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_會議_yoy_2025": {
-      "metric_id": "來臺旅客_會議_yoy_2025",
+    "表1-9_來臺旅客_會議_yoy_2025": {
+      "metric_id": "表1-9_來臺旅客_會議_yoy_2025",
       "metric_name": "來臺旅客_會議 年增率",
       "value": 44.0828332187,
       "display_value": "44.08%",
@@ -3950,10 +4015,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_觀光_2020": {
-      "metric_id": "來臺旅客_觀光_2020",
+    "表1-9_來臺旅客_觀光_2020": {
+      "metric_id": "表1-9_來臺旅客_觀光_2020",
       "metric_name": "來臺旅客_觀光 2020",
       "value": 694187.0,
       "display_value": "694,187",
@@ -3980,10 +4045,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_觀光_2021": {
-      "metric_id": "來臺旅客_觀光_2021",
+    "表1-9_來臺旅客_觀光_2021": {
+      "metric_id": "表1-9_來臺旅客_觀光_2021",
       "metric_name": "來臺旅客_觀光 2021",
       "value": 156.0,
       "display_value": "156.00",
@@ -4010,10 +4075,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_觀光_2022": {
-      "metric_id": "來臺旅客_觀光_2022",
+    "表1-9_來臺旅客_觀光_2022": {
+      "metric_id": "表1-9_來臺旅客_觀光_2022",
       "metric_name": "來臺旅客_觀光 2022",
       "value": 254686.0,
       "display_value": "254,686",
@@ -4040,10 +4105,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_觀光_2023": {
-      "metric_id": "來臺旅客_觀光_2023",
+    "表1-9_來臺旅客_觀光_2023": {
+      "metric_id": "表1-9_來臺旅客_觀光_2023",
       "metric_name": "來臺旅客_觀光 2023",
       "value": 4316832.0,
       "display_value": "4,316,832",
@@ -4070,10 +4135,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "來臺旅客_觀光_2024": {
-      "metric_id": "來臺旅客_觀光_2024",
+    "表1-9_來臺旅客_觀光_2024": {
+      "metric_id": "表1-9_來臺旅客_觀光_2024",
       "metric_name": "來臺旅客_觀光 2024",
       "value": 5376199.0,
       "display_value": "5,376,199",
@@ -4100,10 +4165,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國_日本_2025": {
-      "metric_id": "出國_日本_2025",
+    "表2-2_出國_日本_2025": {
+      "metric_id": "表2-2_出國_日本_2025",
       "metric_name": "出國_日本 2025",
       "value": 6730817.0,
       "display_value": "6,730,817",
@@ -4130,10 +4195,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國_日本_yoy_2025": {
-      "metric_id": "出國_日本_yoy_2025",
+    "表2-2_出國_日本_yoy_2025": {
+      "metric_id": "表2-2_出國_日本_yoy_2025",
       "metric_name": "出國_日本 年增率",
       "value": 12.0660506723,
       "display_value": "12.07%",
@@ -4165,10 +4230,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國_日本_share_2025": {
-      "metric_id": "出國_日本_share_2025",
+    "表2-2_出國_日本_share_2025": {
+      "metric_id": "表2-2_出國_日本_share_2025",
       "metric_name": "出國_日本 占比",
       "value": 37.9932289947,
       "display_value": "37.99%",
@@ -4200,10 +4265,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國_大陸_2025": {
-      "metric_id": "出國_大陸_2025",
+    "表2-2_出國_大陸_2025": {
+      "metric_id": "表2-2_出國_大陸_2025",
       "metric_name": "出國_大陸 2025",
       "value": 3237511.0,
       "display_value": "3,237,511",
@@ -4230,10 +4295,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國_大陸_yoy_2025": {
-      "metric_id": "出國_大陸_yoy_2025",
+    "表2-2_出國_大陸_yoy_2025": {
+      "metric_id": "表2-2_出國_大陸_yoy_2025",
       "metric_name": "出國_大陸 年增率",
       "value": 16.865671534,
       "display_value": "16.87%",
@@ -4265,10 +4330,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國_大陸_share_2025": {
-      "metric_id": "出國_大陸_share_2025",
+    "表2-2_出國_大陸_share_2025": {
+      "metric_id": "表2-2_出國_大陸_share_2025",
       "metric_name": "出國_大陸 占比",
       "value": 18.2746755402,
       "display_value": "18.27%",
@@ -4300,10 +4365,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國_韓國_2025": {
-      "metric_id": "出國_韓國_2025",
+    "表2-2_出國_韓國_2025": {
+      "metric_id": "表2-2_出國_韓國_2025",
       "metric_name": "出國_韓國 2025",
       "value": 1835061.0,
       "display_value": "1,835,061",
@@ -4330,10 +4395,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國_韓國_yoy_2025": {
-      "metric_id": "出國_韓國_yoy_2025",
+    "表2-2_出國_韓國_yoy_2025": {
+      "metric_id": "表2-2_出國_韓國_yoy_2025",
       "metric_name": "出國_韓國 年增率",
       "value": 28.3799893382,
       "display_value": "28.38%",
@@ -4365,10 +4430,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國_韓國_share_2025": {
-      "metric_id": "出國_韓國_share_2025",
+    "表2-2_出國_韓國_share_2025": {
+      "metric_id": "表2-2_出國_韓國_share_2025",
       "metric_name": "出國_韓國 占比",
       "value": 10.3583105576,
       "display_value": "10.36%",
@@ -4400,10 +4465,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國_亞洲地區_香港_2025": {
-      "metric_id": "出國_亞洲地區_香港_2025",
+    "表2-2_出國_亞洲地區_香港_2025": {
+      "metric_id": "表2-2_出國_亞洲地區_香港_2025",
       "metric_name": "出國_亞洲地區_香港 2025",
       "value": 1626176.0,
       "display_value": "1,626,176",
@@ -4430,10 +4495,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國_亞洲地區_香港_yoy_2025": {
-      "metric_id": "出國_亞洲地區_香港_yoy_2025",
+    "表2-2_出國_亞洲地區_香港_yoy_2025": {
+      "metric_id": "表2-2_出國_亞洲地區_香港_yoy_2025",
       "metric_name": "出國_亞洲地區_香港 年增率",
       "value": 35.0845349932,
       "display_value": "35.08%",
@@ -4465,10 +4530,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國_亞洲地區_香港_share_2025": {
-      "metric_id": "出國_亞洲地區_香港_share_2025",
+    "表2-2_出國_亞洲地區_香港_share_2025": {
+      "metric_id": "表2-2_出國_亞洲地區_香港_share_2025",
       "metric_name": "出國_亞洲地區_香港 占比",
       "value": 9.1792240308,
       "display_value": "9.18%",
@@ -4500,10 +4565,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國_越南_2025": {
-      "metric_id": "出國_越南_2025",
+    "表2-2_出國_越南_2025": {
+      "metric_id": "表2-2_出國_越南_2025",
       "metric_name": "出國_越南 2025",
       "value": 1214362.0,
       "display_value": "1,214,362",
@@ -4530,10 +4595,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國_越南_yoy_2025": {
-      "metric_id": "出國_越南_yoy_2025",
+    "表2-2_出國_越南_yoy_2025": {
+      "metric_id": "表2-2_出國_越南_yoy_2025",
       "metric_name": "出國_越南 年增率",
       "value": -3.8777791146,
       "display_value": "-3.88%",
@@ -4565,10 +4630,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國_越南_share_2025": {
-      "metric_id": "出國_越南_share_2025",
+    "表2-2_出國_越南_share_2025": {
+      "metric_id": "表2-2_出國_越南_share_2025",
       "metric_name": "出國_越南 占比",
       "value": 6.8546706215,
       "display_value": "6.85%",
@@ -4600,10 +4665,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國_日本_2020": {
-      "metric_id": "出國_日本_2020",
+    "表2-2_出國_日本_2020": {
+      "metric_id": "表2-2_出國_日本_2020",
       "metric_name": "出國_日本 2020",
       "value": 697981.0,
       "display_value": "697,981",
@@ -4630,10 +4695,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國_日本_2021": {
-      "metric_id": "出國_日本_2021",
+    "表2-2_出國_日本_2021": {
+      "metric_id": "表2-2_出國_日本_2021",
       "metric_name": "出國_日本 2021",
       "value": 14049.0,
       "display_value": "14,049",
@@ -4660,10 +4725,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國_日本_2022": {
-      "metric_id": "出國_日本_2022",
+    "表2-2_出國_日本_2022": {
+      "metric_id": "表2-2_出國_日本_2022",
       "metric_name": "出國_日本 2022",
       "value": 354219.0,
       "display_value": "354,219",
@@ -4690,10 +4755,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國_日本_2023": {
-      "metric_id": "出國_日本_2023",
+    "表2-2_出國_日本_2023": {
+      "metric_id": "表2-2_出國_日本_2023",
       "metric_name": "出國_日本 2023",
       "value": 4225804.0,
       "display_value": "4,225,804",
@@ -4720,10 +4785,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國_日本_2024": {
-      "metric_id": "出國_日本_2024",
+    "表2-2_出國_日本_2024": {
+      "metric_id": "表2-2_出國_日本_2024",
       "metric_name": "出國_日本 2024",
       "value": 6006116.0,
       "display_value": "6,006,116",
@@ -4750,10 +4815,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國人次_40至49歲40-49_2025": {
-      "metric_id": "出國人次_40至49歲40-49_2025",
+    "表2-3_出國人次_40至49歲40-49_2025": {
+      "metric_id": "表2-3_出國人次_40至49歲40-49_2025",
       "metric_name": "出國人次_40至49歲 40-49 2025",
       "value": 3734662.0,
       "display_value": "3,734,662",
@@ -4780,10 +4845,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國人次_40至49歲40-49_yoy_2025": {
-      "metric_id": "出國人次_40至49歲40-49_yoy_2025",
+    "表2-3_出國人次_40至49歲40-49_yoy_2025": {
+      "metric_id": "表2-3_出國人次_40至49歲40-49_yoy_2025",
       "metric_name": "出國人次_40至49歲 40-49 年增率",
       "value": 11.2145700401,
       "display_value": "11.21%",
@@ -4815,10 +4880,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國人次_40至49歲40-49_share_2025": {
-      "metric_id": "出國人次_40至49歲40-49_share_2025",
+    "表2-3_出國人次_40至49歲40-49_share_2025": {
+      "metric_id": "表2-3_出國人次_40至49歲40-49_share_2025",
       "metric_name": "出國人次_40至49歲 40-49 占比",
       "value": 19.7137671451,
       "display_value": "19.71%",
@@ -4850,10 +4915,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國人次_30至39歲30-39_2025": {
-      "metric_id": "出國人次_30至39歲30-39_2025",
+    "表2-3_出國人次_30至39歲30-39_2025": {
+      "metric_id": "表2-3_出國人次_30至39歲30-39_2025",
       "metric_name": "出國人次_30至39歲 30-39 2025",
       "value": 3693310.0,
       "display_value": "3,693,310",
@@ -4880,10 +4945,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國人次_30至39歲30-39_yoy_2025": {
-      "metric_id": "出國人次_30至39歲30-39_yoy_2025",
+    "表2-3_出國人次_30至39歲30-39_yoy_2025": {
+      "metric_id": "表2-3_出國人次_30至39歲30-39_yoy_2025",
       "metric_name": "出國人次_30至39歲 30-39 年增率",
       "value": 14.1740450048,
       "display_value": "14.17%",
@@ -4915,10 +4980,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國人次_30至39歲30-39_share_2025": {
-      "metric_id": "出國人次_30至39歲30-39_share_2025",
+    "表2-3_出國人次_30至39歲30-39_share_2025": {
+      "metric_id": "表2-3_出國人次_30至39歲30-39_share_2025",
       "metric_name": "出國人次_30至39歲 30-39 占比",
       "value": 19.4954866959,
       "display_value": "19.50%",
@@ -4950,10 +5015,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國人次_60歲及以上60_2025": {
-      "metric_id": "出國人次_60歲及以上60_2025",
+    "表2-3_出國人次_60歲及以上60_2025": {
+      "metric_id": "表2-3_出國人次_60歲及以上60_2025",
       "metric_name": "出國人次_60歲及以上 60 2025",
       "value": 3598187.0,
       "display_value": "3,598,187",
@@ -4980,10 +5045,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國人次_60歲及以上60_yoy_2025": {
-      "metric_id": "出國人次_60歲及以上60_yoy_2025",
+    "表2-3_出國人次_60歲及以上60_yoy_2025": {
+      "metric_id": "表2-3_出國人次_60歲及以上60_yoy_2025",
       "metric_name": "出國人次_60歲及以上 60 年增率",
       "value": 13.3931174144,
       "display_value": "13.39%",
@@ -5015,10 +5080,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國人次_60歲及以上60_share_2025": {
-      "metric_id": "出國人次_60歲及以上60_share_2025",
+    "表2-3_出國人次_60歲及以上60_share_2025": {
+      "metric_id": "表2-3_出國人次_60歲及以上60_share_2025",
       "metric_name": "出國人次_60歲及以上 60 占比",
       "value": 18.9933709296,
       "display_value": "18.99%",
@@ -5050,10 +5115,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國人次_50至59歲50-59_2025": {
-      "metric_id": "出國人次_50至59歲50-59_2025",
+    "表2-3_出國人次_50至59歲50-59_2025": {
+      "metric_id": "表2-3_出國人次_50至59歲50-59_2025",
       "metric_name": "出國人次_50至59歲 50-59 2025",
       "value": 3155802.0,
       "display_value": "3,155,802",
@@ -5080,10 +5145,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國人次_50至59歲50-59_yoy_2025": {
-      "metric_id": "出國人次_50至59歲50-59_yoy_2025",
+    "表2-3_出國人次_50至59歲50-59_yoy_2025": {
+      "metric_id": "表2-3_出國人次_50至59歲50-59_yoy_2025",
       "metric_name": "出國人次_50至59歲 50-59 年增率",
       "value": 11.9530505573,
       "display_value": "11.95%",
@@ -5115,10 +5180,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國人次_50至59歲50-59_share_2025": {
-      "metric_id": "出國人次_50至59歲50-59_share_2025",
+    "表2-3_出國人次_50至59歲50-59_share_2025": {
+      "metric_id": "表2-3_出國人次_50至59歲50-59_share_2025",
       "metric_name": "出國人次_50至59歲 50-59 占比",
       "value": 16.6581998007,
       "display_value": "16.66%",
@@ -5150,10 +5215,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國人次_20至29歲20-29_2025": {
-      "metric_id": "出國人次_20至29歲20-29_2025",
+    "表2-3_出國人次_20至29歲20-29_2025": {
+      "metric_id": "表2-3_出國人次_20至29歲20-29_2025",
       "metric_name": "出國人次_20至29歲 20-29 2025",
       "value": 2647031.0,
       "display_value": "2,647,031",
@@ -5180,10 +5245,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國人次_20至29歲20-29_yoy_2025": {
-      "metric_id": "出國人次_20至29歲20-29_yoy_2025",
+    "表2-3_出國人次_20至29歲20-29_yoy_2025": {
+      "metric_id": "表2-3_出國人次_20至29歲20-29_yoy_2025",
       "metric_name": "出國人次_20至29歲 20-29 年增率",
       "value": 12.290894066,
       "display_value": "12.29%",
@@ -5215,10 +5280,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國人次_20至29歲20-29_share_2025": {
-      "metric_id": "出國人次_20至29歲20-29_share_2025",
+    "表2-3_出國人次_20至29歲20-29_share_2025": {
+      "metric_id": "表2-3_出國人次_20至29歲20-29_share_2025",
       "metric_name": "出國人次_20至29歲 20-29 占比",
       "value": 13.9726038822,
       "display_value": "13.97%",
@@ -5250,10 +5315,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國人次_40至49歲40-49_2020": {
-      "metric_id": "出國人次_40至49歲40-49_2020",
+    "表2-3_出國人次_40至49歲40-49_2020": {
+      "metric_id": "表2-3_出國人次_40至49歲40-49_2020",
       "metric_name": "出國人次_40至49歲 40-49 2020",
       "value": 495305.0,
       "display_value": "495,305",
@@ -5280,10 +5345,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國人次_40至49歲40-49_2021": {
-      "metric_id": "出國人次_40至49歲40-49_2021",
+    "表2-3_出國人次_40至49歲40-49_2021": {
+      "metric_id": "表2-3_出國人次_40至49歲40-49_2021",
       "metric_name": "出國人次_40至49歲 40-49 2021",
       "value": 72601.0,
       "display_value": "72,601",
@@ -5310,10 +5375,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國人次_40至49歲40-49_2022": {
-      "metric_id": "出國人次_40至49歲40-49_2022",
+    "表2-3_出國人次_40至49歲40-49_2022": {
+      "metric_id": "表2-3_出國人次_40至49歲40-49_2022",
       "metric_name": "出國人次_40至49歲 40-49 2022",
       "value": 307541.0,
       "display_value": "307,541",
@@ -5340,10 +5405,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國人次_40至49歲40-49_2023": {
-      "metric_id": "出國人次_40至49歲40-49_2023",
+    "表2-3_出國人次_40至49歲40-49_2023": {
+      "metric_id": "表2-3_出國人次_40至49歲40-49_2023",
       "metric_name": "出國人次_40至49歲 40-49 2023",
       "value": 2390482.0,
       "display_value": "2,390,482",
@@ -5370,10 +5435,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "出國人次_40至49歲40-49_2024": {
-      "metric_id": "出國人次_40至49歲40-49_2024",
+    "表2-3_出國人次_40至49歲40-49_2024": {
+      "metric_id": "表2-3_出國人次_40至49歲40-49_2024",
       "metric_name": "出國人次_40至49歲 40-49 2024",
       "value": 3358069.0,
       "display_value": "3,358,069",
@@ -5400,10 +5465,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "郵輪來臺遊客人次_人數_2025": {
-      "metric_id": "郵輪來臺遊客人次_人數_2025",
+    "表4-1_郵輪來臺遊客人次_人數_2025": {
+      "metric_id": "表4-1_郵輪來臺遊客人次_人數_2025",
       "metric_name": "郵輪來臺遊客人次_人數 2025",
       "value": 159252.0,
       "display_value": "159,252",
@@ -5430,10 +5495,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "郵輪來臺遊客人次_人數_yoy_2025": {
-      "metric_id": "郵輪來臺遊客人次_人數_yoy_2025",
+    "表4-1_郵輪來臺遊客人次_人數_yoy_2025": {
+      "metric_id": "表4-1_郵輪來臺遊客人次_人數_yoy_2025",
       "metric_name": "郵輪來臺遊客人次_人數 年增率",
       "value": 76.8877040986,
       "display_value": "76.89%",
@@ -5465,10 +5530,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "郵輪來臺遊客人次_成長率_2025": {
-      "metric_id": "郵輪來臺遊客人次_成長率_2025",
+    "表4-1_郵輪來臺遊客人次_成長率_2025": {
+      "metric_id": "表4-1_郵輪來臺遊客人次_成長率_2025",
       "metric_name": "郵輪來臺遊客人次_成長率 2025",
       "value": 76.8877040986,
       "display_value": "76.89%",
@@ -5495,10 +5560,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "郵輪來臺遊客人次_成長率_yoy_2025": {
-      "metric_id": "郵輪來臺遊客人次_成長率_yoy_2025",
+    "表4-1_郵輪來臺遊客人次_成長率_yoy_2025": {
+      "metric_id": "表4-1_郵輪來臺遊客人次_成長率_yoy_2025",
       "metric_name": "郵輪來臺遊客人次_成長率 年增率",
       "value": null,
       "display_value": "N/A",
@@ -5528,12 +5593,12 @@
         "歷年郵輪來臺遊客人次!C8"
       ],
       "validation_status": "na",
-      "validation_note": "基期為負數（-21.77），成長率正負號無意義；[郵輪來臺遊客人次_成長率_yoy_2025] 值為 N/A，未參與後續計算",
+      "validation_note": "基期為負數（-21.77），成長率正負號無意義；[表4-1_郵輪來臺遊客人次_成長率_yoy_2025] 值為 N/A，未參與後續計算",
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "郵輪來臺遊客人次_人數_2020": {
-      "metric_id": "郵輪來臺遊客人次_人數_2020",
+    "表4-1_郵輪來臺遊客人次_人數_2020": {
+      "metric_id": "表4-1_郵輪來臺遊客人次_人數_2020",
       "metric_name": "郵輪來臺遊客人次_人數 2020",
       "value": 9959.0,
       "display_value": "9,959",
@@ -5560,10 +5625,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "郵輪來臺遊客人次_人數_2021": {
-      "metric_id": "郵輪來臺遊客人次_人數_2021",
+    "表4-1_郵輪來臺遊客人次_人數_2021": {
+      "metric_id": "表4-1_郵輪來臺遊客人次_人數_2021",
       "metric_name": "郵輪來臺遊客人次_人數 2021",
       "value": null,
       "display_value": "N/A",
@@ -5594,12 +5659,12 @@
         "歷年郵輪來臺遊客人次!B9"
       ],
       "validation_status": "na",
-      "validation_note": "[郵輪來臺遊客人次_人數_2021] 值為 N/A，未參與後續計算",
+      "validation_note": "[表4-1_郵輪來臺遊客人次_人數_2021] 值為 N/A，未參與後續計算",
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "郵輪來臺遊客人次_人數_2022": {
-      "metric_id": "郵輪來臺遊客人次_人數_2022",
+    "表4-1_郵輪來臺遊客人次_人數_2022": {
+      "metric_id": "表4-1_郵輪來臺遊客人次_人數_2022",
       "metric_name": "郵輪來臺遊客人次_人數 2022",
       "value": null,
       "display_value": "N/A",
@@ -5630,12 +5695,12 @@
         "歷年郵輪來臺遊客人次!B9"
       ],
       "validation_status": "na",
-      "validation_note": "[郵輪來臺遊客人次_人數_2022] 值為 N/A，未參與後續計算",
+      "validation_note": "[表4-1_郵輪來臺遊客人次_人數_2022] 值為 N/A，未參與後續計算",
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "郵輪來臺遊客人次_人數_2023": {
-      "metric_id": "郵輪來臺遊客人次_人數_2023",
+    "表4-1_郵輪來臺遊客人次_人數_2023": {
+      "metric_id": "表4-1_郵輪來臺遊客人次_人數_2023",
       "metric_name": "郵輪來臺遊客人次_人數 2023",
       "value": 115081.0,
       "display_value": "115,081",
@@ -5662,10 +5727,10 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     },
-    "郵輪來臺遊客人次_人數_2024": {
-      "metric_id": "郵輪來臺遊客人次_人數_2024",
+    "表4-1_郵輪來臺遊客人次_人數_2024": {
+      "metric_id": "表4-1_郵輪來臺遊客人次_人數_2024",
       "metric_name": "郵輪來臺遊客人次_人數 2024",
       "value": 90030.0,
       "display_value": "90,030",
@@ -5692,7 +5757,7 @@
       "validation_status": "passed",
       "validation_note": null,
       "attempts": 1,
-      "timestamp": "2026-08-02T10:33:54"
+      "timestamp": "2026-08-02T10:44:00"
     }
   }
 }

@@ -152,11 +152,25 @@ def rank_fields_by_latest_value(
     )
 
 
-def find_total_field(dataset: Dataset, file_name: str) -> str | None:
-    """找出某檔案的官方總計欄，供占比計算當分母。"""
+def find_total_field(
+    dataset: Dataset, file_name: str, sheet_name: str | None = None
+) -> str | None:
+    """
+    找出官方總計欄，供占比計算當分母。
+
+    **必須同時比對工作表**：一個檔案常有多張表量測不同的東西（附件四同時有
+    「流通卡數」與「當月簽帳金額」四張表）。只比對檔名會拿到別張表的總計，
+    變成「簽帳金額 ÷ 流通卡數」——實測算出 124.11% 的占比。
+
+    Sanity Check 會攔下超過 100% 的占比，但那是最後一道防線；若兩張表的量級
+    碰巧接近，錯誤比率會落在合理區間而**完全不被發現**。
+    """
     for canonical, meta in dataset.fields.items():
-        if meta.file_name == file_name and meta.aggregation_role == "total":
-            return canonical
+        if meta.file_name != file_name or meta.aggregation_role != "total":
+            continue
+        if sheet_name is not None and meta.sheet_name != sheet_name:
+            continue
+        return canonical
     return None
 
 

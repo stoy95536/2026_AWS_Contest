@@ -51,6 +51,64 @@ HEADER_JOIN = " > "
 """多層表頭的階層分隔符，如「亞洲地區 > 日本 Japan」。"""
 
 
+ROC_EPOCH_OFFSET = 1911
+"""民國元年 = 西元 1912 年。"""
+
+AD_YEAR_MIN, AD_YEAR_MAX = 1900, 2100
+"""合理西元年範圍。超出此範圍的四位數多半是金額或人次，不是年份。"""
+
+
+def normalize_period_code(value: Any) -> int | None:
+    """
+    把「期間代碼」正規化成西元年：民國年月 11401 → 2025、西元年月 202401 → 2024。
+
+    財報常把期間放在**欄名**（`金融機構名稱 | 11401 | 11402 | …`），此時表頭列
+    是「1 個文字 + 12 個數字」、數值佔比 0.92——若不先認出這些數字是期間代碼，
+    表頭列會被當成資料列，整張表解析失敗（實測附件四即為此狀況，產出 0 筆）。
+
+    月份會併入年度：本模組的 `period` 是西元年整數，同一年的 12 個月歸到同一個
+    period，`group_sum` 因此得到年度合計——對「整年度市占率」這類問題是正確的。
+    需要月度粒度時得另行擴充，此處不靜默假裝支援。
+    """
+    if isinstance(value, bool):
+        return None
+    if isinstance(value, (int, float)):
+        if float(value) != int(value):
+            return None
+        number = int(value)
+    else:
+        text = str(value).strip() if value is not None else ""
+        if not text.isdigit():
+            return None
+        number = int(text)
+
+    # 西元年月 190001~210012
+    if 190001 <= number <= 210012 and 1 <= number % 100 <= 12:
+        return number // 100
+    # 民國年月 10001~19912（民國 100~199 年）
+    if 10001 <= number <= 19912 and 1 <= number % 100 <= 12:
+        return number // 100 + ROC_EPOCH_OFFSET
+    # 純西元年
+    if AD_YEAR_MIN <= number <= AD_YEAR_MAX:
+        return number
+    return None
+
+
+def looks_like_period_header(row: list[Any], min_codes: int = 3) -> bool:
+    """
+    判斷一整列是否為「期間代碼表頭」。
+
+    要求至少 `min_codes` 個期間代碼且佔多數，避免把「2024」這種單一年份
+    的資料列誤判成表頭。
+    """
+    values = [v for v in row if v is not None and str(v).strip() != ""]
+    if len(values) < min_codes:
+        return False
+    codes = sum(1 for v in values if normalize_period_code(v) is not None)
+    return codes >= min_codes and codes / len(values) >= 0.5
+
+
+
 def _is_number(v: Any) -> bool:
     """bool 是 int 的子類，但 Excel 的 TRUE/FALSE 不是統計數值，須排除。"""
     return isinstance(v, (int, float)) and not isinstance(v, bool)
@@ -154,8 +212,14 @@ def _find_data_start(grid: list[list[Any]]) -> int | None:
     """由上往下掃，第一個數值佔比過半的列即資料起點。"""
     for idx, row in enumerate(grid[:MAX_HEADER_SCAN], start=1):
         non_empty, ratio = _row_numeric_ratio(row)
-        if non_empty and ratio > NUMERIC_RATIO_THRESHOLD:
-            return idx
+        if not non_empty or ratio <= NUMERIC_RATIO_THRESHOLD:
+            continue
+        # 期間代碼當欄名時（`金融機構名稱 | 11401 | 11402 | …`），表頭列的
+        # 數值佔比高達 0.92，會被誤判成資料列而讓整張表解析失敗。
+        # 這些數字是「識別碼」不是「量測值」，須排除。
+        if looks_like_period_header(row):
+            continue
+        return idx
     return None
 
 
