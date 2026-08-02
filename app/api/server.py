@@ -26,7 +26,7 @@ from fastapi.middleware.cors import CORSMiddleware
 import sys
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
 
-from src.pipeline import Pipeline, PipelineConfig
+from src.unified_pipeline import run_pipeline_from_files
 
 app = FastAPI(
     title="LLM 驅動之 Excel 報表轉簡報自動化系統",
@@ -175,55 +175,42 @@ async def _run_pipeline(
     model_id: str,
     region: str,
 ):
-    """背景執行 Pipeline（支援多個 Excel）。"""
+    """背景執行統一 Pipeline。"""
     try:
-        # 用第一個 Excel 作為主要輸入，其餘合併
-        primary_excel = excel_paths[0]
+        # 讀取提示詞
+        prompt = None
+        if prompt_path and os.path.exists(prompt_path):
+            with open(prompt_path, "r", encoding="utf-8") as f:
+                prompt = f.read().strip()
 
-        config = PipelineConfig(
-            excel_path=primary_excel,
+        tasks[task_id]["progress"] = 10
+        tasks[task_id]["current_step"] = "執行 Pipeline"
+
+        result = run_pipeline_from_files(
+            excel_files=excel_paths,
             template_path=template_path,
+            prompt=prompt,
             output_dir=output_dir,
             use_llm=use_llm,
-            model_id=model_id,
-            region=region,
             target_institution=target_institution,
         )
 
-        pipeline = Pipeline(config)
-
-        # 如果有多個 Excel，額外載入
-        if len(excel_paths) > 1:
-            pipeline.extra_excel_paths = excel_paths[1:]
-
-        # 如果有自訂提示詞
-        if prompt_path:
-            pipeline.user_prompt_path = prompt_path
-
-        # 執行
-        tasks[task_id]["progress"] = 10
-        tasks[task_id]["current_step"] = "解析 Excel"
-
-        result = pipeline.run()
-
-        # 更新步驟
-        tasks[task_id]["steps_completed"] = ["upload"] + result.steps_completed
         tasks[task_id]["progress"] = 100
 
-        if result.success:
+        if result["success"]:
             tasks[task_id]["status"] = "completed"
+            tasks[task_id]["steps_completed"] = ["upload", "task1", "task2", "task3"]
             tasks[task_id]["result"] = {
-                "ppt_path": result.ppt_path,
-                "excel_path": result.excel_path,
-                "lineage_path": result.lineage_path,
-                "qa_report_path": result.qa_report_path,
-                "slide_spec_path": result.slide_spec_path,
-                "duration_seconds": result.duration_seconds,
-                "steps_completed": result.steps_completed,
+                "ppt_path": result["ppt_path"],
+                "excel_path": result["excel_path"],
+                "lineage_path": result["lineage_path"],
+                "qa_report_path": result["qa_report_path"],
+                "slide_spec_path": result["slide_spec_path"],
+                "duration_seconds": result["duration"],
             }
         else:
             tasks[task_id]["status"] = "failed"
-            tasks[task_id]["error"] = result.errors
+            tasks[task_id]["error"] = result["errors"]
 
     except Exception as e:
         tasks[task_id]["status"] = "failed"
