@@ -12,3 +12,23 @@
 - 驗證結果：市場流通卡數 6,049 萬張、台新市占率 11.0%、排名第五，所有數據與附件三預期一致
 - 16 頁 PPT 全部使用附件一模板 layout，7 頁含原生可編輯圖表
 - 修正空白 placeholder 問題、修正散佈圖生成邏輯
+
+Task 2 LLM Agent 系統重構 + Task1 串接 08/02-群
+- 重構 Task 2 為「領域無關」通用架構：Agent 本身不寫死任何產業內容，收到什麼資料就產出什麼簡報（信用卡/旅遊/零售皆可）
+- 以金融業為核心出發點，但支援跨域（金融業與百工百業相連，旅遊資料只是其中一種情境）
+- 三個 Agent 全部重寫：
+  * planner_agent.py：新增 classify_data() 自動判別業務情境、數據類型、主題分群；結構完全由資料驅動
+  * analyst_agent.py：WIRA 四要素洞察（發生什麼/為什麼重要/可能原因/建議行動），不再只重述數字
+  * reviewer_agent.py：六維度品質審核，輸出格式對齊 README 5.3
+- 提示詞全部改為通用版：system_prompt.md, slide_planner.md, insight_reviewer.md
+- 頁數改為使用者可指定，未指定則預設 16 頁
+- 新增 schemas/metric.schema.json 與 slide_spec.schema.json（對齊 README 5.1/5.2 介面契約）
+- Agent 改為從 .env 讀取 MODEL_ID / AWS_REGION，新增 tests/test_llm_connection.py 連線測試
+- 【與成員 A 串接】新增 run_task2_from_task1()：直接讀 Task1 的 analysis_result.json
+  * Planner 使用 Task1 已算好的 chart_data（引用真實 metric_id，不讓 LLM 重編）
+  * Analyst 引用真實 metric_id 產生洞察，加入防幻覺過濾（移除 LLM 編造的不存在 ID）
+  * Reviewer 接受 Task1 的 metrics_list 格式，驗證 chart.series[].metric_ids（與成員 D 的 ppt_reconciler 相容）
+- 實測：用 Task1 真實旅遊資料（180 指標、11 圖表）跑通 LLM 模式，QA PASSED，0 errors，產出 39 條洞察
+- 洞察品質：引用真實數字（786萬人次、年增21.13%、100億美元），連結金融業務機會（外匯兌換、跨境支付、旅遊保險）
+- 執行指令：python Task2/Agent_Part.py --from-task1 --llm
+- 全程使用 Kiro IDE 進行開發，開發過程記錄於 .kiro/specs 與 .kiro/steering
