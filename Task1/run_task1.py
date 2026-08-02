@@ -339,7 +339,9 @@ def main() -> None:
     root = Path(__file__).resolve().parents[1]
     parser = argparse.ArgumentParser(description="Task 1 端到端執行")
     parser.add_argument("--data", default=str(root / "Task1" / "data"), help="Excel 目錄")
-    parser.add_argument("--out", default=str(root / "outputs" / "v2"), help="輸出目錄")
+    # 開發期曾暫寫 outputs/v2/ 以免蓋掉成員 D 的 demo 素材；
+    # 端到端驗證通過後切回正式路徑，成員 B/C/D 讀的就是這裡
+    parser.add_argument("--out", default=str(root / "outputs"), help="輸出目錄")
     parser.add_argument("--prompt", default=None, help="使用者提問；未給則走規則式後備")
     parser.add_argument(
         "--prompt-file", default=None,

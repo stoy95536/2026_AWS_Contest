@@ -3,8 +3,8 @@
 這三份是 **Task 1 實際跑 11 份旅遊 Excel 產出的真實輸出**，不是手寫的假資料。
 決賽當天檔案換掉後，內容會變、**格式不會變**，現在就能對著它寫串接程式。
 
-> 正式執行時檔案位於 `outputs/`（開發期暫時寫在 `outputs/v2/`，避免蓋掉現有
-> demo 素材）。這裡的副本只是讓你們不必自己跑就能開始接。
+> **正式路徑已切換為 `outputs/`**，程式碼範例直接用該路徑即可。
+> 本目錄的副本是同一份內容，方便沒跑過程式時先看格式。
 
 | 檔案 | 給誰 | 內容 |
 |---|---|---|
@@ -23,7 +23,7 @@
 
 ```python
 import json
-payload = json.load(open("Task1/samples/analysis_result.json", encoding="utf-8"))
+payload = json.load(open("outputs/analysis_result.json", encoding="utf-8"))
 
 specs = PlannerAgent().plan_structure(payload["data_summary"], use_llm=True, total_pages=16)
 ```
@@ -41,7 +41,7 @@ data_summary = {
 
 ```python
 from src.export import load_metrics
-metrics = load_metrics("Task1/samples/analysis_result.json")   # {metric_id: metric}
+metrics = load_metrics("outputs/analysis_result.json")   # {metric_id: metric}
 metrics["來臺旅客_亞洲地區_日本_2024"]["value"]        # 1318372.0
 metrics["來臺旅客_亞洲地區_日本_2024"]["display_value"] # "1,318,372"
 ```
@@ -58,7 +58,7 @@ metrics["來臺旅客_亞洲地區_日本_2024"]["display_value"] # "1,318,372"
 ```python
 from src.export import load_chart_series
 
-for chart_id, chart in load_chart_series("Task1/samples/analysis_result.json").items():
+for chart_id, chart in load_chart_series("outputs/analysis_result.json").items():
     factory.create_bar_chart(
         slide, x, y, cx, cy,
         categories=chart["categories"],     # list[str]
@@ -94,7 +94,7 @@ series_data = {"來臺旅客_亞洲地區_日本": [269659.0, 10056.0, 87616.0, 
 ```python
 from src.export import load_lineage_tracker
 
-tracker = load_lineage_tracker("Task1/samples/data_lineage.json")   # 177 筆
+tracker = load_lineage_tracker("outputs/data_lineage.json")   # 177 筆
 reconciler = PPTReconciler(tracker)
 result = reconciler.reconcile(slide_specs)
 ```
