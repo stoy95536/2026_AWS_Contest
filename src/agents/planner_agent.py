@@ -55,18 +55,21 @@ class PlannerAgent:
 
     # ─── 公開介面 ───────────────────────────────────────────
 
-    def plan_structure(self, data_summary: dict, use_llm: bool = True, total_pages: int = None) -> list[dict]:
+    def plan_structure(self, data_summary: dict, use_llm: bool = True, total_pages: int = None,
+                       metrics: list = None, chart_data: list = None) -> list[dict]:
         """
         規劃簡報結構。
 
-        頁數由使用者決定：
-        - total_pages 有值 → 依使用者指定
-        - total_pages = None → 預設 16 頁
+        可接受兩種呼叫方式：
+        1. plan_structure(data_summary) — 只有摘要，Agent 自行推導結構
+        2. plan_structure(data_summary, metrics=..., chart_data=...) — Task1 已計算好指標和圖表
 
         Args:
-            data_summary: {institutions, metrics, periods, record_count}
+            data_summary: {institutions, metrics, periods, record_count, [files]}
             use_llm: 是否使用 LLM
-            total_pages: 使用者指定的頁數（None 表示未指定，預設 16）
+            total_pages: 使用者指定的頁數（None 表示預設 16）
+            metrics: Task1 計算引擎產出的 metric 陣列 (README 5.1 格式)
+            chart_data: Task1 計算引擎產出的 chart_data 陣列
 
         Returns:
             slide_spec 陣列 (README 5.2 格式)
@@ -74,12 +77,12 @@ class PlannerAgent:
         pages = total_pages if total_pages is not None else 16
 
         if not use_llm:
-            return self._rule_based_plan(data_summary, pages)
+            return self._rule_based_plan(data_summary, pages, metrics=metrics, chart_data=chart_data)
         try:
-            return self._llm_plan(data_summary, pages)
+            return self._llm_plan(data_summary, pages, metrics=metrics, chart_data=chart_data)
         except Exception as e:
             print(f"[PlannerAgent] LLM 規劃失敗，使用規則引擎: {e}")
-            return self._rule_based_plan(data_summary, pages)
+            return self._rule_based_plan(data_summary, pages, metrics=metrics, chart_data=chart_data)
 
     def classify_data(self, data_summary: dict) -> dict:
         """
@@ -193,15 +196,19 @@ class PlannerAgent:
 
     # ─── 規則引擎規劃 ────────────────────────────────────────
 
-    def _rule_based_plan(self, data_summary: dict, total_pages: int = 16) -> list[dict]:
+    def _rule_based_plan(self, data_summary: dict, total_pages: int = 16,
+                         metrics: list = None, chart_data: list = None) -> list[dict]:
         """完全由資料驅動的結構規劃。頁數依使用者指定。"""
         classification = self.classify_data(data_summary)
         domain = classification["domain"]
         themes = classification["theme_groups"]
         data_types = classification["data_types"]
-        metrics = data_summary.get("metrics", [])
+        metric_names = data_summary.get("metrics", [])
         institutions = data_summary.get("institutions", [])
         periods = data_summary.get("periods", [])
+
+        # 如果 Task1 提供了 chart_data，用它來決定分析頁的圖表
+        available_charts = chart_data or []
 
         slides = []
 
@@ -215,52 +222,58 @@ class PlannerAgent:
         # P2: 目錄
         slides.append(self._make_slide(2, "toc", "目錄"))
 
-        # P3: Executive Summary
+        # P3: Executive Summary — 引用 Task1 的真實 metric_ids
         s3 = self._make_slide(3, "executive_summary", "Executive Summary")
         s3["headline"] = "關鍵發現摘要"
-        s3["kpis"] = [{"label": m, "metric_id": f"summary_{self._safe_id(m)}"} for m in metrics[:5]]
+        if metrics:
+            # 取前5個 passed 的 metric 作為 KPI
+            valid_metrics = [m for m in metrics if m.get("validation_status") == "passed"][:5]
+            s3["kpis"] = [{"label": m["metric_name"], "metric_id": m["metric_id"]} for m in valid_metrics]
+            s3["source_ids"] = [m["metric_id"] for m in valid_metrics]
+        else:
+            s3["kpis"] = [{"label": m, "metric_id": f"summary_{self._safe_id(m)}"} for m in metric_names[:5]]
         slides.append(s3)
 
         # 中間頁面：分配給 Chapters
         slide_no = 4
-        last_analysis_page = total_pages - 2  # 倒數第二頁前都給 Chapter
+        last_analysis_page = total_pages - 2
 
-        # 計算每個 Chapter 可分配的頁數
-        num_chapters = min(len(themes), max(2, available_for_chapters // 3))
-        themes_to_use = themes[:num_chapters]
+        # 如果有 chart_data，優先用它來分配頁面
+        if available_charts:
+            slides_from_charts = self._plan_from_chart_data(available_charts, slide_no, last_analysis_page)
+            slides.extend(slides_from_charts)
+            slide_no = slides[-1]["slide_no"] + 1 if slides_from_charts else slide_no
+        else:
+            # 沒有 chart_data，用原本的主題分群邏輯
+            num_chapters = min(len(themes), max(2, available_for_chapters // 3))
+            themes_to_use = themes[:num_chapters]
+            pages_per_chapter = available_for_chapters // num_chapters if num_chapters > 0 else 0
 
-        # 平均分配剩餘頁面給各 Chapter
-        pages_per_chapter = available_for_chapters // num_chapters if num_chapters > 0 else 0
-
-        for ch_idx, theme in enumerate(themes_to_use, 1):
-            if slide_no > last_analysis_page:
-                break
-
-            # Chapter 分隔頁
-            slides.append(self._make_slide(slide_no, "chapter_divider",
-                                          f"Chapter {ch_idx:02d} {theme['name']}"))
-            slide_no += 1
-
-            # 該 Chapter 的分析頁（分隔頁佔 1，剩餘給分析）
-            analysis_count = pages_per_chapter - 1
-            theme_metrics = theme["metrics"]
-            pages = self._generate_analysis_pages(
-                theme_metrics, data_types, institutions, periods, slide_no
-            )
-
-            for page in pages[:analysis_count]:
+            for ch_idx, theme in enumerate(themes_to_use, 1):
                 if slide_no > last_analysis_page:
                     break
-                page["slide_no"] = slide_no
-                slides.append(page)
+                slides.append(self._make_slide(slide_no, "chapter_divider",
+                                              f"Chapter {ch_idx:02d} {theme['name']}"))
                 slide_no += 1
 
-        # 補齊到 last_analysis_page（如果 Chapter 不夠）
+                analysis_count = pages_per_chapter - 1
+                theme_metrics = theme["metrics"]
+                pages = self._generate_analysis_pages(
+                    theme_metrics, data_types, institutions, periods, slide_no
+                )
+                for page in pages[:analysis_count]:
+                    if slide_no > last_analysis_page:
+                        break
+                    page["slide_no"] = slide_no
+                    slides.append(page)
+                    slide_no += 1
+
+        # 補齊到 last_analysis_page
         while slide_no <= last_analysis_page:
-            remaining_metrics = [m for m in metrics if not any(
+            remaining_metrics = [m for m in metric_names if not any(
                 m in s.get("title", "") for s in slides
             )]
-            fill_metric = remaining_metrics[0] if remaining_metrics else metrics[0] if metrics else "補充指標"
+            fill_metric = remaining_metrics[0] if remaining_metrics else metric_names[0] if metric_names else "補充指標"
             layout = "comparison_chart" if "cross_section" in data_types else "trend_chart"
             s = self._make_slide(slide_no, layout, f"{fill_metric}分析")
             s["headline"] = f"{fill_metric}深度分析"
@@ -274,6 +287,68 @@ class PlannerAgent:
 
         # 最後一頁：感謝頁
         slides.append(self._make_slide(total_pages, "thank_you", "感謝頁"))
+
+        return slides
+
+    def _plan_from_chart_data(self, chart_data: list, start_no: int, max_no: int) -> list[dict]:
+        """
+        當 Task1 提供了 chart_data 時，直接用它來規劃分析頁面。
+        每張圖表對應一頁分析頁，並自動插入 chapter_divider。
+        """
+        slides = []
+        slide_no = start_no
+
+        # 將 chart_data 依 chart_type 分群作為 Chapter
+        chart_groups = {}
+        for chart in chart_data:
+            ctype = chart.get("chart_type", "bar")
+            if ctype in ("line",):
+                group = "趨勢分析"
+            elif ctype in ("bar", "horizontal_bar"):
+                group = "比較分析"
+            elif ctype in ("scatter",):
+                group = "關聯分析"
+            else:
+                group = "綜合分析"
+            chart_groups.setdefault(group, []).append(chart)
+
+        for ch_idx, (group_name, charts) in enumerate(chart_groups.items(), 1):
+            if slide_no > max_no:
+                break
+
+            # Chapter 分隔頁
+            slides.append(self._make_slide(slide_no, "chapter_divider",
+                                          f"Chapter {ch_idx:02d} {group_name}"))
+            slide_no += 1
+
+            # 每張圖一頁
+            for chart in charts:
+                if slide_no > max_no:
+                    break
+
+                layout_map = {"line": "trend_chart", "bar": "ranking_chart",
+                              "horizontal_bar": "ranking_chart", "scatter": "scatter_chart",
+                              "stacked_bar": "stacked_chart"}
+                layout = layout_map.get(chart.get("chart_type"), "comparison_chart")
+
+                s = self._make_slide(slide_no, layout, chart.get("title", "分析"))
+                s["headline"] = ""  # Analyst 會填
+                s["chart"] = {
+                    "type": chart.get("chart_type", "bar"),
+                    "series_metric_ids": [],
+                    "series": chart.get("series", []),
+                    "categories": chart.get("categories", []),
+                    "chart_data_id": chart.get("chart_data_id", ""),
+                }
+                # 收集所有 metric_ids 作為 source_ids
+                all_mids = []
+                for series in chart.get("series", []):
+                    all_mids.extend(series.get("metric_ids", []))
+                s["chart"]["series_metric_ids"] = all_mids
+                s["source_ids"] = all_mids
+
+                slides.append(s)
+                slide_no += 1
 
         return slides
 
@@ -357,10 +432,17 @@ class PlannerAgent:
 
     # ─── LLM 增強規劃 ────────────────────────────────────────
 
-    def _llm_plan(self, data_summary: dict, total_pages: int = 16) -> list[dict]:
+    def _llm_plan(self, data_summary: dict, total_pages: int = 16,
+                  metrics: list = None, chart_data: list = None) -> list[dict]:
         """使用 LLM 動態規劃——完全從資料推導結構，無預設假設。"""
         system_prompt = self._load_prompt()
         classification = self.classify_data(data_summary)
+
+        # 如果有 chart_data，提供給 LLM 作為參考
+        chart_info = ""
+        if chart_data:
+            chart_titles = [c.get("title", "") for c in chart_data]
+            chart_info = f"\n\n## 計算引擎已產出的圖表（可直接使用）\n{json.dumps(chart_titles, ensure_ascii=False)}"
 
         user_message = f"""
 根據以下資料摘要，規劃 {total_pages} 頁策略分析簡報結構。
@@ -368,20 +450,21 @@ class PlannerAgent:
 注意：不要假設資料屬於哪個特定產業。所有標題、Chapter 名稱必須從資料內容推導。
 
 ## 資料摘要
-- 主體列表: {json.dumps(data_summary.get('institutions', []), ensure_ascii=False)}
+- 主體列表: {json.dumps(data_summary.get('institutions', [])[:20], ensure_ascii=False)}
 - 指標列表: {json.dumps(data_summary.get('metrics', []), ensure_ascii=False)}
-- 時間期間: {json.dumps(data_summary.get('periods', []), ensure_ascii=False)}
+- 時間期間: {json.dumps(data_summary.get('periods', [])[-10:], ensure_ascii=False)}
 - 資料筆數: {data_summary.get('record_count', 0)}
 
 ## 自動分類結果（參考）
 - 推測情境: {classification['domain']}
 - 數據類型: {json.dumps(classification['data_types'], ensure_ascii=False)}
 - 主題分群: {json.dumps([t['name'] for t in classification['theme_groups']], ensure_ascii=False)}
+{chart_info}
 
 ## 要求
 1. 恰好 {total_pages} 頁
 2. 每頁欄位: slide_no, layout, title, headline, chart, kpis, insights, recommendations, source_ids
-3. chart: {{"type": str, "series_metric_ids": [str]}}
+3. chart: {{"type": str, "series_metric_ids": [str], "series": [{{"name": str, "metric_ids": [str]}}]}}
 4. insights: [{{"text": str, "evidence_metric_ids": [str]}}]
 5. headline 必須是洞察結論，不是數字描述
 6. 標題和內容完全由資料驅動，不要寫死特定產業用語

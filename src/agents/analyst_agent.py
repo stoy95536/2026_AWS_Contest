@@ -63,7 +63,8 @@ class AnalystAgent:
 
         Args:
             slide_spec: 該頁規格（來自 PlannerAgent）
-            metric_data: 該頁相關的計算引擎結果 (README 5.1 格式)
+            metric_data: 該頁相關的計算引擎結果 (Task1 metric 格式)
+                         每筆: {metric_id, metric_name, value, display_value, unit, period, ...}
 
         Returns:
             enriched slide_spec (README 5.2 格式)
@@ -82,7 +83,15 @@ class AnalystAgent:
         all_metric_data: dict,
         use_llm: bool = True,
     ) -> list[dict]:
-        """為所有頁面生成洞察。"""
+        """
+        為所有頁面生成洞察。
+
+        Args:
+            slide_specs: 所有頁面規格
+            all_metric_data: {slide_no: [metric_dict, ...]} 或 {slide_no: []}
+                            若為空，嘗試從 slide_spec 的 chart.series[].metric_ids 提取
+            use_llm: 是否使用 LLM
+        """
         enriched = []
         for spec in slide_specs:
             slide_no = spec.get("slide_no", 0)
@@ -95,12 +104,14 @@ class AnalystAgent:
     def _rule_based_insights(self, slide_spec: dict, metric_data: list[dict]) -> dict:
         """
         根據 layout 類型產出通用洞察骨架。
-        文字不含任何產業特定用語，而是用通用的分析語言。
+        當 metric_data 包含 Task1 的真實指標時，引用真實 metric_ids。
         """
         enriched = slide_spec.copy()
         layout = slide_spec.get("layout", "")
         title = slide_spec.get("title", "")
-        available_ids = [m["metric_id"] for m in metric_data if isinstance(m, dict) and "metric_id" in m]
+
+        # 收集可用的 metric_ids（來自 metric_data 或 chart.series）
+        available_ids = self._collect_metric_ids(slide_spec, metric_data)
 
         # layout 到分析方法的映射
         insight_generators = {
@@ -121,9 +132,45 @@ class AnalystAgent:
 
         # 確保 source_ids
         if not enriched.get("source_ids") and available_ids:
-            enriched["source_ids"] = available_ids[:5]
+            enriched["source_ids"] = available_ids[:10]
 
         return enriched
+
+    def _collect_metric_ids(self, slide_spec: dict, metric_data: list[dict]) -> list[str]:
+        """
+        從多個來源收集可用的 metric_ids：
+        1. metric_data 陣列中的 metric_id 欄位（Task1 格式）
+        2. slide_spec.chart.series[].metric_ids（Planner 放入的）
+        3. slide_spec.chart.series_metric_ids（flat list）
+        4. slide_spec.source_ids
+        """
+        ids = []
+
+        # 從 metric_data 提取
+        for m in metric_data:
+            if isinstance(m, dict) and "metric_id" in m:
+                ids.append(m["metric_id"])
+
+        # 從 chart.series[].metric_ids 提取
+        chart = slide_spec.get("chart")
+        if chart and isinstance(chart, dict):
+            for series in chart.get("series", []):
+                if isinstance(series, dict):
+                    ids.extend(series.get("metric_ids", []))
+            # 也取 flat list
+            ids.extend(chart.get("series_metric_ids", []))
+
+        # 從 source_ids 提取
+        ids.extend(slide_spec.get("source_ids", []))
+
+        # 去重但保持順序
+        seen = set()
+        unique = []
+        for mid in ids:
+            if mid and mid not in seen:
+                seen.add(mid)
+                unique.append(mid)
+        return unique
 
     # ─── 通用洞察模板（不含任何產業特定用語）─────────────────────
 
@@ -221,23 +268,56 @@ class AnalystAgent:
         """使用 LLM 根據實際數據撰寫洞察。"""
         system_prompt = self._load_system_prompt()
 
+        # 精簡 metric_data 避免超出 token（只保留重要欄位）
+        slim_metrics = []
+        for m in metric_data[:20]:  # 最多 20 筆
+            if isinstance(m, dict) and m.get("value") is not None:
+                slim_metrics.append({
+                    "metric_id": m.get("metric_id", ""),
+                    "metric_name": m.get("metric_name", ""),
+                    "value": m.get("value"),
+                    "display_value": m.get("display_value", ""),
+                    "unit": m.get("unit", ""),
+                    "period": m.get("period", ""),
+                })
+
+        # 也從 chart.series 收集有效資訊
+        chart = slide_spec.get("chart")
+        chart_context = ""
+        if chart and isinstance(chart, dict):
+            series_info = []
+            for s in chart.get("series", []):
+                if isinstance(s, dict) and s.get("values"):
+                    series_info.append({
+                        "name": s.get("name", ""),
+                        "values_sample": s.get("values", [])[:6],
+                        "metric_ids_sample": s.get("metric_ids", [])[:3],
+                    })
+            if series_info:
+                chart_context = f"\n\n## 圖表資料系列\n{json.dumps(series_info, ensure_ascii=False, indent=2)}"
+            if chart.get("categories"):
+                chart_context += f"\n\ncategories: {json.dumps(chart['categories'][:6], ensure_ascii=False)}"
+
         user_message = f"""
 請為以下簡報頁面生成策略洞察。
 
 ## 頁面規格
-{json.dumps(slide_spec, ensure_ascii=False, indent=2)}
+- slide_no: {slide_spec.get('slide_no')}
+- layout: {slide_spec.get('layout')}
+- title: {slide_spec.get('title')}
 
-## 計算引擎結果（你只能引用這些數字）
-{json.dumps(metric_data, ensure_ascii=False, indent=2)}
+## 計算引擎結果（你只能引用這些 metric_id 和數字）
+{json.dumps(slim_metrics, ensure_ascii=False, indent=2)}
+{chart_context}
 
 ## 要求
 1. 輸出格式: {{"headline": str, "insights": [{{"text": str, "evidence_metric_ids": [str]}}], "source_ids": [str]}}
 2. 若為策略頁則加 "recommendations": [{{"action": str, "rationale": str}}]
 3. 每項洞察包含：發生什麼、為什麼重要、可能原因、建議行動
-4. 不得自行計算或新增數字
-5. 推測須使用「可能」「推測」「顯示」等措辭
-6. headline 是一句話洞察結論，不是數字描述
-7. 不要假設特定產業——根據提供的資料內容撰寫
+4. evidence_metric_ids 必須是上面提供的真實 metric_id
+5. 不得自行計算或新增數字
+6. 推測須使用「可能」「推測」「顯示」等措辭
+7. headline 是一句話洞察結論，不是數字描述
 
 輸出 JSON。
 """

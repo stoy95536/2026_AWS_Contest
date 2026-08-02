@@ -45,22 +45,34 @@ class ReviewerAgent:
     def review(
         self,
         slide_specs: list[dict],
-        verified_metrics: dict,
+        verified_metrics: dict = None,
         use_llm: bool = False,
         expected_pages: int = None,
+        metrics_list: list = None,
     ) -> dict:
         """
         審核簡報規格。
 
         Args:
             slide_specs: 完整簡報規格
-            verified_metrics: {metric_id: value} 已驗證的計算結果
+            verified_metrics: {metric_id: value} 已驗證的計算結果（傳統格式）
             use_llm: 是否使用 LLM 輔助
             expected_pages: 預期頁數（None 則不檢查頁數）
+            metrics_list: Task1 完整 metrics 陣列（替代 verified_metrics）
+                         會自動轉換為 {metric_id: value} 格式
 
         Returns:
             README 5.3 格式: {"status": "passed|failed", "errors": [...]}
         """
+        # 如果提供了 Task1 的 metrics_list，轉換為 verified_metrics 格式
+        if metrics_list and not verified_metrics:
+            verified_metrics = {}
+            for m in metrics_list:
+                if isinstance(m, dict) and "metric_id" in m:
+                    verified_metrics[m["metric_id"]] = m.get("value")
+
+        verified_metrics = verified_metrics or {}
+
         errors = []
 
         for spec in slide_specs:
@@ -114,6 +126,9 @@ class ReviewerAgent:
         """檢查所有 metric_id 引用是否存在於計算引擎。"""
         errors = []
 
+        if not verified:
+            return errors
+
         # KPI metric_ids
         for kpi in spec.get("kpis", []):
             mid = kpi.get("metric_id", "")
@@ -124,9 +139,10 @@ class ReviewerAgent:
                     "message": f"KPI '{kpi.get('label', '')}' 引用 metric_id '{mid}' 不存在於計算引擎",
                 })
 
-        # chart series_metric_ids
+        # chart — 檢查 series_metric_ids (flat) 和 series[].metric_ids (Task1格式)
         chart = spec.get("chart")
         if chart and isinstance(chart, dict):
+            # flat list
             for mid in chart.get("series_metric_ids", []):
                 if mid and mid not in verified:
                     errors.append({
@@ -134,6 +150,16 @@ class ReviewerAgent:
                         "type": "missing_source",
                         "message": f"圖表引用 metric_id '{mid}' 不存在於計算引擎",
                     })
+            # series[].metric_ids (Task1/PPT reconciler 格式)
+            for series in chart.get("series", []):
+                if isinstance(series, dict):
+                    for mid in series.get("metric_ids", []):
+                        if mid and mid not in verified:
+                            errors.append({
+                                "slide_no": slide_no,
+                                "type": "missing_source",
+                                "message": f"圖表 series '{series.get('name','')}' 引用 metric_id '{mid}' 不存在於計算引擎",
+                            })
 
         # insights evidence_metric_ids
         for insight in spec.get("insights", []):
